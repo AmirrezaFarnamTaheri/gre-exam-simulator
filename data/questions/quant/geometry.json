@@ -1,0 +1,80 @@
+[
+  {
+    "id": "q-ge-01",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "quadrilaterals_and_polygons",
+    "difficulty": 3,
+    "explanation": "l=2w+3; perimeter 2(l+w)=2(3w+3)=6w+6=36 -> w=5.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "A rectangle has a length that is 3 more than twice its width. If the perimeter of the rectangle is 36, what is the width?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "correct": [
+      "5"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ge-02",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "circles",
+    "difficulty": 3,
+    "explanation": "Circumference 2*pi*r=10*pi -> r=5. Area = pi*25 ≈ 78.54 > 78.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "quantity_a": "The area of the circle",
+    "quantity_b": "78",
+    "shared_info": "A circle has a circumference of 10*pi.",
+    "correct": "A"
+  },
+  {
+    "id": "q-ge-03",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "pythagorean_theorem",
+    "difficulty": 4,
+    "explanation": "sqrt(9^2 + 12^2) = sqrt(81+144) = sqrt(225) = 15.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "In a right triangle, the two legs have lengths 9 and 12. What is the length of the hypotenuse?",
+    "correct": "15"
+  },
+  {
+    "id": "q-ge-04",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "explanation": "side^3=64 -> side=4. Surface area = 6*4^2 = 96.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "The volume of a cube is 64. What is the surface area of the cube?",
+    "choices": [
+      "16",
+      "24",
+      "64",
+      "96",
+      "144"
+    ],
+    "correct": [
+      "96"
+    ],
+    "select_all": false
+  }
+]

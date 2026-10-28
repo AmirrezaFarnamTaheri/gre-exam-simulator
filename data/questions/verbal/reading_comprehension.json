@@ -1,0 +1,140 @@
+[
+  {
+    "id": "v-rc-01",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "explanation": "This is the only choice that captures both the symbiosis and the warming threat central to the passage.",
+    "source": "seed",
+    "tags": [],
+    "passage_id": "p-coral-01",
+    "question": "Which of the following best states the main idea of the passage?",
+    "choices": [
+      "Coral bleaching is caused primarily by overfishing in reef ecosystems.",
+      "Coral reefs' outsized biodiversity depends on a heat-sensitive symbiosis that is increasingly disrupted by rising ocean temperatures.",
+      "Zooxanthellae algae are more important to marine ecosystems than coral polyps themselves.",
+      "Coastal communities are the primary cause of declining coral reef health.",
+      "Bleached coral reefs never recover once algae have been expelled."
+    ],
+    "correct": [
+      "Coral reefs' outsized biodiversity depends on a heat-sensitive symbiosis that is increasingly disrupted by rising ocean temperatures."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-02",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 2,
+    "explanation": "The passage states bleached coral can recruit new algae and recover if temperatures normalize quickly.",
+    "source": "seed",
+    "tags": [],
+    "passage_id": "p-coral-01",
+    "question": "According to the passage, a coral reef that has undergone bleaching:",
+    "choices": [
+      "has permanently lost all of its living tissue.",
+      "may recover if normal temperatures return quickly enough.",
+      "will always recover within one growing season.",
+      "was likely never home to zooxanthellae algae.",
+      "is unaffected by further temperature increases."
+    ],
+    "correct": [
+      "may recover if normal temperatures return quickly enough."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-03",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 4,
+    "explanation": "All three are stated directly: they live in coral tissue, supply most of its energy, and are expelled under heat stress.",
+    "source": "seed",
+    "tags": [],
+    "passage_id": "p-coral-01",
+    "question": "The passage suggests which of the following about zooxanthellae algae? Select all that apply.",
+    "choices": [
+      "They live symbiotically within coral tissue.",
+      "They provide most of the coral's energy through photosynthesis.",
+      "They are expelled by coral during periods of heat stress."
+    ],
+    "correct": [
+      "They live symbiotically within coral tissue.",
+      "They provide most of the coral's energy through photosynthesis.",
+      "They are expelled by coral during periods of heat stress."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "v-rc-04",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 3,
+    "explanation": "The passage says hand-copied books \"confined literacy and scholarship largely to monasteries, courts, and the wealthy.\"",
+    "source": "seed",
+    "tags": [],
+    "passage_id": "p-printing-01",
+    "question": "The passage implies that before the invention of the printing press:",
+    "choices": [
+      "no books existed in Europe.",
+      "literacy was largely restricted to a small segment of society.",
+      "the Protestant Reformation had already occurred.",
+      "spelling and grammar were already standardized across Europe.",
+      "print shops were common in most European cities."
+    ],
+    "correct": [
+      "literacy was largely restricted to a small segment of society."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-05",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 2,
+    "explanation": "The passage explicitly lists standardized spelling and grammar as a consequence.",
+    "source": "seed",
+    "tags": [],
+    "passage_id": "p-printing-01",
+    "question": "Which of the following is cited in the passage as a consequence of the printing press's introduction?",
+    "choices": [
+      "The complete elimination of hand-copied manuscripts.",
+      "The standardization of spelling and grammar across regions.",
+      "The invention of movable type by monastery scribes.",
+      "A decrease in the number of European print shops.",
+      "The end of the Protestant Reformation."
+    ],
+    "correct": [
+      "The standardization of spelling and grammar across regions."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-06",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "explanation": "The sentence uses the internet as a relatable scale comparison, not an argument about which is \"better.\"",
+    "source": "seed",
+    "tags": [],
+    "passage_id": "p-printing-01",
+    "question": "The author's comparison to the internet in the final sentence primarily serves to:",
+    "choices": [
+      "argue that the internet is a more powerful tool for spreading information than the printing press was.",
+      "suggest a modern point of comparison for the scale of the printing press's impact on the spread of ideas.",
+      "criticize modern historians for overstating the importance of the printing press.",
+      "prove that digital technology has made printed books obsolete.",
+      "demonstrate that the internet was directly inspired by Gutenberg's invention."
+    ],
+    "correct": [
+      "suggest a modern point of comparison for the scale of the printing press's impact on the spread of ideas."
+    ],
+    "select_all": false
+  }
+]

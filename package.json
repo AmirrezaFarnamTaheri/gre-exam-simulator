@@ -1,0 +1,8 @@
+{
+  "name": "gre-study-app",
+  "private": true,
+  "workspaces": [
+    "engine",
+    "web"
+  ]
+}

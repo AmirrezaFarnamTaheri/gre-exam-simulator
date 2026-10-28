@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q-ar-01",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "exponents_and_roots",
+    "difficulty": 2,
+    "explanation": "If 0<x<1, x^2>x^3; if x>1, x^2<x^3; if x=1, they're equal. No single relationship holds.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "quantity_a": "x^2",
+    "quantity_b": "x^3",
+    "shared_info": "x > 0",
+    "correct": "cannot_determine"
+  },
+  {
+    "id": "q-ar-02",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 2,
+    "explanation": "0.15 * 240 = 36.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "What is 15% of 240?",
+    "correct": "36"
+  },
+  {
+    "id": "q-ar-03",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "explanation": "1.40 * 0.75 = 1.05, a net increase of 5% over the original wholesale price.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "A store marks up the wholesale price of an item by 40% and then offers a 25% discount on the marked-up price. What is the net percent change from the original wholesale price?",
+    "choices": [
+      "+5%",
+      "+15%",
+      "+35%",
+      "-5%",
+      "+65%"
+    ],
+    "correct": [
+      "+5%"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-04",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "explanation": "47 = 6*7 + 5, remainder 5. 83 = 9*9 + 2, remainder 2. 5 > 2.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "quantity_a": "The remainder when 47 is divided by 6",
+    "quantity_b": "The remainder when 83 is divided by 9",
+    "shared_info": null,
+    "correct": "A"
+  }
+]

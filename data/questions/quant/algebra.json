@@ -1,0 +1,70 @@
+[
+  {
+    "id": "q-al-01",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 2,
+    "explanation": "3x - 7 = 2x + 5 -> x = 12.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "If 3x - 7 = 2x + 5, what is the value of x?",
+    "correct": "12"
+  },
+  {
+    "id": "q-al-02",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "quadratic_equations",
+    "difficulty": 4,
+    "explanation": "(x-2)(x-3)=0, so x=2 or x=3. Quantity A could be less than or equal to Quantity B.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "quantity_a": "x",
+    "quantity_b": "3",
+    "shared_info": "x^2 - 5x + 6 = 0",
+    "correct": "cannot_determine"
+  },
+  {
+    "id": "q-al-03",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "functions",
+    "difficulty": 4,
+    "explanation": "f(-2) = 2(4) - 3(-2) + 1 = 8 + 6 + 1 = 15.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "If f(x) = 2x^2 - 3x + 1, what is f(-2)?",
+    "choices": [
+      "9",
+      "11",
+      "15",
+      "17",
+      "23"
+    ],
+    "correct": [
+      "15"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-al-04",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "explanation": "4x + 12 = 2x + 18 -> 2x = 6 -> x = 3.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "If 4(x + 3) = 2(x + 9), what is the value of x?",
+    "correct": "3"
+  }
+]

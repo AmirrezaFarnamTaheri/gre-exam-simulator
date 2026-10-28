@@ -1,0 +1,80 @@
+[
+  {
+    "id": "q-da-01",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 2,
+    "explanation": "Sum of 5 = 100; sum of remaining 4 = 72; removed = 100 - 72 = 28.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "The mean of five numbers is 20. If one of the numbers is removed, the mean of the remaining four numbers is 18. What was the value of the removed number?",
+    "choices": [
+      "18",
+      "20",
+      "24",
+      "28",
+      "32"
+    ],
+    "correct": [
+      "28"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-02",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "probability",
+    "difficulty": 3,
+    "explanation": "P(red) = 4/10 = 2/5, equal to Quantity B.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "quantity_a": "The probability the marble is red",
+    "quantity_b": "2/5",
+    "shared_info": "A jar contains 4 red marbles and 6 blue marbles. One marble is drawn at random.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-da-03",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "explanation": "C(7,3) = 7!/(3!4!) = 35.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "A committee of 3 people is to be chosen from a group of 7 people. How many different committees are possible?",
+    "correct": "35"
+  },
+  {
+    "id": "q-da-04",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "explanation": "Sorted, the middle (4th of 7) value is 81.",
+    "source": "seed",
+    "tags": [
+      "verified"
+    ],
+    "prompt": "The following are 7 test scores: 62, 74, 74, 81, 88, 91, 95. What is the median score?",
+    "choices": [
+      "74",
+      "78",
+      "81",
+      "88",
+      "91"
+    ],
+    "correct": [
+      "81"
+    ],
+    "select_all": false
+  }
+]

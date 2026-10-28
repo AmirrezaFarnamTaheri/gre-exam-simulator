@@ -1,0 +1,186 @@
+[
+  {
+    "id": "v-se-01",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "Both mean convincing, matching opponents being won over.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "Her arguments were so ______ that even her staunchest opponents found themselves nodding in agreement.",
+    "choices": [
+      "persuasive",
+      "compelling",
+      "confusing",
+      "lengthy",
+      "esoteric",
+      "tedious"
+    ],
+    "correct": [
+      "persuasive",
+      "compelling"
+    ]
+  },
+  {
+    "id": "v-se-02",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 2,
+    "explanation": "\"Despite\" signals contrast with generous tipping: reputation for being stingy.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "Despite his reputation for being ______, he tipped generously and never haggled over prices.",
+    "choices": [
+      "parsimonious",
+      "stingy",
+      "generous",
+      "punctual",
+      "loyal",
+      "candid"
+    ],
+    "correct": [
+      "parsimonious",
+      "stingy"
+    ]
+  },
+  {
+    "id": "v-se-03",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "Praising nothing matches a harshly critical (scathing/withering) review.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "The critic's review was ______, praising almost nothing about the film's plot, acting, or pacing.",
+    "choices": [
+      "scathing",
+      "withering",
+      "laudatory",
+      "brief",
+      "ambivalent",
+      "measured"
+    ],
+    "correct": [
+      "scathing",
+      "withering"
+    ]
+  },
+  {
+    "id": "v-se-04",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 2,
+    "explanation": "\"Even the X efforts...could not\" implies X was admirable but still insufficient.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "Even the ______ efforts of the rescue team could not save the stranded hikers before the storm hit.",
+    "choices": [
+      "heroic",
+      "valiant",
+      "half-hearted",
+      "brief",
+      "coordinated",
+      "delayed"
+    ],
+    "correct": [
+      "heroic",
+      "valiant"
+    ]
+  },
+  {
+    "id": "v-se-05",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "Flawed methodology undermines confidence, matching dubious/questionable.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "Because the data were collected using flawed methodology, the study's conclusions must be regarded as ______.",
+    "choices": [
+      "dubious",
+      "questionable",
+      "definitive",
+      "premature",
+      "compelling",
+      "irrefutable"
+    ],
+    "correct": [
+      "dubious",
+      "questionable"
+    ]
+  },
+  {
+    "id": "v-se-06",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 2,
+    "explanation": "Touching many topics matches broad in scope: wide-ranging/comprehensive.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "The senator's speech was remarkably ______, touching on foreign policy, healthcare, and education in the span of ten minutes.",
+    "choices": [
+      "wide-ranging",
+      "comprehensive",
+      "narrow",
+      "focused",
+      "concise",
+      "brief"
+    ],
+    "correct": [
+      "wide-ranging",
+      "comprehensive"
+    ]
+  },
+  {
+    "id": "v-se-07",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "Fear of collapse matches a rundown, decrepit/dilapidated structure.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "The old bridge was so ______ that engineers feared it might collapse under even light traffic.",
+    "choices": [
+      "dilapidated",
+      "decrepit",
+      "sturdy",
+      "modern",
+      "ornate",
+      "temporary"
+    ],
+    "correct": [
+      "dilapidated",
+      "decrepit"
+    ]
+  },
+  {
+    "id": "v-se-08",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 2,
+    "explanation": "Easy for a layperson to grasp matches a clear, lucid explanation.",
+    "source": "seed",
+    "tags": [],
+    "sentence": "Her explanation of the tax code was surprisingly ______, breaking down complicated regulations into terms a layperson could easily grasp.",
+    "choices": [
+      "lucid",
+      "clear",
+      "convoluted",
+      "technical",
+      "brief",
+      "biased"
+    ],
+    "correct": [
+      "lucid",
+      "clear"
+    ]
+  }
+]

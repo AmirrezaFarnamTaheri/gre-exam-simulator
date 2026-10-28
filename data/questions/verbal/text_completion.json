@@ -1,0 +1,188 @@
+[
+  {
+    "id": "v-tc-01",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 2,
+    "explanation": "\"too costly\" signals a negative outcome, so funding was cut/withdrawn.",
+    "source": "seed",
+    "tags": [],
+    "passage": "Despite the committee's early enthusiasm, the project was eventually deemed too costly, and funding was (i)______.",
+    "choices": {
+      "i": [
+        "withdrawn",
+        "increased",
+        "publicized"
+      ]
+    },
+    "correct": {
+      "i": "withdrawn"
+    }
+  },
+  {
+    "id": "v-tc-02",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 3,
+    "explanation": "Falling asleep signals a sleep-inducing (soporific) lecture.",
+    "source": "seed",
+    "tags": [],
+    "passage": "The professor's lectures were so (i)______ that students frequently fell asleep before the halfway point.",
+    "choices": {
+      "i": [
+        "soporific",
+        "riveting",
+        "controversial"
+      ]
+    },
+    "correct": {
+      "i": "soporific"
+    }
+  },
+  {
+    "id": "v-tc-03",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 4,
+    "explanation": "\"Although\" signals contrast: it looked substantive but was actually a calculated dodge.",
+    "source": "seed",
+    "tags": [],
+    "passage": "Although the senator's speech appeared (i)______ on the surface, careful analysis revealed it to be a (ii)______ attempt to avoid committing to any specific policy.",
+    "choices": {
+      "i": [
+        "substantive",
+        "brief",
+        "humorous"
+      ],
+      "ii": [
+        "calculated",
+        "spontaneous",
+        "sincere"
+      ]
+    },
+    "correct": {
+      "i": "substantive",
+      "ii": "calculated"
+    }
+  },
+  {
+    "id": "v-tc-04",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 3,
+    "explanation": "\"Simple, unadorned\" matches \"spare\"; that spareness is its austerity.",
+    "source": "seed",
+    "tags": [],
+    "passage": "The novelist's prose was widely praised for being (i)______, conveying complex emotions through simple, unadorned sentences, though some critics found this very (ii)______ off-putting.",
+    "choices": {
+      "i": [
+        "spare",
+        "verbose",
+        "ornate"
+      ],
+      "ii": [
+        "austerity",
+        "richness",
+        "ambiguity"
+      ]
+    },
+    "correct": {
+      "i": "spare",
+      "ii": "austerity"
+    }
+  },
+  {
+    "id": "v-tc-05",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 2,
+    "explanation": "Circumstantial evidence alone is often insufficient for conviction.",
+    "source": "seed",
+    "tags": [],
+    "passage": "Because the evidence against the defendant was purely (i)______, the jury could not convict beyond a reasonable doubt.",
+    "choices": {
+      "i": [
+        "circumstantial",
+        "overwhelming",
+        "irrefutable"
+      ]
+    },
+    "correct": {
+      "i": "circumstantial"
+    }
+  },
+  {
+    "id": "v-tc-06",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 4,
+    "explanation": "\"Far from\" plus self-deprecating/humble implies the opposite: pompous.",
+    "source": "seed",
+    "tags": [],
+    "passage": "Far from being the (i)______ figure his critics portrayed, the diplomat was in private conversations remarkably self-deprecating and quick to laugh at his own mistakes.",
+    "choices": {
+      "i": [
+        "pompous",
+        "affable",
+        "reserved"
+      ]
+    },
+    "correct": {
+      "i": "pompous"
+    }
+  },
+  {
+    "id": "v-tc-07",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 5,
+    "explanation": "\"Neither...nor\" balances an uncritical celebration against a nuanced portrait.",
+    "source": "seed",
+    "tags": [],
+    "passage": "The historian's account was neither a (i)______ celebration of the era nor an unremittingly bleak indictment of it, but rather a (ii)______ portrait that acknowledged both its achievements and its atrocities.",
+    "choices": {
+      "i": [
+        "uncritical",
+        "critical",
+        "brief"
+      ],
+      "ii": [
+        "nuanced",
+        "simplistic",
+        "one-sided"
+      ]
+    },
+    "correct": {
+      "i": "uncritical",
+      "ii": "nuanced"
+    }
+  },
+  {
+    "id": "v-tc-08",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 3,
+    "explanation": "\"Paradoxically\" signals the opposite of the intended effect: efficiency fell.",
+    "source": "seed",
+    "tags": [],
+    "passage": "The company's new policy, intended to streamline operations, instead introduced so much red tape that efficiency was, paradoxically, (i)______.",
+    "choices": {
+      "i": [
+        "diminished",
+        "enhanced",
+        "unaffected"
+      ]
+    },
+    "correct": {
+      "i": "diminished"
+    }
+  }
+]
