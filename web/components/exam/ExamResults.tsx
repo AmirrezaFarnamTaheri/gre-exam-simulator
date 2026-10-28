@@ -10,6 +10,7 @@ interface ExamResultsProps {
   timeSpentSec: number;
   sectionTitle: string;
   onRetake: () => void;
+  onRetakeFresh?: () => void;
 }
 
 export default function ExamResults({
@@ -18,6 +19,7 @@ export default function ExamResults({
   timeSpentSec,
   sectionTitle,
   onRetake,
+  onRetakeFresh,
 }: ExamResultsProps) {
   const [selectedReviewIdx, setSelectedReviewIdx] = useState(0);
 
@@ -75,10 +77,14 @@ export default function ExamResults({
 
   function formatAnswerDisplay(ans: any): string {
     if (ans === undefined || ans === null || ans === "") return "(Unanswered)";
+    if (ans === "A") return "Quantity A is greater";
+    if (ans === "B") return "Quantity B is greater";
+    if (ans === "equal") return "The two quantities are equal";
+    if (ans === "cannot_determine") return "The relationship cannot be determined from the information given";
     if (Array.isArray(ans)) return ans.join(", ");
     if (typeof ans === "object") {
       return Object.entries(ans)
-        .map(([k, v]) => `Blank ${k}: ${v}`)
+        .map(([k, v]) => `Blank (${k}): ${v}`)
         .join(" | ");
     }
     return String(ans);
@@ -130,11 +136,19 @@ export default function ExamResults({
           &larr; Return to Dashboard
         </Link>
         <div className="flex gap-3">
+          {onRetakeFresh && (
+            <button
+              onClick={onRetakeFresh}
+              className="px-4 py-2 bg-[#1b3a5b] hover:bg-[#12273e] text-white text-sm font-bold rounded-lg shadow transition"
+            >
+              Retake with Fresh Questions &rarr;
+            </button>
+          )}
           <button
             onClick={onRetake}
             className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 text-sm font-bold rounded-lg transition"
           >
-            Retake Section
+            Retake Same Questions
           </button>
         </div>
       </div>

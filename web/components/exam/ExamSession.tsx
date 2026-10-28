@@ -41,14 +41,18 @@ export default function ExamSession({
   const [secondsRemaining, setSecondsRemaining] = useState(totalSeconds);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
 
+  // Question sampling
+  function sampleQuestions() {
+    const pool = BANK.filter((q) => q.section === section);
+    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, questionCount);
+  }
+
   // Initialize questions
   useEffect(() => {
-    const pool = BANK.filter((q) => q.section === section);
-
-    // Shuffle pool and select questionCount
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled.slice(0, questionCount));
-  }, [section, questionCount]);
+    setQuestions(sampleQuestions());
+    setSecondsRemaining(durationMinutes * 60);
+  }, [section, questionCount, durationMinutes]);
 
   // Countdown timer
   useEffect(() => {
@@ -120,16 +124,31 @@ export default function ExamSession({
     }
   }
 
+  function handleRetake(fresh = false) {
+    if (fresh) {
+      setQuestions(sampleQuestions());
+    }
+    setIsFinished(false);
+    setSecondsRemaining(totalSeconds);
+    setUserAnswers({});
+    setMarkedQuestions({});
+    setCurrentIndex(0);
+  }
+
   // Count unanswered questions
   const unansweredCount = questions.filter((q) => {
     const ans = userAnswers[q.id];
-    return (
-      ans === undefined ||
-      ans === null ||
-      ans === "" ||
-      (Array.isArray(ans) && ans.length === 0) ||
-      (typeof ans === "object" && Object.keys(ans).length === 0)
-    );
+    if (ans === undefined || ans === null || ans === "") return true;
+    if (q.qtype === "text_completion") {
+      if (!ans || typeof ans !== "object") return true;
+      const reqBlanks = Object.keys(q.choices);
+      return !reqBlanks.every((b) => !!ans[b]);
+    }
+    if (q.qtype === "sentence_equivalence") {
+      return !Array.isArray(ans) || ans.length !== 2;
+    }
+    if (Array.isArray(ans)) return ans.length === 0;
+    return false;
   }).length;
 
   if (isFinished) {
@@ -145,13 +164,8 @@ export default function ExamSession({
         userAnswers={userAnswers}
         timeSpentSec={timeSpent}
         sectionTitle={title}
-        onRetake={() => {
-          setIsFinished(false);
-          setSecondsRemaining(totalSeconds);
-          setUserAnswers({});
-          setMarkedQuestions({});
-          setCurrentIndex(0);
-        }}
+        onRetake={() => handleRetake(false)}
+        onRetakeFresh={() => handleRetake(true)}
       />
     );
   }
@@ -279,7 +293,7 @@ export default function ExamSession({
             </h3>
             {unansweredCount > 0 ? (
               <p className="text-sm text-amber-700 bg-amber-50 p-3 rounded-lg border border-amber-200">
-                ⚠️ You have <strong>{unansweredCount} unanswered</strong> question{unansweredCount > 1 ? "s" : ""}. Unanswered questions receive 0 points on the GRE.
+                ⚠️ You have <strong>{unansweredCount} incomplete or unanswered</strong> question{unansweredCount > 1 ? "s" : ""}. Unanswered questions receive 0 points on the GRE.
               </p>
             ) : (
               <p className="text-sm text-gray-600">

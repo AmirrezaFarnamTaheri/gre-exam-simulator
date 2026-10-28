@@ -27,8 +27,15 @@ export default function ReviewModal({
   function isAnswered(q: AnyQuestion) {
     const ans = userAnswers[q.id];
     if (ans === undefined || ans === null || ans === "") return false;
-    if (Array.isArray(ans) && ans.length === 0) return false;
-    if (typeof ans === "object" && Object.keys(ans).length === 0) return false;
+    if (q.qtype === "text_completion") {
+      if (typeof ans !== "object") return false;
+      const reqBlanks = Object.keys(q.choices);
+      return reqBlanks.every((b) => !!ans[b]);
+    }
+    if (q.qtype === "sentence_equivalence") {
+      return Array.isArray(ans) && ans.length === 2;
+    }
+    if (Array.isArray(ans)) return ans.length > 0;
     return true;
   }
 
@@ -105,12 +112,12 @@ export default function ReviewModal({
           </table>
         </div>
 
-        <div className="bg-gray-100 p-4 border-t flex justify-end gap-3">
+        <div className="p-3 bg-gray-100 border-t flex justify-end">
           <button
             onClick={onClose}
-            className="px-5 py-2 bg-[#1b3a5b] hover:bg-[#12273e] text-white text-sm font-bold rounded shadow transition"
+            className="px-5 py-1.5 bg-[#1b3a5b] hover:bg-[#12273e] text-white rounded text-sm font-bold shadow"
           >
-            Return to Current Question
+            Return to Test
           </button>
         </div>
       </div>
