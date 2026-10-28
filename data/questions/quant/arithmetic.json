@@ -68,5 +68,78 @@
     "quantity_b": "The remainder when 83 is divided by 9",
     "shared_info": null,
     "correct": "A"
+  },
+  {
+    "id": "q-ar-05",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "explanation": "Let original price be P. After 20% increase, price is 1.20P. After 20% decrease, price is 1.20P * 0.80 = 0.96P. This represents a 4% decrease from P.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "percentage_change"
+    ],
+    "prompt": "The price of an item was increased by 20%, and then the new price was decreased by 20%. The final price is what percent of the original price?",
+    "choices": [
+      "96%",
+      "98%",
+      "100%",
+      "102%",
+      "104%"
+    ],
+    "correct": [
+      "96%"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-06",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "explanation": "Powers of 7 mod 5: 7^1 = 7 ≡ 2, 7^2 = 49 ≡ 4, 7^3 = 343 ≡ 3, 7^4 = 2401 ≡ 1. The cycle of remainders is 2, 4, 3, 1 with period 4. 45 = 4*11 + 1, so 7^45 has the same remainder as 7^1, which is 2. Quantity A is 2, Quantity B is 2. The quantities are equal.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "modulo_arithmetic"
+    ],
+    "quantity_a": "The remainder when 7^45 is divided by 5",
+    "quantity_b": "2",
+    "correct": "equal"
+  },
+  {
+    "id": "q-ar-07",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "explanation": "Rate of A = 1/6 jobs/hr. Rate of B = 1/9 jobs/hr. Together in 2 hours they do 2*(1/6 + 1/9) = 2*(5/18) = 10/18 = 5/9 of the job. Remaining work = 4/9. Machine B alone takes (4/9) / (1/9) = 4 hours. Starting at 11:00 AM + 4 hours gives 3:00 PM.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "work_rate"
+    ],
+    "prompt": "Machine A finishes a batch in 6 hours, while Machine B finishes the same batch in 9 hours. Both start at 9:00 AM. At 11:00 AM, Machine A stops, and Machine B finishes alone. How many hours did Machine B work alone?",
+    "correct": "4"
+  },
+  {
+    "id": "q-ar-08",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "explanation": "n is divisible by both 6 and 9, so n is a multiple of lcm(6, 9) = 18. The multiples of 18 are 18, 36, 54, ... all of which are divisible by 18, but not necessarily by 54 (e.g. 18 or 36 is not). Quantity A is the remainder when n is divided by 18, which is 0. Quantity B is 0. They are equal.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "lcm_divisibility"
+    ],
+    "quantity_a": "The remainder when n is divided by 18",
+    "quantity_b": "0",
+    "shared_info": "n is a positive integer divisible by both 6 and 9.",
+    "correct": "equal"
   }
 ]

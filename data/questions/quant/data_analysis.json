@@ -76,5 +76,87 @@
       "81"
     ],
     "select_all": false
+  },
+  {
+    "id": "q-da-05",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "explanation": "Number of ways to choose 3 people from 8 is C(8, 3) = (8*7*6)/(3*2*1) = 56. Committees with NO women (only men) = C(5, 3) = (5*4*3)/(3*2*1) = 10. Committees with at least one woman = 56 - 10 = 46.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "combinations"
+    ],
+    "prompt": "A committee of 3 people is to be selected from a group of 5 men and 3 women. How many different committees can be formed that include at least one woman?",
+    "choices": [
+      "30",
+      "36",
+      "40",
+      "46",
+      "56"
+    ],
+    "correct": [
+      "46"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-06",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "explanation": "Set S original: mean = (10+20+30+40+50)/5 = 30. If 100 is added, new mean is (150+100)/6 = 250/6 ≈ 41.67. Median of original set is 30. Median of new set {10, 20, 30, 40, 50, 100} is (30+40)/2 = 35. The mean increased by ~11.67, while the median increased by only 5. Thus Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "mean_vs_median"
+    ],
+    "quantity_a": "The increase in the mean of Set S",
+    "quantity_b": "The increase in the median of Set S",
+    "shared_info": "Set S initially contains the integers {10, 20, 30, 40, 50}. The number 100 is then added to Set S.",
+    "correct": "A"
+  },
+  {
+    "id": "q-da-07",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "probability",
+    "difficulty": 4,
+    "explanation": "Probability of NO heads in 4 flips is (1/2)^4 = 1/16. Probability of at least one head = 1 - 1/16 = 15/16.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "complementary_probability"
+    ],
+    "prompt": "A fair coin is tossed 4 times. What is the probability that at least one head turns up?",
+    "choices": [
+      "1/16",
+      "7/16",
+      "1/2",
+      "15/16",
+      "1"
+    ],
+    "correct": [
+      "15/16"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-08",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "explanation": "Total students = 100. French only + Spanish only + Both = French + Spanish - Both = 60 + 45 - 20 = 85. Students studying neither = 100 - 85 = 15.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "venn_diagram"
+    ],
+    "prompt": "In a class of 100 students, 60 study French, 45 study Spanish, and 20 study both languages. How many students study neither language?",
+    "correct": "15"
   }
 ]

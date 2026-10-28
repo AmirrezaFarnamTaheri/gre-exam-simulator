@@ -66,5 +66,120 @@
     ],
     "prompt": "If 4(x + 3) = 2(x + 9), what is the value of x?",
     "correct": "3"
+  },
+  {
+    "id": "q-al-05",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "functions",
+    "difficulty": 3,
+    "explanation": "g(-2) = (-2)^2 + 1 = 4 + 1 = 5. Then f(g(-2)) = f(5) = 2(5) - 3 = 10 - 3 = 7.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "composite_function"
+    ],
+    "prompt": "Let f(x) = 2x - 3 and g(x) = x^2 + 1. What is the value of f(g(-2))?",
+    "choices": [
+      "3",
+      "5",
+      "7",
+      "9",
+      "11"
+    ],
+    "correct": [
+      "7"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-al-06",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "functions",
+    "difficulty": 4,
+    "explanation": "f(a) = a^2 - 4a + 7 = (a - 2)^2 + 3. Since (a - 2)^2 >= 0 for all real a, the minimum value of f(a) is 3, achieved when a = 2. For any other real number, f(a) > 3. Therefore, f(a) >= 3 for all real a. Thus Quantity A is greater than or equal to Quantity B, but can equal 3. Thus cannot determine whether A > B or A = B.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "parabola_vertex"
+    ],
+    "quantity_a": "f(a)",
+    "quantity_b": "3",
+    "shared_info": "The function f is defined by f(x) = x^2 - 4x + 7 for all real numbers x, and a is a real number.",
+    "correct": "cannot_determine"
+  },
+  {
+    "id": "q-al-07",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "functions",
+    "difficulty": 3,
+    "explanation": "3 * 5 = (3*5)/(3 + 5) = 15/8. (15/8) * 2 = ((15/8)*2)/((15/8) + 2) = (15/4)/(31/8) = (15/4)*(8/31) = 30/31.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "custom_operation"
+    ],
+    "prompt": "For all positive numbers a and b, let a * b = (ab)/(a + b). If 4 * k = 2, what is the value of k?",
+    "correct": "4"
+  },
+  {
+    "id": "q-al-08",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "exponents_and_roots",
+    "difficulty": 4,
+    "explanation": "2^20 - 2^18 = 2^18 * (2^2 - 1) = 2^18 * 3. So (2^20 - 2^18)/3 = 2^18. Quantity A is 2^18 and Quantity B is 2^18, so they are equal.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "factoring_exponents"
+    ],
+    "quantity_a": "(2^20 - 2^18) / 3",
+    "quantity_b": "2^18",
+    "correct": "equal"
+  },
+  {
+    "id": "q-al-09",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "explanation": "|2x - 5| <= 7 means -7 <= 2x - 5 <= 7. Adding 5 gives -2 <= 2x <= 12. Dividing by 2 gives -1 <= x <= 6. The integer solutions are -1, 0, 1, 2, 3, 4, 5, 6, which is 8 integers.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "absolute_value"
+    ],
+    "prompt": "How many integers satisfy the inequality |2x - 5| ≤ 7?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "correct": [
+      "8"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-al-10",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "quadratic_equations",
+    "difficulty": 4,
+    "explanation": "x^2 - 5x + 6 = 0 factors to (x - 2)(x - 3) = 0, so x = 2 or x = 3. y^2 - 7y + 12 = 0 factors to (y - 3)(y - 4) = 0, so y = 3 or y = 4. If x = 3 and y = 3, x = y. If x = 2 and y = 4, x < y. Therefore the relationship cannot be determined.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "quadratic_roots"
+    ],
+    "quantity_a": "x",
+    "quantity_b": "y",
+    "shared_info": "x^2 - 5x + 6 = 0 and y^2 - 7y + 12 = 0.",
+    "correct": "cannot_determine"
   }
 ]
