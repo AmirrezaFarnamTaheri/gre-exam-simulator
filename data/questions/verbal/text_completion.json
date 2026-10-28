@@ -245,7 +245,7 @@
     "qtype": "text_completion",
     "topic": "text_completion_triple_blank",
     "difficulty": 5,
-    "explanation": "Blank (i) 'mercurial' or 'capricious' fits unpredictable mood. Blank (ii) 'placate' or 'mollify' matches soothing anger. Blank (iii) 'equanimity' describes regained calm composure.",
+    "explanation": "Blank (i) 'capricious' fits unpredictable mood. Blank (ii) 'mollify' matches soothing anger. Blank (iii) 'equanimity' describes regained calm composure.",
     "source": "seed",
     "tags": [
       "verified",
@@ -297,6 +297,570 @@
     },
     "correct": {
       "i": "esoteric"
+    }
+  },
+  {
+    "id": "v-tc-13",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 4,
+    "explanation": "Blank (i) 'anachronistic' reflects being out of its historical time, while blank (ii) 'fidelity' denotes strict accuracy to historical records.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "Historians faulted the period drama for including (i)______ dialogue that reflected contemporary twentieth-century slang, thereby undermining the director's professed commitment to historical (ii)______.",
+    "choices": {
+      "i": [
+        "anachronistic",
+        "timeless",
+        "incisive"
+      ],
+      "ii": [
+        "fidelity",
+        "novelty",
+        "license"
+      ]
+    },
+    "correct": {
+      "i": "anachronistic",
+      "ii": "fidelity"
+    }
+  },
+  {
+    "id": "v-tc-14",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 4,
+    "explanation": "'Fastidious' describes someone extremely attentive to and demanding about accuracy and details.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "The curator was so (i)______ regarding the restoration of antique tapestries that she spent months inspecting individual silk fibers under a microscope.",
+    "choices": {
+      "i": [
+        "fastidious",
+        "cursory",
+        "negligent"
+      ]
+    },
+    "correct": {
+      "i": "fastidious"
+    }
+  },
+  {
+    "id": "v-tc-15",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 3,
+    "explanation": "'Perfunctory' means carried out with a minimum of effort, reflection, or genuine interest, as when a bored inspector barely glares at paperwork.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "Rather than conducting a rigorous audit, the building inspector offered only a (i)______ glance at the architectural blueprints before stamping his approval.",
+    "choices": {
+      "i": [
+        "perfunctory",
+        "meticulous",
+        "trenchant"
+      ]
+    },
+    "correct": {
+      "i": "perfunctory"
+    }
+  },
+  {
+    "id": "v-tc-16",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 4,
+    "explanation": "Blank (i) 'pellucid' means crystal clear and easy to understand. Blank (ii) 'convoluted' describes complex, intricate arguments that obscure meaning.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "While the legal analyst's early writings were celebrated for their (i)______ clarity, his subsequent judicial opinions became so dense and (ii)______ that even seasoned appellate judges struggled to follow his reasoning.",
+    "choices": {
+      "i": [
+        "pellucid",
+        "arcane",
+        "turgid"
+      ],
+      "ii": [
+        "convoluted",
+        "perspicuous",
+        "succinct"
+      ]
+    },
+    "correct": {
+      "i": "pellucid",
+      "ii": "convoluted"
+    }
+  },
+  {
+    "id": "v-tc-17",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 4,
+    "explanation": "An 'iconoclast' is someone who attacks established beliefs, revered institutions, or conventional orthodoxies.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "By relentlessly challenging the entrenched orthodoxies of twentieth-century economics, the young theorist established a reputation as a fearless (i)______.",
+    "choices": {
+      "i": [
+        "iconoclast",
+        "sycophant",
+        "benefactor"
+      ]
+    },
+    "correct": {
+      "i": "iconoclast"
+    }
+  },
+  {
+    "id": "v-tc-18",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 4,
+    "explanation": "Blank (i) 'profligate' means recklessly extravagant or wasteful in the use of resources. Blank (ii) 'insolvency' means bankruptcy or inability to pay debts.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "The monarch's (i)______ spending on lavish palaces and extravagant banquets exhausted the national treasury, ultimately precipitating the state's financial (ii)______.",
+    "choices": {
+      "i": [
+        "profligate",
+        "frugal",
+        "prudent"
+      ],
+      "ii": [
+        "insolvency",
+        "solvency",
+        "opulence"
+      ]
+    },
+    "correct": {
+      "i": "profligate",
+      "ii": "insolvency"
+    }
+  },
+  {
+    "id": "v-tc-19",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_triple_blank",
+    "difficulty": 5,
+    "explanation": "Blank (i) 'polemical' means aggressive or hostile in verbal attack. Blank (ii) 'belied' means contradicted or gave a false impression of. Blank (iii) 'conciliatory' matches an earnest peacemaking desire.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "triple_blank"
+    ],
+    "passage": "The editor's sharply (i)______ editorial against the mayor was surprising, for its acrimonious tone directly (ii)______ his private assurances that he intended to foster a (iii)______ relationship between the press and the municipal council.",
+    "choices": {
+      "i": [
+        "polemical",
+        "laudatory",
+        "soporific"
+      ],
+      "ii": [
+        "belied",
+        "reinforced",
+        "presaged"
+      ],
+      "iii": [
+        "conciliatory",
+        "bellicose",
+        "superficial"
+      ]
+    },
+    "correct": {
+      "i": "polemical",
+      "ii": "belied",
+      "iii": "conciliatory"
+    }
+  },
+  {
+    "id": "v-tc-20",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 3,
+    "explanation": "'Gregarious' describes a person fond of company, sociable, and thriving in groups.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "Unlike his reclusive brother, Julian was remarkably (i)______, spending nearly every evening entertaining guests and organizing lively social gatherings.",
+    "choices": {
+      "i": [
+        "gregarious",
+        "solitary",
+        "diffident"
+      ]
+    },
+    "correct": {
+      "i": "gregarious"
+    }
+  },
+  {
+    "id": "v-tc-21",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 3,
+    "explanation": "Blank (i) 'mitigate' means to make less severe or serious. Blank (ii) 'exacerbated' means worsened, which fits the contrast introduced by 'instead'.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "The emergency subsidy was designed to (i)______ the acute hardship felt by local farmers, yet bureaucratic delays in fund disbursement instead (ii)______ their financial distress.",
+    "choices": {
+      "i": [
+        "mitigate",
+        "compound",
+        "disregard"
+      ],
+      "ii": [
+        "exacerbated",
+        "alleviated",
+        "forestalled"
+      ]
+    },
+    "correct": {
+      "i": "mitigate",
+      "ii": "exacerbated"
+    }
+  },
+  {
+    "id": "v-tc-22",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 5,
+    "explanation": "'Enervating' means causing one to feel completely drained of energy or vitality.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "The oppressive tropical humidity had an undeniably (i)______ effect on the research team, leaving them utterly drained of energy before noon.",
+    "choices": {
+      "i": [
+        "enervating",
+        "invigorating",
+        "salutary"
+      ]
+    },
+    "correct": {
+      "i": "enervating"
+    }
+  },
+  {
+    "id": "v-tc-23",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 4,
+    "explanation": "Blank (i) 'equivocal' means ambiguous or deliberately noncommittal. Blank (ii) 'lucidity' denotes clearness of expression.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "The spokesperson's statement was notoriously (i)______, leaving reporters frustrated by its evasive phrasing when they had anticipated an address of absolute (ii)______.",
+    "choices": {
+      "i": [
+        "equivocal",
+        "categorical",
+        "lucid"
+      ],
+      "ii": [
+        "lucidity",
+        "duplicity",
+        "hesitation"
+      ]
+    },
+    "correct": {
+      "i": "equivocal",
+      "ii": "lucidity"
+    }
+  },
+  {
+    "id": "v-tc-24",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_triple_blank",
+    "difficulty": 5,
+    "explanation": "Blank (i) 'dogmatic' describes someone rigidly adhering to unproven doctrine. Blank (ii) 'intransigence' means refusal to compromise. Blank (iii) 'parochial' means narrow or provincial in outlook.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "triple_blank"
+    ],
+    "passage": "The party leader's increasingly (i)______ insistence on theoretical purity alienated moderate allies, whose complaints regarding his unyielding (ii)______ were dismissed as the products of a (iii)______ and unprincipled worldview.",
+    "choices": {
+      "i": [
+        "dogmatic",
+        "flexible",
+        "pragmatic"
+      ],
+      "ii": [
+        "intransigence",
+        "magnanimity",
+        "deference"
+      ],
+      "iii": [
+        "parochial",
+        "cosmopolitan",
+        "comprehensive"
+      ]
+    },
+    "correct": {
+      "i": "dogmatic",
+      "ii": "intransigence",
+      "iii": "parochial"
+    }
+  },
+  {
+    "id": "v-tc-25",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 4,
+    "explanation": "'Reticent' means not revealing one's thoughts or feelings readily; reserved or uncommunicative.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "Despite repeated inquiries from investigative journalists, the reclusive author remained stubbornly (i)______ regarding the biographical origins of her protagonist.",
+    "choices": {
+      "i": [
+        "reticent",
+        "forthcoming",
+        "effusive"
+      ]
+    },
+    "correct": {
+      "i": "reticent"
+    }
+  },
+  {
+    "id": "v-tc-26",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 4,
+    "explanation": "Blank (i) 'alacrity' means brisk and cheerful readiness. Blank (ii) 'indifference' contrasts with eager, motivated performance.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "The volunteers responded with remarkable (i)______, mobilizing aid convoys within hours of the earthquake, in stark contrast to the municipal agency's bureaucratic (ii)______.",
+    "choices": {
+      "i": [
+        "alacrity",
+        "reluctance",
+        "trepidation"
+      ],
+      "ii": [
+        "indifference",
+        "vigor",
+        "celerity"
+      ]
+    },
+    "correct": {
+      "i": "alacrity",
+      "ii": "indifference"
+    }
+  },
+  {
+    "id": "v-tc-27",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 3,
+    "explanation": "'Amalgamate' means to combine or unite diverse organizations or elements into a unified whole.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "In order to survive heightened global competition, the three regional logistics firms decided to (i)______ their shipping networks into a unified corporate entity.",
+    "choices": {
+      "i": [
+        "amalgamate",
+        "disband",
+        "attenuate"
+      ]
+    },
+    "correct": {
+      "i": "amalgamate"
+    }
+  },
+  {
+    "id": "v-tc-28",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 5,
+    "explanation": "Blank (i) 'specious' means superficially plausible but actually wrong or deceptive. Blank (ii) 'veracity' means truthfulness and accuracy.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "Although the defense attorney's opening argument sounded persuasive at first blush, prosecutors soon dismantled it as thoroughly (i)______, casting profound doubt on the witness's (ii)______.",
+    "choices": {
+      "i": [
+        "specious",
+        "impeccable",
+        "unimpeachable"
+      ],
+      "ii": [
+        "veracity",
+        "fallibility",
+        "treachery"
+      ]
+    },
+    "correct": {
+      "i": "specious",
+      "ii": "veracity"
+    }
+  },
+  {
+    "id": "v-tc-29",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_triple_blank",
+    "difficulty": 5,
+    "explanation": "Blank (i) 'ubiquitous' means present everywhere. Blank (ii) 'disparate' means fundamentally different or distinct. Blank (iii) 'homogenize' means to make uniform or similar across regions.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "triple_blank"
+    ],
+    "passage": "As global retail franchises became increasingly (i)______ across major capitals, cultural preservationists worried that unique regional architectures, once sharply (ii)______, would gradually be (iii)______ into a monotonous urban monoculture.",
+    "choices": {
+      "i": [
+        "ubiquitous",
+        "scarce",
+        "anomalous"
+      ],
+      "ii": [
+        "disparate",
+        "interchangeable",
+        "monolithic"
+      ],
+      "iii": [
+        "homogenized",
+        "diversified",
+        "subverted"
+      ]
+    },
+    "correct": {
+      "i": "ubiquitous",
+      "ii": "disparate",
+      "iii": "homogenized"
+    }
+  },
+  {
+    "id": "v-tc-30",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 4,
+    "explanation": "'Castigate' means to reprimand, scold, or criticize someone severely.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "The oversight committee did not hesitate to (i)______ the senior executive for his flagrant disregard of safety protocols during the plant expansion.",
+    "choices": {
+      "i": [
+        "castigate",
+        "laud",
+        "exonerate"
+      ]
+    },
+    "correct": {
+      "i": "castigate"
+    }
+  },
+  {
+    "id": "v-tc-31",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_double_blank",
+    "difficulty": 4,
+    "explanation": "Blank (i) 'taciturn' means reserved or saying very little. Blank (ii) 'garrulous' means excessively talkative, especially on trivial matters.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "During committee hearings, the senator was uncharacteristically (i)______, keeping his thoughts to himself, yet when attending private political rallies, he became an outspoken and (ii)______ orator.",
+    "choices": {
+      "i": [
+        "taciturn",
+        "loquacious",
+        "voluble"
+      ],
+      "ii": [
+        "garrulous",
+        "reticent",
+        "diffident"
+      ]
+    },
+    "correct": {
+      "i": "taciturn",
+      "ii": "garrulous"
+    }
+  },
+  {
+    "id": "v-tc-32",
+    "section": "verbal",
+    "qtype": "text_completion",
+    "topic": "text_completion_single_blank",
+    "difficulty": 5,
+    "explanation": "'Obsequious' means obedient or attentive to an excessive or servile degree; fawning or sycophantic.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "gre_vocab"
+    ],
+    "passage": "Despising the (i)______ flattery of palace courtiers who affirmed his every whim, the emperor sought the counsel of straightforward advisors who dared to offer candid criticism.",
+    "choices": {
+      "i": [
+        "obsequious",
+        "trenchant",
+        "insolent"
+      ]
+    },
+    "correct": {
+      "i": "obsequious"
     }
   }
 ]

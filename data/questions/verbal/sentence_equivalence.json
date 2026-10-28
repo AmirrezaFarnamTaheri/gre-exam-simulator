@@ -286,5 +286,629 @@
       "spurious",
       "specious"
     ]
+  },
+  {
+    "id": "v-se-13",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Pellucid' and 'limpid' both mean completely clear and easy to understand.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Far from being opaque, the mathematician's explanatory monograph was remarkably ______, allowing even novices to grasp the fundamental proof.",
+    "choices": [
+      "pellucid",
+      "convoluted",
+      "limpid",
+      "turbid",
+      "esoteric",
+      "recondite"
+    ],
+    "correct": [
+      "pellucid",
+      "limpid"
+    ]
+  },
+  {
+    "id": "v-se-14",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Intractable' and 'recalcitrant' both mean stubborn, obstinate, or unmanageable.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Despite prolonged mediation by senior faculty, the departmental dispute proved ______, with neither party willing to compromise on curriculum reform.",
+    "choices": [
+      "intractable",
+      "malleable",
+      "recalcitrant",
+      "tractable",
+      "pliable",
+      "amenable"
+    ],
+    "correct": [
+      "intractable",
+      "recalcitrant"
+    ]
+  },
+  {
+    "id": "v-se-15",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Castigate' and 'chastise' both mean to rebuke or reprimand severely.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Editorial boards across the nation did not hesitate to ______ the mayor for allocating municipal disaster funds to administrative bonuses.",
+    "choices": [
+      "castigate",
+      "laud",
+      "chastise",
+      "extol",
+      "exonerate",
+      "vindicate"
+    ],
+    "correct": [
+      "castigate",
+      "chastise"
+    ]
+  },
+  {
+    "id": "v-se-16",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Profligate' and 'prodigal' both mean recklessly extravagant or wasteful with resources.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Because of the heir's ______ spending habits on luxury yachts and private airfare, the family fortune was depleted within two decades.",
+    "choices": [
+      "parsimonious",
+      "profligate",
+      "frugal",
+      "prodigal",
+      "austere",
+      "thrifty"
+    ],
+    "correct": [
+      "profligate",
+      "prodigal"
+    ]
+  },
+  {
+    "id": "v-se-17",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Insipid' and 'vapid' both describe something lacking flavor, vigor, or interest.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Reviewers dismissed the summer blockbuster as ______ entertainment, arguing that its predictable plot and flat dialogue offered nothing memorable.",
+    "choices": [
+      "riveting",
+      "insipid",
+      "vapid",
+      "scintillating",
+      "poignant",
+      "provocative"
+    ],
+    "correct": [
+      "insipid",
+      "vapid"
+    ]
+  },
+  {
+    "id": "v-se-18",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Enervate' and 'debilitate' both mean to cause someone to feel drained of energy or vitality.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The relentless tropical humidity threatened to ______ the expedition team, forcing them to rest during the hottest midday hours.",
+    "choices": [
+      "invigorate",
+      "enervate",
+      "galvanize",
+      "debilitate",
+      "rejuvenate",
+      "animate"
+    ],
+    "correct": [
+      "enervate",
+      "debilitate"
+    ]
+  },
+  {
+    "id": "v-se-19",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Parsimonious' and 'miserly' both mean stingy, extremely unwilling to spend money.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Although the founder was a billionaire, his ______ lifestyle was legendary; he refused to purchase a new automobile for thirty years.",
+    "choices": [
+      "parsimonious",
+      "magnanimous",
+      "miserly",
+      "munificent",
+      "altruistic",
+      "opulent"
+    ],
+    "correct": [
+      "parsimonious",
+      "miserly"
+    ]
+  },
+  {
+    "id": "v-se-20",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Equivocal' and 'ambiguous' both mean open to multiple interpretations, deliberately unclear.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "When questioned about his future political ambitions, the governor gave an intentionally ______ response that neither confirmed nor ruled out a presidential bid.",
+    "choices": [
+      "unequivocal",
+      "equivocal",
+      "ambiguous",
+      "lucid",
+      "emphatic",
+      "categorical"
+    ],
+    "correct": [
+      "equivocal",
+      "ambiguous"
+    ]
+  },
+  {
+    "id": "v-se-21",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Anomaly' and 'aberration' both describe an unexpected departure from what is normal or established.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The sudden drop in annual precipitation was regarded as an ______, given that rainfall in the river basin had remained remarkably consistent for centuries.",
+    "choices": [
+      "anomaly",
+      "aberration",
+      "exemplar",
+      "paradigm",
+      "harbinger",
+      "epitome"
+    ],
+    "correct": [
+      "anomaly",
+      "aberration"
+    ]
+  },
+  {
+    "id": "v-se-22",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Belie' and 'mask' both describe concealing or giving a false, deceptive impression of underlying feelings.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Her cheerful demeanor during the press conference seemed to ______ the profound sorrow she felt following the dissolution of her company.",
+    "choices": [
+      "belie",
+      "reveal",
+      "mask",
+      "substantiate",
+      "corroborate",
+      "portend"
+    ],
+    "correct": [
+      "belie",
+      "mask"
+    ]
+  },
+  {
+    "id": "v-se-23",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Capricious' and 'mercurial' both refer to sudden, unpredictable shifts in mood, temper, or policy.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Investors grew weary of the startup founder's ______ management style, which frequently led to abrupt shifts in strategic direction without warning.",
+    "choices": [
+      "capricious",
+      "mercurial",
+      "steadfast",
+      "placid",
+      "unwavering",
+      "methodical"
+    ],
+    "correct": [
+      "capricious",
+      "mercurial"
+    ]
+  },
+  {
+    "id": "v-se-24",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Esoteric' and 'arcane' both describe obscure knowledge understood by only an initiated inner circle.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The manuscript was composed in an ______ dialect of medieval Latin that only a handful of paleographers worldwide could decipher.",
+    "choices": [
+      "esoteric",
+      "arcane",
+      "pellucid",
+      "accessible",
+      "pedestrian",
+      "elementary"
+    ],
+    "correct": [
+      "esoteric",
+      "arcane"
+    ]
+  },
+  {
+    "id": "v-se-25",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Loquacious' and 'garrulous' both characterize someone who is excessively talkative.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Known among his peers as exceptionally ______, the talkative traveler could transform a brief train commute into a four-hour monologue.",
+    "choices": [
+      "loquacious",
+      "garrulous",
+      "reticent",
+      "taciturn",
+      "laconic",
+      "diffident"
+    ],
+    "correct": [
+      "loquacious",
+      "garrulous"
+    ]
+  },
+  {
+    "id": "v-se-26",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Ephemeral' and 'transient' both refer to phenomena that last for only a fleeting, brief period.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Ecologists observed that the desert bloom was remarkably ______; the vibrant carpet of wildflowers withered within four days of the flash flood.",
+    "choices": [
+      "ephemeral",
+      "transient",
+      "perennial",
+      "indestructible",
+      "everlasting",
+      "durable"
+    ],
+    "correct": [
+      "ephemeral",
+      "transient"
+    ]
+  },
+  {
+    "id": "v-se-27",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Disparate' and 'divergent' both describe views or elements that are sharply different or conflicting in character.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Although the two sociologists examined the same urban neighborhood, they arrived at strikingly ______ conclusions regarding its economic mobility.",
+    "choices": [
+      "disparate",
+      "divergent",
+      "identical",
+      "congruent",
+      "uniform",
+      "harmonious"
+    ],
+    "correct": [
+      "disparate",
+      "divergent"
+    ]
+  },
+  {
+    "id": "v-se-28",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Prosaic' and 'pedestrian' both mean dull, uninspired, or lacking artistic beauty.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Despite the lavish budget, the film's dialogue remained disappointingly ______, failing to evoke the lyrical grandeur of the original epic poem.",
+    "choices": [
+      "prosaic",
+      "pedestrian",
+      "sublime",
+      "scintillating",
+      "transcendent",
+      "provocative"
+    ],
+    "correct": [
+      "prosaic",
+      "pedestrian"
+    ]
+  },
+  {
+    "id": "v-se-29",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 5,
+    "explanation": "'Obdurate' and 'intransigent' both describe an unyielding, stubbornly unbending refusal to alter one's course.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Faced with overwhelming evidence of municipal corruption, the mayor remained ______, refusing to resign or even acknowledge wrongdoing.",
+    "choices": [
+      "obdurate",
+      "intransigent",
+      "amenable",
+      "pliable",
+      "tractable",
+      "vacillating"
+    ],
+    "correct": [
+      "obdurate",
+      "intransigent"
+    ]
+  },
+  {
+    "id": "v-se-30",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 5,
+    "explanation": "'Sycophantic' and 'obsequious' both describe behaving with servile, fawning flattery.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The despotic CEO surrounded himself with ______ aides who enthusiastically echoed his every proclamation, regardless of its wisdom.",
+    "choices": [
+      "sycophantic",
+      "obsequious",
+      "insolent",
+      "defiant",
+      "fractious",
+      "querulous"
+    ],
+    "correct": [
+      "sycophantic",
+      "obsequious"
+    ]
+  },
+  {
+    "id": "v-se-31",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 5,
+    "explanation": "'Prevaricate' and 'equivocate' both mean to speak in an evasive manner to avoid admitting the truth.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Under cross-examination, the defendant began to ______, offering contradictory timelines to evade direct responsibility.",
+    "choices": [
+      "prevaricate",
+      "equivocate",
+      "confess",
+      "corroborate",
+      "explicate",
+      "elucidate"
+    ],
+    "correct": [
+      "prevaricate",
+      "equivocate"
+    ]
+  },
+  {
+    "id": "v-se-32",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Alacrity' and 'celerity' both denote brisk, prompt, and eager speed.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The elite cybersecurity unit responded to the server breach with impressive ______, neutralizing the threat in under ten minutes.",
+    "choices": [
+      "alacrity",
+      "celerity",
+      "torpor",
+      "indolence",
+      "hesitancy",
+      "lassitude"
+    ],
+    "correct": [
+      "alacrity",
+      "celerity"
+    ]
+  },
+  {
+    "id": "v-se-33",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Laconic' and 'terse' both denote concise brevity in speech or expression.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The general's reply to the enemy's surrender ultimatum was characteristically ______: a single word scribbled on the parchment.",
+    "choices": [
+      "laconic",
+      "terse",
+      "diffuse",
+      "prolix",
+      "voluble",
+      "circuitous"
+    ],
+    "correct": [
+      "laconic",
+      "terse"
+    ]
+  },
+  {
+    "id": "v-se-34",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Ameliorate' and 'improve' both mean to make an unsatisfactory condition better.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The microfinance initiative succeeded in its primary objective to ______ the living conditions of impoverished rural artisans.",
+    "choices": [
+      "ameliorate",
+      "improve",
+      "worsen",
+      "vitiate",
+      "compound",
+      "stifle"
+    ],
+    "correct": [
+      "ameliorate",
+      "improve"
+    ]
+  },
+  {
+    "id": "v-se-35",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 4,
+    "explanation": "'Trenchant' and 'incisive' both mean penetrating, sharp, and vigorously clear in expression.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "The political analyst offered a ______ critique of the proposed legislation, cutting straight to its constitutional vulnerabilities.",
+    "choices": [
+      "trenchant",
+      "incisive",
+      "obtuse",
+      "vague",
+      "pedestrian",
+      "banal"
+    ],
+    "correct": [
+      "trenchant",
+      "incisive"
+    ]
+  },
+  {
+    "id": "v-se-36",
+    "section": "verbal",
+    "qtype": "sentence_equivalence",
+    "topic": "sentence_equivalence",
+    "difficulty": 3,
+    "explanation": "'Venerate' and 'revere' both mean to regard someone or something with profound respect and admiration.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "synonym_pair"
+    ],
+    "sentence": "Citizens throughout the nation continue to ______ the founding diplomat, celebrating her integrity and tireless statecraft.",
+    "choices": [
+      "venerate",
+      "revere",
+      "deride",
+      "disparage",
+      "execrate",
+      "censure"
+    ],
+    "correct": [
+      "venerate",
+      "revere"
+    ]
   }
 ]

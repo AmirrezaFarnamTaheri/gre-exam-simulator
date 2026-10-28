@@ -158,5 +158,358 @@
     ],
     "prompt": "In a class of 100 students, 60 study French, 45 study Spanish, and 20 study both languages. How many students study neither language?",
     "correct": "15"
+  },
+  {
+    "id": "q-da-09",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "explanation": "List Y is formed by adding the constant 100 to each element of List X. Adding a constant shifts the mean but has zero effect on spread or dispersion, so the standard deviation of both lists is identical. Both quantities are equal.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "standard_deviation"
+    ],
+    "quantity_a": "The standard deviation of List X",
+    "quantity_b": "The standard deviation of List Y",
+    "shared_info": "List X: 12, 14, 16, 18, 20. List Y: 112, 114, 116, 118, 120.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-da-10",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "counting_methods",
+    "difficulty": 3,
+    "explanation": "Since order matters and repetition is not allowed, this is a permutation: P(7, 4) = 7 * 6 * 5 * 4 = 840 different codes.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "permutations"
+    ],
+    "prompt": "How many different 4-digit codes can be formed using the digits 1, 2, 3, 4, 5, 6, 7 if no digit can be repeated in the code?",
+    "correct": "840"
+  },
+  {
+    "id": "q-da-11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "probability",
+    "difficulty": 4,
+    "explanation": "There are 36 possible outcomes when rolling two dice. Sum of 7 occurs in 6 ways: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1). Sum of 11 occurs in 2 ways: (5,6),(6,5). Total favorable outcomes = 6 + 2 = 8. Probability = 8/36 = 2/9.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "dice_probability"
+    ],
+    "prompt": "Two standard fair 6-sided dice are rolled simultaneously. What is the probability that the sum of the numbers rolled is 7 or 11?",
+    "choices": [
+      "1/6",
+      "2/9",
+      "1/4",
+      "5/18",
+      "1/3"
+    ],
+    "correct": [
+      "2/9"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-12",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "normal_distribution",
+    "difficulty": 4,
+    "explanation": "The range 67 to 73 inches corresponds to exactly μ - 1σ to μ + 1σ. In any normal distribution, approximately 68.27% of values fall within 1 standard deviation of the mean. Since 68.27% > 68.00%, Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "normal_distribution"
+    ],
+    "quantity_a": "The percentage of adult males in the population with heights between 67 inches and 73 inches",
+    "quantity_b": "68%",
+    "shared_info": "The heights of adult males in a certain population are normally distributed with a mean of 70 inches and a standard deviation of 3 inches.",
+    "correct": "A"
+  },
+  {
+    "id": "q-da-13",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "sets_and_venn_diagrams",
+    "difficulty": 4,
+    "explanation": "Executives with at least one degree = 80 + 50 - 25 = 105. Executives with neither degree = 120 - 105 = 15.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "sets"
+    ],
+    "prompt": "Of 120 executives, 80 have a business degree, 50 have an engineering degree, and 25 have both degrees. How many of the executives have neither degree?",
+    "correct": "15"
+  },
+  {
+    "id": "q-da-14",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "explanation": "Total sum required for an average of 88 on 4 exams = 4 * 88 = 352. Sum of first three exams = 82 + 86 + 91 = 259. Minimum score required on fourth exam = 352 - 259 = 93.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "mean"
+    ],
+    "prompt": "A student has scores of 82, 86, and 91 on the first three exams in a course. What minimum score must the student receive on the fourth exam to earn an overall average (arithmetic mean) of at least 88 for all four exams?",
+    "choices": [
+      "91",
+      "92",
+      "93",
+      "94",
+      "95"
+    ],
+    "correct": [
+      "93"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-15",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "explanation": "By combinatorial symmetry, C(n, k) = C(n, n - k). Here C(10, 2) = (10 * 9) / 2 = 45, and C(10, 8) = C(10, 2) = 45. Both quantities are equal.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "combinations"
+    ],
+    "quantity_a": "The number of ways to choose 2 items from 10 items",
+    "quantity_b": "The number of ways to choose 8 items from 10 items",
+    "correct": "equal"
+  },
+  {
+    "id": "q-da-16",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "probability",
+    "difficulty": 3,
+    "explanation": "Total marbles = 5 + 7 + 8 = 20. P(first green) = 5/20 = 1/4. P(second green | first green) = 4/19. Overall probability = (5/20) * (4/19) = 20 / 380 = 1/19.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "dependent_probability"
+    ],
+    "prompt": "A bag contains 5 green marbles, 7 yellow marbles, and 8 blue marbles. If two marbles are drawn one after another without replacement, what is the probability that both marbles are green? Express your answer as a simplified fraction a/b.",
+    "correct": "1/19"
+  },
+  {
+    "id": "q-da-17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 5,
+    "explanation": "The 10 data points are ordered: 3, 5, 7, 8, 9, 11, 14, 16, 18, 20. Lower half (first 5 points): 3, 5, 7, 8, 9; median Q1 = 7. Upper half (last 5 points): 11, 14, 16, 18, 20; median Q3 = 16. The interquartile range is IQR = Q3 - Q1 = 16 - 7 = 9.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "interquartile_range"
+    ],
+    "prompt": "The interquartile range (IQR) of a set of data is defined as the difference between the 75th percentile (Q3) and the 25th percentile (Q1). Consider the dataset: 3, 5, 7, 8, 9, 11, 14, 16, 18, 20. What is the interquartile range of this dataset?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "correct": [
+      "9"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "explanation": "Treat the 2 specific books as a single composite item. There are then 4 items to arrange in 4! = 24 ways. Within the composite item, the 2 books can be ordered in 2! = 2 ways. Total arrangements = 24 * 2 = 48.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "arrangements"
+    ],
+    "prompt": "In how many different orders can 5 books be arranged on a shelf if 2 specific books must always be placed next to each other?",
+    "choices": [
+      "24",
+      "36",
+      "48",
+      "72",
+      "120"
+    ],
+    "correct": [
+      "48"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-19",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "probability",
+    "difficulty": 4,
+    "explanation": "For independent events: P(A ∩ B) = P(A) * P(B) = 0.4 * 0.5 = 0.20. P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.4 + 0.5 - 0.20 = 0.70. Both Quantity A and Quantity B equal 0.7.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "independent_events"
+    ],
+    "quantity_a": "P(A or B)",
+    "quantity_b": "0.7",
+    "shared_info": "Events A and B are independent events. P(A) = 0.4 and P(B) = 0.5.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-da-20",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "explanation": "In an ordered set of 7 distinct positive integers, the median is the 4th value. Adding 5 shifts all values by +5, so the median increases by 5 (changes). Multiplying by 2 doubles the 4th value (changes). Changing the extreme values (largest or smallest) without crossing the median leaves the 4th value unchanged. Adding 1 to the median increases it by 1 (changes).",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "median_properties"
+    ],
+    "prompt": "Which of the following operations will always change the median of a dataset containing 7 distinct positive integers? Select all that apply.",
+    "choices": [
+      "Adding 5 to every number in the dataset",
+      "Multiplying every number in the dataset by 2",
+      "Increasing the largest number in the dataset by 10",
+      "Decreasing the smallest number in the dataset by 2",
+      "Adding 1 to the median number only"
+    ],
+    "correct": [
+      "Adding 5 to every number in the dataset",
+      "Multiplying every number in the dataset by 2",
+      "Adding 1 to the median number only"
+    ],
+    "select_all": true
+  },
+  {
+    "id": "q-da-21",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "normal_distribution",
+    "difficulty": 5,
+    "explanation": "Score 700 is (700 - 500) / 100 = +2 standard deviations above the mean. According to the empirical 68-95-99.7 rule, 95% of scores lie within 2 standard deviations (between 300 and 700). The remaining 5% is split equally between the two tails, so (100 - 95) / 2 = 2.5% of test-takers score above 700.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "empirical_rule"
+    ],
+    "prompt": "Scores on a standardized exam are normally distributed with a mean of 500 and a standard deviation of 100. Using the empirical 68-95-99.7 rule, what percent of test-takers score above 700?",
+    "correct": "2.5"
+  },
+  {
+    "id": "q-da-22",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "explanation": "By the fundamental principle of counting, the total number of distinct 3-course meals is 4 * 6 * 3 = 72.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "counting_principle"
+    ],
+    "prompt": "A restaurant menu offers 4 appetizers, 6 main courses, and 3 desserts. How many different 3-course meals consisting of one appetizer, one main course, and one dessert can be ordered?",
+    "choices": [
+      "36",
+      "48",
+      "60",
+      "72",
+      "96"
+    ],
+    "correct": [
+      "72"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-23",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "explanation": "The range of any set of 10 consecutive integers is always (largest - smallest) = (n + 9) - n = 9, regardless of where the sequence begins. Both Quantity A and Quantity B equal 9.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "range"
+    ],
+    "quantity_a": "The range of Set P",
+    "quantity_b": "The range of Set Q",
+    "shared_info": "Set P contains 10 consecutive positive integers. Set Q contains 10 consecutive positive integers with the smallest integer being twice the smallest integer of Set P.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-da-24",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "sets_and_venn_diagrams",
+    "difficulty": 3,
+    "explanation": "Owners of at least one pet = 60 - 10 = 50. Total = Dogs + Cats - Both => 50 = 40 + 25 - Both => Both = 65 - 50 = 15 respondents.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "venn_diagrams"
+    ],
+    "prompt": "In a survey of 60 pet owners, 40 own dogs, 25 own cats, and 10 own neither dogs nor cats. How many survey respondents own both a dog and a cat?",
+    "choices": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "correct": [
+      "15"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-da-25",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "probability",
+    "difficulty": 5,
+    "explanation": "P(exactly 2 heads in 3 flips) = C(3, 2) * (0.6)^2 * (0.4)^1 = 3 * 0.36 * 0.4 = 0.432. P(exactly 1 head in 3 flips) = C(3, 1) * (0.6)^1 * (0.4)^2 = 3 * 0.6 * 0.16 = 0.288. Since 0.432 > 0.288, Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "binomial_probability"
+    ],
+    "quantity_a": "The probability of getting exactly 2 heads in 3 flips",
+    "quantity_b": "The probability of getting exactly 1 head in 3 flips",
+    "shared_info": "A coin is biased such that the probability of landing heads is 0.6 and tails is 0.4.",
+    "correct": "A"
+  },
+  {
+    "id": "q-da-26",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "explanation": "Total sum of all 6 numbers = 6 * 25 = 150. Sum of first two numbers = 2 * 20 = 40. Sum of last three numbers = 3 * 26 = 78. Fourth number = 150 - (40 + 78) = 150 - 118 = 32.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "mean_reconstruction"
+    ],
+    "prompt": "The average (arithmetic mean) of six numbers is 25. If the average of the first two numbers is 20 and the average of the last three numbers is 26, what is the value of the fourth number?",
+    "correct": "32"
   }
 ]

@@ -234,5 +234,279 @@
     "quantity_b": "100",
     "shared_info": "Rectangle R has a perimeter of 40 and is not a square.",
     "correct": "B"
+  },
+  {
+    "id": "q-ge-13",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "triangles",
+    "difficulty": 3,
+    "explanation": "The sum of the angles is 2k + 3k + 5k = 10k = 180° => k = 18°. The largest angle is 5k = 5 * 18° = 90°.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "triangle_angles"
+    ],
+    "prompt": "In triangle ABC, the measures of the three interior angles are in the ratio 2:3:5. What is the measure, in degrees, of the largest angle?",
+    "choices": [
+      "60°",
+      "75°",
+      "90°",
+      "105°",
+      "120°"
+    ],
+    "correct": [
+      "90°"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ge-14",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "circles",
+    "difficulty": 4,
+    "explanation": "Area of the square = 64 => side length s = 8. A circle inscribed in this square has diameter d = 8, so radius r = 4. The area of the circle is π * r^2 = 16π ≈ 16 * 3.1416 = 50.27, which is strictly greater than 50. Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "inscribed_figures"
+    ],
+    "quantity_a": "The area of the circle",
+    "quantity_b": "50",
+    "shared_info": "A circle is inscribed inside a square of area 64.",
+    "correct": "A"
+  },
+  {
+    "id": "q-ge-15",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "coordinate_geometry",
+    "difficulty": 3,
+    "explanation": "Distance formula: d = sqrt((x2 - x1)^2 + (y2 - y1)^2) = sqrt((5 - (-3))^2 + (-4 - 2)^2) = sqrt(8^2 + (-6)^2) = sqrt(64 + 36) = sqrt(100) = 10.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "distance_formula"
+    ],
+    "prompt": "What is the distance between the points (-3, 2) and (5, -4) in the xy-plane?",
+    "correct": "10"
+  },
+  {
+    "id": "q-ge-16",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "explanation": "Let perimeter be 12. For the equilateral triangle: side = 4, area = (sqrt(3)/4) * 4^2 = 4*sqrt(3) ≈ 6.93. For the square: side = 3, area = 3^2 = 9. Since 6.93 < 9, Quantity B is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "isoperimetric"
+    ],
+    "quantity_a": "The area of the equilateral triangle",
+    "quantity_b": "The area of the square",
+    "shared_info": "An equilateral triangle and a square have equal perimeters.",
+    "correct": "B"
+  },
+  {
+    "id": "q-ge-17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "quadrilaterals_and_polygons",
+    "difficulty": 3,
+    "explanation": "Area of a trapezoid = ((b1 + b2) / 2) * h = ((8 + 14) / 2) * 6 = 11 * 6 = 66.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "trapezoid"
+    ],
+    "prompt": "A trapezoid has parallel bases of lengths 8 and 14, and an altitude of 6. What is the area of the trapezoid?",
+    "choices": [
+      "54",
+      "60",
+      "66",
+      "72",
+      "84"
+    ],
+    "correct": [
+      "66"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ge-18",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "3d_solids",
+    "difficulty": 4,
+    "explanation": "In a right cone, h = sqrt(slant_height^2 - radius^2) = sqrt(10^2 - 6^2) = 8. Volume = (1/3) * π * r^2 * h = (1/3) * π * 36 * 8 = 96π. The value of k is 96.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "cone_volume"
+    ],
+    "prompt": "The radius of the base of a right circular cone is 6 and its slant height is 10. If the volume of the cone is kπ, what is the value of k?",
+    "correct": "96"
+  },
+  {
+    "id": "q-ge-19",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "right_triangles_special",
+    "difficulty": 4,
+    "explanation": "In a 30-60-90 right triangle, the side opposite the 30° angle is half the hypotenuse: QR = PR / 2 = 12 / 2 = 6. Both Quantity A and Quantity B equal 6.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "special_triangles"
+    ],
+    "quantity_a": "The length of leg QR",
+    "quantity_b": "6",
+    "shared_info": "In right triangle PQR, angle Q is 90 degrees, angle P is 30 degrees, and hypotenuse PR has length 12.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-ge-20",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "coordinate_geometry",
+    "difficulty": 4,
+    "explanation": "Points on the x-axis have y = 0. Substituting y = 0: (x - 3)^2 + (0 + 4)^2 = 25 => (x - 3)^2 + 16 = 25 => (x - 3)^2 = 9 => x - 3 = ±3, so x = 0 or x = 6. There are exactly 2 points of intersection.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "circle_intersections"
+    ],
+    "prompt": "The circle defined by (x - 3)^2 + (y + 4)^2 = 25 intersects the x-axis at how many points?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "Infinite"
+    ],
+    "correct": [
+      "2"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ge-21",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "triangles",
+    "difficulty": 3,
+    "explanation": "By the triangle inequality, the third side x of any triangle with sides 5 and 5 must satisfy x < 5 + 5 = 10 and x > |5 - 5| = 0. Therefore, x is strictly less than 10. Quantity B is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "triangle_inequality"
+    ],
+    "quantity_a": "x",
+    "quantity_b": "10",
+    "shared_info": "Triangle ABC is an isosceles triangle with side lengths 5, 5, and x.",
+    "correct": "B"
+  },
+  {
+    "id": "q-ge-22",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "area_perimeter_volume",
+    "difficulty": 3,
+    "explanation": "New area = (1.20L) * (0.90W) = 1.08 * LW, which represents an 8% increase from the original area LW.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "percent_change_area"
+    ],
+    "prompt": "If the length of a rectangle is increased by 20% and its width is decreased by 10%, by what percent does the area of the rectangle change?",
+    "choices": [
+      "Increases by 8%",
+      "Increases by 10%",
+      "Increases by 12%",
+      "Decreases by 2%",
+      "Decreases by 8%"
+    ],
+    "correct": [
+      "Increases by 8%"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ge-23",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "quadrilaterals_and_polygons",
+    "difficulty": 4,
+    "explanation": "Diagonals of a rhombus are perpendicular bisectors of each other. The half-diagonals form four right triangles with legs 6 and 8. The side of the rhombus is sqrt(6^2 + 8^2) = 10. Perimeter = 4 * 10 = 40.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "rhombus"
+    ],
+    "prompt": "A rhombus has diagonals of lengths 12 and 16. What is the perimeter of the rhombus?",
+    "correct": "40"
+  },
+  {
+    "id": "q-ge-24",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "circles",
+    "difficulty": 4,
+    "explanation": "Area of Circle A = π*r^2. Area of Circle B = π*(2r)^2 = 4π*r^2. Quantity B is 3 times the area of Circle A = 3π*r^2. Since 4π*r^2 > 3π*r^2 for any r > 0, Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "circle_scaling"
+    ],
+    "quantity_a": "The area of Circle B",
+    "quantity_b": "3 times the area of Circle A",
+    "shared_info": "Circle A has radius r, and Circle B has radius 2r, where r > 0.",
+    "correct": "A"
+  },
+  {
+    "id": "q-ge-25",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "triangles",
+    "difficulty": 4,
+    "explanation": "By triangle inequality, the sum of any two sides must exceed the third: 3+4=7 < 8 (invalid); 5+12=17 > 13 (valid); 7+10=17 > 16 (valid); 6+6=12 not > 12 (degenerate, invalid); 8+15=23 > 17 (valid).",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "triangle_inequality"
+    ],
+    "prompt": "Which of the following sets of three numbers could represent the side lengths of a triangle? Select all that apply.",
+    "choices": [
+      "3, 4, 8",
+      "5, 12, 13",
+      "7, 10, 16",
+      "6, 6, 12",
+      "8, 15, 17"
+    ],
+    "correct": [
+      "5, 12, 13",
+      "7, 10, 16",
+      "8, 15, 17"
+    ],
+    "select_all": true
+  },
+  {
+    "id": "q-ge-26",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "3d_solids",
+    "difficulty": 5,
+    "explanation": "Volume is proportional to r^3. Volume of the large sphere is (4/3)*π*3^3 = 36π. Volume of each small sphere is (4/3)*π*1^3 = (4/3)π. Number of small spheres = 36π / ((4/3)π) = 3^3 = 27. Both Quantity A and Quantity B equal 27.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "sphere_volume"
+    ],
+    "quantity_a": "The total number of smaller spheres created",
+    "quantity_b": "27",
+    "shared_info": "A solid metal sphere of radius 3 is melted down and recast into smaller solid spheres, each of radius 1, with no loss of metal.",
+    "correct": "equal"
   }
 ]

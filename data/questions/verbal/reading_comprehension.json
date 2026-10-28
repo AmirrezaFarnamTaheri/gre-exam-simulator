@@ -136,5 +136,368 @@
       "suggest a modern point of comparison for the scale of the printing press's impact on the spread of ideas."
     ],
     "select_all": false
+  },
+  {
+    "id": "v-rc-07",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "explanation": "The passage explores flat galactic rotation curves and compares the prevailing dark matter paradigm with the Modified Newtonian Dynamics (MOND) alternative.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "astrophysics"
+    ],
+    "passage_id": "p-dark-matter-01",
+    "question": "The primary purpose of the passage is to:",
+    "choices": [
+      "contrast two competing scientific explanations for observed galactic rotation curves and discuss their evidentiary merits.",
+      "prove conclusively that Newtonian mechanics fails on cosmological scales.",
+      "advocate for the immediate adoption of Modified Newtonian Dynamics over dark matter models.",
+      "demonstrate that gravitational lensing cannot account for large-scale cosmic structure.",
+      "recount the historical discovery of the cosmic microwave background."
+    ],
+    "correct": [
+      "contrast two competing scientific explanations for observed galactic rotation curves and discuss their evidentiary merits."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-08",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "explanation": "The passage explicitly names the 'cusp-core problem' and the 'missing satellites problem' as persistent discrepancies confronting the cold dark matter model.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "astrophysics"
+    ],
+    "passage_id": "p-dark-matter-01",
+    "question": "According to the passage, which of the following is an empirical discrepancy faced by the cold dark matter (CDM) model?",
+    "choices": [
+      "The Baryonic Tully-Fisher relation",
+      "The cusp-core problem",
+      "Gravitational lensing in the Bullet Cluster",
+      "Cosmic microwave background anisotropies",
+      "Flat rotation curves at large radii"
+    ],
+    "correct": [
+      "The cusp-core problem"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-09",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "explanation": "The Bullet Cluster demonstrates that gravitational potential can be spatially displaced from normal gas mass, posing a profound challenge to modified gravity theories that require gravity to strictly trace baryonic matter.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "astrophysics"
+    ],
+    "passage_id": "p-dark-matter-01",
+    "question": "It can be inferred from the passage that proponents of the cold dark matter hypothesis view the Bullet Cluster as significant because it: Select all that apply.",
+    "choices": [
+      "provides evidence that gravitational mass can exist spatially separated from normal baryonic gas.",
+      "proves that Newtonian gravity operates identically at low and high accelerations.",
+      "is difficult to reconcile with theories that explain anomalous rotation curves solely through modified gravitational laws."
+    ],
+    "correct": [
+      "provides evidence that gravitational mass can exist spatially separated from normal baryonic gas.",
+      "is difficult to reconcile with theories that explain anomalous rotation curves solely through modified gravitational laws."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "v-rc-10",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "explanation": "The author notes that MOND predicts the Baryonic Tully-Fisher relation tightly without needing fine-tuned halo parameters.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "astrophysics"
+    ],
+    "passage_id": "p-dark-matter-01",
+    "question": "The author mentions the 'Baryonic Tully-Fisher relation' primarily in order to:",
+    "choices": [
+      "highlight an empirical observation that MOND successfully accounts for without ad hoc halo assumptions.",
+      "demonstrate a fatal contradiction within Modified Newtonian Dynamics.",
+      "refute the standard cosmological model's prediction of cosmic background radiation.",
+      "show that visible stars exert more gravitational force than previously calculated.",
+      "explain why spiral galaxies exhibit flat rotation curves."
+    ],
+    "correct": [
+      "highlight an empirical observation that MOND successfully accounts for without ad hoc halo assumptions."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-11",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "explanation": "The passage refutes the traditional view of universal female exclusion from guilds by demonstrating diverse female roles and independent all-female chartered guilds.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "labor_history"
+    ],
+    "passage_id": "p-labor-history-01",
+    "question": "Which of the following best summarizes the main idea of the passage?",
+    "choices": [
+      "Revisionist research shows that women's participation in early modern European guilds was extensive and economically flexible rather than universally excluded.",
+      "Early modern European craft guilds were entirely dominated by all-female institutions such as seamstresses and lace-makers.",
+      "Guild bans on female labor were motivated exclusively by religious doctrine rather than macroeconomic conditions.",
+      "Widows were the only female workers in early modern Europe who possessed legal and financial autonomy.",
+      "Craft guilds gradually dissolved because they failed to integrate female apprentices during economic expansions."
+    ],
+    "correct": [
+      "Revisionist research shows that women's participation in early modern European guilds was extensive and economically flexible rather than universally excluded."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-12",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "explanation": "The text states Parisian seamstresses held independent chartered rights, elected wardens, and litigated in royal courts.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "labor_history"
+    ],
+    "passage_id": "p-labor-history-01",
+    "question": "According to the passage, the Parisian seamstresses (lingères) were notable because they:",
+    "choices": [
+      "formed an independent, chartered all-female guild that elected its own wardens and litigated in royal courts.",
+      "were the first group of workers to successfully dissolve male tailor guilds.",
+      "relied entirely on male relatives to represent them in legal disputes.",
+      "were granted mastership status only during severe macroeconomic recessions.",
+      "operated exclusively outside the corporative guild framework."
+    ],
+    "correct": [
+      "formed an independent, chartered all-female guild that elected its own wardens and litigated in royal courts."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-13",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "explanation": "The final sentence explains that bans were aggressively enforced during contractions 'to protect male wages from perceived deflationary competition.'",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "labor_history"
+    ],
+    "passage_id": "p-labor-history-01",
+    "question": "The passage suggests that craft guilds enforced gendered bans against female labor during economic contractions primarily because:",
+    "choices": [
+      "guild leaders sought to shield male artisans' wages from perceived deflationary competition.",
+      "municipal governments revoked the royal charters of female-dominated textile guilds.",
+      "female artisans had refused to serve as contracted wage earners.",
+      "traditional religious authorities intervened to enforce domestic patriarchy.",
+      "the supply of male apprentices had drastically declined."
+    ],
+    "correct": [
+      "guild leaders sought to shield male artisans' wages from perceived deflationary competition."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-14",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 4,
+    "explanation": "The passage explicitly documents all three: apprentices and journeywomen, elected wardens in all-female guilds, and widows inheriting workshops.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "labor_history"
+    ],
+    "passage_id": "p-labor-history-01",
+    "question": "According to the passage, which of the following were roles performed by women within early modern European guild structures? Select all that apply.",
+    "choices": [
+      "Formal apprentices and journeywomen within craft trades",
+      "Elected wardens in all-female chartered guilds",
+      "Widows exercising legal autonomy over inherited workshops"
+    ],
+    "correct": [
+      "Formal apprentices and journeywomen within craft trades",
+      "Elected wardens in all-female chartered guilds",
+      "Widows exercising legal autonomy over inherited workshops"
+    ],
+    "select_all": true
+  },
+  {
+    "id": "v-rc-15",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "explanation": "The passage focuses on cognitive dissonance theory and specifically how belief disconfirmation can paradoxically heighten conviction to alleviate distress.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "psychology"
+    ],
+    "passage_id": "p-cognitive-dissonance-01",
+    "question": "The author is primarily concerned with:",
+    "choices": [
+      "explaining how the psychological need to reduce cognitive dissonance can lead individuals to intensify their commitment to disproven beliefs.",
+      "criticizing the methodological flaws in Leon Festinger's observational study of apocalyptic millenarian cults.",
+      "demonstrating that religious prophecy is an inherently irrational psychological mechanism.",
+      "comparing the effectiveness of social validation versus empirical evidence in belief revision.",
+      "tracing the historical evolution of social psychology throughout the twentieth century."
+    ],
+    "correct": [
+      "explaining how the psychological need to reduce cognitive dissonance can lead individuals to intensify their commitment to disproven beliefs."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-16",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "explanation": "The passage states that the cult's most devoted adherents 'became markedly more fervent in their faith, actively proselytizing to external skeptics.'",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "psychology"
+    ],
+    "passage_id": "p-cognitive-dissonance-01",
+    "question": "According to Festinger's findings cited in the passage, when the cult's apocalyptic prophecy failed, the most committed members reacted by:",
+    "choices": [
+      "becoming more fervent in their faith and aggressively proselytizing to outsiders.",
+      "publicly denouncing the cult leader and disbanding the group.",
+      "falling into profound apathy and abandoning all spiritual practices.",
+      "admitting their error and attempting to reclaim forfeited employment.",
+      "seeking psychological counseling to manage their grief."
+    ],
+    "correct": [
+      "becoming more fervent in their faith and aggressively proselytizing to outsiders."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-17",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "explanation": "Festinger tied the dissonance magnitude to irrevocable investment; individuals without such sacrifice would experience far less distress and could much more readily acknowledge the disconfirmation.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "psychology"
+    ],
+    "passage_id": "p-cognitive-dissonance-01",
+    "question": "The passage implies that a member who had sacrificed very little to join the cult would be:",
+    "choices": [
+      "more likely to abandon the cult's beliefs following the failed prophecy than a member who had liquidated significant assets.",
+      "more likely to proselytize aggressively than a member with substantial financial investment.",
+      "incapable of experiencing cognitive dissonance under any circumstances.",
+      "more prone to reinterpreting disconfirmation as a miraculous event.",
+      "unable to perceive external skepticism from the general public."
+    ],
+    "correct": [
+      "more likely to abandon the cult's beliefs following the failed prophecy than a member who had liquidated significant assets."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-18",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "explanation": "The author points out that adherents could not psychologically bear that their immense, irrevocable life sacrifices were based on delusion, forcing them to preserve the belief.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "psychology"
+    ],
+    "passage_id": "p-cognitive-dissonance-01",
+    "question": "In the passage, the author mentions the members' 'profound, irrevocable public sacrifices' primarily to explain:",
+    "choices": [
+      "why acknowledging that the prophecy was false was psychologically unacceptable to the adherents.",
+      "how the cult leader managed to amass considerable personal wealth.",
+      "why external skeptics were unable to infiltrate the millenarian group.",
+      "the ethical violations committed during Festinger's observational research.",
+      "how the cult was able to finance its aggressive proselytizing campaigns."
+    ],
+    "correct": [
+      "why acknowledging that the prophecy was false was psychologically unacceptable to the adherents."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "v-rc-19",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 4,
+    "explanation": "All three premises are directly stated in Festinger's cognitive dissonance model as presented in the passage.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "psychology"
+    ],
+    "passage_id": "p-cognitive-dissonance-01",
+    "question": "Based on the passage, which of the following statements about cognitive dissonance are accurate? Select all that apply.",
+    "choices": [
+      "Inconsistency among beliefs, attitudes, and behaviors induces a state of mental discomfort.",
+      "Individuals are motivated to alter cognitive elements to re-establish internal equilibrium.",
+      "Seeking social validation through proselytism can serve to alleviate severe dissonance."
+    ],
+    "correct": [
+      "Inconsistency among beliefs, attitudes, and behaviors induces a state of mental discomfort.",
+      "Individuals are motivated to alter cognitive elements to re-establish internal equilibrium.",
+      "Seeking social validation through proselytism can serve to alleviate severe dissonance."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "v-rc-20",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 5,
+    "explanation": "The investor doubled down on a bad decision due to massive prior investment and sought social validation from others, perfectly paralleling the belief disconfirmation response.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "psychology"
+    ],
+    "passage_id": "p-cognitive-dissonance-01",
+    "question": "Which of the following hypothetical scenarios is most analogous to the response of the cult members described in the passage?",
+    "choices": [
+      "An investor who poured his life savings into a failing startup responds to poor earnings reports by buying more shares and enthusiastically urging friends to invest.",
+      "A scientist immediately discards a cherished hypothesis as soon as a single laboratory trial contradicts it.",
+      "A consumer returns a defective appliance to the store and demands a complete cash refund.",
+      "A politician admits during a debate that her previously proposed tax policy caused unexpected economic harm.",
+      "An athlete retires early from professional sports after suffering a career-ending injury."
+    ],
+    "correct": [
+      "An investor who poured his life savings into a failing startup responds to poor earnings reports by buying more shares and enthusiastically urging friends to invest."
+    ],
+    "select_all": false
   }
 ]

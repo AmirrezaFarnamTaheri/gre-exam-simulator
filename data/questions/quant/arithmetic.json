@@ -141,5 +141,368 @@
     "quantity_b": "0",
     "shared_info": "n is a positive integer divisible by both 6 and 9.",
     "correct": "equal"
+  },
+  {
+    "id": "q-ar-09",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "explanation": "72 = 2^3 * 3^2. Since n^2 is a multiple of 72, the prime factorization of n^2 must have even exponents, so n^2 must contain at least 2^4 * 3^2. Therefore, n must contain at least 2^2 * 3^1 = 12. Thus n is a multiple of 12, and the remainder when n is divided by 12 is 0. Both quantities are 0.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "prime_factorization"
+    ],
+    "quantity_a": "The remainder when n is divided by 12",
+    "quantity_b": "0",
+    "shared_info": "n is an integer such that n^2 is divisible by 72.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-ar-10",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 2,
+    "explanation": "(3/8) * N = 45 => N = 45 * (8/3) = 120. Then (5/6) * 120 = 100.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "fractions"
+    ],
+    "prompt": "If 3/8 of a certain number is 45, what is 5/6 of that number?",
+    "correct": "100"
+  },
+  {
+    "id": "q-ar-11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "ratios_and_proportions",
+    "difficulty": 3,
+    "explanation": "Let initial red = 3k, blue = 5k. Adding 12 red gives (3k + 12) / (5k) = 3/4. Cross multiplying: 4(3k + 12) = 15k => 12k + 48 = 15k => 3k = 48 => k = 16. Blue tokens = 5k = 5 * 16 = 80.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "ratios"
+    ],
+    "prompt": "The ratio of the number of red tokens to blue tokens in a bag is 3:5. If 12 red tokens are added to the bag, the new ratio of red to blue tokens becomes 3:4. How many blue tokens are in the bag?",
+    "choices": [
+      "40",
+      "60",
+      "80",
+      "100",
+      "120"
+    ],
+    "correct": [
+      "80"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-12",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "exponents_and_roots",
+    "difficulty": 4,
+    "explanation": "3^44 = (3^4)^11 = 81^11. 4^33 = (4^3)^11 = 64^11. Since 81 > 64, 81^11 > 64^11. Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "powers_comparison"
+    ],
+    "quantity_a": "3^44",
+    "quantity_b": "4^33",
+    "correct": "A"
+  },
+  {
+    "id": "q-ar-13",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 5,
+    "explanation": "Units digits of powers of 3 follow a 4-cycle: 3, 9, 7, 1. Since 105 mod 4 = 1, 3^105 ends in 3. Units digits of powers of 7 follow a 4-cycle: 7, 9, 3, 1. Since 105 mod 4 = 1, 7^105 ends in 7. Sum ends in (3 + 7) mod 10 = 0.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "units_digit"
+    ],
+    "prompt": "What is the units digit of 3^105 + 7^105?",
+    "choices": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": [
+      "0"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-14",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "mixtures_and_alligation",
+    "difficulty": 4,
+    "explanation": "Pure water has 0% acid. Amount of acid in 30 L of 40% solution = 0.40 * 30 = 12 L. For the new mixture to be 25% acid: 12 / (30 + w) = 0.25 = 1/4 => 30 + w = 48 => w = 18 liters.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "mixtures"
+    ],
+    "prompt": "How many liters of pure water must be added to 30 liters of a 40% acid solution to produce a 25% acid solution?",
+    "correct": "18"
+  },
+  {
+    "id": "q-ar-15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "rate_and_work",
+    "difficulty": 3,
+    "explanation": "Average speed for equal distances is the harmonic mean: 2 * (v1 * v2) / (v1 + v2) = 2 * (40 * 60) / (40 + 60) = 4800 / 100 = 48 mph.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "average_speed"
+    ],
+    "prompt": "A car travels from Town A to Town B at an average speed of 40 miles per hour and returns along the same route from Town B to Town A at an average speed of 60 miles per hour. What is the car's average speed, in miles per hour, for the entire round trip?",
+    "choices": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "correct": [
+      "48"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-16",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "explanation": "Any odd integer n = 2k + 1 has n^2 - 1 = 4k(k + 1). Since k(k + 1) is a product of consecutive integers, it is even, so 4k(k + 1) is always divisible by 8. Thus for any odd prime, the remainder when n^2 - 1 is divided by 8 is 0. Both Quantity A and Quantity B equal 0.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "number_theory"
+    ],
+    "quantity_a": "The remainder when (p^2 - 1) is divided by 8",
+    "quantity_b": "The remainder when (q^2 - 1) is divided by 8",
+    "shared_info": "p and q are distinct prime numbers greater than 2.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-ar-17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "explanation": "Increasing by x% and decreasing by x% yields (1 + x/100)(1 - x/100) = 1 - (x/100)^2. A 9% net decrease means 1 - (x/100)^2 = 0.91 => (x/100)^2 = 0.09 => x/100 = 0.30 => x = 30.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "percents"
+    ],
+    "prompt": "If a quantity is increased by x% and then the resulting quantity is decreased by x%, the final result is a 9% net decrease from the original quantity. What is the value of x?",
+    "choices": [
+      "3",
+      "9",
+      "15",
+      "30",
+      "45"
+    ],
+    "correct": [
+      "30"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "explanation": "12! = 12 * 11 * 10 * ... * 1. The prime factors of 12! are all primes <= 12 (2, 3, 5, 7, 11). 37 is a prime number greater than 12, so 37 cannot divide 12!. All other options (22 = 2*11, 27 = 3^3, 35 = 5*7, 42 = 6*7) have prime factorizations completely contained in 12!.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "factorials"
+    ],
+    "prompt": "Which of the following integers is NOT a factor of 12! ?",
+    "choices": [
+      "22",
+      "27",
+      "35",
+      "37",
+      "42"
+    ],
+    "correct": [
+      "37"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-19",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "exponents_and_roots",
+    "difficulty": 3,
+    "explanation": "(2^x) * (4^x) * (8^x) = 2^x * (2^2)^x * (2^3)^x = 2^(x + 2x + 3x) = 2^(6x). Since 64 = 2^6, 2^(6x) = 2^6 => 6x = 6 => x = 1.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "exponents"
+    ],
+    "prompt": "If (2^x) * (4^x) * (8^x) = 64, what is the value of x?",
+    "correct": "1"
+  },
+  {
+    "id": "q-ar-20",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "explanation": "Comparing a/b and (a + 1)/(b + 1): cross-multiplying gives a(b + 1) = ab + a versus b(a + 1) = ab + b. Since 0 < a < b, ab + a < ab + b, so a/b < (a + 1)/(b + 1). Quantity B is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "inequalities_fractions"
+    ],
+    "quantity_a": "a / b",
+    "quantity_b": "(a + 1) / (b + 1)",
+    "shared_info": "0 < a < b",
+    "correct": "B"
+  },
+  {
+    "id": "q-ar-21",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 2,
+    "explanation": "The prime numbers between 20 and 40 are 23, 29, 31, and 37. There are exactly 4 such primes.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "primes"
+    ],
+    "prompt": "How many prime numbers are between 20 and 40?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": [
+      "4"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-22",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "mixtures_and_alligation",
+    "difficulty": 3,
+    "explanation": "Since equal volumes (5 liters each) of Mixture X (30% juice) and Mixture Y (60% juice) are combined, the concentration of juice in Mixture Z is the unweighted average: (30% + 60%) / 2 = 45%. The two quantities are equal.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "mixtures"
+    ],
+    "quantity_a": "The percentage of juice in Mixture Z",
+    "quantity_b": "45%",
+    "shared_info": "Mixture X is 30% juice and 70% water by volume. Mixture Y is 60% juice and 40% water by volume. 5 liters of Mixture X and 5 liters of Mixture Y are combined into Mixture Z.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-ar-23",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "rate_and_work",
+    "difficulty": 4,
+    "explanation": "Rate of Pipe A = +1/4 tank/hr. Rate of Pipe B = -1/6 tank/hr. Net filling rate = 1/4 - 1/6 = 3/12 - 2/12 = 1/12 tank/hr. Time required to fill completely = 1 / (1/12) = 12 hours.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "work_rate"
+    ],
+    "prompt": "Pipe A can fill an empty tank in 4 hours, and Pipe B can empty the full tank in 6 hours. If both pipes are opened simultaneously when the tank is empty, how many hours will it take to fill the tank completely?",
+    "correct": "12"
+  },
+  {
+    "id": "q-ar-24",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 5,
+    "explanation": "Positive integers with remainder 3 when divided by 5 are 3, 8, 13, 18, 23, 28... Testing these modulo 7: 3 mod 7 = 3; 8 mod 7 = 1; 13 mod 7 = 6; 18 mod 7 = 4. Thus 18 is the smallest such positive integer.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "remainders"
+    ],
+    "prompt": "When positive integer n is divided by 5, the remainder is 3. When n is divided by 7, the remainder is 4. What is the smallest possible positive value of n?",
+    "choices": [
+      "11",
+      "18",
+      "23",
+      "25",
+      "32"
+    ],
+    "correct": [
+      "18"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-ar-25",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "explanation": "0.75 = 3/4 = 0.750. 7/9 ≈ 0.778 > 0.75 (YES). 4/5 = 0.800 > 0.75 (YES). 13/18 ≈ 0.722 < 0.75 (NO). 5/7 ≈ 0.714 < 0.75 (NO). 17/20 = 0.850 > 0.75 (YES).",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "comparing_fractions"
+    ],
+    "prompt": "Which of the following numbers are greater than 0.75? Select all that apply.",
+    "choices": [
+      "7/9",
+      "4/5",
+      "13/18",
+      "5/7",
+      "17/20"
+    ],
+    "correct": [
+      "7/9",
+      "4/5",
+      "17/20"
+    ],
+    "select_all": true
+  },
+  {
+    "id": "q-ar-26",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "exponents_and_roots",
+    "difficulty": 5,
+    "explanation": "If k is an odd negative integer (e.g. -1), (-1)^k = -1 and (-1)^(k+1) = 1, so Quantity A < Quantity B. If k is an even negative integer (e.g. -2), (-1)^k = 1 and (-1)^(k+1) = -1, so Quantity A > Quantity B. The relationship cannot be determined.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "parity_exponents"
+    ],
+    "quantity_a": "(-1)^k",
+    "quantity_b": "(-1)^(k + 1)",
+    "shared_info": "k is a negative integer.",
+    "correct": "cannot_determine"
   }
 ]

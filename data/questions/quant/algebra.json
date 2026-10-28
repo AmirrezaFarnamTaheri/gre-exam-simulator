@@ -181,5 +181,311 @@
     "quantity_b": "y",
     "shared_info": "x^2 - 5x + 6 = 0 and y^2 - 7y + 12 = 0.",
     "correct": "cannot_determine"
+  },
+  {
+    "id": "q-al-11",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "systems_of_equations",
+    "difficulty": 2,
+    "explanation": "From x - y = 2, x = y + 2. Substituting into 2x + 3y = 19 gives 2(y + 2) + 3y = 19 => 5y + 4 = 19 => 5y = 15 => y = 3. Then x = 5. Therefore, x + y = 5 + 3 = 8.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "systems_of_equations"
+    ],
+    "prompt": "If 2x + 3y = 19 and x - y = 2, what is the value of x + y?",
+    "correct": "8"
+  },
+  {
+    "id": "q-al-12",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "explanation": "3x = 24 - 4y = 4(6 - y). For x and y to be positive integers, 6 - y must be a positive multiple of 3. Since 0 < y < 6, the only possible value for y is 3. When y = 3, 3x = 12 => x = 4. Thus x = 4 is the unique solution. Both Quantity A and Quantity B equal 4.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "diophantine"
+    ],
+    "quantity_a": "x",
+    "quantity_b": "4",
+    "shared_info": "3x + 4y = 24, where x and y are positive integers.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-al-13",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "quadratic_equations",
+    "difficulty": 4,
+    "explanation": "x^2 - y^2 = (x - y)(x + y) = 48. Since x - y = 4, 4(x + y) = 48 => x + y = 12. Adding the two equations: 2x = 16 => x = 8. Subtracting gives 2y = 8 => y = 4. Then 2x + 3y = 2(8) + 3(4) = 16 + 12 = 28.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "difference_of_squares"
+    ],
+    "prompt": "If x^2 - y^2 = 48 and x - y = 4, what is the value of 2x + 3y?",
+    "choices": [
+      "20",
+      "24",
+      "28",
+      "32",
+      "36"
+    ],
+    "correct": [
+      "28"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-al-14",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "exponents_and_roots",
+    "difficulty": 4,
+    "explanation": "Factoring: Quantity A = (x - 1)(x + 1) / (x - 1) = x + 1. Quantity B = (x - 1)(x^2 + x + 1) / (x^2 + x + 1) = x - 1. For any x > 1, x + 1 > x - 1. Quantity A is strictly greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "rational_simplification"
+    ],
+    "quantity_a": "(x^2 - 1) / (x - 1)",
+    "quantity_b": "(x^3 - 1) / (x^2 + x + 1)",
+    "shared_info": "x > 1",
+    "correct": "A"
+  },
+  {
+    "id": "q-al-15",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "functions",
+    "difficulty": 3,
+    "explanation": "f(2k) = 3(2k) - 5 = 6k - 5. Setting 6k - 5 = 19 gives 6k = 24 => k = 4.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "functions"
+    ],
+    "prompt": "If f(x) = 3x - 5 and f(2k) = 19, what is the value of k?",
+    "correct": "4"
+  },
+  {
+    "id": "q-al-16",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 4,
+    "explanation": "The product xy for x in (-3, 5) and y in (-2, 4) can range over (-12, 20). If x = 4.5 and y = 3.5, xy = 15.75 > 15. If x = 1 and y = 1, xy = 1 < 15. The relationship cannot be determined.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "inequalities"
+    ],
+    "quantity_a": "xy",
+    "quantity_b": "15",
+    "shared_info": "-3 < x < 5 and -2 < y < 4",
+    "correct": "cannot_determine"
+  },
+  {
+    "id": "q-al-17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "algebraic_expressions_and_factoring",
+    "difficulty": 3,
+    "explanation": "(x + y)^2 = x^2 + 2xy + y^2 = 100. Substituting xy = 21 yields x^2 + y^2 = 100 - 2(21) = 100 - 42 = 58.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "algebraic_identities"
+    ],
+    "prompt": "If (x + y)^2 = 100 and xy = 21, what is the value of x^2 + y^2?",
+    "choices": [
+      "42",
+      "58",
+      "79",
+      "121",
+      "142"
+    ],
+    "correct": [
+      "58"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-al-18",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "coordinate_geometry_lines",
+    "difficulty": 3,
+    "explanation": "Slope m = (y2 - y1) / (x2 - x1) = (13 - 5) / (6 - 2) = 8 / 4 = 2. Both quantities equal 2.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "slopes"
+    ],
+    "quantity_a": "The slope of Line L",
+    "quantity_b": "2",
+    "shared_info": "Line L in the xy-plane passes through the points (2, 5) and (6, 13).",
+    "correct": "equal"
+  },
+  {
+    "id": "q-al-19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 4,
+    "explanation": "3 - 2x < 5x - 11 => 3 + 11 < 5x + 2x => 14 < 7x => x > 2. Among the choices, 3, 4, and 5 are strictly greater than 2.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "linear_inequalities"
+    ],
+    "prompt": "Which of the following values of x satisfy the inequality 3 - 2x < 5x - 11? Select all that apply.",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": [
+      "3",
+      "4",
+      "5"
+    ],
+    "select_all": true
+  },
+  {
+    "id": "q-al-20",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "quadratic_equations",
+    "difficulty": 5,
+    "explanation": "A quadratic equation has exactly one real solution when its discriminant is zero: b^2 - 4ac = 0 => k^2 - 4(1)(36) = 0 => k^2 = 144. Since k > 0, k = 12.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "discriminant"
+    ],
+    "prompt": "If the quadratic equation x^2 + kx + 36 = 0 has exactly one real solution, and k > 0, what is the value of k?",
+    "correct": "12"
+  },
+  {
+    "id": "q-al-21",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "functions",
+    "difficulty": 4,
+    "explanation": "g(1) = (1 - 3)^2 + 4 = (-2)^2 + 4 = 8. g(5) = (5 - 3)^2 + 4 = (2)^2 + 4 = 8. The parabola is symmetric about its axis of symmetry at x = 3. Both quantities equal 8.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "function_symmetry"
+    ],
+    "quantity_a": "g(1)",
+    "quantity_b": "g(5)",
+    "shared_info": "The function g is defined by g(x) = (x - 3)^2 + 4 for all real numbers x.",
+    "correct": "equal"
+  },
+  {
+    "id": "q-al-22",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "algebraic_expressions_and_factoring",
+    "difficulty": 3,
+    "explanation": "4(2a - b) = 3(a + 2b) => 8a - 4b = 3a + 6b => 5a = 10b => a / b = 2 / 1, which is the ratio 2:1.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "ratios"
+    ],
+    "prompt": "If (2a - b) / (a + 2b) = 3/4, what is the ratio of a to b?",
+    "choices": [
+      "2:5",
+      "5:2",
+      "7:4",
+      "10:5",
+      "2:1"
+    ],
+    "correct": [
+      "2:1"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-al-23",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "explanation": "For negative numbers, if x < y < 0, taking reciprocals reverses the inequality: 1/x > 1/y. For example, let x = -4 and y = -2: 1/(-4) = -0.25 > 1/(-2) = -0.50. Thus Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "reciprocal_inequalities"
+    ],
+    "quantity_a": "1 / x",
+    "quantity_b": "1 / y",
+    "shared_info": "x < y < 0",
+    "correct": "A"
+  },
+  {
+    "id": "q-al-24",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "systems_of_equations",
+    "difficulty": 4,
+    "explanation": "Subtracting the second equation from the first: (3x + 2y) - (2x + 3y) = 13 - 12 => x - y = 1.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "systems_of_equations"
+    ],
+    "prompt": "If 3x + 2y = 13 and 2x + 3y = 12, what is the value of x - y?",
+    "choices": [
+      "-1",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": [
+      "1"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "q-al-25",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "quadratic_equations",
+    "difficulty": 5,
+    "explanation": "By Vieta's formulas for ax^2 + bx + c = 0: sum of roots r + s = -b/a = -(-10)/2 = 5. Product of roots r * s = c/a = 7/2 = 3.5. Since 5 > 3.5, Quantity A is greater.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "vietas_formulas"
+    ],
+    "quantity_a": "r + s",
+    "quantity_b": "r * s",
+    "shared_info": "r and s are the roots of the quadratic equation 2x^2 - 10x + 7 = 0.",
+    "correct": "A"
+  },
+  {
+    "id": "q-al-26",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "exponents_and_roots",
+    "difficulty": 4,
+    "explanation": "125 = 5^3, so 5^(2x - 3) = (5^3)^(x - 2) = 5^(3x - 6). Equating exponents: 2x - 3 = 3x - 6 => x = 3.",
+    "source": "seed",
+    "tags": [
+      "verified",
+      "exponential_equations"
+    ],
+    "prompt": "If 5^(2x - 3) = 125^(x - 2), what is the value of x?",
+    "correct": "3"
   }
 ]
