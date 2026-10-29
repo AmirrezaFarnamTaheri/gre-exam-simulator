@@ -232,3 +232,169 @@ th, td {
   margin-bottom: 1.5rem;
   color: var(--muted);
 }
+
+
+/* ─── ETS Exam Simulator Utility Classes ─────────────────────────────────── */
+.min-h-screen { min-height: 100vh; }
+.min-h-\[480px\] { min-height: 480px; }
+.min-h-\[44px\] { min-height: 44px; }
+.max-h-\[85vh\] { max-height: 85vh; }
+.max-h-\[550px\] { max-height: 550px; }
+.h-fit { height: fit-content; }
+.w-full { width: 100%; }
+.w-48 { width: 12rem; }
+.w-4 { width: 1rem; }
+.h-4 { height: 1rem; }
+.w-\[260px\] { width: 260px; }
+.max-w-md { max-width: 28rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-5xl { max-width: 64rem; }
+.max-w-6xl { max-width: 72rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.flex { display: flex; }
+.flex-1 { flex: 1 1 0%; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.col-span-2 { grid-column: span 2 / span 2; }
+@media (min-width: 768px) {
+  .md\:flex-row { flex-direction: row; }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .md\:p-8 { padding: 2rem; }
+}
+.gap-1\.5 { gap: 0.375rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-2\.5 > * + * { margin-top: 0.625rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.space-y-8 > * + * { margin-top: 2rem; }
+.fixed { position: fixed; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.top-16 { top: 4rem; }
+.right-6 { right: 1.5rem; }
+.z-50 { z-index: 50; }
+.overflow-hidden { overflow: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.whitespace-pre-line { white-space: pre-line; }
+.select-none { user-select: none; }
+.cursor-pointer { cursor: pointer; }
+.cursor-not-allowed { cursor: not-allowed; }
+.p-2 { padding: 0.5rem; }
+.p-2\.5 { padding: 0.625rem; }
+.p-3 { padding: 0.75rem; }
+.p-3\.5 { padding: 0.875rem; }
+.p-4 { padding: 1rem; }
+.p-5 { padding: 1.25rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.px-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-1\.5 { padding-left: 0.375rem; padding-right: 0.375rem; }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-7 { padding-left: 1.75rem; padding-right: 1.75rem; }
+.py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.pt-2 { padding-top: 0.5rem; }
+.pb-1\.5 { padding-bottom: 0.375rem; }
+.pb-3 { padding-bottom: 0.75rem; }
+.pr-4 { padding-right: 1rem; }
+.pl-2 { padding-left: 0.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.rounded { border-radius: 0.25rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-full { border-radius: 9999px; }
+.border { border: 1px solid #d1d5db; }
+.border-2 { border: 2px solid #9ca3af; }
+.border-b { border-bottom: 1px solid #e5e7eb; }
+.border-t { border-top: 1px solid #d1d5db; }
+.border-r { border-right: 1px solid #cbd5e1; }
+.bg-\[\#1b3a5b\] { background-color: #1b3a5b; color: #ffffff; }
+.bg-\[\#1a3a60\] { background-color: #1a3a60; color: #ffffff; }
+.bg-\[\#2b548b\] { background-color: #2b548b; color: #ffffff; }
+.bg-\[\#1b6b38\] { background-color: #1b6b38; color: #ffffff; }
+.bg-\[\#e8e8e8\] { background-color: #e8e8e8; color: #111827; }
+.bg-\[\#f4f7f2\] { background-color: #f4f7f2; color: #111827; }
+.bg-\[\#d0d0d0\] { background-color: #d0d0d0; color: #111827; }
+.bg-\[\#d9e2ec\] { background-color: #d9e2ec; color: #111827; }
+.bg-\[\#e6a29a\] { background-color: #e6a29a; color: #111827; }
+.bg-\[\#e2e8f0\] { background-color: #e2e8f0; color: #1f2937; }
+.bg-\[\#f3f4f6\], .bg-gray-100 { background-color: #f3f4f6; color: #111827; }
+.bg-white { background-color: #ffffff; color: #111827; }
+.bg-gray-50, .bg-slate-50 { background-color: #f8fafc; color: #111827; }
+.bg-gray-200 { background-color: #e5e7eb; color: #1f2937; }
+.bg-blue-50, .bg-blue-50\/60 { background-color: #eff6ff; color: #1e3a8a; }
+.bg-blue-100\/70 { background-color: #dbeafe; }
+.bg-amber-50 { background-color: #fffbeb; color: #b45309; }
+.bg-amber-400 { background-color: #fbbf24; color: #000000; }
+.bg-green-50, .bg-green-100 { background-color: #dcfce7; color: #166534; }
+.bg-red-50, .bg-red-100 { background-color: #fee2e2; color: #991b1b; }
+.bg-red-800\/80 { background-color: #991b1b; color: #ffffff; }
+.bg-black\/30 { background-color: rgba(0, 0, 0, 0.3); }
+.bg-black\/60 { background-color: rgba(0, 0, 0, 0.6); }
+.bg-white\/10 { background-color: rgba(255, 255, 255, 0.1); }
+.text-white { color: #ffffff; }
+.text-gray-900 { color: #111827; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-700 { color: #374151; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-500 { color: #6b7280; }
+.text-blue-200 { color: #bfdbfe; }
+.text-blue-800, .text-blue-900 { color: #1e3a8a; }
+.text-green-700, .text-green-800 { color: #166534; }
+.text-red-600, .text-red-700, .text-red-800 { color: #991b1b; }
+.text-amber-300 { color: #fcd34d; }
+.text-amber-600, .text-amber-700 { color: #b45309; }
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold, .font-black { font-weight: 800; }
+.font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.font-serif { font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+.font-sans { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+.underline { text-decoration: underline; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.block { display: block; }
+.shadow-sm { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06); }
+.shadow, .shadow-md { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.shadow-lg, .shadow-2xl { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }

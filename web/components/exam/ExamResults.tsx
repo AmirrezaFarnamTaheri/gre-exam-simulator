@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import type { AnyQuestion } from "gre-adaptive-engine";
+import { useAdaptiveState } from "@/lib/useAdaptiveState";
 
 // Numeric-tolerant comparison — matches fractions, decimals, and integer forms.
 function parseNumeric(value: string): number | null {
@@ -43,6 +44,8 @@ export default function ExamResults({
   onRetakeFresh,
 }: ExamResultsProps) {
   const [selectedReviewIdx, setSelectedReviewIdx] = useState(0);
+  const { recordAnswer, hydrated } = useAdaptiveState();
+  const recordedRef = useRef(false);
 
   // Score validation
   let correctCount = 0;
@@ -84,6 +87,14 @@ export default function ExamResults({
     if (isCorrect) correctCount++;
     return { question: q, userAns, isCorrect };
   });
+
+  useEffect(() => {
+    if (!hydrated || recordedRef.current) return;
+    recordedRef.current = true;
+    for (const qr of questionResults) {
+      recordAnswer(qr.question, qr.isCorrect);
+    }
+  }, [hydrated, questionResults, recordAnswer]);
 
   const total = questions.length;
   const accuracyPct = Math.round((correctCount / total) * 100);
