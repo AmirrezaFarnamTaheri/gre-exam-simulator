@@ -4,6 +4,27 @@ import React, { useState } from "react";
 import Link from "next/link";
 import type { AnyQuestion } from "gre-adaptive-engine";
 
+// Numeric-tolerant comparison — matches fractions, decimals, and integer forms.
+function parseNumeric(value: string): number | null {
+  const trimmed = value.trim();
+  if (/^-?\d+(\.\d+)?$/.test(trimmed)) return Number(trimmed);
+  const fractionMatch = trimmed.match(/^(-?\d+)\/(\d+)$/);
+  if (fractionMatch) {
+    const numerator = Number(fractionMatch[1]);
+    const denominator = Number(fractionMatch[2]);
+    if (denominator !== 0) return numerator / denominator;
+  }
+  return null;
+}
+
+function numericAnswersMatch(entered: string, expected: string): boolean {
+  const enteredNum = parseNumeric(entered);
+  const expectedNum = parseNumeric(expected);
+  if (enteredNum !== null && expectedNum !== null)
+    return Math.abs(enteredNum - expectedNum) < 1e-9;
+  return entered.trim().toLowerCase() === expected.trim().toLowerCase();
+}
+
 interface ExamResultsProps {
   questions: AnyQuestion[];
   userAnswers: Record<string, any>;
@@ -39,8 +60,7 @@ export default function ExamResults({
       }
     } else if (q.qtype === "quant_numeric_entry") {
       if (userAns) {
-        isCorrect =
-          userAns.trim().toLowerCase() === q.correct.trim().toLowerCase();
+        isCorrect = numericAnswersMatch(userAns, q.correct);
       }
     } else if (q.qtype === "text_completion") {
       if (userAns && typeof userAns === "object") {
