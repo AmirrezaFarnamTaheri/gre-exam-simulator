@@ -114,6 +114,9 @@ export default function Dashboard() {
         <Link href="/study/mixed" className="button">
           Study Mixed
         </Link>
+        <Link href="/vocab" className="button">
+          Vocabulary (SRS)
+        </Link>
       </nav>
 
       <TopicTable title="Verbal topics" rows={verbalSummary} />
