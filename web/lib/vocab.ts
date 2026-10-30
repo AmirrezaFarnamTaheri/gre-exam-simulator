@@ -8,6 +8,8 @@ export interface VocabWord {
   example: string;
   difficulty: number;
   list: string;
+  pos?: string;
+  synonyms?: string;
 }
 
 export const VOCAB: VocabWord[] = words as VocabWord[];

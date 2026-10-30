@@ -66,7 +66,17 @@ export default function VocabSession() {
           {revealed ? (
             <>
               <p style={{ fontSize: "1.1rem" }}>{current.definition}</p>
+              {current.pos && (
+                <p style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: "0.25rem" }}>
+                  <em>{current.pos}</em>
+                </p>
+              )}
               {current.example && <p style={{ color: "var(--muted)", fontStyle: "italic" }}>&ldquo;{current.example}&rdquo;</p>}
+              {current.synonyms && (
+                <p style={{ fontSize: "0.85rem", color: "var(--muted)" }}>
+                  <strong>Synonyms:</strong> {current.synonyms}
+                </p>
+              )}
               <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "1rem" }}>
                 <button className="button" onClick={() => grade(1)}>Again</button>
                 <button className="button" onClick={() => grade(3)}>Hard</button>
