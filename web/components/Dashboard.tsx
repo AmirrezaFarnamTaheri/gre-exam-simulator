@@ -117,6 +117,9 @@ export default function Dashboard() {
         <Link href="/vocab" className="button">
           Vocabulary (SRS)
         </Link>
+        <Link href="/awa" className="button" style={{ backgroundColor: "#7c3aed", borderColor: "#7c3aed" }}>
+          AWA Writing Practice
+        </Link>
       </nav>
 
       <TopicTable title="Verbal topics" rows={verbalSummary} />
