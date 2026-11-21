@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import awaData from "../../data/questions/awa.json";
+import awaGuides from "../../data/awa/guides.json";
 
 interface AwaPrompt {
   id: string;
@@ -10,6 +10,7 @@ interface AwaPrompt {
   prompt: string;
   directions: string;
   source: string;
+  brainstorm?: string[];
 }
 
 const ALL: AwaPrompt[] = awaData as AwaPrompt[];
@@ -17,23 +18,22 @@ const ISSUE = ALL.filter((p) => p.type === "issue");
 const ARGUMENT = ALL.filter((p) => p.type === "argument");
 
 const ISSUE_RUBRIC = [
-  "I stated a clear position on the issue.",
-  "I provided at least two distinct reasons supporting my position.",
-  "I addressed at least one counterargument or concession.",
-  "I used at least one concrete example or analogy.",
-  "My response is at least 300 words.",
-  "My essay has a clear introduction, body, and conclusion.",
-  "My writing is free of major grammatical errors.",
+  "Clear, nuanced position stated in the opening paragraph.",
+  "At least two distinct supporting reasons developed in separate body paragraphs.",
+  "At least one counterargument or concession addressed directly.",
+  "Concrete historical, scientific, or real-world example included.",
+  "Well-developed length (400 to 550 words for 4.5 to 6.0 range).",
+  "Clear paragraph transitions, topic sentences, and concise conclusion.",
+  "Clean grammar, spelling, and sentence variety for ETS e-rater.",
 ];
 
 const ARGUMENT_RUBRIC = [
-  "I identified the main conclusion of the argument.",
-  "I identified at least two logical flaws or unwarranted assumptions.",
-  "I explained what evidence would strengthen or weaken each flaw.",
-  "I did not express my personal opinion on the issue itself.",
-  "My response is at least 300 words.",
-  "My essay has a clear structure addressing multiple flaws.",
-  "My writing is free of major grammatical errors.",
+  "Main conclusion of the argument identified accurately.",
+  "At least two logical flaws or unwarranted assumptions explained.",
+  "Specific evidence needed to evaluate each flaw described.",
+  "Personal opinion on the issue avoided.",
+  "At least 350 words with organized flaw-by-flaw paragraphs.",
+  "Clean grammar and precise analytical phrasing.",
 ];
 
 function pick<T>(arr: T[]): T {
@@ -41,18 +41,25 @@ function pick<T>(arr: T[]): T {
 }
 
 const KEY = "gre-awa-history-v1";
+const AI_KEY = "gre-awa-ai-config-v1";
 
 function loadHistory(): string[] {
   if (typeof localStorage === "undefined") return [];
-  try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { return []; }
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || "[]");
+  } catch {
+    return [];
+  }
 }
+
 function saveHistory(ids: string[]) {
   if (typeof localStorage === "undefined") return;
-  localStorage.setItem(KEY, JSON.stringify(ids.slice(-50))); // keep last 50
+  localStorage.setItem(KEY, JSON.stringify(ids.slice(-80)));
 }
 
 export default function AwaSession() {
   const [tab, setTab] = useState<"issue" | "argument">("issue");
+  const [showLegacyArg, setShowLegacyArg] = useState(false);
   const [prompt, setPrompt] = useState<AwaPrompt | null>(null);
   const [essay, setEssay] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -60,8 +67,36 @@ export default function AwaSession() {
   const [history, setHistory] = useState<string[]>([]);
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
+  const [showBrainstorm, setShowBrainstorm] = useState(false);
+  const [showTemplates, setShowTemplates] = useState(false);
 
-  useEffect(() => { setHistory(loadHistory()); }, []);
+  const [aiEndpoint, setAiEndpoint] = useState("https://api.openai.com/v1/chat/completions");
+  const [aiModel, setAiModel] = useState("gpt-4o-mini");
+  const [aiKey, setAiKey] = useState("");
+  const [aiFeedback, setAiFeedback] = useState("");
+  const [aiLoading, setAiLoading] = useState(false);
+  const [showAiSetup, setShowAiSetup] = useState(false);
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
+
+  useEffect(() => {
+    const savedHist = loadHistory();
+    setHistory(savedHist);
+    if (typeof localStorage !== "undefined") {
+      try {
+        const cfg = JSON.parse(localStorage.getItem(AI_KEY) || "{}");
+        if (cfg.endpoint) setAiEndpoint(cfg.endpoint);
+        if (cfg.model) setAiModel(cfg.model);
+        if (cfg.apiKey) setAiKey(cfg.apiKey);
+      } catch {
+        // ignore
+      }
+    }
+    // Load an initial Issue prompt immediately so the user can start writing in 0 extra clicks
+    const enriched = ISSUE.filter((p) => p.brainstorm && p.brainstorm.length > 0);
+    const pool = enriched.length > 0 ? enriched : ISSUE;
+    const unseen = pool.filter((p) => !savedHist.includes(p.id));
+    setPrompt(pick(unseen.length > 0 ? unseen : pool));
+  }, []);
 
   useEffect(() => {
     if (!running) return;
@@ -69,18 +104,34 @@ export default function AwaSession() {
     return () => clearInterval(id);
   }, [running]);
 
+  function saveAiConfig() {
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem(
+        AI_KEY,
+        JSON.stringify({ endpoint: aiEndpoint, model: aiModel, apiKey: aiKey })
+      );
+    }
+    setShowAiSetup(false);
+  }
+
   function fmt(s: number) {
     return `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
   }
 
-  function nextPrompt() {
-    const pool = tab === "issue" ? ISSUE : ARGUMENT;
+  function nextPrompt(onlyWithBrainstorm = false) {
+    let pool = tab === "issue" ? ISSUE : ARGUMENT;
+    if (onlyWithBrainstorm && tab === "issue") {
+      const enriched = pool.filter((p) => p.brainstorm && p.brainstorm.length > 0);
+      if (enriched.length > 0) pool = enriched;
+    }
     const unseen = pool.filter((p) => !history.includes(p.id));
     const chosen = pick(unseen.length > 0 ? unseen : pool);
     setPrompt(chosen);
     setEssay("");
     setSubmitted(false);
     setChecklist([]);
+    setAiFeedback("");
+    setShowBrainstorm(false);
     setElapsed(0);
     setRunning(true);
   }
@@ -97,124 +148,282 @@ export default function AwaSession() {
     }
   }
 
+  function buildFullDiagnosticPrompt(): string {
+    return `${awaGuides.ai_diagnostic_prompt}\n\nPROMPT:\n${prompt?.prompt || ""}\n\nDIRECTIONS:\n${prompt?.directions || ""}\n\nSTUDENT ESSAY (${wordCount} words, ${fmt(elapsed)}):\n${essay}`;
+  }
+
+  async function runAiGrade() {
+    if (!aiKey.trim()) {
+      setShowAiSetup(true);
+      return;
+    }
+    setAiLoading(true);
+    setAiFeedback("");
+    try {
+      const res = await fetch(aiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${aiKey.trim()}`,
+        },
+        body: JSON.stringify({
+          model: aiModel,
+          messages: [
+            { role: "system", content: awaGuides.ai_diagnostic_prompt },
+            {
+              role: "user",
+              content: `PROMPT:\n${prompt?.prompt}\n\nDIRECTIONS:\n${prompt?.directions}\n\nSTUDENT ESSAY (${wordCount} words):\n${essay}`,
+            },
+          ],
+          temperature: 0.3,
+        }),
+      });
+      if (!res.ok) {
+        const errTxt = await res.text();
+        setAiFeedback(`API Error (${res.status}): ${errTxt.slice(0, 300)}`);
+      } else {
+        const data = await res.json();
+        setAiFeedback(data?.choices?.[0]?.message?.content || JSON.stringify(data));
+      }
+    } catch (e: any) {
+      setAiFeedback(`Network or CORS error: ${e?.message || String(e)}. Use "Copy ETS Diagnostic Prompt" to paste into ChatGPT, Claude, or Gemini.`);
+    } finally {
+      setAiLoading(false);
+    }
+  }
+
+  function copyDiagnosticPrompt() {
+    navigator.clipboard?.writeText(buildFullDiagnosticPrompt());
+    setCopiedPrompt(true);
+    setTimeout(() => setCopiedPrompt(false), 2000);
+  }
+
   function toggleCheck(i: number) {
     setChecklist((c) => c.map((v, idx) => (idx === i ? !v : v)));
   }
 
   const rubric = tab === "issue" ? ISSUE_RUBRIC : ARGUMENT_RUBRIC;
-  const score = submitted ? Math.round((checklist.filter(Boolean).length / rubric.length) * 6) : null;
+  const score = submitted ? Math.round(((checklist.filter(Boolean).length / rubric.length) * 6) * 2) / 2 : null;
   const wordCount = essay.trim() ? essay.trim().split(/\s+/).length : 0;
+  const wordPct = Math.min(100, Math.round((wordCount / 450) * 100));
 
   return (
-    <main className="container">
-      <p><Link href="/">&larr; Dashboard</Link></p>
-      <h1>GRE Analytical Writing (AWA)</h1>
-      <p style={{ color: "var(--muted)" }}>
-        {ISSUE.length} Issue + {ARGUMENT.length} Argument prompts from the official ETS pool
-      </p>
-
-      {/* Tab selector */}
-      <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
-        {(["issue", "argument"] as const).map((t) => (
-          <button
-            key={t}
-            className="button"
-            style={tab === t ? { backgroundColor: "#7c3aed", borderColor: "#7c3aed" } : {}}
-            onClick={() => { setTab(t); setPrompt(null); setSubmitted(false); setEssay(""); setElapsed(0); setRunning(false); }}
-          >
-            {t === "issue" ? `Issue (${ISSUE.length})` : `Argument (${ARGUMENT.length})`}
+    <main className="container-narrow">
+      <div className="dash-header" style={{ marginBottom: "1rem" }}>
+        <div>
+          <h1 style={{ margin: 0 }}>Essay Writing</h1>
+          <p className="muted-text" style={{ margin: "0.2rem 0 0" }}>
+            Issue Essay · 30 min · Aim for 400-550 words
+          </p>
+        </div>
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+          <button type="button" className="btn-ghost" onClick={() => setShowTemplates((s) => !s)}>
+            {showTemplates ? "Hide Guide" : "Scoring Guide"}
           </button>
-        ))}
+          <button type="button" className="btn-ghost" onClick={() => setShowAiSetup((s) => !s)}>
+            {aiKey ? "AI Ready" : "AI Feedback Setup"}
+          </button>
+          <button
+            type="button"
+            className="btn-ghost"
+            onClick={() => {
+              const next = !showLegacyArg;
+              setShowLegacyArg(next);
+              const nextTab = next ? "argument" : "issue";
+              setTab(nextTab);
+              setPrompt(pick(nextTab === "issue" ? ISSUE : ARGUMENT));
+              setSubmitted(false);
+              setEssay("");
+              setRunning(false);
+              setElapsed(0);
+            }}
+          >
+            {showLegacyArg ? "Switch to Issue" : "Old Argument Prompts"}
+          </button>
+        </div>
       </div>
 
+      {showAiSetup && (
+        <section className="surface-card">
+          <h2>AI Essay Feedback Setup</h2>
+          <p className="muted-text" style={{ marginTop: 0 }}>
+            Saved only on your computer. Works with OpenAI-compatible API keys.
+          </p>
+          <div style={{ display: "grid", gap: "0.75rem" }}>
+            <label htmlFor="awa-ai-endpoint" className="field-label">
+              API Endpoint URL
+              <input id="awa-ai-endpoint" className="field-input" value={aiEndpoint} onChange={(e) => setAiEndpoint(e.target.value)} />
+            </label>
+            <label htmlFor="awa-ai-model" className="field-label">
+              Model Name
+              <input id="awa-ai-model" className="field-input" value={aiModel} onChange={(e) => setAiModel(e.target.value)} />
+            </label>
+            <label htmlFor="awa-ai-key" className="field-label">
+              API Key (stored locally)
+              <input id="awa-ai-key" type="password" className="field-input" value={aiKey} onChange={(e) => setAiKey(e.target.value)} placeholder="sk-..." />
+            </label>
+            <div>
+              <button type="button" className="button" onClick={saveAiConfig}>Save Local Settings</button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {showTemplates && (
+        <section className="surface-card">
+          <h2>Scoring Guide &amp; Essay Templates</h2>
+          <div style={{ display: "grid", gap: "0.5rem", marginBottom: "0.75rem", fontSize: "0.9rem" }}>
+            {awaGuides.rubric_criteria.map((rc) => (
+              <div key={rc.band}>
+                <strong>Band {rc.band}:</strong> {rc.summary}
+              </div>
+            ))}
+          </div>
+          {awaGuides.templates.map((t, i) => (
+            <details key={i} style={{ marginTop: "0.5rem" }}>
+              <summary style={{ fontWeight: 700, padding: "0.4rem 0" }}>{t.title}</summary>
+              <pre className="explanation" style={{ whiteSpace: "pre-wrap", maxHeight: 320, overflowY: "auto" }}>
+                {t.content}
+              </pre>
+            </details>
+          ))}
+        </section>
+      )}
+
       {!prompt ? (
-        <section style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "1.5rem" }}>
-          <h2>{tab === "issue" ? "Analyze an Issue" : "Analyze an Argument"}</h2>
-          <p style={{ color: "var(--muted)", fontSize: "0.9rem" }}>
+        <section className="surface-card">
+          <h2>{tab === "issue" ? "Analyze an Issue (Official 30-Minute Task)" : "Analyze an Argument (Retired Pre-2023 Archive)"}</h2>
+          <p className="muted-text">
             {tab === "issue"
-              ? "You will be presented with an issue and specific instructions. Write a response addressing the issue. Time: 30 minutes."
-              : "You will be presented with an argument and specific instructions. Analyze the reasoning—do not express your own views. Time: 30 minutes."}
+              ? "State a clear position, develop two concrete reasons with real-world examples, address a counterargument, and finish with a crisp conclusion."
+              : "Retired from the GRE in September 2023. Retained here strictly as an optional critical-reasoning exercise."}
           </p>
-          <p style={{ color: "var(--muted)", fontSize: "0.85rem" }}>
-            Seen: {history.filter((id) => id.startsWith(tab === "issue" ? "awa_issue" : "awa_arg")).length} /{" "}
-            {tab === "issue" ? ISSUE.length : ARGUMENT.length} prompts
+          <p className="muted-text">
+            Completed in this browser: <strong>{history.filter((id) => id.startsWith(tab === "issue" ? "awa_issue" : "awa_arg")).length}</strong> / {tab === "issue" ? ISSUE.length : ARGUMENT.length}
           </p>
-          <button className="button" onClick={nextPrompt}>Get a prompt</button>
+          <div className="tab-row" style={{ marginBottom: 0 }}>
+            <button type="button" className="button" onClick={() => nextPrompt(false)}>Random Prompt</button>
+            {tab === "issue" && (
+              <button type="button" className="btn-accent" onClick={() => nextPrompt(true)}>
+                Prompt With Brainstorming Guide ({awaGuides.matched_prompts})
+              </button>
+            )}
+          </div>
         </section>
       ) : !submitted ? (
-        <section style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "1.5rem" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
-            <span style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase" }}>
-              {tab === "issue" ? "Issue Task" : "Argument Task"}
+        <section className="surface-card">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
+            <span className="qtype-label" style={{ margin: 0 }}>
+              {tab === "issue" ? "Issue Task (30 Min)" : "Legacy Argument Task"}
             </span>
-            <span style={{
-              fontFamily: "monospace", fontSize: "1.1rem",
-              color: elapsed > 1800 ? "#ef4444" : "var(--muted)"
-            }}>
-              ⏱ {fmt(elapsed)} {elapsed > 1800 && "⚠️"}
+            <span className="font-mono" style={{ fontWeight: 700, color: elapsed > 1800 ? "var(--incorrect-fg)" : "var(--fg)" }}>
+              Elapsed: {fmt(elapsed)} {elapsed > 1800 ? "(Over 30m limit)" : ""}
             </span>
           </div>
-          <p style={{ fontStyle: "italic", lineHeight: 1.6 }}>{prompt.prompt}</p>
-          {prompt.directions && (
-            <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginTop: "0.75rem", borderLeft: "3px solid var(--border)", paddingLeft: "0.75rem" }}>
-              {prompt.directions}
-            </p>
+
+          <p className="passage" style={{ fontStyle: "italic", margin: "0 0 0.75rem" }}>{prompt.prompt}</p>
+          {prompt.directions && <p className="passage-text">{prompt.directions}</p>}
+
+          {prompt.brainstorm && prompt.brainstorm.length > 0 && (
+            <div style={{ margin: "0.75rem 0" }}>
+              <button type="button" className="btn-ghost" onClick={() => setShowBrainstorm((b) => !b)}>
+                {showBrainstorm ? "Hide Brainstorming Outline" : `Show Brainstorming Outline (${prompt.brainstorm.length} ideas)`}
+              </button>
+              {showBrainstorm && (
+                <ul style={{ marginTop: "0.65rem", paddingLeft: "1.25rem", lineHeight: 1.6, fontSize: "0.92rem" }}>
+                  {prompt.brainstorm.map((pt, i) => (
+                    <li key={i} style={{ marginBottom: "0.4rem" }}>{pt}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
           )}
-          <textarea
-            value={essay}
-            onChange={(e) => setEssay(e.target.value)}
-            placeholder="Write your response here…"
-            style={{
-              width: "100%", minHeight: 300, marginTop: "1rem", padding: "0.75rem",
-              fontFamily: "inherit", fontSize: "0.95rem", lineHeight: 1.6,
-              border: "1px solid var(--border)", borderRadius: 6,
-              backgroundColor: "var(--bg)", color: "var(--text)", resize: "vertical",
-              boxSizing: "border-box",
-            }}
-          />
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "0.5rem" }}>
-            <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{wordCount} words</span>
-            <div style={{ display: "flex", gap: "0.5rem" }}>
-              <button className="button" onClick={nextPrompt}>New prompt</button>
-              <button className="button" onClick={handleSubmit} disabled={wordCount < 50}
-                style={{ backgroundColor: "#0f766e", borderColor: "#0f766e" }}>
-                Submit &amp; Self-Grade
+
+          <label htmlFor="awa-essay-editor" className="field-label" style={{ marginTop: "1rem" }}>
+            Your Essay Response
+            <textarea
+              id="awa-essay-editor"
+              className="field-textarea"
+              value={essay}
+              onChange={(e) => setEssay(e.target.value)}
+              placeholder="Write your essay here (target: 400 to 550 words)..."
+            />
+          </label>
+
+          <div className="word-progress-track" aria-label={`Word count progress: ${wordCount} of 450 target words`}>
+            <div className={`word-progress-fill ${wordCount >= 400 ? "target-met" : ""}`} style={{ width: `${wordPct}%` }} />
+          </div>
+
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem", marginTop: "0.5rem" }}>
+            <span className="muted-text font-mono">
+              {wordCount} words {wordCount >= 400 ? "(Target length reached)" : "(Target: 400+ words)"}
+            </span>
+            <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+              <button type="button" className="btn-ghost" onClick={() => nextPrompt(false)}>New Prompt</button>
+              <button type="button" className="button" onClick={handleSubmit} disabled={wordCount < 50}>
+                Submit &amp; Grade
               </button>
             </div>
           </div>
         </section>
       ) : (
-        <section style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "1.5rem" }}>
-          <h2>Self-Assessment Rubric</h2>
-          <p style={{ color: "var(--muted)", fontSize: "0.85rem" }}>
-            Time: {fmt(elapsed)} &middot; {wordCount} words &middot; Check each criterion you met:
+        <section className="surface-card">
+          <h2>Review Your Essay</h2>
+          <p className="muted-text">
+            Time: {fmt(elapsed)} | Length: {wordCount} words
           </p>
-          <ul style={{ listStyle: "none", padding: 0 }}>
+
+          <div className="tab-row">
+            <button type="button" className="btn-accent" onClick={runAiGrade} disabled={aiLoading}>
+              {aiLoading ? "Checking..." : "Get AI Feedback"}
+            </button>
+            <button type="button" className="btn-ghost" onClick={copyDiagnosticPrompt}>
+              {copiedPrompt ? "Copied" : "Copy Prompt for ChatGPT / Claude"}
+            </button>
+          </div>
+
+          {aiFeedback && (
+            <pre className="explanation" style={{ whiteSpace: "pre-wrap", marginBottom: "1rem" }}>
+              {aiFeedback}
+            </pre>
+          )}
+
+          <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0" }}>
             {rubric.map((item, i) => (
-              <li key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.4rem 0", borderBottom: "1px solid var(--border)" }}>
-                <input type="checkbox" checked={checklist[i] || false} onChange={() => toggleCheck(i)}
-                  style={{ width: 18, height: 18, cursor: "pointer" }} />
-                <label style={{ cursor: "pointer", fontSize: "0.9rem" }} onClick={() => toggleCheck(i)}>{item}</label>
+              <li key={i} style={{ borderBottom: "1px solid var(--border)", padding: "0.55rem 0" }}>
+                <label style={{ display: "flex", alignItems: "center", gap: "0.65rem", fontSize: "0.94rem" }}>
+                  <input
+                    type="checkbox"
+                    checked={checklist[i] || false}
+                    onChange={() => toggleCheck(i)}
+                    style={{ width: 20, height: 20 }}
+                  />
+                  <span>{item}</span>
+                </label>
               </li>
             ))}
           </ul>
+
           {score !== null && (
-            <div style={{ marginTop: "1rem", padding: "0.75rem", backgroundColor: "#134e4a", color: "#fff", borderRadius: 8 }}>
-              <strong>Estimated band: {score}/6</strong>
-              <span style={{ marginLeft: "0.75rem", fontSize: "0.85rem", color: "#ccfbf1" }}>
-                ({checklist.filter(Boolean).length}/{rubric.length} criteria met)
-              </span>
+            <div className="feedback correct">
+              <strong>Self-Estimated Band: {score.toFixed(1)} / 6.0</strong> ({checklist.filter(Boolean).length} of {rubric.length} criteria checked)
             </div>
           )}
-          <div style={{ marginTop: "1rem" }}>
-            <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "var(--muted)", lineHeight: 1.5 }}>
-              <strong>Your prompt:</strong> {prompt.prompt}
-            </p>
-            <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginTop: "0.5rem", whiteSpace: "pre-wrap" }}>
-              <strong>Your response:</strong>{"\n"}{essay}
-            </p>
+
+          {prompt.brainstorm && prompt.brainstorm.length > 0 && (
+            <div className="explanation" style={{ marginTop: "1rem" }}>
+              <strong>Reference Brainstorming Points:</strong>
+              <ul style={{ marginTop: "0.45rem", paddingLeft: "1.2rem" }}>
+                {prompt.brainstorm.map((pt, i) => (
+                  <li key={i} style={{ marginBottom: "0.35rem" }}>{pt}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div style={{ marginTop: "1.25rem" }}>
+            <button type="button" className="button" onClick={() => nextPrompt(false)}>Next Prompt</button>
           </div>
-          <button className="button" style={{ marginTop: "1rem" }} onClick={nextPrompt}>Next prompt</button>
         </section>
       )}
     </main>

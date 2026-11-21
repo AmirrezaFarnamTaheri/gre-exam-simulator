@@ -1,26 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { selectNextQuestion } from "gre-adaptive-engine";
 import type { AnyQuestion, Section } from "gre-adaptive-engine";
 import { BANK } from "@/lib/questionBank";
 import { useAdaptiveState } from "@/lib/useAdaptiveState";
 import QuestionRenderer from "@/components/questions/QuestionRenderer";
 
-export default function StudySession({ section }: { section: Section | undefined }) {
+export default function StudySession({
+  section,
+  mistakesOnly = false,
+}: {
+  section: Section | undefined;
+  mistakesOnly?: boolean;
+}) {
   const { state, recordAnswer, hydrated } = useAdaptiveState();
   const [question, setQuestion] = useState<AnyQuestion | null>(null);
   const [answered, setAnswered] = useState(false);
 
+  // Unresolved mistakes: questions whose MOST RECENT attempt was incorrect
+  const mistakeBank = useMemo(() => {
+    if (!mistakesOnly) return BANK;
+    const latestByQ = new Map<string, boolean>();
+    for (const a of state.attempts) {
+      latestByQ.set(a.questionId, a.correct);
+    }
+    const missedIds = new Set(
+      [...latestByQ.entries()].filter(([, ok]) => !ok).map(([id]) => id)
+    );
+    return BANK.filter((q) => missedIds.has(q.id));
+  }, [mistakesOnly, state.attempts]);
+
   const pickNext = useCallback(() => {
-    setQuestion(selectNextQuestion(state, BANK, { section }));
+    const pool = mistakesOnly ? mistakeBank : BANK;
+    if (pool.length === 0) {
+      setQuestion(null);
+      setAnswered(false);
+      return;
+    }
+    setQuestion(selectNextQuestion(state, pool, { section }));
     setAnswered(false);
-  }, [state, section]);
+  }, [state, section, mistakesOnly, mistakeBank]);
 
   useEffect(() => {
     if (hydrated && !question) pickNext();
-    // Only re-run when hydration completes (initial pick) -- not on every state/pickNext change.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated]);
 
@@ -38,7 +62,11 @@ export default function StudySession({ section }: { section: Section | undefined
     );
   }
 
-  const heading = section ? `${section[0].toUpperCase()}${section.slice(1)} practice` : "Mixed practice";
+  const heading = mistakesOnly
+    ? `Mistake Notebook (${mistakeBank.length} unresolved)`
+    : section
+    ? `${section[0].toUpperCase()}${section.slice(1)} practice`
+    : "Mixed practice";
 
   return (
     <main className="container">
@@ -50,7 +78,11 @@ export default function StudySession({ section }: { section: Section | undefined
       {question ? (
         <QuestionRenderer key={question.id} question={question} onAnswered={handleAnswered} />
       ) : (
-        <p>No questions available for this selection yet.</p>
+        <p>
+          {mistakesOnly
+            ? "No unresolved mistakes! Every question you have attempted is currently mastered."
+            : "No questions available for this selection yet."}
+        </p>
       )}
 
       {answered && (

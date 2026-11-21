@@ -6,11 +6,13 @@ import type {
   QuantComparisonQuestion,
   QuantMultipleChoiceQuestion,
   QuantNumericEntryQuestion,
+  DataInterpretationQuestion,
   TextCompletionQuestion,
   SentenceEquivalenceQuestion,
   ReadingComprehensionQuestion,
 } from "gre-adaptive-engine";
-import { getPassageById } from "@/lib/questionBank";
+import { getDiDatasetById, getPassageById } from "@/lib/questionBank";
+import { DiDataCard } from "@/components/questions/DataInterpretationQuestionView";
 
 interface ExamQuestionRendererProps {
   question: AnyQuestion;
@@ -88,6 +90,16 @@ export default function ExamQuestionRenderer({
   if (question.qtype === "reading_comprehension") {
     return (
       <ReadingComprehensionExamView
+        q={question}
+        answer={currentAnswer}
+        onChange={onAnswerChange}
+      />
+    );
+  }
+
+  if (question.qtype === "data_interpretation") {
+    return (
+      <DataInterpretationExamView
         q={question}
         answer={currentAnswer}
         onChange={onAnswerChange}
@@ -257,7 +269,7 @@ function QuantNumericEntryExamView({
           value={answer || ""}
           onChange={(e) => onChange(e.target.value)}
           placeholder="e.g. 15 or 3.25"
-          className="border-2 border-gray-400 rounded-md p-3 font-mono text-xl w-48 text-center focus:outline-none focus:border-blue-600 bg-white shadow-inner"
+          className="border-2 border-gray-400 rounded-md p-3 font-mono text-xl w-48 text-center bg-white text-gray-900 shadow-inner"
         />
       </div>
     </div>
@@ -423,6 +435,76 @@ function ReadingComprehensionExamView({
         {q.select_all && (
           <div className="text-xs font-sans font-bold uppercase tracking-wide text-blue-800 bg-blue-50 p-2 border border-blue-200 rounded">
             Select all choices that apply.
+          </div>
+        )}
+
+        <div className="space-y-2.5">
+          {q.choices.map((choice) => {
+            const isSelected = current.includes(choice);
+            return (
+              <label
+                key={choice}
+                onClick={() => handleSelect(choice)}
+                className={`flex items-center gap-3 p-3.5 border rounded-lg cursor-pointer transition select-none ${
+                  isSelected
+                    ? "bg-blue-50 border-blue-600 shadow-sm"
+                    : "bg-white border-gray-300 hover:bg-gray-50"
+                }`}
+              >
+                <input
+                  type={q.select_all ? "checkbox" : "radio"}
+                  checked={isSelected}
+                  onChange={() => {}}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="font-serif text-base text-gray-900">{choice}</span>
+              </label>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DataInterpretationExamView({
+  q,
+  answer,
+  onChange,
+}: {
+  q: DataInterpretationQuestion;
+  answer?: string[];
+  onChange: (val: string[]) => void;
+}) {
+  const dataset = getDiDatasetById(q.dataset_id);
+  const current = answer || [];
+
+  function handleSelect(choice: string) {
+    if (q.select_all) {
+      if (current.includes(choice)) {
+        onChange(current.filter((c) => c !== choice));
+      } else {
+        onChange([...current, choice]);
+      }
+    } else {
+      onChange([choice]);
+    }
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="overflow-y-auto max-h-[550px]">
+        <DiDataCard dataset={dataset} />
+      </div>
+
+      <div className="space-y-5">
+        <div className="font-serif text-lg leading-relaxed text-gray-900">
+          {q.prompt}
+        </div>
+
+        {q.select_all && (
+          <div className="text-xs font-sans font-bold uppercase tracking-wide text-blue-800 bg-blue-50 p-2 border border-blue-200 rounded">
+            Indicate ALL such statements/values.
           </div>
         )}
 

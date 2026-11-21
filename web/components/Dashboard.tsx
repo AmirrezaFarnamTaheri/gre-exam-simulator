@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { exportState, getTopicSummary, importState, topicsForSection } from "gre-adaptive-engine";
 import { BANK } from "@/lib/questionBank";
+import { VOCAB } from "@/lib/vocab";
 import { useAdaptiveState } from "@/lib/useAdaptiveState";
 
 export default function Dashboard() {
@@ -13,7 +14,7 @@ export default function Dashboard() {
   if (!hydrated) {
     return (
       <main className="container">
-        <p>Loading your progress...</p>
+        <p className="muted-text">Loading...</p>
       </main>
     );
   }
@@ -22,6 +23,10 @@ export default function Dashboard() {
   const quantTopics = topicsForSection(BANK, "quant");
   const verbalSummary = getTopicSummary(state, verbalTopics);
   const quantSummary = getTopicSummary(state, quantTopics);
+
+  const latestByQ = new Map<string, boolean>();
+  for (const a of state.attempts) latestByQ.set(a.questionId, a.correct);
+  const unresolvedMistakes = [...latestByQ.values()].filter((ok) => !ok).length;
 
   function handleExport() {
     const blob = new Blob([exportState(state)], { type: "application/json" });
@@ -33,10 +38,6 @@ export default function Dashboard() {
     URL.revokeObjectURL(url);
   }
 
-  function handleImportClick() {
-    fileInputRef.current?.click();
-  }
-
   async function handleImportFile(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -44,98 +45,128 @@ export default function Dashboard() {
     try {
       replaceState(importState(text));
     } catch {
-      alert("That file doesn't look like a valid progress export.");
+      alert("That file does not match the GRE study progress export format.");
     }
     e.target.value = "";
   }
 
   return (
     <main className="container">
-      <h1>GRE Adaptive Study & Exam Simulator</h1>
-
-      <section className="section-ratings">
-        <div className="rating-card">
-          <h2>Verbal Rating</h2>
-          <p className="rating-value">{Math.round(state.sectionRatings.verbal)}</p>
+      {/* Compact Header + Inline Progress Summary */}
+      <div className="dash-header">
+        <div>
+          <h1>GRE Practice</h1>
+          <div className="bank-meta-strip">
+            <span>Verbal <strong>{Math.round(state.sectionRatings.verbal)}</strong></span>
+            <span>Math <strong>{Math.round(state.sectionRatings.quant)}</strong></span>
+            <span><strong>{state.attempts.length}</strong> answered</span>
+            <span><strong>{unresolvedMistakes}</strong> mistakes</span>
+          </div>
         </div>
-        <div className="rating-card">
-          <h2>Quant Rating</h2>
-          <p className="rating-value">{Math.round(state.sectionRatings.quant)}</p>
+        <Link href="/exam/full" className="btn-accent">
+          Start Full Test (1h 58m)
+        </Link>
+      </div>
+
+      {/* Primary Action Grid: Timed Exams */}
+      <section className="exam-desk-panel" aria-label="Timed GRE Exams">
+        <div className="exam-hero-grid">
+          <Link href="/exam/full" className="exam-mode-card primary-mock">
+            <div className="exam-card-head">
+              <span className="exam-card-title">Full Practice Test</span>
+              <span className="exam-meta-tag">1h 58m</span>
+            </div>
+            <span className="exam-card-desc">
+              Essay + Verbal &amp; Math with a combined 260-340 score.
+            </span>
+          </Link>
+
+          <Link href="/exam/quant" className="exam-mode-card">
+            <div className="exam-card-head">
+              <span className="exam-card-title">Timed Math</span>
+              <span className="exam-meta-tag">27 Q · 47m</span>
+            </div>
+            <span className="exam-card-desc">
+              Two timed parts with calculator, charts, and tables.
+            </span>
+          </Link>
+
+          <Link href="/exam/verbal" className="exam-mode-card">
+            <div className="exam-card-head">
+              <span className="exam-card-title">Timed Verbal</span>
+              <span className="exam-meta-tag">27 Q · 41m</span>
+            </div>
+            <span className="exam-card-desc">
+              Two timed parts with fill-in-the-blank, synonyms, and reading.
+            </span>
+          </Link>
+        </div>
+
+        <div className="exam-quick-links">
+          <Link href="/exam/quant-s1">Short Math Test (12 Q, 21m)</Link>
+          <Link href="/exam/verbal-s1">Short Verbal Test (12 Q, 18m)</Link>
         </div>
       </section>
 
-      {/* ETS Real Exam Simulator Modes */}
-      <section style={{ backgroundColor: "#1b3a5b", color: "#fff", padding: "1.5rem", borderRadius: "10px", margin: "1.5rem 0", boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px" }}>
-          <span style={{ backgroundColor: "#f59e0b", color: "#000", fontSize: "11px", fontWeight: "900", padding: "2px 6px", borderRadius: "4px" }}>ETS EXAM SIMULATOR</span>
-          <h2 style={{ fontSize: "1.25rem", margin: 0, fontWeight: "bold" }}>Timed Section Mode</h2>
-        </div>
-        <p style={{ fontSize: "0.85rem", color: "#bfdbfe", margin: "0 0 1rem 0" }}>
-          Official ETS test conditions: countdown timer (Hide/Show), on-screen calculator, Mark for Review, and Review Grid. Zero spoilers during the test.
-        </p>
-
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-          <Link
-            href="/exam/quant"
-            style={{ display: "block", padding: "1rem", backgroundColor: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: "8px", textDecoration: "none", color: "#fff" }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontWeight: "bold", fontSize: "1rem" }}>
-              <span>Quant Section &rarr;</span>
-              <span style={{ backgroundColor: "#10b981", fontSize: "11px", padding: "2px 6px", borderRadius: "4px" }}>12 Q • 21 Min</span>
-            </div>
-            <div style={{ fontSize: "0.8rem", color: "#e2e8f0", marginTop: "4px" }}>
-              Includes on-screen calculator & review table
-            </div>
-          </Link>
-
-          <Link
-            href="/exam/verbal"
-            style={{ display: "block", padding: "1rem", backgroundColor: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: "8px", textDecoration: "none", color: "#fff" }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontWeight: "bold", fontSize: "1rem" }}>
-              <span>Verbal Section &rarr;</span>
-              <span style={{ backgroundColor: "#10b981", fontSize: "11px", padding: "2px 6px", borderRadius: "4px" }}>12 Q • 18 Min</span>
-            </div>
-            <div style={{ fontSize: "0.8rem", color: "#e2e8f0", marginTop: "4px" }}>
-              Text Completion, SE & Reading Comprehension
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      <h3 style={{ marginTop: "1.5rem", marginBottom: "0.5rem", fontSize: "1.1rem", fontWeight: "bold" }}>Untimed Adaptive Practice</h3>
-      <nav className="study-links">
-        <Link href="/study/verbal" className="button">
-          Study Verbal
+      {/* Focused Untimed Practice */}
+      <nav className="study-grid" aria-label="Study tools">
+        <Link href="/study/verbal" className="study-tile">
+          <strong>Verbal Practice</strong>
+          <span>Fill-in-the-blank, synonyms &amp; reading</span>
         </Link>
-        <Link href="/study/quant" className="button">
-          Study Quant
+        <Link href="/study/quant" className="study-tile">
+          <strong>Math Practice</strong>
+          <span>Focuses on your weaker topics</span>
         </Link>
-        <Link href="/study/mixed" className="button">
-          Study Mixed
+        <Link href="/study/mistakes" className="study-tile">
+          <strong>Mistakes ({unresolvedMistakes})</strong>
+          <span>Retry missed questions</span>
         </Link>
-        <Link href="/vocab" className="button">
-          Vocabulary (SRS)
+        <Link href="/vocab" className="study-tile">
+          <strong>Vocab ({VOCAB.length.toLocaleString()})</strong>
+          <span>Flashcards &amp; synonym matching</span>
         </Link>
-        <Link href="/awa" className="button" style={{ backgroundColor: "#7c3aed", borderColor: "#7c3aed" }}>
-          AWA Writing Practice
+        <Link href="/awa" className="study-tile">
+          <strong>Essay Writing</strong>
+          <span>Timed essays &amp; outlines</span>
+        </Link>
+        <Link href="/guides" className="study-tile">
+          <strong>Guides</strong>
+          <span>Math formulas, reading tips &amp; scoring</span>
         </Link>
       </nav>
 
-      <TopicTable title="Verbal topics" rows={verbalSummary} />
-      <TopicTable title="Quant topics" rows={quantSummary} />
+      {/* Collapsible Details: Topic Mastery & Local Backup */}
+      <details className="surface-card dash-details" open={state.attempts.length > 0}>
+        <summary className="dash-summary">
+          <span>Progress by Topic &amp; Backup</span>
+          <span className="muted-text" style={{ fontWeight: 500, fontSize: "0.85rem" }}>
+            {verbalTopics.length + quantTopics.length} topics · {BANK.length.toLocaleString()} questions
+          </span>
+        </summary>
 
-      <section className="backup-actions">
-        <button onClick={handleExport}>Export progress</button>
-        <button onClick={handleImportClick}>Import progress</button>
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="application/json"
-          style={{ display: "none" }}
-          onChange={handleImportFile}
-        />
-      </section>
+        <div className="topics-grid" style={{ marginTop: "1rem" }}>
+          <TopicTable title="Verbal Topics" rows={verbalSummary} />
+          <TopicTable title="Math Topics" rows={quantSummary} />
+        </div>
+
+        <div className="backup-actions">
+          <button type="button" className="btn-ghost" onClick={handleExport}>
+            Save Backup
+          </button>
+          <button type="button" className="btn-ghost" onClick={() => fileInputRef.current?.click()}>
+            Load Backup
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="application/json"
+            aria-label="Import progress JSON file"
+            style={{ display: "none" }}
+            onChange={handleImportFile}
+          />
+        </div>
+      </details>
     </main>
   );
 }
@@ -143,25 +174,34 @@ export default function Dashboard() {
 function TopicTable({ title, rows }: { title: string; rows: ReturnType<typeof getTopicSummary> }) {
   return (
     <section className="topic-table">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <table>
         <thead>
           <tr>
             <th>Topic</th>
-            <th>Rating</th>
-            <th>Attempts</th>
+            <th>Score</th>
+            <th>Level</th>
             <th>Accuracy</th>
           </tr>
         </thead>
         <tbody>
-          {rows.map((r) => (
-            <tr key={r.topic}>
-              <td>{r.topic.replace(/_/g, " ")}</td>
-              <td>{Math.round(r.rating)}</td>
-              <td>{r.attempts}</td>
-              <td>{r.accuracy === null ? "—" : `${Math.round(r.accuracy * 100)}%`}</td>
-            </tr>
-          ))}
+          {rows.map((r) => {
+            const pct = Math.max(6, Math.min(100, Math.round(((r.rating - 600) / 800) * 100)));
+            return (
+              <tr key={r.topic}>
+                <td className="capitalize">{r.topic.replace(/_/g, " ")}</td>
+                <td className="font-mono">{Math.round(r.rating)}</td>
+                <td>
+                  <div className="mastery-bar-track" aria-label={`Mastery ${pct}%`}>
+                    <div className="mastery-bar-fill" style={{ width: `${pct}%` }} />
+                  </div>
+                </td>
+                <td className="font-mono">
+                  {r.accuracy === null ? "New" : `${Math.round(r.accuracy * 100)}%`}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </section>

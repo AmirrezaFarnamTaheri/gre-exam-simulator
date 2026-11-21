@@ -1,33 +1,86 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import type { AnyQuestion, Section } from "gre-adaptive-engine";
+import {
+  determineSection2Difficulty,
+  type AdaptiveDifficultyBand,
+  type AnyQuestion,
+  type Section,
+} from "gre-adaptive-engine";
 import { BANK } from "@/lib/questionBank";
 import GRECalculator from "./GRECalculator";
 import ReviewModal from "./ReviewModal";
 import ExamQuestionRenderer from "./ExamQuestionRenderer";
-import ExamResults from "./ExamResults";
+import ExamResults, { evaluateQuestionAnswer } from "./ExamResults";
 
 interface ExamSessionProps {
   section: Section;
+  adaptiveTwoStage?: boolean;
   questionCount?: number;
   durationMinutes?: number;
 }
 
+function shuffle<T>(arr: T[]): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function sampleStageQuestions(
+  section: Section,
+  count: number,
+  band: AdaptiveDifficultyBand,
+  excludeIds: Set<string>
+): AnyQuestion[] {
+  const pool = BANK.filter((q) => q.section === section && !excludeIds.has(q.id));
+  const targetDiffs =
+    band === "easy" ? [1, 2, 3] : band === "hard" ? [4, 5] : [3, 4, 2];
+
+  const primary = shuffle(pool.filter((q) => targetDiffs.includes(q.difficulty)));
+  const fallback = shuffle(pool.filter((q) => !targetDiffs.includes(q.difficulty)));
+  const combined = [...primary, ...fallback];
+
+  // For Quant, ensure at least 1-2 Data Interpretation items when available
+  if (section === "quant") {
+    const diPool = combined.filter((q) => q.qtype === "data_interpretation");
+    const nonDi = combined.filter((q) => q.qtype !== "data_interpretation");
+    const diTake = Math.min(2, diPool.length);
+    const chosen = [...nonDi.slice(0, Math.max(0, count - diTake)), ...diPool.slice(0, diTake)];
+    return shuffle(chosen).slice(0, count);
+  }
+  return combined.slice(0, count);
+}
+
 export default function ExamSession({
   section,
+  adaptiveTwoStage = true,
   questionCount = 12,
   durationMinutes = 21,
 }: ExamSessionProps) {
   const router = useRouter();
 
-  // Test setup
+  // Stage state: 1 (12 Q Medium) -> transition -> 2 (15 Q Easy/Medium/Hard)
+  const [stage, setStage] = useState<1 | 2>(1);
+  const [stageTransition, setStageTransition] = useState<{
+    s1Correct: number;
+    s1Total: number;
+    nextBand: AdaptiveDifficultyBand;
+  } | null>(null);
+  const [s2Difficulty, setS2Difficulty] = useState<AdaptiveDifficultyBand>("medium");
+
   const [questions, setQuestions] = useState<AnyQuestion[]>([]);
+  const [s1Questions, setS1Questions] = useState<AnyQuestion[]>([]);
+  const [s1Answers, setS1Answers] = useState<Record<string, any>>({});
+  const [s1TimeSec, setS1TimeSec] = useState(0);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<string, any>>({});
   const [markedQuestions, setMarkedQuestions] = useState<Record<string, boolean>>({});
+  const [questionTimesSec, setQuestionTimesSec] = useState<Record<string, number>>({});
 
   // Tool states
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
@@ -36,33 +89,69 @@ export default function ExamSession({
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
-  // Timer state
-  const totalSeconds = durationMinutes * 60;
+  // Stage-specific durations (official Shortened GRE timings)
+  const stageDurationMin =
+    stage === 1
+      ? durationMinutes
+      : section === "quant"
+      ? 26
+      : 23;
+  const totalSeconds = stageDurationMin * 60;
   const [secondsRemaining, setSecondsRemaining] = useState(totalSeconds);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
 
-  // Question sampling
-  function sampleQuestions() {
-    const pool = BANK.filter((q) => q.section === section);
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, questionCount);
+  const currentQIdRef = useRef<string | null>(null);
+
+  function startFreshExam() {
+    const s1 = sampleStageQuestions(section, questionCount, "medium", new Set());
+    setStage(1);
+    setStageTransition(null);
+    setS2Difficulty("medium");
+    setQuestions(s1);
+    setS1Questions([]);
+    setS1Answers({});
+    setS1TimeSec(0);
+    setUserAnswers({});
+    setMarkedQuestions({});
+    setQuestionTimesSec({});
+    setCurrentIndex(0);
+    setIsFinished(false);
+    setSecondsRemaining(durationMinutes * 60);
   }
 
-  // Initialize questions
   useEffect(() => {
-    setQuestions(sampleQuestions());
-    setSecondsRemaining(durationMinutes * 60);
-  }, [section, questionCount, durationMinutes]);
+    startFreshExam();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [section, questionCount, durationMinutes, adaptiveTwoStage]);
 
-  // Countdown timer
+  const currentQ = questions[currentIndex];
   useEffect(() => {
-    if (isFinished || questions.length === 0) return;
+    currentQIdRef.current = currentQ?.id ?? null;
+  }, [currentQ?.id]);
+
+  // Close submit confirmation modal on Escape key
+  useEffect(() => {
+    if (!showSubmitConfirm) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setShowSubmitConfirm(false);
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showSubmitConfirm]);
+
+  // Countdown + per-question elapsed time tracker
+  useEffect(() => {
+    if (isFinished || stageTransition || questions.length === 0) return;
 
     const timer = setInterval(() => {
+      const activeId = currentQIdRef.current;
+      if (activeId) {
+        setQuestionTimesSec((prev) => ({ ...prev, [activeId]: (prev[activeId] ?? 0) + 1 }));
+      }
       setSecondsRemaining((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          setIsFinished(true);
+          finishCurrentStage();
           return 0;
         }
         return prev - 1;
@@ -70,44 +159,134 @@ export default function ExamSession({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [isFinished, questions.length]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFinished, stageTransition, questions.length, stage]);
+
+  function finishCurrentStage() {
+    setShowSubmitConfirm(false);
+    if (adaptiveTwoStage && stage === 1) {
+      const s1Correct = questions.filter((q) => evaluateQuestionAnswer(q, userAnswers[q.id])).length;
+      const nextBand = determineSection2Difficulty(s1Correct, questions.length);
+      setS1Questions(questions);
+      setS1Answers(userAnswers);
+      setS1TimeSec(totalSeconds - secondsRemaining);
+      setS2Difficulty(nextBand);
+      setStageTransition({ s1Correct, s1Total: questions.length, nextBand });
+    } else {
+      setIsFinished(true);
+    }
+  }
+
+  function beginStage2() {
+    if (!stageTransition) return;
+    const seen = new Set(s1Questions.map((q) => q.id));
+    const s2 = sampleStageQuestions(section, 15, stageTransition.nextBand, seen);
+    setStage(2);
+    setQuestions(s2);
+    setUserAnswers({});
+    setMarkedQuestions({});
+    setCurrentIndex(0);
+    setStageTransition(null);
+    setSecondsRemaining((section === "quant" ? 26 : 23) * 60);
+  }
 
   if (questions.length === 0) {
     return (
       <div className="min-h-screen flex items-center justify-center font-sans bg-gray-100">
         <div className="text-center p-8 bg-white rounded-xl shadow-md border">
-          <h2 className="text-lg font-bold text-gray-800">Initializing Exam Section...</h2>
-          <p className="text-sm text-gray-500 mt-2">Calibrating ETS question parameters...</p>
+          <h2 className="text-lg font-bold text-gray-800">Starting Test...</h2>
+          <p className="text-sm text-gray-500 mt-2">Loading questions...</p>
         </div>
       </div>
     );
   }
 
-  const currentQ = questions[currentIndex];
-  const isMarked = !!markedQuestions[currentQ.id];
+  if (stageTransition) {
+    return (
+      <div className="min-h-screen bg-[#f3f4f6] flex items-center justify-center p-6 font-sans">
+        <div className="bg-white border-2 border-[#1b3a5b] rounded-xl max-w-lg w-full p-8 shadow-lg space-y-4 text-center">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-700">
+            Part 1 Complete
+          </p>
+          <h2 className="text-2xl font-bold text-gray-900">
+            Ready for Part 2 ({section === "quant" ? "15 Q · 26 Min" : "15 Q · 23 Min"})
+          </h2>
+          <p className="text-sm text-gray-600">
+            You answered {stageTransition.s1Correct} of {stageTransition.s1Total} correctly in Part 1.
+            Your Part 2 difficulty is{" "}
+            <strong className="uppercase text-[#1b3a5b]">{stageTransition.nextBand}</strong>.
+          </p>
+          <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-900">
+            {stageTransition.nextBand === "hard"
+              ? "Hard Part 2: unlocks scores up to 170."
+              : stageTransition.nextBand === "medium"
+              ? "Medium Part 2: balanced difficulty (scores up to ~164)."
+              : "Easy Part 2: foundational difficulty (scores up to ~155)."}
+          </div>
+          <button
+            type="button"
+            onClick={beginStage2}
+            className="w-full py-3 bg-[#1b3a5b] hover:bg-[#12273e] text-white font-bold rounded-lg shadow transition"
+          >
+            Start Part 2 &rarr;
+          </button>
+        </div>
+      </div>
+    );
+  }
 
+  if (isFinished) {
+    const allQuestions = adaptiveTwoStage ? [...s1Questions, ...questions] : questions;
+    const allAnswers = adaptiveTwoStage ? { ...s1Answers, ...userAnswers } : userAnswers;
+    const totalTimeSpent = (adaptiveTwoStage ? s1TimeSec : 0) + (totalSeconds - secondsRemaining);
+    const s1Correct = adaptiveTwoStage
+      ? s1Questions.filter((q) => evaluateQuestionAnswer(q, s1Answers[q.id])).length
+      : undefined;
+
+    const title =
+      section === "quant"
+        ? adaptiveTwoStage
+          ? "Quantitative Reasoning (Full 2-Stage Adaptive: 12 + 15 Q)"
+          : "Section 1: Quantitative Reasoning"
+        : adaptiveTwoStage
+        ? "Verbal Reasoning (Full 2-Stage Adaptive: 12 + 15 Q)"
+        : "Section 1: Verbal Reasoning";
+
+    return (
+      <ExamResults
+        section={section}
+        questions={allQuestions}
+        userAnswers={allAnswers}
+        timeSpentSec={totalTimeSpent}
+        questionTimesSec={questionTimesSec}
+        sectionTitle={title}
+        s1Count={adaptiveTwoStage ? s1Questions.length : undefined}
+        s1Correct={s1Correct}
+        s2Difficulty={adaptiveTwoStage ? s2Difficulty : undefined}
+        onRetake={() => {
+          setIsFinished(false);
+          setUserAnswers({});
+          setMarkedQuestions({});
+          setCurrentIndex(0);
+          setSecondsRemaining(totalSeconds);
+        }}
+        onRetakeFresh={startFreshExam}
+      />
+    );
+  }
+
+  const isMarked = !!markedQuestions[currentQ.id];
   const minutesLeft = Math.floor(secondsRemaining / 60);
   const secondsLeft = secondsRemaining % 60;
-  const isTimeLow = secondsRemaining < 300; // < 5 mins
+  const isTimeLow = secondsRemaining < 300;
 
   function handleAnswerChange(ans: any) {
-    setUserAnswers((prev) => ({
-      ...prev,
-      [currentQ.id]: ans,
-    }));
-    // Reset transfer val once applied
+    setUserAnswers((prev) => ({ ...prev, [currentQ.id]: ans }));
     setCalcTransferVal(null);
   }
 
   function toggleMark() {
-    setMarkedQuestions((prev) => ({
-      ...prev,
-      [currentQ.id]: !prev[currentQ.id],
-    }));
-  }
-
-  function handleCalculatorTransfer(val: string) {
-    setCalcTransferVal(val);
+    setMarkedQuestions((prev) => ({ ...prev, [currentQ.id]: !prev[currentQ.id] }));
   }
 
   function handleNext() {
@@ -119,30 +298,15 @@ export default function ExamSession({
   }
 
   function handleBack() {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
   }
 
-  function handleRetake(fresh = false) {
-    if (fresh) {
-      setQuestions(sampleQuestions());
-    }
-    setIsFinished(false);
-    setSecondsRemaining(totalSeconds);
-    setUserAnswers({});
-    setMarkedQuestions({});
-    setCurrentIndex(0);
-  }
-
-  // Count unanswered questions
   const unansweredCount = questions.filter((q) => {
     const ans = userAnswers[q.id];
     if (ans === undefined || ans === null || ans === "") return true;
     if (q.qtype === "text_completion") {
       if (!ans || typeof ans !== "object") return true;
-      const reqBlanks = Object.keys(q.choices);
-      return !reqBlanks.every((b) => !!ans[b]);
+      return !Object.keys(q.choices).every((b) => !!ans[b]);
     }
     if (q.qtype === "sentence_equivalence") {
       return !Array.isArray(ans) || ans.length !== 2;
@@ -151,30 +315,11 @@ export default function ExamSession({
     return false;
   }).length;
 
-  if (isFinished) {
-    const timeSpent = totalSeconds - secondsRemaining;
-    const title =
-      section === "quant"
-        ? "Section 1: Quantitative Reasoning"
-        : "Section 1: Verbal Reasoning";
-
-    return (
-      <ExamResults
-        questions={questions}
-        userAnswers={userAnswers}
-        timeSpentSec={timeSpent}
-        sectionTitle={title}
-        onRetake={() => handleRetake(false)}
-        onRetakeFresh={() => handleRetake(true)}
-      />
-    );
-  }
-
   return (
     <div className="min-h-screen bg-[#f3f4f6] text-gray-900 font-sans flex flex-col justify-between">
       {/* ETS Top Header Toolbar */}
       <header className="bg-[#1b3a5b] text-white select-none shadow-md">
-        <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between text-sm">
+        <div className="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-sm">
           <div className="flex items-center gap-4">
             <button
               onClick={() => {
@@ -187,9 +332,8 @@ export default function ExamSession({
               Quit Test
             </button>
             <span className="font-bold tracking-wide uppercase text-blue-200">
-              {section === "quant"
-                ? "Quantitative Reasoning"
-                : "Verbal Reasoning"}
+              {section === "quant" ? "Quantitative" : "Verbal"} · Section {stage}
+              {adaptiveTwoStage && stage === 2 ? ` (${s2Difficulty})` : ""}
             </span>
           </div>
 
@@ -198,7 +342,6 @@ export default function ExamSession({
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Mark for review checkbox */}
             <label className="flex items-center gap-1.5 cursor-pointer bg-white/10 px-2.5 py-1 rounded border border-white/20 hover:bg-white/20 transition">
               <input
                 type="checkbox"
@@ -209,7 +352,6 @@ export default function ExamSession({
               <span className="text-xs font-bold uppercase">Mark</span>
             </label>
 
-            {/* Review Screen Button */}
             <button
               onClick={() => setIsReviewOpen(true)}
               className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded border border-white/20 text-xs font-bold uppercase transition"
@@ -217,7 +359,6 @@ export default function ExamSession({
               Review
             </button>
 
-            {/* Calculator Button (Quant only) */}
             {section === "quant" && (
               <button
                 onClick={() => setIsCalculatorOpen(!isCalculatorOpen)}
@@ -231,7 +372,6 @@ export default function ExamSession({
               </button>
             )}
 
-            {/* Timer & Hide Time Button */}
             <div className="flex items-center gap-2 bg-black/30 px-3 py-1 rounded border border-white/10">
               {!isTimerHidden && (
                 <span
@@ -239,8 +379,7 @@ export default function ExamSession({
                     isTimeLow ? "text-amber-300 animate-pulse" : "text-white"
                   }`}
                 >
-                  {String(minutesLeft).padStart(2, "0")}:
-                  {String(secondsLeft).padStart(2, "0")}
+                  {String(minutesLeft).padStart(2, "0")}:{String(secondsLeft).padStart(2, "0")}
                 </span>
               )}
               <button
@@ -254,7 +393,6 @@ export default function ExamSession({
         </div>
       </header>
 
-      {/* Main Exam Question Canvas */}
       <main className="max-w-5xl w-full mx-auto p-6 md:p-8 flex-1">
         <div className="bg-white border-2 border-gray-300 rounded-xl p-8 shadow-sm min-h-[480px] flex flex-col justify-between">
           <ExamQuestionRenderer
@@ -266,14 +404,12 @@ export default function ExamSession({
         </div>
       </main>
 
-      {/* Floating GRE Calculator */}
       <GRECalculator
         isOpen={isCalculatorOpen}
         onClose={() => setIsCalculatorOpen(false)}
-        onTransferDisplay={handleCalculatorTransfer}
+        onTransferDisplay={(val) => setCalcTransferVal(val)}
       />
 
-      {/* Question Review Grid Modal */}
       <ReviewModal
         isOpen={isReviewOpen}
         onClose={() => setIsReviewOpen(false)}
@@ -284,48 +420,53 @@ export default function ExamSession({
         currentIndex={currentIndex}
       />
 
-      {/* Section Submission Confirmation Modal */}
       {showSubmitConfirm && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl shadow-2xl border-2 border-gray-400 max-w-md w-full p-6 text-center space-y-4">
-            <h3 className="text-xl font-bold text-gray-900">
-              Submit This Section?
+        <div
+          className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="submit-confirm-title"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowSubmitConfirm(false);
+          }}
+        >
+          <div className="bg-white text-gray-900 rounded-xl shadow-2xl border-2 border-gray-400 max-w-md w-full p-6 text-center space-y-4">
+            <h3 id="submit-confirm-title" className="text-xl font-bold text-gray-900">
+              Submit Section {stage}?
             </h3>
             {unansweredCount > 0 ? (
               <p className="text-sm text-amber-700 bg-amber-50 p-3 rounded-lg border border-amber-200">
-                ⚠️ You have <strong>{unansweredCount} incomplete or unanswered</strong> question{unansweredCount > 1 ? "s" : ""}. Unanswered questions receive 0 points on the GRE.
+                Warning: You have <strong>{unansweredCount} incomplete or unanswered</strong> question
+                {unansweredCount > 1 ? "s" : ""}. Unanswered questions receive 0 points on the GRE.
               </p>
             ) : (
               <p className="text-sm text-gray-600">
-                You have answered all {questions.length} questions in this section.
+                You have answered all {questions.length} questions in Section {stage}.
               </p>
             )}
             <p className="text-xs text-gray-500">
-              Once you submit, you cannot return to this section.
+              Once you submit, you cannot return to Section {stage}.
             </p>
-
             <div className="flex justify-center gap-3 pt-2">
               <button
+                type="button"
                 onClick={() => setShowSubmitConfirm(false)}
-                className="px-4 py-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-100 transition"
+                className="px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-100 transition"
               >
                 Return to Test
               </button>
               <button
-                onClick={() => {
-                  setShowSubmitConfirm(false);
-                  setIsFinished(true);
-                }}
+                type="button"
+                onClick={finishCurrentStage}
                 className="px-5 py-2 bg-[#1b3a5b] hover:bg-[#12273e] text-white text-sm font-bold rounded-lg shadow transition"
               >
-                Submit Section
+                {adaptiveTwoStage && stage === 1 ? "Submit & Route to Section 2" : "Finish & Score"}
               </button>
             </div>
           </div>
         </div>
       )}
 
-      {/* Bottom Navigation Toolbar */}
       <footer className="bg-white border-t border-gray-300 py-3 px-6 shadow-inner select-none">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
           <button
@@ -345,14 +486,14 @@ export default function ExamSession({
               onClick={() => setShowSubmitConfirm(true)}
               className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-bold border border-gray-300 rounded-lg transition"
             >
-              End Section
+              End Section {stage}
             </button>
 
             <button
               onClick={handleNext}
               className="px-7 py-2 bg-[#1b3a5b] hover:bg-[#12273e] text-white text-sm font-bold rounded-lg shadow transition"
             >
-              {currentIndex === questions.length - 1 ? "Review & Finish" : "Next \u2192"}
+              {currentIndex === questions.length - 1 ? "Review & Submit" : "Next \u2192"}
             </button>
           </div>
         </div>

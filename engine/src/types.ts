@@ -73,13 +73,37 @@ export interface QuantNumericEntryQuestion extends QuestionBase {
   correct: string;
 }
 
+export interface DataInterpretationDataset {
+  id: string;
+  title: string;
+  subtitle?: string;
+  chartType: "bar" | "table";
+  unit?: string;
+  headers: string[];
+  rows: (string | number)[][];
+  notes?: string;
+}
+
+export interface DataInterpretationQuestion extends QuestionBase {
+  section: "quant";
+  qtype: "data_interpretation";
+  dataset_id: string;
+  prompt: string;
+  choices: string[];
+  correct: string[];
+  select_all: boolean;
+}
+
+export type AdaptiveDifficultyBand = "easy" | "medium" | "hard";
+
 export type AnyQuestion =
   | TextCompletionQuestion
   | SentenceEquivalenceQuestion
   | ReadingComprehensionQuestion
   | QuantComparisonQuestion
   | QuantMultipleChoiceQuestion
-  | QuantNumericEntryQuestion;
+  | QuantNumericEntryQuestion
+  | DataInterpretationQuestion;
 
 /** Per-topic ability estimate and interaction history. */
 export interface TopicStat {

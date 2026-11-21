@@ -7,6 +7,7 @@ import ReadingComprehensionQuestionView from "./ReadingComprehensionQuestionView
 import QuantComparisonQuestionView from "./QuantComparisonQuestionView";
 import QuantMultipleChoiceQuestionView from "./QuantMultipleChoiceQuestionView";
 import QuantNumericEntryQuestionView from "./QuantNumericEntryQuestionView";
+import DataInterpretationQuestionView from "./DataInterpretationQuestionView";
 
 export default function QuestionRenderer({
   question,
@@ -28,6 +29,8 @@ export default function QuestionRenderer({
       return <QuantMultipleChoiceQuestionView question={question} onAnswered={onAnswered} />;
     case "quant_numeric_entry":
       return <QuantNumericEntryQuestionView question={question} onAnswered={onAnswered} />;
+    case "data_interpretation":
+      return <DataInterpretationQuestionView question={question} onAnswered={onAnswered} />;
     default: {
       // Exhaustiveness check: a compile error here means a qtype was added
       // without a corresponding view component.

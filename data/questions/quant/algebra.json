@@ -487,5 +487,231 @@
     ],
     "prompt": "If 5^(2x - 3) = 125^(x - 2), what is the value of x?",
     "correct": "3"
+  },
+  {
+    "id": "q240_s1_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "shared_info": "x2 + 6x = 7.",
+    "quantity_a": "(x + 3)2.",
+    "quantity_b": "16.",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A ((x + 3)2.) vs Quantity B (16.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "prompt": "(2x + 1)2 \u0000 (2x \u0000 1)2 =",
+    "choices": [
+      "2",
+      "8x",
+      "4x \u0000 1",
+      "4x + 1",
+      "8x + 2"
+    ],
+    "correct": [
+      "8x"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 8x. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s2_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "shared_info": "f (x) = 4 x2 + 28x + 49 for all x.",
+    "quantity_a": "The numberb such that f (b) is the minimum value off.",
+    "quantity_b": "\u00003.",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The numberb such that f (b) is the minimum value off.) vs Quantity B (\u00003.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s3_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 4,
+    "shared_info": "x is an integer greater than 3.",
+    "quantity_a": "The number of even factors of2x",
+    "quantity_b": "The number of odd factors of3x",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (The number of even factors of2x) vs Quantity B (The number of odd factors of3x) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s4_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "shared_info": "The reciprocal ofx \u0000 2 is x + 2.",
+    "quantity_a": "x",
+    "quantity_b": "3",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (x) vs Quantity B (3) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s5_q20",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 4,
+    "prompt": "In the xy-plane, the point(t; t \u0000 1) lies on the line with equationy = \u0000 1 2 x + 1 3 is the value oft? Give your answer as a fraction.",
+    "correct": "8/9",
+    "explanation": "Exact numeric answer: 8/9. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s7_q5",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "shared_info": null,
+    "quantity_a": "The least integerx that satisfies the inequalityx3 > \u000030",
+    "quantity_b": "\u00003",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The least integerx that satisfies the inequalityx3 > \u000030) vs Quantity B (\u00003) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s8_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "shared_info": "A total of 1,500 boxes are stored in four warehouses. The number of boxes stored in the individual warehouses are x, y, z, and w, respectively, wherew = 2x and z = 2y.",
+    "quantity_a": "x + y",
+    "quantity_b": "500",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (x + y) vs Quantity B (500) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s9_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "shared_info": "x + 2y = 12 and 2y > 7.",
+    "quantity_a": "x.",
+    "quantity_b": "y.",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (x.) vs Quantity B (y.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q5",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 3,
+    "shared_info": "The equation ax2 = bx2 + 1, where a and b are constants, has two real solutions.",
+    "quantity_a": "a.",
+    "quantity_b": "b.",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (a.) vs Quantity B (b.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q19",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 4,
+    "prompt": "How many integer values ofn satisfy the inequalityj3 \u0000 nj \u0014 4?",
+    "correct": "9",
+    "explanation": "Exact numeric answer: 9. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s10_q18",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 4,
+    "prompt": "If 3x 2 = 5 7y and 3y 5 = a x, what is the value ofa? Give your answer as a fraction.",
+    "correct": "2/7",
+    "explanation": "Exact numeric answer: 2/7. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s11_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "linear_equations_and_inequalities",
+    "difficulty": 4,
+    "shared_info": "The function f is defined for all numbersx by f (2x) = x2 \u0000 2x + 8.",
+    "quantity_a": "f (6)",
+    "quantity_b": "12",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (f (6)) vs Quantity B (12) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
   }
 ]

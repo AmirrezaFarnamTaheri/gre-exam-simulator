@@ -1,121 +1,68 @@
-# GRE Adaptive Study App
+# GRE Exam Simulator & Adaptive Study Suite
 
-A personal, free, adaptive GRE study tool: a Python pipeline generates verbal and
-quantitative practice questions, a TypeScript engine adapts question difficulty to
-your performance (per topic, Elo-style), and a Next.js app lets you actually study
-against it. Progress is stored locally in your browser — no account, no server,
-no cost.
+A free, local-first GRE study and full exam simulation workspace built for the post-September 2023 Shortened GRE. Progress, Elo-style topic ratings, SRS vocabulary scheduling, and exam logs stay in your browser with zero accounts or paywalls.
 
-> **Not affiliated with ETS.** This is an independent hobby project. Question
-> content is either original or generated, not copied from ETS/Khan Academy/any
-> test-prep vendor.
+> **Not affiliated with ETS.** This is an independent study project built for personal exam preparation.
 
-## Why this exists
+## Key Capabilities
 
-Like any student wanting to go to grad school, the GRE was just one more
-requirement standing between me and the programs I wanted to apply to. So I
-went looking for how to actually prepare for it — and found surprisingly few
-free options, and none of them fleshed out. Khan Academy has a set of
-ETS-partnered videos that cover content review, and sites like Magoosh explain
-the test format well, but neither of those is a place to actually *practice*:
-there's no single free tool that adapts to what you personally get right or
-wrong and gives you more of what you need. The adaptive platforms that do
-exist are almost all paid.
+- **1,749 Curated Questions (`data/questions/`)**:
+  - **Verbal Reasoning**: 864 Text Completion (1-blank, 2-blank, and 3-blank), 575 Sentence Equivalence, and Reading Comprehension passages.
+  - **Quantitative Reasoning**: 267 Quantitative Comparison, Multiple Choice, and Numeric Entry questions plus 8 Data Interpretation datasets (23 DI questions with rendered charts and tables).
+- **Authentic Shortened GRE Exam Simulators (`/exam/`)**:
+  - **Full-Length 1h 58m Mock (`/exam/full`)**: Analytical Writing (30m) + Verbal S1 (12 Q, 18m) + Quant S1 (12 Q, 21m) + Adaptive Verbal S2 (15 Q, 23m) + Adaptive Quant S2 (15 Q, 26m) with combined 260-340 score reporting.
+  - **2-Stage Section-Adaptive Exams (`/exam/quant`, `/exam/verbal`)**: Automatic Easy / Medium / Hard Section 2 routing, on-screen ETS GRE Calculator with display transfer, Review modal, Mark for Review, and per-question timing diagnostics.
+- **Elo-Adaptive Study & Mistake Notebook (`/study/`)**:
+  - Per-topic mastery tracking calibrated around a ~65% target success rate.
+  - Dedicated Mistake Notebook (`/study/mistakes`) that isolates unresolved errors until mastered.
+- **Vocabulary Lab (`/vocab`)**:
+  - 3,046 GRE words with SM-2 spaced repetition, GregMat Groups 01-32 filters, and a Sentence Equivalence Synonym-Pair Drill covering 369 synonym clusters.
+- **AWA Issue Studio (`/awa`)**:
+  - 114 Analyze an Issue prompts paired with structured brainstorming outlines, 30-minute timer, live 400-550 word target bar, and a Bring-Your-Own-Key (BYOK) AI rubric grader plus one-click prompt copy.
+- **Reference Hub (`/guides`)**:
+  - Quantitative formula cheatsheet, Reading Comprehension playbook, Shortened GRE adaptive scoring rules, and structured study planner.
+- **Accessible Scholarly Desk UI**:
+  - Light and Dark themes verified to WCAG AA contrast standards (`>= 4.5:1`), responsive desktop and mobile navigation, keyboard-accessible dialogs, and JSON progress export/import.
 
-This project is my attempt to close that gap. It's a baseline, not a finished
-product — the question bank is intentionally small to start, and the
-difficulty model is simple. But it's a real, working start toward a free,
-open, genuinely adaptive way to study for the GRE, built so it can keep
-growing: more questions, better content, and a clearer picture over time of
-what "adaptive" should actually mean for someone studying on their own, with
-no budget for test prep and no interest in waiting for one to show up.
-
-## How it works
-
-- **[`pipeline/`](pipeline)** — Python scripts that produce the question bank
-  (`data/questions/*.json`) from hand-authored seed content, with a schema
-  (pydantic) every question is validated against and an optional hook to expand
-  the bank via an LLM (`ANTHROPIC_API_KEY`).
-- **[`engine/`](engine)** — a small TypeScript package with no UI dependencies:
-  given your answer history, it picks the next question by biasing toward your
-  weakest topics and matching difficulty to a ~65% expected-success rate, then
-  updates a per-topic rating after each answer. Has its own test suite (vitest).
-- **[`web/`](web)** — the Next.js app you actually study in: a dashboard showing
-  your ratings per topic, and a study session that renders each question type
-  (text completion, sentence equivalence, reading comprehension, quantitative
-  comparison, multiple choice, numeric entry) and records your answers.
-
-The generated `data/questions/*.json` is committed to this repo, so you don't
-need Python installed just to use the app — only if you want to regenerate or
-expand the question bank yourself.
-
-## Getting started
+## Getting Started
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org) 18 or later (includes npm)
-- [Python](https://www.python.org) 3.10+ — only needed if you want to regenerate
-  or expand the question bank
+- [Python](https://www.python.org) 3.10+ (optional, only for regenerating data banks)
 
-### Run the app
+### Run Locally
+
+Double-click **`GRE-Exam-Simulator.exe`** in the project root to start the local server automatically and open the app in your default browser (close the launcher window to stop the server cleanly).
+
+Or run from a terminal:
 
 ```sh
-git clone https://github.com/<your-username>/gre-study-app.git
-cd gre-study-app
 npm install
 npm run dev --workspace=web
 ```
 
-Then open **http://localhost:3000**.
+Open **http://localhost:3000**.
 
-`npm install` at the repo root installs dependencies for both the `engine` and
-`web` workspaces (this is an npm-workspaces monorepo). `npm run dev` starts a
-long-running dev server — stop it with `Ctrl+C` in that terminal when you're done.
-
-#### Windows convenience shortcut
-
-[`start-study-app.bat`](start-study-app.bat) starts the dev server and opens
-your browser automatically. Right-click it → **Create shortcut**, then move
-the shortcut to your Desktop for one-click launching.
-
-### Running tests / typechecking
+### Verification Commands
 
 ```sh
-npm run test --workspace=engine        # adaptive engine unit tests
+npm run test --workspace=engine
 npm run typecheck --workspace=engine
 npm run typecheck --workspace=web
-npm run build --workspace=web          # production build check
+npm run build --workspace=web
 ```
 
-### Regenerating the question bank (optional)
+## Project Structure
 
-```sh
-pip install -r requirements.txt
-python -m pipeline.build
+```text
+gre-exam-simulator/
+  data/              Question bank, vocab deck, synonym clusters, AWA prompts, and reference guides
+  engine/            Framework-agnostic TypeScript adaptive rating & section-routing engine (Vitest)
+  scripts/           Curated dataset ingestion utilities
+  web/               Next.js App Router frontend
+  DESIGN.md          Visual design tokens and accessibility specification
 ```
-
-Add `--expand N` to top up each topic with N additional LLM-generated questions
-(requires `ANTHROPIC_API_KEY` in your environment):
-
-```sh
-python -m pipeline.build --expand 10
-```
-
-## Project structure
-
-```
-gre-study-app/
-  pipeline/          Python content-generation pipeline
-  data/questions/    generated question bank (JSON)
-  engine/            adaptive selection engine (TypeScript, framework-agnostic)
-  web/               Next.js app
-```
-
-## Backing up your progress
-
-The dashboard has **Export progress** / **Import progress** buttons — your
-ratings and answer history live in your browser's localStorage, so use these
-to back them up or move them to another browser/device.
 
 ## License
 

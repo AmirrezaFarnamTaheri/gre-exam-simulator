@@ -1,5 +1,6 @@
 import { newCard, type SrsCard } from "gre-adaptive-engine";
 import words from "../../data/vocab/words.json";
+import synonymClustersRaw from "../../data/vocab/synonym_clusters.json";
 
 export interface VocabWord {
   id: string;
@@ -10,9 +11,20 @@ export interface VocabWord {
   list: string;
   pos?: string;
   synonyms?: string;
+  antonyms?: string;
+  gregmatGroup?: number;
+  groups?: string[];
+}
+
+export interface SynonymCluster {
+  id: string;
+  words: string[];
+  meaning_fa: string;
+  anchor: string;
 }
 
 export const VOCAB: VocabWord[] = words as VocabWord[];
+export const SYNONYM_CLUSTERS: SynonymCluster[] = synonymClustersRaw as SynonymCluster[];
 
 const KEY = "gre-study-vocab-srs-v1";
 

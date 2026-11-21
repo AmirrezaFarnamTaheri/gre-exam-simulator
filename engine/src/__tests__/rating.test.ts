@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { DEFAULT_RATING, difficultyToRating, expectedScore, updateRating } from "../rating";
+import {
+  DEFAULT_RATING,
+  calculateAdaptiveGreScore,
+  determineSection2Difficulty,
+  difficultyToRating,
+  expectedScore,
+  updateRating,
+} from "../rating";
 
 describe("difficultyToRating", () => {
   it("maps difficulty 3 (midpoint) to the default rating", () => {
@@ -37,5 +44,24 @@ describe("updateRating", () => {
 
   it("leaves the rating unchanged when actual matches expectation exactly", () => {
     expect(updateRating(1000, 1, 1, 40)).toBe(1000);
+  });
+});
+
+describe("shortened GRE adaptive routing & scoring", () => {
+  it("routes Section 1 scores to easy / medium / hard Section 2", () => {
+    expect(determineSection2Difficulty(3, 12)).toBe("easy");
+    expect(determineSection2Difficulty(4, 12)).toBe("easy");
+    expect(determineSection2Difficulty(6, 12)).toBe("medium");
+    expect(determineSection2Difficulty(8, 12)).toBe("hard");
+    expect(determineSection2Difficulty(11, 12)).toBe("hard");
+  });
+
+  it("caps easy routing and rewards hard routing within 130-170", () => {
+    const perfectHard = calculateAdaptiveGreScore("quant", 12, 15, "hard", 27);
+    const cappedEasy = calculateAdaptiveGreScore("quant", 4, 15, "easy", 27);
+    const zeroScore = calculateAdaptiveGreScore("verbal", 0, 0, "easy", 27);
+    expect(perfectHard).toBe(170);
+    expect(cappedEasy).toBeLessThanOrEqual(153);
+    expect(zeroScore).toBe(130);
   });
 });

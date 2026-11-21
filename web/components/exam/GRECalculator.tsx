@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface GRECalculatorProps {
   isOpen: boolean;
@@ -18,6 +18,15 @@ export default function GRECalculator({
   const [prevVal, setPrevVal] = useState<number | null>(null);
   const [operation, setOperation] = useState<string | null>(null);
   const [waitingForNewInput, setWaitingForNewInput] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -150,14 +159,20 @@ export default function GRECalculator({
   }
 
   return (
-    <div className="fixed top-16 right-6 z-50 bg-[#e8e8e8] border-2 border-[#555] rounded-md shadow-2xl p-3 w-[260px] font-mono select-none">
+    <div
+      role="dialog"
+      aria-label="GRE Calculator"
+      className="fixed top-16 right-6 z-50 bg-[#e8e8e8] text-gray-900 border-2 border-[#555] rounded-md shadow-2xl p-3 w-[260px] font-mono select-none"
+    >
       <div className="flex justify-between items-center bg-[#1a3a60] text-white px-2 py-1 mb-2 rounded text-xs font-bold">
         <span>GRE CALCULATOR</span>
         <button
+          type="button"
           onClick={onClose}
-          className="text-white hover:text-red-300 px-1 font-extrabold"
+          aria-label="Close calculator"
+          className="text-white bg-white/10 hover:bg-white/20 px-2 py-0.5 rounded font-bold"
         >
-          ✕
+          Close
         </button>
       </div>
 
