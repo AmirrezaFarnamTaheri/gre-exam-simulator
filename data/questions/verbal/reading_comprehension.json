@@ -966,5 +966,282 @@
     ],
     "select_all": false,
     "select_in_passage": true
+  },
+  {
+    "id": "gre-study-rc-music-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The passage challenges the claim that equal temperament was required for remote keys, showing unequal tunings persisted and were used expressively.",
+    "passage_id": "gre-study-rc-music",
+    "question": "Which statement best captures the main point of the passage?",
+    "choices": [
+      "Equal temperament eliminated dramatic tension in nineteenth-century keyboard music.",
+      "Eighteenth-century composers modulated to distant keys even while unequal temperaments remained standard.",
+      "Workshop manuals prove that keyboard technicians opposed every form of modulation.",
+      "Modern listeners prefer unequal temperaments to equal temperament.",
+      "Keys with few sharps or flats were avoided by eighteenth-century composers."
+    ],
+    "correct": [
+      "Eighteenth-century composers modulated to distant keys even while unequal temperaments remained standard."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-music-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "In unequal temperaments, keys with few sharps or flats sounded calmer while remote keys had sharper intervals that heightened dramatic tension.",
+    "passage_id": "gre-study-rc-music",
+    "question": "According to the passage, what effect did unequal temperaments have on remote keys?",
+    "choices": [
+      "They made remote keys indistinguishable from keys with few sharps.",
+      "They prevented keyboard technicians from tuning instruments quickly.",
+      "They produced sharper intervals that composers used for dramatic tension.",
+      "They required instruments to have more than twelve steps per octave.",
+      "They forced composers to write exclusively for string ensembles."
+    ],
+    "correct": [
+      "They produced sharper intervals that composers used for dramatic tension."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-music-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The second sentence cites surviving workshop manuals as evidence against the earlier view.",
+    "passage_id": "gre-study-rc-music",
+    "question": "Select the sentence that introduces historical evidence challenging the earlier attribution to equal temperament.",
+    "choices": [
+      "Music historians once attributed the rise of pieces written in distant keys during the eighteenth century solely to the spread of equal temperament, a tuning system that divides the octave into twelve identical steps.",
+      "Recent studies of surviving workshop manuals, however, show that most keyboard technicians continued using unequal temperaments well into the nineteenth century.",
+      "In those systems, keys with few sharps or flats sounded calmer while remote keys carried sharper intervals that heightened dramatic tension.",
+      "Composers exploited these distinct acoustic colors rather than avoiding remote keys altogether.",
+      "Treating equal temperament as a precondition for modulation overlooks how musicians turned slight tuning irregularities into an expressive resource."
+    ],
+    "correct": [
+      "Recent studies of surviving workshop manuals, however, show that most keyboard technicians continued using unequal temperaments well into the nineteenth century."
+    ],
+    "select_all": false,
+    "select_in_passage": true
+  },
+  {
+    "id": "gre-study-rc-soil-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "When phosphorus is abundant, trees cut carbon flow and some fungi tap older organic matter, showing the exchange shifts with resource supply.",
+    "passage_id": "gre-study-rc-soil",
+    "question": "Which statements about mycorrhizal relationships are supported by the passage? Select all that apply.",
+    "choices": [
+      "Abundant soil phosphorus can reduce the amount of carbon trees supply to fungi.",
+      "Some fungal strains can survive without relying solely on sugars from host trees.",
+      "Seedlings must supply large amounts of sugar before a fungal network aids their survival."
+    ],
+    "correct": [
+      "Abundant soil phosphorus can reduce the amount of carbon trees supply to fungi.",
+      "Some fungal strains can survive without relying solely on sugars from host trees."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "gre-study-rc-soil-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The dry-summer seedling example shows a case where plants gain survival benefits despite supplying little sugar, contrasting with the fertilized-soil case.",
+    "passage_id": "gre-study-rc-soil",
+    "question": "Why does the author mention seedlings during dry summers?",
+    "choices": [
+      "To show that fertilization harms young trees",
+      "To illustrate a condition in which hosts benefit from fungi while contributing little sugar",
+      "To prove that older organic matter disappears during drought",
+      "To argue that forest ecologists should stop studying phosphorus",
+      "To explain why trees grow faster in dry climates"
+    ],
+    "correct": [
+      "To illustrate a condition in which hosts benefit from fungi while contributing little sugar"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-soil-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "A shifting market shaped by scarcity predicts that nutrient scarcity increases host reliance on and investment in the fungal partner.",
+    "passage_id": "gre-study-rc-soil",
+    "question": "Which observation would best align with the passage's 'shifting market' characterization?",
+    "choices": [
+      "Trees deliver the exact same share of sugar to fungi regardless of soil nutrients.",
+      "Fungi disappear completely whenever soil phosphorus levels change.",
+      "Trees increase carbon flow to fungi when soil phosphorus becomes scarce.",
+      "Seedlings refuse to connect to fungal networks until they reach maturity.",
+      "Fertilization permanently converts all fungi into independent decomposers."
+    ],
+    "correct": [
+      "Trees increase carbon flow to fungi when soil phosphorus becomes scarce."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-tolls-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Bridge crossings fell 12% while rail ridership rose only 4%; the remaining reduction came from earlier crossings and consolidated delivery runs.",
+    "passage_id": "gre-study-rc-tolls",
+    "question": "The passage suggests that city analysts erred primarily by doing which of the following?",
+    "choices": [
+      "Overstating the percentage decline in morning bridge traffic",
+      "Assuming that nearly all reduced peak crossings represented a shift to rail",
+      "Ignoring the cost of installing traffic sensors on feeder roads",
+      "Setting the toll too low to affect retail delivery vans",
+      "Measuring traffic counts during holidays rather than workdays"
+    ],
+    "correct": [
+      "Assuming that nearly all reduced peak crossings represented a shift to rail"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-tolls-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 2,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Traffic sensors showed drivers crossing 30 minutes earlier and delivery vans consolidating trips.",
+    "passage_id": "gre-study-rc-tolls",
+    "question": "Which responses to the peak-hour toll are mentioned in the passage? Select all that apply.",
+    "choices": [
+      "Some commuters shifted to parallel rail lines.",
+      "Some drivers crossed the bridge before peak pricing started.",
+      "Some delivery operators combined multiple trips into fewer runs."
+    ],
+    "correct": [
+      "Some commuters shifted to parallel rail lines.",
+      "Some drivers crossed the bridge before peak pricing started.",
+      "Some delivery operators combined multiple trips into fewer runs."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "gre-study-rc-tolls-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "If pre-peak congestion spiked severely when drivers shifted 30 minutes earlier, the net benefit of timing flexibility would be smaller than expected.",
+    "passage_id": "gre-study-rc-tolls",
+    "question": "Which finding would most complicate the passage's conclusion about timing flexibility?",
+    "choices": [
+      "Rail trains ran on schedule throughout the month.",
+      "Shifting crossings thirty minutes earlier created an equally severe bottleneck just before peak hours.",
+      "Retail stores reported lower fuel costs after consolidating van trips.",
+      "Bridge toll revenue funded additional feeder-road maintenance.",
+      "Weekend traffic counts remained unchanged after the toll began."
+    ],
+    "correct": [
+      "Shifting crossings thirty minutes earlier created an equally severe bottleneck just before peak hours."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-moons-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The passage states that without gravitational resonance from neighboring moons, tidal friction would circularize the orbit and stop the heating.",
+    "passage_id": "gre-study-rc-moons",
+    "question": "According to the passage, what role do neighboring moons play in maintaining a subsurface ocean?",
+    "choices": [
+      "They reflect extra sunlight onto the icy moon's surface.",
+      "They prevent tidal friction from circularizing the moon's orbit.",
+      "They pull water vapor plumes back onto the ice shell.",
+      "They cool the moon's core so the ocean does not boil.",
+      "They shield the moon from the host planet's gravity."
+    ],
+    "correct": [
+      "They prevent tidal friction from circularizing the moon's orbit."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-moons-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "If a solitary moon has no neighbors to preserve eccentricity, friction will circularize its orbit and shut down tidal flexing.",
+    "passage_id": "gre-study-rc-moons",
+    "question": "It can be inferred from the passage that an icy outer-planet moon orbiting entirely alone would most likely:",
+    "choices": [
+      "Maintain a thicker plume of water vapor than moons with neighbors",
+      "Lose its tidal heat engine as its orbit became circular over time",
+      "Move progressively closer to the Sun because of orbital friction",
+      "Develop an increasingly elliptical orbit without outside gravity",
+      "Freeze immediately during its first flyby"
+    ],
+    "correct": [
+      "Lose its tidal heat engine as its orbit became circular over time"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-moons-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 2,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The third sentence defines tidal flexing and explains how changing gravitational pull generates internal heat through friction.",
+    "passage_id": "gre-study-rc-moons",
+    "question": "Select the sentence that explains the physical mechanism generating heat inside the moon.",
+    "choices": [
+      "Because outer-planet moons orbit far from the Sun, planetary scientists once expected their interiors to be frozen solid.",
+      "Close flybys overturned that assumption by revealing fractured ice shells and plumes of water vapor.",
+      "The energy source is tidal flexing: as a moon follows a slightly elliptical orbit around a massive planet, changing gravitational pull stretches and compresses its interior, generating heat through friction.",
+      "Without orbital interactions from neighboring moons, however, friction would quickly circularize the orbit and shut the heat engine down.",
+      "A subsurface ocean can persist over billions of years only when gravitational resonance keeps the orbit eccentric."
+    ],
+    "correct": [
+      "The energy source is tidal flexing: as a moon follows a slightly elliptical orbit around a massive planet, changing gravitational pull stretches and compresses its interior, generating heat through friction."
+    ],
+    "select_all": false,
+    "select_in_passage": true
   }
 ]

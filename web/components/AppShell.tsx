@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
+import StudyTimerWidget from "./StudyTimerWidget";
 
 const THEME_KEY = "gre-study-theme-v1";
 
@@ -78,9 +79,12 @@ export default function AppShell({ children }: { children: ReactNode }) {
               );
             })}
           </nav>
-          <button type="button" className="btn-ghost theme-toggle" onClick={toggleTheme}>
-            {theme === "light" ? "Dark mode" : "Light mode"}
-          </button>
+          <div className="site-header-tools">
+            <StudyTimerWidget />
+            <button type="button" className="btn-ghost theme-toggle" onClick={toggleTheme}>
+              {theme === "light" ? "Dark mode" : "Light mode"}
+            </button>
+          </div>
         </div>
       </header>
       <div id="main-content" className="app-main" tabIndex={-1}>

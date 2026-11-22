@@ -6,9 +6,12 @@ A free, local-first GRE study and full exam simulation workspace built for the p
 
 ## Key Capabilities
 
-- **1,749 Curated Questions (`data/questions/`)**:
-  - **Verbal Reasoning**: 864 Text Completion (1-blank, 2-blank, and 3-blank), 575 Sentence Equivalence, and Reading Comprehension passages.
-  - **Quantitative Reasoning**: 267 Quantitative Comparison, Multiple Choice, and Numeric Entry questions plus 8 Data Interpretation datasets (23 DI questions with rendered charts and tables).
+- **1,837 Curated Questions (`data/questions/`)**:
+  - **Verbal Reasoning**: 864 Text Completion (1-blank, 2-blank, and 3-blank), 575 Sentence Equivalence, 52 untimed Reading Comprehension questions (including Select-in-Passage and Select-All), plus 12 held-out timed passages (24 Q) for fresh timed Verbal sections.
+  - **Quantitative Reasoning**: 322 Quant questions including Quantitative Comparison trap drills, Numeric Entry, Problem Solving, Math Foundations, and 8 Data Interpretation datasets (23 DI items with rendered charts and tables).
+- **Exam Task Targets & Focus Study Tools**:
+  - Every practice question, vocab drill, AWA task, and course lesson labels the exact GRE exam section, task format, and target pacing, with a Format (`Exam task`) filter and toggleable per-question pace timer.
+  - Built-in **Study Timer** in the header (Pomodoro `25/5`, `50/10`, `15/3`, GRE sprint timers, stopwatch, daily focus goal, and streak tracker).
 - **Authentic Shortened GRE Exam Simulators (`/exam/`)**:
   - **Full-Length 1h 58m Mock (`/exam/full`)**: Analytical Writing (30m) + Verbal S1 (12 Q, 18m) + Quant S1 (12 Q, 21m) + Adaptive Verbal S2 (15 Q, 23m) + Adaptive Quant S2 (15 Q, 26m) with combined 260-340 score reporting.
   - **2-Stage Section-Adaptive Exams (`/exam/quant`, `/exam/verbal`)**: Automatic Easy / Medium / Hard Section 2 routing, on-screen ETS GRE Calculator with display transfer, Review modal, Mark for Review, and per-question timing diagnostics.

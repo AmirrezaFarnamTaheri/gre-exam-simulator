@@ -53,5 +53,29 @@
     "title": "Counting library outreach",
     "text": "A library piloted an evening pickup program and found that visits increased during the pilot. Most of the new visits occurred in the first week, when staff phoned patrons who already had items on hold. The director proposed extending evening hours to every branch, arguing that the visit increase demonstrated demand for later hours. One librarian agreed that the pilot warranted another trial but asked for a different comparison. At some branches, hold hours would remain unchanged while staff made the same calls. At others, pickup would stay open later without the calls. If visits rose primarily at the branches that made calls, the first pilot would tell the library more about reminders than about scheduling.",
     "source": "original"
+  },
+  {
+    "id": "gre-study-rc-music",
+    "title": "Temperament and keyboard repertoire",
+    "text": "Music historians once attributed the rise of pieces written in distant keys during the eighteenth century solely to the spread of equal temperament, a tuning system that divides the octave into twelve identical steps. Recent studies of surviving workshop manuals, however, show that most keyboard technicians continued using unequal temperaments well into the nineteenth century. In those systems, keys with few sharps or flats sounded calmer while remote keys carried sharper intervals that heightened dramatic tension. Composers exploited these distinct acoustic colors rather than avoiding remote keys altogether. Treating equal temperament as a precondition for modulation overlooks how musicians turned slight tuning irregularities into an expressive resource.",
+    "source": "original"
+  },
+  {
+    "id": "gre-study-rc-soil",
+    "title": "Mycorrhizal trade in forest soils",
+    "text": "Forest ecologists have long described the partnership between tree roots and mycorrhizal fungi as a straightforward exchange of plant sugars for soil phosphorus. Field measurements now complicate that picture. When phosphorus becomes abundant after fertilization, many trees sharply reduce the carbon they send underground, yet certain fungal strains persist by tapping older organic matter rather than relying on host trees. Conversely, during dry summers, seedlings linked to an established fungal network survive at higher rates even when they contribute minimal sugar. The relationship therefore behaves less like a fixed bargain and more like a shifting market shaped by local scarcity.",
+    "source": "original"
+  },
+  {
+    "id": "gre-study-rc-tolls",
+    "title": "Evaluating congestion tolls",
+    "text": "When a city introduced peak-hour bridge tolls, morning vehicle counts fell by twelve percent within a month. City analysts cited the figure as proof that tolls shift commuters onto rail lines. Yet rail ridership on parallel corridors grew by only four percent over the same period. Traffic sensors on feeder roads revealed the missing share: many drivers simply crossed the bridge thirty minutes earlier before the higher rate began, while retail delivery vans consolidated multiple trips into fewer runs. Focusing solely on rail statistics therefore understates how flexible timing and logistics reduce peak bottlenecks.",
+    "source": "original"
+  },
+  {
+    "id": "gre-study-rc-moons",
+    "title": "Tidal heating on icy moons",
+    "text": "Because outer-planet moons orbit far from the Sun, planetary scientists once expected their interiors to be frozen solid. Close flybys overturned that assumption by revealing fractured ice shells and plumes of water vapor. The energy source is tidal flexing: as a moon follows a slightly elliptical orbit around a massive planet, changing gravitational pull stretches and compresses its interior, generating heat through friction. Without orbital interactions from neighboring moons, however, friction would quickly circularize the orbit and shut the heat engine down. A subsurface ocean can persist over billions of years only when gravitational resonance keeps the orbit eccentric.",
+    "source": "original"
   }
 ]

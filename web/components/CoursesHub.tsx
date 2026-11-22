@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import coursesData from "../../data/courses/gre_courses.json";
+import { getCourseTrackExamTarget } from "@/lib/examTargets";
 
 interface QuizItem {
   q: string;
@@ -135,6 +136,11 @@ export default function CoursesHub() {
             </div>
 
             <p className="muted-text" style={{ marginTop: 0 }}>{active.summary}</p>
+            <div className="exam-target-bar" aria-label="Exam task target">
+              <div>
+                <span className="exam-target-tag">{getCourseTrackExamTarget(active.track)}</span>
+              </div>
+            </div>
 
             <h3>Key Rules</h3>
             <ul style={{ paddingLeft: "1.25rem", lineHeight: 1.7 }}>

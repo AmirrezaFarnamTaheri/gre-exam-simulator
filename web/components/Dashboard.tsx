@@ -12,12 +12,12 @@ type ProgressCatalog = { questionIds: string[]; topics: Record<Section, string[]
 type Destination = [href: string, title: string, detail: string];
 
 const practice: Destination[] = [
-  ["/study/quant", "Math", "Arithmetic, algebra, geometry, and data"],
-  ["/study/verbal", "Verbal", "Reading comprehension, text completion, and sentence equivalence"],
-  ["/awa", "Essay writing", "Plan or write an Analyze an Issue essay"],
-  ["/vocab", "Vocabulary", "Flashcards and synonym practice"],
-  ["/study/quant?level=beginner", "Math foundations", "Start with ratios, rates, equations, and right triangles"],
-  ["/study/mixed", "Mixed questions", "Questions from both verbal and math"],
+  ["/study/quant", "Math", "Targets Quantitative Comparison, Problem Solving, Numeric Entry & Data Interpretation"],
+  ["/study/verbal", "Verbal", "Targets Text Completion, Sentence Equivalence & Reading Comprehension"],
+  ["/awa", "Essay writing", "Targets Analytical Writing Section 1: Analyze an Issue (30 min)"],
+  ["/vocab", "Vocabulary", "Targets Verbal Text Completion & Sentence Equivalence word pairs"],
+  ["/study/quant?level=beginner", "Math foundations", "Targets Quantitative Reasoning basics: ratios, rates, equations, inequalities & triangles"],
+  ["/study/mixed", "Mixed questions", "Targets both Verbal Reasoning and Quantitative Reasoning formats together"],
 ];
 
 const tests: Destination[] = [

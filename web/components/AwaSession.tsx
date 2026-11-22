@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import awaData from "../../data/questions/awa.json";
 import awaGuides from "../../data/awa/guides.json";
+import sampleEssaysRaw from "../../data/awa/sample_essays.json";
+
+const SAMPLE_ESSAYS = sampleEssaysRaw as Record<string, { wordCount: number; essay: string }>;
 
 interface AwaPrompt {
   id: string;
@@ -68,6 +71,7 @@ export default function AwaSession() {
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
   const [showBrainstorm, setShowBrainstorm] = useState(false);
+  const [showSampleEssay, setShowSampleEssay] = useState(false);
   const [showTemplates, setShowTemplates] = useState(false);
 
   const [aiEndpoint, setAiEndpoint] = useState("https://api.openai.com/v1/chat/completions");
@@ -290,6 +294,21 @@ export default function AwaSession() {
         </section>
       )}
 
+      <div className="exam-target-bar" aria-label="Exam task target">
+        <div>
+          <span className="exam-target-tag">
+            {tab === "issue"
+              ? "Exam target: GRE Analytical Writing (Section 1) - Analyze an Issue"
+              : "Exam target: Optional critical-reasoning drill (retired Argument format)"}
+          </span>
+          <p className="exam-target-detail">
+            {tab === "issue"
+              ? "Official post-2023 GRE opens with one 30-minute Analyze an Issue essay (scored 0.0-6.0 in 0.5 steps; aim for 400-550 words)."
+              : "No longer tested on the Shortened GRE; useful as extra practice for spotting flawed assumptions in Reading Comprehension."}
+          </p>
+        </div>
+      </div>
+
       {!prompt ? (
         <section className="surface-card">
           <h2>{tab === "issue" ? "Analyze an Issue · 30 minutes" : "Analyze an Argument · extra practice"}</h2>
@@ -324,17 +343,32 @@ export default function AwaSession() {
           <p className="passage" style={{ fontStyle: "italic", margin: "0 0 0.75rem" }}>{prompt.prompt}</p>
           {prompt.directions && <p className="passage-text">{prompt.directions}</p>}
 
-          {prompt.brainstorm && prompt.brainstorm.length > 0 && (
-            <div style={{ margin: "0.75rem 0" }}>
-              <button type="button" className="btn-ghost" onClick={() => setShowBrainstorm((b) => !b)}>
-                {showBrainstorm ? "Hide Brainstorming Outline" : `Show Brainstorming Outline (${prompt.brainstorm.length} ideas)`}
-              </button>
-              {showBrainstorm && (
-                <ul style={{ marginTop: "0.65rem", paddingLeft: "1.25rem", lineHeight: 1.6, fontSize: "0.92rem" }}>
+          {(prompt.brainstorm?.length || SAMPLE_ESSAYS[prompt.id]) && (
+            <div style={{ margin: "0.75rem 0", display: "grid", gap: "0.65rem" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+                {prompt.brainstorm && prompt.brainstorm.length > 0 && (
+                  <button type="button" className="btn-ghost" onClick={() => setShowBrainstorm((b) => !b)}>
+                    {showBrainstorm ? "Hide Brainstorming Outline" : `Show Brainstorming Outline (${prompt.brainstorm.length} ideas)`}
+                  </button>
+                )}
+                {SAMPLE_ESSAYS[prompt.id] && (
+                  <button type="button" className="btn-ghost" onClick={() => setShowSampleEssay((s) => !s)}>
+                    {showSampleEssay ? "Hide Sample Essay" : `Show Sample Essay (${SAMPLE_ESSAYS[prompt.id].wordCount} words)`}
+                  </button>
+                )}
+              </div>
+              {showBrainstorm && prompt.brainstorm && (
+                <ul style={{ margin: 0, paddingLeft: "1.25rem", lineHeight: 1.6, fontSize: "0.92rem" }}>
                   {prompt.brainstorm.map((pt, i) => (
                     <li key={i} style={{ marginBottom: "0.4rem" }}>{pt}</li>
                   ))}
                 </ul>
+              )}
+              {showSampleEssay && SAMPLE_ESSAYS[prompt.id] && (
+                <div className="explanation" style={{ whiteSpace: "pre-line", maxHeight: 360, overflowY: "auto" }}>
+                  <strong>Sample Issue Essay ({SAMPLE_ESSAYS[prompt.id].wordCount} words):</strong>
+                  <p style={{ marginTop: "0.5rem", marginBottom: 0 }}>{SAMPLE_ESSAYS[prompt.id].essay}</p>
+                </div>
               )}
             </div>
           )}

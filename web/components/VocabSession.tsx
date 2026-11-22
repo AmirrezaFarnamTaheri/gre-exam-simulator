@@ -188,6 +188,21 @@ export default function VocabSession() {
         </div>
       </div>
 
+      <div className="exam-target-bar" aria-label="Exam task target">
+        <div>
+          <span className="exam-target-tag">
+            {mode === "srs"
+              ? "Exam target: GRE Verbal Reasoning - Text Completion & Sentence Equivalence"
+              : "Exam target: GRE Verbal Reasoning - Sentence Equivalence (pick 2 synonyms)"}
+          </span>
+          <p className="exam-target-detail">
+            {mode === "srs"
+              ? "Builds recall for high-frequency GRE words tested in 1/2/3-blank Text Completion and 6-choice Sentence Equivalence."
+              : "Mirrors the GRE Sentence Equivalence pairing skill: spot two words that create equivalent sentence meanings."}
+          </p>
+        </div>
+      </div>
+
       {mode === "srs" ? (
         <>
           <div className="surface-card">
