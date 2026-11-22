@@ -220,6 +220,132 @@
     ]
   },
   {
+    "id": "gre-writing-nuance",
+    "track": "Essay Writing",
+    "title": "Nuanced Thesis, Concession & Rebuttal (4.0 to 5.5+)",
+    "duration": "11 min",
+    "summary": "Move beyond one-sided stances by qualifying your claim and refuting the strongest counterargument.",
+    "keyRules": [
+      "ETS raters separate Band 5.0-6.0 essays from Band 4.0 essays primarily by complexity: address why intelligent people hold the opposing view instead of dismissing it.",
+      "Frame a qualified thesis: 'While [opposing concern] holds true in [narrow context], [your core position] remains more compelling because [reason 1] and [reason 2].'",
+      "Dedicate Body Paragraph 3 to a steel-manned concession: state the strongest opposing case honestly ('Admittedly, ...'), define the exact boundary where it applies, and then show why your primary claim still outweighs it.",
+      "Avoid sitting on the fence ('Both sides have pros and cons'); a qualified thesis still commits clearly to one direction."
+    ],
+    "workedExample": {
+      "problem": "Weak thesis: 'Universities should never require classes outside a student's major because they waste time.'",
+      "walkthrough": "Band 5.5+ thesis: 'While specialized training is indispensable for technical careers, requiring a targeted core of cross-disciplinary courses equips graduates to solve complex problems that rarely respect departmental boundaries.' Concession (Body 3): 'Admittedly, rigid general-education lists can delay graduation when poorly designed; nevertheless, capping electives to two analytical breadth courses preserves specialization while preventing tunnel vision.'"
+    },
+    "practiceAction": { "label": "Draft a Nuanced Issue Essay", "href": "/awa" },
+    "quiz": [
+      {
+        "q": "What makes a concession paragraph score in the 5.0-6.0 range on the GRE Issue task?",
+        "choices": [
+          "Briefly saying 'some people disagree' and moving straight to the conclusion",
+          "Presenting the strongest opposing point fairly, defining where it holds, and showing why your main claim still prevails",
+          "Changing your mind in paragraph 3 so both sides get equal weight",
+          "Repeating your introduction word for word"
+        ],
+        "answer": "Presenting the strongest opposing point fairly, defining where it holds, and showing why your main claim still prevails",
+        "explanation": "Fairly engaging a serious counterargument and bounding its scope demonstrates mature analytical complexity."
+      },
+      {
+        "q": "Which thesis statement shows the strongest GRE Issue qualification?",
+        "choices": [
+          "There are good and bad arguments on both sides of this policy.",
+          "Governments should always fund art because art is important for everyone.",
+          "Although emergency infrastructure needs can justify temporary budget shifts, sustained public arts funding remains vital because it anchors civic identity and spurs local commerce.",
+          "In this essay I will discuss whether governments should fund the arts."
+        ],
+        "answer": "Although emergency infrastructure needs can justify temporary budget shifts, sustained public arts funding remains vital because it anchors civic identity and spurs local commerce.",
+        "explanation": "It commits to a clear stance, acknowledges a realistic exception, and previews two distinct supporting reasons."
+      }
+    ]
+  },
+  {
+    "id": "gre-writing-examples",
+    "track": "Essay Writing",
+    "title": "Concrete Examples & Analytical Depth (Zero Filler)",
+    "duration": "12 min",
+    "summary": "Replace vague generalities with sharp Claim -> Mechanism -> Concrete Example -> Scope chains.",
+    "keyRules": [
+      "Never stop at circular restatement ('Technology helps education because it makes learning better'). Every body paragraph needs: Claim -> Causal Mechanism (how/why) -> Concrete Example -> Tie-back to Thesis.",
+      "Keep a reusable 6-domain example toolkit ready before exam day: Science & Tech (GPS from relativity, penicillin, open-source software), Public Policy (congestion pricing, clean-air regulations), Education (peer review, liberal-arts breadth), History (printing press, Apollo program), Economics (antitrust, microfinance), and Everyday Institutions.",
+      "Hypothetical scenarios work ONLY when vivid, specific, and grounded in a clear mechanism; named real-world cases carry even stronger credibility.",
+      "Explain HOW your example proves the claim in 1-2 analytical sentences; never drop a name and immediately start a new paragraph."
+    ],
+    "workedExample": {
+      "problem": "Vague body sentence: 'Basic research is good because scientists often discover useful inventions later.'",
+      "walkthrough": "Upgraded chain: 'Theoretical inquiry generates foundational tools whose commercial applications cannot be predicted in advance. When physicists studied quantum mechanics and general relativity in the early twentieth century, neither field aimed at consumer navigation; yet today, GPS satellites rely on relativistic time corrections to stay accurate within meters. Cutting non-applied grants therefore starves the pipeline of tomorrow's practical technologies.'"
+    },
+    "practiceAction": { "label": "Practice With Brainstorming Guides", "href": "/awa" },
+    "quiz": [
+      {
+        "q": "What is the biggest weakness of dropping a famous example without an explanation sentence afterward?",
+        "choices": [
+          "It makes the essay too long",
+          "The rater sees a dropped name rather than analytical reasoning linking the example back to your thesis",
+          "ETS forbids historical examples",
+          "e-rater deducts points for proper nouns"
+        ],
+        "answer": "The rater sees a dropped name rather than analytical reasoning linking the example back to your thesis",
+        "explanation": "Analysis is the link between evidence and claim; always explain WHY the example supports your argument."
+      },
+      {
+        "q": "Which paragraph progression best avoids circular filler?",
+        "choices": [
+          "Claim -> Restate claim in synonyms -> Restate claim again",
+          "Claim -> Causal mechanism (why/how) -> Concrete example -> Link back to thesis",
+          "Three unrelated short examples with no topic sentence",
+          "A long dictionary definition of the prompt's main noun"
+        ],
+        "answer": "Claim -> Causal mechanism (why/how) -> Concrete example -> Link back to thesis",
+        "explanation": "Explaining the causal mechanism and anchoring it with one specific example creates dense, persuasive development."
+      }
+    ]
+  },
+  {
+    "id": "gre-writing-mechanics",
+    "track": "Essay Writing",
+    "title": "e-rater Mechanics, Sentence Variety & Final Proofread",
+    "duration": "10 min",
+    "summary": "Eliminate high-penalty grammar slips and add natural syntactic range in the final 4 minutes.",
+    "keyRules": [
+      "Fix comma splices strictly: never join two full clauses with ', however,' or ', therefore,'. Use a period ('. However,') or semicolon ('; however,').",
+      "Prefer crisp active verbs over wordy 'have/make + noun' phrasing ('researchers demonstrated' instead of 'researchers made a demonstration'; 'students experienced' instead of 'students had some experiences').",
+      "Use advanced syntax sparingly for variety: one clean negative-adverb inversion ('Not only does basic research yield breakthroughs, but it also trains critical thinkers' or 'Seldom have policymakers faced...') lifts syntactic range without sounding forced.",
+      "Watch high-risk unassisted spelling & usage pairs (no spellchecker on test day): affect (verb) vs. effect (noun), complement vs. compliment, allude vs. elude, accommodate, committee, necessary, occurrence, definitely, separate."
+    ],
+    "workedExample": {
+      "problem": "Draft: 'Remote work reduces commuting costs, however it can weaken team cohesion, alot of managers have concerns about this.'",
+      "walkthrough": "Edited: 'Remote work reduces commuting costs; however, it can weaken team cohesion, prompting valid concerns among managers.' (Fixed comma splice, replaced 'alot', and tightened wordy phrasing into a clean participle clause.)"
+    },
+    "practiceAction": { "label": "Practice Timed Essay & Proofread", "href": "/awa" },
+    "quiz": [
+      {
+        "q": "Which sentence uses negative-adverb inversion correctly for formal GRE emphasis?",
+        "choices": [
+          "Not only remote work saves money, but it also expands hiring.",
+          "Not only does remote work reduce commuting costs, but it also expands regional hiring pools.",
+          "Seldom policymakers have agreed on a single tax structure.",
+          "Hardly did anyone not attend the open seminar."
+        ],
+        "answer": "Not only does remote work reduce commuting costs, but it also expands regional hiring pools.",
+        "explanation": "Fronting 'Not only' requires auxiliary-before-subject inversion ('does remote work reduce')."
+      },
+      {
+        "q": "Which sentence avoids both a comma splice and a usage error?",
+        "choices": [
+          "The policy had a positive affect, however alot of critics opposed it.",
+          "The policy had a positive effect; however, many critics still questioned its long-term cost.",
+          "The policy effected a positive complement, therefore it succeeded.",
+          "The committee tried to accomodate everyone, nevertheless delays occured."
+        ],
+        "answer": "The policy had a positive effect; however, many critics still questioned its long-term cost.",
+        "explanation": "'Effect' is the correct noun, '; however,' properly joins two independent clauses, and all spellings are standard."
+      }
+    ]
+  },
+  {
     "id": "gre-strategy-pacing",
     "track": "Test Strategy",
     "title": "Two-Pass Pacing & Adaptive Scoring",

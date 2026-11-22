@@ -275,22 +275,42 @@ export default function AwaSession() {
 
       {showTemplates && (
         <section className="surface-card">
-          <h2>Scoring Guide &amp; Essay Templates</h2>
-          <div style={{ display: "grid", gap: "0.5rem", marginBottom: "0.75rem", fontSize: "0.9rem" }}>
+          <h2>Issue Essay Toolkit &amp; Scoring Guide</h2>
+          <p className="muted-text" style={{ marginTop: 0 }}>
+            30-minute execution budget: <strong>0-4 min</strong> outline (qualified stance + 2 reasons/examples + 1 concession) · <strong>4-26 min</strong> draft 5 clear paragraphs (400-550 words) · <strong>26-30 min</strong> e-rater mechanics proofread.
+          </p>
+
+          <div style={{ display: "grid", gap: "0.5rem", marginBottom: "0.9rem", fontSize: "0.9rem" }}>
             {awaGuides.rubric_criteria.map((rc) => (
               <div key={rc.band}>
                 <strong>Band {rc.band}:</strong> {rc.summary}
               </div>
             ))}
           </div>
-          {awaGuides.templates.map((t, i) => (
-            <details key={i} style={{ marginTop: "0.5rem" }}>
-              <summary style={{ fontWeight: 700, padding: "0.4rem 0" }}>{t.title}</summary>
-              <pre className="explanation" style={{ whiteSpace: "pre-wrap", maxHeight: 320, overflowY: "auto" }}>
-                {t.content}
-              </pre>
-            </details>
-          ))}
+
+          <details open style={{ marginTop: "0.5rem" }}>
+            <summary style={{ fontWeight: 700, padding: "0.4rem 0", minHeight: 44, display: "flex", alignItems: "center" }}>
+              Natural Essay Blueprint &amp; Reusable Frames (Adapt, Never Copy Blindly)
+            </summary>
+            <div className="explanation" style={{ display: "grid", gap: "0.6rem" }}>
+              <div><strong>1. Nuanced Opening &amp; Thesis:</strong> &quot;While [opposing concern] holds real merit in [narrow context], [your core position] remains more persuasive because [reason 1] and [reason 2].&quot;</div>
+              <div><strong>2. Body 1 &amp; 2 (Claim -&gt; Mechanism -&gt; Concrete Example):</strong> &quot;First, [clear claim]. This occurs because [causal mechanism]. Consider [named historical, scientific, or policy case], which demonstrates that [tie back to thesis].&quot;</div>
+              <div><strong>3. Body 3 (Fair Concession + Rebuttal):</strong> &quot;Admittedly, [strongest counterargument], particularly when [specific boundary]. Yet this caveat does not overturn [your thesis], because [why primary mechanism outweighs it].&quot;</div>
+              <div><strong>4. Synthesis Conclusion:</strong> &quot;Ultimately, although [brief nod to complexity], prioritizing [your stance] offers a stronger path forward because [synthesized takeaway].&quot;</div>
+            </div>
+          </details>
+
+          <details style={{ marginTop: "0.5rem" }}>
+            <summary style={{ fontWeight: 700, padding: "0.4rem 0", minHeight: 44, display: "flex", alignItems: "center" }}>
+              Final 4-Minute e-rater Proofread &amp; High-Risk Traps
+            </summary>
+            <ul style={{ margin: "0.4rem 0 0", paddingLeft: "1.25rem", lineHeight: 1.65, fontSize: "0.9rem" }}>
+              <li><strong>No comma splices:</strong> Use <code>; however,</code> or <code>. However,</code> instead of <code>, however,</code> between two full clauses.</li>
+              <li><strong>Active verbs over weak fillers:</strong> Write <em>experienced</em>, <em>demonstrated</em>, or <em>argued</em> instead of <em>had some experiences</em> or <em>made an argument</em>.</li>
+              <li><strong>One syntactic upgrade max:</strong> e.g., <em>Not only does [X] improve [A], but it also strengthens [B].</em></li>
+              <li><strong>Spelling/usage checks (no spellchecker on exam):</strong> <em>affect/effect</em>, <em>complement/compliment</em>, <em>allude/elude</em>, <em>accommodate</em>, <em>committee</em>, <em>necessary</em>, <em>definitely</em>, <em>separate</em>, <em>a lot</em> (two words).</li>
+            </ul>
+          </details>
         </section>
       )}
 

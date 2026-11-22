@@ -4,7 +4,7 @@ import { useState } from "react";
 import greRef from "../../data/guides/gre_reference.json";
 
 export default function GuidesHub() {
-  const [tab, setTab] = useState<"formulas" | "rc" | "scoring" | "planner">("formulas");
+  const [tab, setTab] = useState<"formulas" | "rc" | "writing" | "scoring" | "planner">("formulas");
 
   return (
     <main className="container">
@@ -15,6 +15,7 @@ export default function GuidesHub() {
             [
               ["formulas", "Math Formulas"],
               ["rc", "Reading Tips"],
+              ["writing", "Writing Craft"],
               ["scoring", "Scoring"],
               ["planner", "Study Plan"],
             ] as const
@@ -55,6 +56,73 @@ export default function GuidesHub() {
             {greRef.rc_strategies}
           </pre>
         </section>
+      )}
+
+      {tab === "writing" && (
+        <div className="topics-grid">
+          <section className="surface-card" style={{ marginBottom: 0 }}>
+            <h2>30-Minute Issue Essay Budget</h2>
+            <ul style={{ paddingLeft: "1.25rem", lineHeight: 1.7, marginBottom: 0 }}>
+              <li style={{ marginBottom: "0.4rem" }}><strong>0-4 min (Outline):</strong> Pick a qualified stance, list 2 distinct reasons with concrete named examples, and pick 1 fair counterargument to rebut.</li>
+              <li style={{ marginBottom: "0.4rem" }}><strong>4-26 min (Draft 400-550 words):</strong> Intro (context + qualified thesis) -&gt; Body 1 &amp; 2 (Claim -&gt; Mechanism -&gt; Example -&gt; Tie-back) -&gt; Body 3 (Concession + Scope Limit + Rebuttal) -&gt; 2-sentence Conclusion.</li>
+              <li><strong>26-30 min (e-rater Proofread):</strong> Check comma splices, subject-verb agreement, missing articles, and high-risk spelling traps (no spellchecker on test day).</li>
+            </ul>
+          </section>
+
+          <section className="surface-card" style={{ marginBottom: 0 }}>
+            <h2>Transitions &amp; Punctuation Rules</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Function</th>
+                  <th>Expressions</th>
+                  <th>Punctuation Rule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Escalation</strong></td>
+                  <td>moreover, furthermore</td>
+                  <td>Period or semicolon before, comma after. Use only when strengthening the point.</td>
+                </tr>
+                <tr>
+                  <td><strong>Contrast</strong></td>
+                  <td>however, nevertheless, conversely</td>
+                  <td>Never join two full clauses with <code>, however,</code>. Use <code>; however,</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Concession</strong></td>
+                  <td>admittedly, while, although</td>
+                  <td>Pair <em>Admittedly, [X]; yet [Y]</em> to show nuanced Band 5.5-6.0 reasoning.</td>
+                </tr>
+                <tr>
+                  <td><strong>Emphasis</strong></td>
+                  <td>Not only does..., Seldom have...</td>
+                  <td>Use at most once per essay; invert auxiliary before subject.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section className="surface-card" style={{ marginBottom: 0 }}>
+            <h2>6-Domain Example Bank (Avoid Vague Filler)</h2>
+            <ul style={{ paddingLeft: "1.25rem", lineHeight: 1.7, marginBottom: 0 }}>
+              <li style={{ marginBottom: "0.35rem" }}><strong>Science &amp; Tech:</strong> General relativity enabling GPS timing; penicillin from unexpected lab work; open-source software ecosystems.</li>
+              <li style={{ marginBottom: "0.35rem" }}><strong>Public Policy:</strong> Congestion pricing funding transit; clean-air rules spurring industrial innovation.</li>
+              <li style={{ marginBottom: "0.35rem" }}><strong>Education:</strong> Cross-disciplinary ethics for AI engineers; written feedback vs. raw grades.</li>
+              <li><strong>Economics &amp; History:</strong> Printing press expanding literacy; antitrust rules protecting startup competition.</li>
+            </ul>
+          </section>
+
+          <section className="surface-card" style={{ marginBottom: 0 }}>
+            <h2>High-Risk Unassisted Spelling &amp; Usage Traps</h2>
+            <ul style={{ paddingLeft: "1.25rem", lineHeight: 1.7, marginBottom: 0 }}>
+              <li style={{ marginBottom: "0.35rem" }}><strong>Usage pairs:</strong> <em>affect</em> (verb) vs. <em>effect</em> (noun); <em>accept</em> vs. <em>except</em>; <em>advice</em> (noun) vs. <em>advise</em> (verb); <em>complement</em> (complete) vs. <em>compliment</em> (praise); <em>allude</em> vs. <em>elude</em>; <em>a lot</em> (two words).</li>
+              <li style={{ marginBottom: "0.35rem" }}><strong>Double-letter traps:</strong> <em>accommodation, beginning, colleagues, committee, committed, necessary, occasion, occurred, opportunity, preferred, recommend, succeed</em>.</li>
+              <li><strong>Silent/tricky vowels:</strong> <em>achievement, beneficial, convenient, environment, government, independence, maintenance, relevant, rhythm, separate, theoretical</em>.</li>
+            </ul>
+          </section>
+        </div>
       )}
 
       {tab === "scoring" && (
