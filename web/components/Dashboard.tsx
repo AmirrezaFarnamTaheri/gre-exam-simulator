@@ -110,6 +110,10 @@ export default function Dashboard() {
 
       {/* Focused Untimed Practice */}
       <nav className="study-grid" aria-label="Study tools">
+        <Link href="/courses" className="study-tile">
+          <strong>Courses &amp; Lessons</strong>
+          <span>Short topic lectures &amp; quick checks</span>
+        </Link>
         <Link href="/study/verbal" className="study-tile">
           <strong>Verbal Practice</strong>
           <span>Fill-in-the-blank, synonyms &amp; reading</span>

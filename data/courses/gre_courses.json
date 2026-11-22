@@ -1,0 +1,248 @@
+[
+  {
+    "id": "gre-math-numbers",
+    "track": "Math",
+    "title": "Numbers, Zero, Primes & Divisibility",
+    "duration": "10 min",
+    "summary": "Master the hidden definitions ETS uses to build trap questions.",
+    "keyRules": [
+      "Integers include negative whole numbers, zero, and positive whole numbers (..., -2, -1, 0, 1, 2, ...).",
+      "Zero (0) is an even integer and is neither positive nor negative. Any nonzero number to the 0 power equals 1.",
+      "1 is NOT a prime number. 2 is the smallest and only even prime number.",
+      "For fractions between 0 and 1 (like 0.5), squaring makes the number SMALLER (0.25 < 0.5)."
+    ],
+    "workedExample": {
+      "problem": "Compare Quantity A: x^2 and Quantity B: x, given that x > 0.",
+      "walkthrough": "Test x = 2: A = 4, B = 2 (A is greater). Now test x = 0.5: A = 0.25, B = 0.5 (B is greater). Since both outcomes are possible, the answer is D (cannot be determined)."
+    },
+    "practiceAction": { "label": "Practice Math Questions", "href": "/study/quant" },
+    "quiz": [
+      {
+        "q": "Which statement about 0 and 1 is true on the GRE?",
+        "choices": ["1 is the smallest prime number", "0 is a positive even integer", "2 is the only even prime number", "0 is not an integer"],
+        "answer": "2 is the only even prime number",
+        "explanation": "1 is not prime, and 0 is an even integer that is neither positive nor negative."
+      },
+      {
+        "q": "If 0 < k < 1, which value is largest?",
+        "choices": ["k^3", "k^2", "k", "sqrt(k)"],
+        "answer": "sqrt(k)",
+        "explanation": "For numbers between 0 and 1, higher powers get smaller while square roots get larger (e.g., sqrt(0.25) = 0.5 > 0.25)."
+      }
+    ]
+  },
+  {
+    "id": "gre-math-algebra",
+    "track": "Math",
+    "title": "Algebra, Factoring & Exponents",
+    "duration": "12 min",
+    "summary": "Avoid classic expansion errors and simplify large powers without a calculator.",
+    "keyRules": [
+      "Difference of squares: a^2 - b^2 = (a + b)(a - b). Never confuse (a - b)^2 with a^2 - b^2.",
+      "When adding or subtracting powers with the same base, factor out the smallest exponent: 2^34 - 2^28 = 2^28(2^6 - 1).",
+      "Negative exponents mean reciprocals: m^(-n) = 1 / m^n.",
+      "Flip the inequality sign whenever you multiply or divide both sides by a negative number."
+    ],
+    "workedExample": {
+      "problem": "Simplify (3^12 - 3^10) / 3^10.",
+      "walkthrough": "Factor 3^10 from the numerator: 3^10(3^2 - 1) / 3^10 = 3^2 - 1 = 9 - 1 = 8."
+    },
+    "practiceAction": { "label": "Practice Math Questions", "href": "/study/quant" },
+    "quiz": [
+      {
+        "q": "What is the value of (2^10 - 2^8) / 2^8?",
+        "choices": ["2", "3", "4", "8"],
+        "answer": "3",
+        "explanation": "Factor 2^8: 2^8(2^2 - 1) / 2^8 = 4 - 1 = 3."
+      },
+      {
+        "q": "If -3x > 12, what must be true about x?",
+        "choices": ["x > -4", "x < -4", "x > 4", "x < 4"],
+        "answer": "x < -4",
+        "explanation": "Dividing both sides by -3 reverses the inequality sign."
+      }
+    ]
+  },
+  {
+    "id": "gre-math-qc-frozen",
+    "track": "Math",
+    "title": "Quantitative Comparison: The FROZEN Method",
+    "duration": "10 min",
+    "summary": "Systematically test edge cases so you never fall for Choice D traps.",
+    "keyRules": [
+      "Always simplify both quantities first by doing the same valid operation to both sides (add/subtract anything, multiply/divide only by known positives).",
+      "Test FROZEN values when variables are unrestricted: Fractions (1/2), Repeats, One (1), Zero (0), Extremes (100), Negatives (-1, -2).",
+      "The moment two valid test cases give different winners (e.g., A wins once, B or Equal wins once), stop immediately and pick D.",
+      "Never assume geometric figures are drawn to scale unless explicitly stated."
+    ],
+    "workedExample": {
+      "problem": "Compare Quantity A: x + y and Quantity B: xy, where x and y are integers.",
+      "walkthrough": "Test x = 2, y = 2: A = 4, B = 4 (Equal). Test x = 2, y = 3: A = 5, B = 6 (B is greater). Two different relationships -> Answer is D."
+    },
+    "practiceAction": { "label": "Try Short Math Test (12 Q)", "href": "/exam/quant-s1" },
+    "quiz": [
+      {
+        "q": "In Quantitative Comparison, if x = 2 makes Quantity A greater and x = 0 makes both quantities equal, what is the answer?",
+        "choices": ["Quantity A is greater", "Quantity B is greater", "The two quantities are equal", "Cannot be determined"],
+        "answer": "Cannot be determined",
+        "explanation": "Any two valid cases that produce different comparisons immediately prove Choice D."
+      }
+    ]
+  },
+  {
+    "id": "gre-math-geometry-data",
+    "track": "Math",
+    "title": "Geometry, Statistics & Charts",
+    "duration": "12 min",
+    "summary": "Core triangle ratios, consecutive averages, and fast chart estimation.",
+    "keyRules": [
+      "Special right triangles: 3-4-5, 5-12-13, 45-45-90 (1 : 1 : sqrt(2)), and 30-60-90 (1 : sqrt(3) : 2).",
+      "Triangle inequality: any side must be strictly between the difference and the sum of the other two sides.",
+      "In any evenly spaced set (like consecutive integers), Average = Median = (First + Last) / 2.",
+      "In Charts & Tables, always read axis units (thousands, millions, percent) before calculating."
+    ],
+    "workedExample": {
+      "problem": "Find the sum of all integers from 11 to 19 inclusive.",
+      "walkthrough": "Count = 19 - 11 + 1 = 9 numbers. Average = (11 + 19) / 2 = 15. Sum = 9 * 15 = 135."
+    },
+    "practiceAction": { "label": "Practice Charts & Math", "href": "/study/quant" },
+    "quiz": [
+      {
+        "q": "Two sides of a triangle have lengths 5 and 9. Which length is IMPOSSIBLE for the third side?",
+        "choices": ["5", "8", "13", "14"],
+        "answer": "14",
+        "explanation": "The third side must be strictly less than 5 + 9 = 14 (and strictly greater than 9 - 5 = 4)."
+      }
+    ]
+  },
+  {
+    "id": "gre-verbal-tc",
+    "track": "Verbal",
+    "title": "Fill-in-the-Blank (Text Completion) Logic",
+    "duration": "10 min",
+    "summary": "Predict the blank from sentence contrast and support signals before looking at choices.",
+    "keyRules": [
+      "Read the whole sentence first and spot direction words: contrast (although, yet, however, despite) vs. support (moreover, indeed, because, colon ':').",
+      "Write your own simple English word for the blank before reading the 5 choices so clever distractors do not hijack your brain.",
+      "In 2-blank and 3-blank items, solve the easiest/most constrained blank first, not necessarily Blank (i).",
+      "Check tone (positive, negative, neutral) and eliminate choices that clash with the sentence's attitude."
+    ],
+    "workedExample": {
+      "problem": "Although the historian's prose was _____, her underlying archival research was undeniably rigorous.",
+      "walkthrough": "'Although' signals contrast with 'undeniably rigorous'. Prediction: 'sloppy / unclear / dull'. Match the negative-style word (e.g., 'pedestrian' or 'turgid')."
+    },
+    "practiceAction": { "label": "Practice Verbal Questions", "href": "/study/verbal" },
+    "quiz": [
+      {
+        "q": "In a Text Completion sentence, what does a colon (:) usually signal?",
+        "choices": ["A sharp contradiction", "An explanation or illustration of the previous clause", "A shift to an unrelated topic", "A sarcastic tone"],
+        "answer": "An explanation or illustration of the previous clause",
+        "explanation": "A colon expands on, defines, or illustrates the claim right before it."
+      }
+    ]
+  },
+  {
+    "id": "gre-verbal-se",
+    "track": "Verbal",
+    "title": "Sentence Equivalence & Synonym Pairing",
+    "duration": "10 min",
+    "summary": "Pick two choices that create the exact same sentence meaning, not just loose synonyms.",
+    "keyRules": [
+      "Always predict the blank meaning first, just like Text Completion.",
+      "Look for true synonym pairs among the 6 choices that both fit the sentence context.",
+      "Beware of 'trap pairs': two synonyms whose meaning is the exact opposite of what the sentence needs, or a word that fits alone with no matching partner.",
+      "Re-read the sentence with both chosen words separately to confirm identical overall meaning."
+    ],
+    "workedExample": {
+      "problem": "Choices: brief, ephemeral, durable, lasting, vague, harsh. Context: 'fame fades quickly'.",
+      "walkthrough": "Two pairs exist (brief/ephemeral and durable/lasting). Context requires 'short-lived', so pick brief + ephemeral."
+    },
+    "practiceAction": { "label": "Practice Synonym Pairs", "href": "/vocab" },
+    "quiz": [
+      {
+        "q": "When two words in the 6 choices are synonyms, should you automatically pick them?",
+        "choices": ["Yes, there is only ever one synonym pair", "No, verify that the pair actually fits the logic of the sentence", "Yes, unless both words are negative", "Only on 3-blank questions"],
+        "answer": "No, verify that the pair actually fits the logic of the sentence",
+        "explanation": "ETS frequently includes a distractor synonym pair with the wrong meaning for the sentence."
+      }
+    ]
+  },
+  {
+    "id": "gre-verbal-rc",
+    "track": "Verbal",
+    "title": "Reading Strategy & Author View",
+    "duration": "12 min",
+    "summary": "Locate the author's stance quickly and eliminate extreme trap answers.",
+    "keyRules": [
+      "After a named researcher or critic is mentioned, the author's own view usually appears in the next sentence introduced by a transition word (however, yet, in contrast).",
+      "When a question asks about a phrase following a colon (:), the author's purpose refers directly to the clause before the colon.",
+      "For Strengthen/Weaken questions, first state the exact conclusion and ask what alternative cause or missing link connects premise to conclusion.",
+      "Eliminate extreme language ('always', 'never', 'only', 'proves beyond doubt') unless the passage uses equally strong language."
+    ],
+    "workedExample": {
+      "problem": "Passage: 'Dr. Gomez argues urban trees cool streets uniformly. However, recent sensors show cooling varies widely by canopy density.' Question: What is the author's attitude toward Dr. Gomez's claim?",
+      "walkthrough": "'However' signals qualification/critique. The author treats the 'uniformly' part as overstated, not completely worthless -> pick a measured choice like 'partially skeptical' or 'qualified'."
+    },
+    "practiceAction": { "label": "Try Short Verbal Test (12 Q)", "href": "/exam/verbal-s1" },
+    "quiz": [
+      {
+        "q": "In an Evaluate-the-Argument question, what is a classic trap answer?",
+        "choices": ["A choice that tests the key assumption", "A choice that is logically true but merely restates the conclusion", "A choice asking about an alternative cause", "A choice comparing the study group to a control group"],
+        "answer": "A choice that is logically true but merely restates the conclusion",
+        "explanation": "Evaluating an argument requires testing the evidence or link, not repeating the conclusion."
+      }
+    ]
+  },
+  {
+    "id": "gre-writing-issue",
+    "track": "Essay Writing",
+    "title": "30-Minute Issue Essay Blueprint",
+    "duration": "12 min",
+    "summary": "Write a clear, nuanced 450-word essay with zero writer's block.",
+    "keyRules": [
+      "Minutes 0-4: Pick a clear, slightly qualified stance, write 2 distinct supporting reasons with concrete examples, and note 1 counterargument.",
+      "Minutes 4-26: Draft 5 crisp paragraphs (Intro -> Reason 1 + Example -> Reason 2 + Example -> Concession & Rebuttal -> Conclusion).",
+      "Aim for 400-550 words: well-developed reasoning beats filler sentences.",
+      "Minutes 26-30: Proofread strictly for spelling, subject-verb agreement, and run-on sentences (both a human rater and automated software score your essay)."
+    ],
+    "workedExample": {
+      "problem": "Prompt: 'Governments should focus funding on immediate practical problems rather than long-term theoretical research.'",
+      "walkthrough": "Thesis: While urgent needs deserve steady support, cutting theoretical research undermines future breakthroughs. Body 1: Basic physics led to GPS/MRI. Body 2: Private firms underfund long-horizon research. Concession: Emergencies like pandemics require temporary rebalancing, yet baseline basic-science funding must stay protected."
+    },
+    "practiceAction": { "label": "Open Essay Writing Studio", "href": "/awa" },
+    "quiz": [
+      {
+        "q": "Why should you reserve the final 3-4 minutes of your 30-minute essay for proofreading?",
+        "choices": ["To add a brand-new argument in the conclusion", "To catch spelling and grammar errors scored by both human and automated raters", "To delete your concession paragraph", "To shorten the essay under 250 words"],
+        "answer": "To catch spelling and grammar errors scored by both human and automated raters",
+        "explanation": "Clean mechanics and clear paragraph transitions directly protect scores in the 4.5-6.0 band."
+      }
+    ]
+  },
+  {
+    "id": "gre-strategy-pacing",
+    "track": "Test Strategy",
+    "title": "Two-Pass Pacing & Adaptive Scoring",
+    "duration": "8 min",
+    "summary": "Maximize your score across Part 1 and Part 2 without running out of time.",
+    "keyRules": [
+      "There is ZERO penalty for wrong answers on the GRE. Never leave a question blank.",
+      "Pass 1: Answer straightforward questions steadily; mark any item that stalls you past ~90 seconds and move on.",
+      "Pass 2: Use the Review screen to return to marked items with remaining time.",
+      "Part 1 accuracy sets your Part 2 difficulty: 8-12 right unlocks Hard Part 2 (scores up to 170), 5-7 leads to Medium (~164 ceiling), and 0-4 leads to Easy (~155 ceiling)."
+    ],
+    "workedExample": {
+      "problem": "You are on Question 5 of Math Part 1 and have spent 2 minutes with no clear algebraic path.",
+      "walkthrough": "Eliminate impossible choices, pick your best guess, check 'Mark', and immediately advance to Question 6 so you protect 7 easier points ahead."
+    },
+    "practiceAction": { "label": "Start Full Practice Test", "href": "/exam/full" },
+    "quiz": [
+      {
+        "q": "Approximately how many Part 1 questions (out of 12) do you need to answer correctly to unlock the Hard Part 2 section?",
+        "choices": ["At least 3", "At least 5", "At least 8", "All 12"],
+        "answer": "At least 8",
+        "explanation": "Scoring 8-12 out of 12 in Part 1 routes you to the Hard Part 2 module with a 170 ceiling."
+      }
+    ]
+  }
+]

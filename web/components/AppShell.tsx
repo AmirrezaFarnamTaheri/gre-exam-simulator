@@ -8,6 +8,7 @@ const THEME_KEY = "gre-study-theme-v1";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
+  { href: "/courses", label: "Courses" },
   { href: "/exam/full", label: "Mock" },
   { href: "/study/mixed", label: "Practice" },
   { href: "/vocab", label: "Vocab" },

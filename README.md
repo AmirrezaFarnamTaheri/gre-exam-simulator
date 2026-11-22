@@ -19,6 +19,8 @@ A free, local-first GRE study and full exam simulation workspace built for the p
   - 3,046 GRE words with SM-2 spaced repetition, GregMat Groups 01-32 filters, and a Sentence Equivalence Synonym-Pair Drill covering 369 synonym clusters.
 - **AWA Issue Studio (`/awa`)**:
   - 114 Analyze an Issue prompts paired with structured brainstorming outlines, 30-minute timer, live 400-550 word target bar, and a Bring-Your-Own-Key (BYOK) AI rubric grader plus one-click prompt copy.
+- **Guided Courses & Topic Lessons (`/courses`)**:
+  - 9 structured mini-courses across Math, Verbal, Essay Writing, and Test Strategy with key rules, worked examples, interactive quick-check quizzes, local progress tracking, and one-click practice session links.
 - **Reference Hub (`/guides`)**:
   - Quantitative formula cheatsheet, Reading Comprehension playbook, Shortened GRE adaptive scoring rules, and structured study planner.
 - **Accessible Scholarly Desk UI**:
