@@ -10,7 +10,7 @@ import {
   type AnyQuestion,
   type Section,
 } from "gre-adaptive-engine";
-import { BANK } from "@/lib/questionBank";
+import { sampleTimedSection } from "@/lib/questionBank";
 import { useAdaptiveState } from "@/lib/useAdaptiveState";
 import awaData from "../../../data/questions/awa.json";
 import awaGuides from "../../../data/awa/guides.json";
@@ -29,35 +29,6 @@ interface AwaPrompt {
 }
 
 const ISSUE_PROMPTS = (awaData as AwaPrompt[]).filter((p) => p.type === "issue");
-
-function shuffle<T>(arr: T[]): T[] {
-  const c = [...arr];
-  for (let i = c.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [c[i], c[j]] = [c[j], c[i]];
-  }
-  return c;
-}
-
-function sampleSection(
-  section: Section,
-  count: number,
-  band: AdaptiveDifficultyBand,
-  exclude: Set<string>
-): AnyQuestion[] {
-  const pool = BANK.filter((q) => q.section === section && !exclude.has(q.id));
-  const diffs = band === "easy" ? [1, 2, 3] : band === "hard" ? [4, 5] : [3, 4, 2];
-  const primary = shuffle(pool.filter((q) => diffs.includes(q.difficulty)));
-  const fallback = shuffle(pool.filter((q) => !diffs.includes(q.difficulty)));
-  const combined = [...primary, ...fallback];
-  if (section === "quant") {
-    const di = combined.filter((q) => q.qtype === "data_interpretation");
-    const nonDi = combined.filter((q) => q.qtype !== "data_interpretation");
-    const takeDi = Math.min(2, di.length);
-    return shuffle([...nonDi.slice(0, Math.max(0, count - takeDi)), ...di.slice(0, takeDi)]).slice(0, count);
-  }
-  return combined.slice(0, count);
-}
 
 const PHASE_META: Record<Exclude<MockPhase, "intro" | "results">, { label: string; minutes: number; section?: Section }> = {
   awa: { label: "Section 1: Analytical Writing (Analyze an Issue)", minutes: 30 },
@@ -105,8 +76,8 @@ export default function FullMockSession() {
 
   function startFullMock(skipAwa = false) {
     const pickedAwa = ISSUE_PROMPTS[Math.floor(Math.random() * ISSUE_PROMPTS.length)];
-    const v1 = sampleSection("verbal", 12, "medium", new Set());
-    const q1 = sampleSection("quant", 12, "medium", new Set());
+    const v1 = sampleTimedSection("verbal", 12, "medium", new Set());
+    const q1 = sampleTimedSection("quant", 12, "medium", new Set());
     setAwaPrompt(pickedAwa);
     setAwaEssay("");
     setV1Qs(v1);
@@ -142,14 +113,14 @@ export default function FullMockSession() {
       const v1Score = v1Qs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
       const band = determineSection2Difficulty(v1Score, v1Qs.length);
       setV2Band(band);
-      setV2Qs(sampleSection("verbal", 15, band, new Set(v1Qs.map((q) => q.id))));
+      setV2Qs(sampleTimedSection("verbal", 15, band, new Set(v1Qs.map((q) => q.id))));
       setPhase("v2");
       setSecondsRemaining(23 * 60);
     } else if (phase === "v2") {
       const q1Score = q1Qs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
       const band = determineSection2Difficulty(q1Score, q1Qs.length);
       setQ2Band(band);
-      setQ2Qs(sampleSection("quant", 15, band, new Set(q1Qs.map((q) => q.id))));
+      setQ2Qs(sampleTimedSection("quant", 15, band, new Set(q1Qs.map((q) => q.id))));
       setPhase("q2");
       setSecondsRemaining(26 * 60);
     } else if (phase === "q2") {
@@ -190,15 +161,12 @@ export default function FullMockSession() {
     return (
       <main className="container">
         <p style={{ marginBottom: "1rem" }}>
-          <Link href="/" className="btn-ghost">&larr; Dashboard</Link>
+          <Link href="/tests" className="btn-ghost">&larr; Timed tests</Link>
         </p>
         <section className="exam-desk-panel">
-          <span className="exam-meta-tag">
-            FULL PRACTICE TEST · 1H 58M
-          </span>
           <h1 style={{ marginTop: "0.75rem", color: "#ffffff" }}>Full GRE Practice Test</h1>
           <p>
-            Follows the real test order with automatic Part 2 difficulty adjustment and a combined 260-340 score:
+            Allow 1 hour 58 minutes with the essay. Your first verbal and math sections determine the difficulty of their second sections.
           </p>
           <ol style={{ lineHeight: 1.85, color: "#e2e8f0", paddingLeft: "1.25rem", marginBottom: "1.5rem" }}>
             <li><strong>Essay Writing:</strong> 1 Essay · 30 min</li>
@@ -209,7 +177,7 @@ export default function FullMockSession() {
           </ol>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             <button type="button" className="btn-accent" onClick={() => startFullMock(false)}>
-              Start Full Test (With Essay, 1h 58m)
+              Start with essay
             </button>
             <button
               type="button"
@@ -217,7 +185,7 @@ export default function FullMockSession() {
               style={{ backgroundColor: "#ffffff", borderColor: "#ffffff", color: "#183654" }}
               onClick={() => startFullMock(true)}
             >
-              Start Without Essay (1h 28m)
+              Start without essay (1h 28m)
             </button>
           </div>
         </section>
@@ -240,10 +208,10 @@ export default function FullMockSession() {
       <main className="container">
         <div className="exam-desk-panel">
           <p style={{ margin: 0, fontSize: "0.8rem", color: "#dbeafe", textTransform: "uppercase", fontWeight: 700 }}>
-            Full Shortened GRE Official-Style Score Report
+            Practice test results
           </p>
           <h1 style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.4rem)", margin: "0.35rem 0 1rem", color: "#fcd34d" }}>
-            Combined Total: {totalScaled} / 340
+            Verbal + math estimate: {totalScaled} / 340
           </h1>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             <div style={{ backgroundColor: "rgba(255,255,255,0.1)", padding: "1rem", borderRadius: 8 }}>
@@ -269,17 +237,17 @@ export default function FullMockSession() {
                     setCopiedAwa(true);
                   }}
                 >
-                  {copiedAwa ? "Copied AI Prompt" : "Copy AWA AI Grader Prompt"}
+                  {copiedAwa ? "Copied" : "Copy essay for feedback"}
                 </button>
               )}
             </div>
           </div>
           <div style={{ display: "flex", gap: "0.75rem", marginTop: "1.25rem", flexWrap: "wrap" }}>
             <Link href="/" className="button" style={{ backgroundColor: "#ffffff", borderColor: "#ffffff", color: "#183654" }}>
-              Dashboard
+              Study desk
             </Link>
             <Link href="/study/mistakes" className="btn-accent">
-              Drill Missed Questions ({allMissed.length})
+              Retry missed questions ({allMissed.length})
             </Link>
             <button
               type="button"
@@ -287,7 +255,7 @@ export default function FullMockSession() {
               style={{ backgroundColor: "rgba(255,255,255,0.16)", borderColor: "rgba(255,255,255,0.35)", color: "#ffffff" }}
               onClick={() => startFullMock(false)}
             >
-              New Full Mock
+              Start a new test
             </button>
           </div>
         </div>
@@ -295,7 +263,7 @@ export default function FullMockSession() {
         <section className="surface-card">
           <h2 style={{ marginTop: 0 }}>Missed Questions Summary ({allMissed.length})</h2>
           {allMissed.length === 0 ? (
-            <p>Flawless mock: 0 missed questions.</p>
+            <p>No missed questions in this test.</p>
           ) : (
             <ul style={{ paddingLeft: "1.2rem", lineHeight: 1.6 }}>
               {allMissed.slice(0, 30).map((q) => (
@@ -334,7 +302,7 @@ export default function FullMockSession() {
             <div className="font-bold">Question {currentIndex + 1} of {activeQs.length}</div>
           )}
 
-          <div className="flex items-center gap-2">
+          <div className="test-tools flex items-center gap-2">
             {phase !== "awa" && currentQ && (
               <>
                 <label className="flex items-center gap-1 cursor-pointer bg-white/10 px-2 py-1 rounded text-xs font-bold">

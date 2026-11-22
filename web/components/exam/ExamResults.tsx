@@ -120,10 +120,9 @@ export default function ExamResults({
   const total = Math.max(1, questions.length);
   const accuracyPct = Math.round((correctCount / total) * 100);
   const s2Correct = s1Correct !== undefined ? correctCount - s1Correct : 0;
-  const estimatedScaledScore =
-    s1Correct !== undefined && s2Difficulty
-      ? calculateAdaptiveGreScore(section, s1Correct, s2Correct, s2Difficulty, total)
-      : calculateAdaptiveGreScore(section, correctCount, 0, "medium", total);
+  const estimatedScaledScore = s1Correct !== undefined && s2Difficulty
+    ? calculateAdaptiveGreScore(section, s1Correct, s2Correct, s2Difficulty, total)
+    : null;
 
   const minutes = Math.floor(timeSpentSec / 60);
   const seconds = timeSpentSec % 60;
@@ -192,12 +191,14 @@ export default function ExamResults({
                 </p>
               )}
             </div>
-            <div className="text-right">
-              <div className="text-xs uppercase text-blue-200">Estimated Score</div>
-              <div className="text-4xl font-extrabold text-amber-300">
-                {estimatedScaledScore} <span className="text-base font-normal text-blue-200">/ 170</span>
+            {estimatedScaledScore !== null && (
+              <div className="text-right">
+                <div className="text-xs text-blue-200">App score estimate</div>
+                <div className="text-4xl font-extrabold text-amber-300">
+                  {estimatedScaledScore} <span className="text-base font-normal text-blue-200">/ 170</span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
@@ -227,23 +228,23 @@ export default function ExamResults({
 
           <div className="flex flex-wrap gap-3 mt-5">
             <Link
-              href="/"
+              href="/tests"
               className="px-4 py-2 bg-white text-[#1b3a5b] font-bold rounded-lg text-sm hover:bg-blue-50 transition"
             >
-              &larr; Dashboard
+              &larr; Timed tests
             </Link>
             <button
               onClick={onRetake}
               className="px-4 py-2 bg-white/15 hover:bg-white/25 text-white font-bold rounded-lg text-sm transition"
             >
-              Retake Same Set
+              Retry this set
             </button>
             {onRetakeFresh && (
               <button
                 onClick={onRetakeFresh}
                 className="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-black font-bold rounded-lg text-sm transition"
               >
-                New Adaptive Test
+                Try a new set
               </button>
             )}
           </div>
@@ -295,7 +296,7 @@ export default function ExamResults({
                 </span>
                 <span>
                   Time spent: {activeReview.secSpent}s{" "}
-                  {activeReview.secSpent >= 150 ? "(Time sink: mark and move on faster next time)" : ""}
+                  {activeReview.secSpent >= 150 ? "(2.5 minutes or more)" : ""}
                 </span>
               </div>
 
@@ -324,7 +325,7 @@ export default function ExamResults({
             </div>
           ) : (
             <p className="text-sm text-emerald-700 font-semibold">
-              Perfect score: no mistakes to review.
+              No missed questions in this test.
             </p>
           )}
         </div>

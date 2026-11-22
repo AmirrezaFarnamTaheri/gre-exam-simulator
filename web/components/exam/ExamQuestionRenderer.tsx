@@ -1,5 +1,6 @@
 "use client";
 
+import SelectInPassage from "@/components/questions/SelectInPassage";
 import React from "react";
 import type {
   AnyQuestion,
@@ -222,7 +223,7 @@ function QuantMultipleChoiceExamView({
           return (
             <label
               key={choice}
-              onClick={() => handleSelect(choice)}
+
               className={`flex items-center gap-3 p-3.5 border rounded-lg cursor-pointer transition select-none ${
                 isSelected
                   ? "bg-blue-50 border-blue-600 shadow-sm"
@@ -233,7 +234,7 @@ function QuantMultipleChoiceExamView({
                 type={q.select_all ? "checkbox" : "radio"}
                 name="mc_choice"
                 checked={isSelected}
-                onChange={() => {}}
+                onChange={() => handleSelect(choice)}
                 className="w-4 h-4 text-blue-600"
               />
               <span className="font-serif text-base text-gray-900">{choice}</span>
@@ -370,7 +371,6 @@ function SentenceEquivalenceExamView({
           return (
             <label
               key={choice}
-              onClick={() => toggle(choice)}
               className={`flex items-center gap-3 p-3.5 border rounded-lg cursor-pointer transition select-none ${
                 isSelected
                   ? "bg-blue-50 border-blue-600 shadow-sm"
@@ -380,7 +380,7 @@ function SentenceEquivalenceExamView({
               <input
                 type="checkbox"
                 checked={isSelected}
-                onChange={() => {}}
+                onChange={() => toggle(choice)}
                 className="w-4 h-4 text-blue-600"
               />
               <span className="font-serif text-base text-gray-900">{choice}</span>
@@ -403,6 +403,9 @@ function ReadingComprehensionExamView({
 }) {
   const passage = getPassageById(q.passage_id);
   const current = answer || [];
+  if (q.select_in_passage) {
+    return <div className="exam-select-in-passage"><SelectInPassage passage={passage} question={q} selected={current[0]} onSelect={(sentence) => onChange([sentence])} /></div>;
+  }
 
   function handleSelect(choice: string) {
     if (q.select_all) {
@@ -444,7 +447,7 @@ function ReadingComprehensionExamView({
             return (
               <label
                 key={choice}
-                onClick={() => handleSelect(choice)}
+
                 className={`flex items-center gap-3 p-3.5 border rounded-lg cursor-pointer transition select-none ${
                   isSelected
                     ? "bg-blue-50 border-blue-600 shadow-sm"
@@ -453,8 +456,9 @@ function ReadingComprehensionExamView({
               >
                 <input
                   type={q.select_all ? "checkbox" : "radio"}
+                  name={q.id}
                   checked={isSelected}
-                  onChange={() => {}}
+                  onChange={() => handleSelect(choice)}
                   className="w-4 h-4 text-blue-600"
                 />
                 <span className="font-serif text-base text-gray-900">{choice}</span>
@@ -514,7 +518,7 @@ function DataInterpretationExamView({
             return (
               <label
                 key={choice}
-                onClick={() => handleSelect(choice)}
+
                 className={`flex items-center gap-3 p-3.5 border rounded-lg cursor-pointer transition select-none ${
                   isSelected
                     ? "bg-blue-50 border-blue-600 shadow-sm"
@@ -523,8 +527,9 @@ function DataInterpretationExamView({
               >
                 <input
                   type={q.select_all ? "checkbox" : "radio"}
+                  name={q.id}
                   checked={isSelected}
-                  onChange={() => {}}
+                  onChange={() => handleSelect(choice)}
                   className="w-4 h-4 text-blue-600"
                 />
                 <span className="font-serif text-base text-gray-900">{choice}</span>

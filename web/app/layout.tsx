@@ -4,8 +4,8 @@ import AppShell from "@/components/AppShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GRE Adaptive Study & Shortened Exam Simulator",
-  description: "Local-first Shortened GRE adaptive study app, 2-stage exam simulator, vocabulary SRS, AWA studio, and reference hub.",
+  title: "GRE Study",
+  description: "Practice GRE math, verbal reasoning, vocabulary, and essay writing.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

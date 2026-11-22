@@ -186,7 +186,7 @@ export default function AwaSession() {
         setAiFeedback(data?.choices?.[0]?.message?.content || JSON.stringify(data));
       }
     } catch (e: any) {
-      setAiFeedback(`Network or CORS error: ${e?.message || String(e)}. Use "Copy ETS Diagnostic Prompt" to paste into ChatGPT, Claude, or Gemini.`);
+      setAiFeedback(`Network or CORS error: ${e?.message || String(e)}. Use "Copy essay feedback prompt" to paste into ChatGPT, Claude, or Gemini.`);
     } finally {
       setAiLoading(false);
     }
@@ -292,11 +292,11 @@ export default function AwaSession() {
 
       {!prompt ? (
         <section className="surface-card">
-          <h2>{tab === "issue" ? "Analyze an Issue (Official 30-Minute Task)" : "Analyze an Argument (Retired Pre-2023 Archive)"}</h2>
+          <h2>{tab === "issue" ? "Analyze an Issue · 30 minutes" : "Analyze an Argument · extra practice"}</h2>
           <p className="muted-text">
             {tab === "issue"
               ? "State a clear position, develop two concrete reasons with real-world examples, address a counterargument, and finish with a crisp conclusion."
-              : "Retired from the GRE in September 2023. Retained here strictly as an optional critical-reasoning exercise."}
+              : "This optional exercise is outside the current GRE format."}
           </p>
           <p className="muted-text">
             Completed in this browser: <strong>{history.filter((id) => id.startsWith(tab === "issue" ? "awa_issue" : "awa_arg")).length}</strong> / {tab === "issue" ? ISSUE.length : ARGUMENT.length}

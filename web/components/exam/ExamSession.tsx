@@ -8,7 +8,7 @@ import {
   type AnyQuestion,
   type Section,
 } from "gre-adaptive-engine";
-import { BANK } from "@/lib/questionBank";
+import { sampleTimedSection } from "@/lib/questionBank";
 import GRECalculator from "./GRECalculator";
 import ReviewModal from "./ReviewModal";
 import ExamQuestionRenderer from "./ExamQuestionRenderer";
@@ -19,40 +19,6 @@ interface ExamSessionProps {
   adaptiveTwoStage?: boolean;
   questionCount?: number;
   durationMinutes?: number;
-}
-
-function shuffle<T>(arr: T[]): T[] {
-  const copy = [...arr];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
-
-function sampleStageQuestions(
-  section: Section,
-  count: number,
-  band: AdaptiveDifficultyBand,
-  excludeIds: Set<string>
-): AnyQuestion[] {
-  const pool = BANK.filter((q) => q.section === section && !excludeIds.has(q.id));
-  const targetDiffs =
-    band === "easy" ? [1, 2, 3] : band === "hard" ? [4, 5] : [3, 4, 2];
-
-  const primary = shuffle(pool.filter((q) => targetDiffs.includes(q.difficulty)));
-  const fallback = shuffle(pool.filter((q) => !targetDiffs.includes(q.difficulty)));
-  const combined = [...primary, ...fallback];
-
-  // For Quant, ensure at least 1-2 Data Interpretation items when available
-  if (section === "quant") {
-    const diPool = combined.filter((q) => q.qtype === "data_interpretation");
-    const nonDi = combined.filter((q) => q.qtype !== "data_interpretation");
-    const diTake = Math.min(2, diPool.length);
-    const chosen = [...nonDi.slice(0, Math.max(0, count - diTake)), ...diPool.slice(0, diTake)];
-    return shuffle(chosen).slice(0, count);
-  }
-  return combined.slice(0, count);
 }
 
 export default function ExamSession({
@@ -103,7 +69,7 @@ export default function ExamSession({
   const currentQIdRef = useRef<string | null>(null);
 
   function startFreshExam() {
-    const s1 = sampleStageQuestions(section, questionCount, "medium", new Set());
+    const s1 = sampleTimedSection(section, questionCount, "medium", new Set());
     setStage(1);
     setStageTransition(null);
     setS2Difficulty("medium");
@@ -180,7 +146,7 @@ export default function ExamSession({
   function beginStage2() {
     if (!stageTransition) return;
     const seen = new Set(s1Questions.map((q) => q.id));
-    const s2 = sampleStageQuestions(section, 15, stageTransition.nextBand, seen);
+    const s2 = sampleTimedSection(section, 15, stageTransition.nextBand, seen);
     setStage(2);
     setQuestions(s2);
     setUserAnswers({});
@@ -216,13 +182,6 @@ export default function ExamSession({
             Your Part 2 difficulty is{" "}
             <strong className="uppercase text-[#1b3a5b]">{stageTransition.nextBand}</strong>.
           </p>
-          <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-900">
-            {stageTransition.nextBand === "hard"
-              ? "Hard Part 2: unlocks scores up to 170."
-              : stageTransition.nextBand === "medium"
-              ? "Medium Part 2: balanced difficulty (scores up to ~164)."
-              : "Easy Part 2: foundational difficulty (scores up to ~155)."}
-          </div>
           <button
             type="button"
             onClick={beginStage2}
@@ -341,7 +300,7 @@ export default function ExamSession({
             Question {currentIndex + 1} of {questions.length}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="test-tools flex items-center gap-3">
             <label className="flex items-center gap-1.5 cursor-pointer bg-white/10 px-2.5 py-1 rounded border border-white/20 hover:bg-white/20 transition">
               <input
                 type="checkbox"
@@ -460,7 +419,7 @@ export default function ExamSession({
                 onClick={finishCurrentStage}
                 className="px-5 py-2 bg-[#1b3a5b] hover:bg-[#12273e] text-white text-sm font-bold rounded-lg shadow transition"
               >
-                {adaptiveTwoStage && stage === 1 ? "Submit & Route to Section 2" : "Finish & Score"}
+                {adaptiveTwoStage && stage === 1 ? "Submit and continue" : "Finish test"}
               </button>
             </div>
           </div>

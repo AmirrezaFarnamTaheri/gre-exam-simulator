@@ -1,0 +1,368 @@
+[
+  {
+    "id": "timed-reading-1-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Both the schedule and the stop changed, so the author wants to test each change’s effect.",
+    "passage_id": "timed-passage-1",
+    "question": "Which statement best describes the author’s aim?",
+    "choices": [
+      "To explain why two changes should be evaluated separately",
+      "To show that bus riders prefer earlier departures",
+      "To compare two hospitals’ transit budgets",
+      "To establish the best stop location",
+      "To argue that the route should be canceled"
+    ],
+    "correct": [
+      "To explain why two changes should be evaluated separately"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-1-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "An increase with the old stop intact supports a schedule effect independently of relocation.",
+    "passage_id": "timed-passage-1",
+    "question": "Which finding would most strongly support the departure-frequency explanation?",
+    "choices": [
+      "Ridership rises at the hospital when both changes are made.",
+      "The same increase occurs when departures are added and the stop stays at its old location.",
+      "Hospital workers report that their night shifts are tiring.",
+      "A daytime route attracts more riders after relocating a stop.",
+      "Bus seats have been replaced on the route."
+    ],
+    "correct": [
+      "The same increase occurs when departures are added and the stop stays at its old location."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-2-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 2,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Reused paper was common in formal bills, so its presence cannot establish informality.",
+    "passage_id": "timed-passage-2",
+    "question": "What evidence leads the author to question the archive’s label?",
+    "choices": [
+      "Most merchants wrote in pencil.",
+      "Formal bills were also written on reused paper.",
+      "The archive has lost its oldest ledger.",
+      "Letters were cheaper than bills.",
+      "Only handwritten signatures survive."
+    ],
+    "correct": [
+      "Formal bills were also written on reused paper."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-2-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The last sentence suggests looking at what the records did and how they were authenticated.",
+    "passage_id": "timed-passage-2",
+    "question": "Why does the author mention signatures and carried balances?",
+    "choices": [
+      "To describe features of the paper used for the notes",
+      "To suggest more informative evidence of the entries’ function",
+      "To prove that the archive has the wrong dates",
+      "To identify specific people who labeled the notes",
+      "To show that the archive’s formal bills were printed"
+    ],
+    "correct": [
+      "To suggest more informative evidence of the entries’ function"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-3-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Changes in singing affect detectability, so the count can move without a comparable population change.",
+    "passage_id": "timed-passage-3",
+    "question": "What distinction is central to the passage?",
+    "choices": [
+      "Birds heard near a path versus birds heard in a forest",
+      "An observed count versus the number of birds present",
+      "A widened path versus a paved path",
+      "A birdsong’s pitch versus its length",
+      "Spring weather versus autumn weather"
+    ],
+    "correct": [
+      "An observed count versus the number of birds present"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-3-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The surveys began at different times, and the passage ties singing to detection. Comparable dates leave other changes open.",
+    "passage_id": "timed-passage-3",
+    "question": "Which statements are supported?",
+    "choices": [
+      "The two surveys occurred at different times within spring.",
+      "Making the survey dates match would address all possible sources of uncertainty.",
+      "Differences in singing can influence whether a bird is detected."
+    ],
+    "correct": [
+      "The two surveys occurred at different times within spring.",
+      "Differences in singing can influence whether a bird is detected."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "timed-reading-4-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The temporary parts shortage disappears once modules are stocked and can be swapped.",
+    "passage_id": "timed-passage-4",
+    "question": "The technician’s argument most strongly implies which possibility?",
+    "choices": [
+      "Repair times may fall once parts are stocked.",
+      "Standard instruments require fewer repairs in every laboratory.",
+      "Custom instruments cannot be repaired with available tools.",
+      "Temporary purchasing had no effect on repair time.",
+      "The laboratory kept no record of fabrication delays."
+    ],
+    "correct": [
+      "Repair times may fall once parts are stocked."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-4-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 5,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Similar delays after supply becomes reliable, with comparable failures, undermine supply as the main explanation.",
+    "passage_id": "timed-passage-4",
+    "question": "Which evidence would most directly challenge the technician’s explanation?",
+    "choices": [
+      "The custom instruments were more expensive to buy.",
+      "Repair times remain equally long when spare modules are always available and the mix of failures is comparable.",
+      "The new instrument has a smaller screen.",
+      "A different laboratory stocks spare modules.",
+      "Some managers prefer instruments they already know."
+    ],
+    "correct": [
+      "Repair times remain equally long when spare modules are always available and the mix of failures is comparable."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-5-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The author says the separation helps viewers compare how the artist worked across different materials.",
+    "passage_id": "timed-passage-5",
+    "question": "What interpretation does the author favor?",
+    "choices": [
+      "The display mainly traces the chronology of each work.",
+      "The arrangement invites comparison across working materials and methods.",
+      "The reviewer overlooked an error in the painting dates.",
+      "The display establishes that sketches followed every finished painting.",
+      "An exhibition should contain material from only one period."
+    ],
+    "correct": [
+      "The arrangement invites comparison across working materials and methods."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-5-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The recurring subject provides a thread across ink, charcoal, and canvas.",
+    "passage_id": "timed-passage-5",
+    "question": "Why does the author mention the bridge?",
+    "choices": [
+      "To provide an example of comparison across media",
+      "To demonstrate the earliest date in the exhibit",
+      "To identify the artist’s hometown",
+      "To explain why the finished work was framed",
+      "To support the reviewer’s chronological interpretation"
+    ],
+    "correct": [
+      "To provide an example of comparison across media"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-6-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The top floor gained where discomfort was concentrated, while combining all floors obscured the change.",
+    "passage_id": "timed-passage-6",
+    "question": "Which claim does the passage support?",
+    "choices": [
+      "Paint should always be evaluated only from the top floor.",
+      "A measure can obscure a change that matters for the group most affected.",
+      "Student complaints always reflect instrument error.",
+      "The school’s average temperature rose in the afternoon.",
+      "The lowest floor required the most paint."
+    ],
+    "correct": [
+      "A measure can obscure a change that matters for the group most affected."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-6-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The affected floor had fewer recorded degrees in the afternoon and had generated almost all complaints. The aggregate barely moved.",
+    "passage_id": "timed-passage-6",
+    "question": "Which statements does the passage support?",
+    "choices": [
+      "Most complaints had come from students on the upper floor.",
+      "The building average fell about as much as temperatures on the top floor.",
+      "The top floor had lower afternoon temperatures after the roof was painted."
+    ],
+    "correct": [
+      "Most complaints had come from students on the upper floor.",
+      "The top floor had lower afternoon temperatures after the roof was painted."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "timed-reading-7-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The contracts confirm later commercial activity. The evidence does not resolve the initial decision to grow the crop.",
+    "passage_id": "timed-passage-7",
+    "question": "What conclusion about the documented contracts is best supported?",
+    "choices": [
+      "They show market activity for the crop but leave its original adoption unexplained.",
+      "They establish the year every farmer first planted the crop.",
+      "They prove that all earlier contract copies were destroyed.",
+      "They show rainfall increased after farmers sought seeds.",
+      "They establish that merchants offered seeds free of charge."
+    ],
+    "correct": [
+      "They show market activity for the crop but leave its original adoption unexplained."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-7-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 5,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Those dated letters would directly connect early planting decisions to guaranteed purchases.",
+    "passage_id": "timed-passage-7",
+    "question": "Which discovery would most strongly support the historian’s proposed initial cause?",
+    "choices": [
+      "A seed order with prices from a year after adoption",
+      "An undated record of rainfall",
+      "Letters predating seed requests that say farmers will plant only after merchants guarantee purchase",
+      "Later notes that describe a popular dish made from the crop",
+      "Maps showing where merchants eventually built warehouses"
+    ],
+    "correct": [
+      "Letters predating seed requests that say farmers will plant only after merchants guarantee purchase"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-8-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The difference may reflect pre-existing interest among buyers rather than an effect of membership.",
+    "passage_id": "timed-passage-8",
+    "question": "Which possibility weakens the staff’s initial conclusion?",
+    "choices": [
+      "Guests with plans to return are especially likely to buy membership.",
+      "Members enter through a different door.",
+      "Visitors generally purchase day tickets online.",
+      "First-time visitors are asked to fill out a survey.",
+      "The center sells books near the exit."
+    ],
+    "correct": [
+      "Guests with plans to return are especially likely to buy membership."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "timed-reading-8-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Randomly offering access makes selection by pre-existing interest less likely to explain differences in visits.",
+    "passage_id": "timed-passage-8",
+    "question": "What is the purpose of the random offer in the follow-up?",
+    "choices": [
+      "To charge frequent visitors less for admission",
+      "To separate the effect of membership access from who chooses to buy",
+      "To see which exhibits are easiest to maintain",
+      "To match visitors by the size of their groups",
+      "To collect reasons for declining membership"
+    ],
+    "correct": [
+      "To separate the effect of membership access from who chooses to buy"
+    ],
+    "select_all": false
+  }
+]

@@ -39,6 +39,7 @@ export interface ReadingComprehensionQuestion extends QuestionBase {
   choices: string[];
   correct: string[];
   select_all: boolean;
+  select_in_passage?: boolean;
 }
 
 export interface Passage {
