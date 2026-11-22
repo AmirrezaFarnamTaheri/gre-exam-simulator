@@ -21,6 +21,7 @@ const practice: Destination[] = [
 ];
 
 const tests: Destination[] = [
+  ["/exam/diagnostic", "Evaluation diagnostic (recommended Day 1)", "20 Q across all formats + optional essay · 32-52 minutes"],
   ["/exam/quant-s1", "Short math test", "12 questions · 21 minutes"],
   ["/exam/verbal-s1", "Short verbal test", "12 questions · 18 minutes"],
   ["/exam/quant", "Math test", "27 questions · 47 minutes"],
@@ -97,6 +98,7 @@ export default function Dashboard({ desk = "home", catalog }: { desk?: Desk; cat
             <section className="desk-side" aria-labelledby="prepare-test">
               <h2 id="prepare-test">Prepare for test day</h2>
               <DestinationList items={[
+                ["/exam/diagnostic", "Evaluation diagnostic", "Measure all formats in 32-52 min and get your priority list"],
                 ["/tests", "Timed tests", "Full test or a shorter section"],
                 ["/learn", "Lessons and guides", "Worked examples and reference material"],
                 ["/study/mistakes", "Retry missed questions", "Work through questions you missed"],
