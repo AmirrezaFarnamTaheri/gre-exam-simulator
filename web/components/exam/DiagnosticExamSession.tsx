@@ -154,19 +154,31 @@ export default function DiagnosticExamSession() {
   if (phase === "intro") {
     return (
       <main className="container">
-        <p style={{ marginBottom: "1rem" }}>
-          <Link href="/tests" className="btn-ghost">&larr; Timed tests</Link>
+        <p style={{ marginBottom: "0.75rem" }}>
+          <Link href="/tests" className="back-link">&larr; Timed tests</Link>
         </p>
         <section className="exam-desk-panel">
           <h1 style={{ marginTop: "0.25rem", color: "#ffffff" }}>GRE Evaluation Diagnostic</h1>
           <p>
             Test every GRE question format in one short sitting so your 30-day study plan is based on real scores, not guesswork.
           </p>
-          <ol style={{ lineHeight: 1.85, color: "#e2e8f0", paddingLeft: "1.25rem", marginBottom: "1.5rem" }}>
-            <li><strong>Verbal Diagnostic (10 Q, 15 min):</strong> 1/2/3-Blank Text Completion, Sentence Equivalence, Single-Choice RC, Select-All RC, and Select-in-Passage.</li>
-            <li><strong>Math Diagnostic (10 Q, 17 min):</strong> Quantitative Comparison traps, Problem Solving (Single &amp; Select-All), Numeric Entry, and Data Interpretation.</li>
-            <li><strong>Optional Essay Sprint (1 Issue Prompt, 20 min):</strong> Write a structured draft and compare it against a full sample essay.</li>
-          </ol>
+          <div className="exam-stage-grid">
+            <div className="exam-stage-card">
+              <div className="exam-stage-meta">Part 1 · 15 min · 10 Q</div>
+              <div className="exam-stage-title">Verbal Diagnostic</div>
+              <p className="exam-stage-desc">1/2/3-Blank Text Completion, Sentence Equivalence, Single-Choice RC, Select-All RC, and Select-in-Passage.</p>
+            </div>
+            <div className="exam-stage-card">
+              <div className="exam-stage-meta">Part 2 · 17 min · 10 Q</div>
+              <div className="exam-stage-title">Math Diagnostic</div>
+              <p className="exam-stage-desc">Quantitative Comparison traps, Problem Solving (Single &amp; Select-All), Numeric Entry, and Data Interpretation.</p>
+            </div>
+            <div className="exam-stage-card">
+              <div className="exam-stage-meta">Part 3 · 20 min · Optional</div>
+              <div className="exam-stage-title">Issue Essay Sprint</div>
+              <p className="exam-stage-desc">Write a structured Issue draft and compare it side-by-side against a full sample essay.</p>
+            </div>
+          </div>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             <button type="button" className="btn-accent" onClick={() => startDiagnostic(true)}>
               Start Full Diagnostic (52 min, with Essay)
@@ -377,7 +389,7 @@ export default function DiagnosticExamSession() {
           <div className="test-tools flex items-center gap-2">
             {phase !== "awa" && currentQ && (
               <>
-                <label className="flex items-center gap-1 cursor-pointer bg-white/10 px-2 py-1 rounded text-xs font-bold">
+                <label className="flex items-center gap-1.5 cursor-pointer bg-white/10 hover:bg-white/20 px-3 min-h-[44px] rounded text-xs font-bold text-white border border-white/20">
                   <input
                     type="checkbox"
                     checked={Boolean(marked[currentQ.id])}
@@ -387,17 +399,17 @@ export default function DiagnosticExamSession() {
                   />
                   Mark
                 </label>
-                <button type="button" onClick={() => setIsReviewOpen(true)} className="px-2.5 py-1 bg-white/15 hover:bg-white/25 rounded text-xs font-bold">
+                <button type="button" onClick={() => setIsReviewOpen(true)} className="px-3 min-h-[44px] bg-white/15 hover:bg-white/25 text-white border border-white/20 rounded text-xs font-bold">
                   Review
                 </button>
               </>
             )}
             {phase === "quant" && (
-              <button type="button" onClick={() => setIsCalcOpen((v) => !v)} className="px-2.5 py-1 bg-white/15 hover:bg-white/25 rounded text-xs font-bold">
+              <button type="button" onClick={() => setIsCalcOpen((v) => !v)} className="px-3 min-h-[44px] bg-white/15 hover:bg-white/25 text-white border border-white/20 rounded text-xs font-bold">
                 Calculator
               </button>
             )}
-            <span className="font-mono font-bold bg-black/25 px-3 py-1 rounded">{fmt(secondsLeft)}</span>
+            <span className="font-mono font-bold bg-black/25 text-white px-3 py-2 rounded border border-white/10">{fmt(secondsLeft)}</span>
           </div>
         </div>
       </header>

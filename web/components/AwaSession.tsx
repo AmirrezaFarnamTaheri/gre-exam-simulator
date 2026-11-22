@@ -335,9 +335,19 @@ export default function AwaSession() {
             <span className="qtype-label" style={{ margin: 0 }}>
               {tab === "issue" ? "Issue Task (30 Min)" : "Legacy Argument Task"}
             </span>
-            <span className="font-mono" style={{ fontWeight: 700, color: elapsed > 1800 ? "var(--incorrect-fg)" : "var(--fg)" }}>
-              Elapsed: {fmt(elapsed)} {elapsed > 1800 ? "(Over 30m limit)" : ""}
-            </span>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
+              <span className={`pacing-pill font-mono ${elapsed > 1800 ? "over" : ""}`}>
+                {fmt(elapsed)} / 30:00 {elapsed > 1800 ? "(Over)" : ""}
+              </span>
+              <button type="button" className="btn-ghost study-timer-mini" onClick={() => setRunning((r) => !r)}>
+                {running ? "Pause" : elapsed > 0 ? "Resume" : "Start timer"}
+              </button>
+              {elapsed > 0 && (
+                <button type="button" className="btn-ghost study-timer-mini" onClick={() => { setRunning(false); setElapsed(0); }}>
+                  Reset
+                </button>
+              )}
+            </div>
           </div>
 
           <p className="passage" style={{ fontStyle: "italic", margin: "0 0 0.75rem" }}>{prompt.prompt}</p>
@@ -379,7 +389,11 @@ export default function AwaSession() {
               id="awa-essay-editor"
               className="field-textarea"
               value={essay}
-              onChange={(e) => setEssay(e.target.value)}
+              onChange={(e) => {
+                const next = e.target.value;
+                setEssay(next);
+                if (!running && elapsed === 0 && next.trim().length > 0) setRunning(true);
+              }}
               placeholder="Write your essay here (target: 400 to 550 words)..."
             />
           </label>

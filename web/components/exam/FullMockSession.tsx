@@ -160,21 +160,31 @@ export default function FullMockSession() {
   if (phase === "intro") {
     return (
       <main className="container">
-        <p style={{ marginBottom: "1rem" }}>
-          <Link href="/tests" className="btn-ghost">&larr; Timed tests</Link>
+        <p style={{ marginBottom: "0.75rem" }}>
+          <Link href="/tests" className="back-link">&larr; Timed tests</Link>
         </p>
         <section className="exam-desk-panel">
-          <h1 style={{ marginTop: "0.75rem", color: "#ffffff" }}>Full GRE Practice Test</h1>
+          <h1 style={{ marginTop: "0.25rem", color: "#ffffff" }}>Full GRE Practice Test</h1>
           <p>
             Allow 1 hour 58 minutes with the essay. Your first verbal and math sections determine the difficulty of their second sections.
           </p>
-          <ol style={{ lineHeight: 1.85, color: "#e2e8f0", paddingLeft: "1.25rem", marginBottom: "1.5rem" }}>
-            <li><strong>Essay Writing:</strong> 1 Essay · 30 min</li>
-            <li><strong>Verbal Part 1:</strong> 12 Questions · 18 min</li>
-            <li><strong>Math Part 1:</strong> 12 Questions · 21 min</li>
-            <li><strong>Verbal Part 2:</strong> 15 Questions · 23 min</li>
-            <li><strong>Math Part 2:</strong> 15 Questions · 26 min</li>
-          </ol>
+          <div className="exam-stage-grid">
+            <div className="exam-stage-card">
+              <div className="exam-stage-meta">Section 1 · 30 min</div>
+              <div className="exam-stage-title">Analytical Writing</div>
+              <p className="exam-stage-desc">1 Analyze an Issue essay (400-550 words target).</p>
+            </div>
+            <div className="exam-stage-card">
+              <div className="exam-stage-meta">Sections 2 &amp; 4 · 41 min</div>
+              <div className="exam-stage-title">Verbal Reasoning (27 Q)</div>
+              <p className="exam-stage-desc">Stage 1 (12 Q, 18m) routes Stage 2 (15 Q, 23m) adaptively.</p>
+            </div>
+            <div className="exam-stage-card">
+              <div className="exam-stage-meta">Sections 3 &amp; 5 · 47 min</div>
+              <div className="exam-stage-title">Quantitative Reasoning (27 Q)</div>
+              <p className="exam-stage-desc">Stage 1 (12 Q, 21m) routes Stage 2 (15 Q, 26m) adaptively.</p>
+            </div>
+          </div>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             <button type="button" className="btn-accent" onClick={() => startFullMock(false)}>
               Start with essay

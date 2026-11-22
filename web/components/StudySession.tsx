@@ -127,7 +127,7 @@ export default function StudySession({
   return (
     <main className="container">
       <div className="session-header">
-        <Link href={mistakesOnly ? "/progress" : "/practice"}>&larr; {mistakesOnly ? "Progress" : "Practice"}</Link>
+        <Link href={mistakesOnly ? "/progress" : "/practice"} className="back-link">&larr; {mistakesOnly ? "Progress" : "Practice"}</Link>
         <h1>{heading}</h1>
       </div>
 

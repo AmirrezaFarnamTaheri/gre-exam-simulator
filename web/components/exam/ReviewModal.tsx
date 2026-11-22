@@ -92,9 +92,18 @@ export default function ReviewModal({
                 return (
                   <tr
                     key={q.id}
+                    tabIndex={0}
+                    role="button"
                     onClick={() => {
                       onSelectQuestion(idx);
                       onClose();
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        onSelectQuestion(idx);
+                        onClose();
+                      }
                     }}
                     className={`cursor-pointer hover:bg-blue-50 transition ${
                       isCurrent ? "bg-blue-100/70 font-semibold" : ""
