@@ -13,6 +13,7 @@ import GRECalculator from "./GRECalculator";
 import ReviewModal from "./ReviewModal";
 import ExamQuestionRenderer from "./ExamQuestionRenderer";
 import ExamResults, { evaluateQuestionAnswer } from "./ExamResults";
+import { postGreResult } from "@/lib/resultsSync";
 
 interface ExamSessionProps {
   section: Section;
@@ -139,6 +140,32 @@ export default function ExamSession({
       setS2Difficulty(nextBand);
       setStageTransition({ s1Correct, s1Total: questions.length, nextBand });
     } else {
+      const combinedQs = adaptiveTwoStage ? [...s1Questions, ...questions] : questions;
+      const combinedAns = adaptiveTwoStage ? { ...s1Answers, ...userAnswers } : userAnswers;
+      const totalOk = combinedQs.filter((q) => evaluateQuestionAnswer(q, combinedAns[q.id])).length;
+      postGreResult({
+        kind: "run",
+        id: `gre-sec-${section}-${Date.now()}`,
+        runType: "section_test",
+        title: `GRE Timed ${section === "quant" ? "Math" : "Verbal"} (${combinedQs.length} Q)`,
+        scores: {
+          section,
+          correct: totalOk,
+          total: combinedQs.length,
+          adaptiveTwoStage,
+          s2Difficulty: adaptiveTwoStage ? s2Difficulty : null,
+        },
+        details: {
+          items: combinedQs.map((q) => ({
+            id: q.id,
+            section: q.section,
+            qtype: q.qtype,
+            topic: q.topic,
+            correct: evaluateQuestionAnswer(q, combinedAns[q.id]),
+            elapsedSec: questionTimesSec[q.id] || 0,
+          })),
+        },
+      });
       setIsFinished(true);
     }
   }

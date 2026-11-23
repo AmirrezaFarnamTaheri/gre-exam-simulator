@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import awaData from "../../data/questions/awa.json";
 import awaGuides from "../../data/awa/guides.json";
 import sampleEssaysRaw from "../../data/awa/sample_essays.json";
+import { postGreResult } from "@/lib/resultsSync";
 
 const SAMPLE_ESSAYS = sampleEssaysRaw as Record<string, { wordCount: number; essay: string }>;
 
@@ -149,6 +150,17 @@ export default function AwaSession() {
       const updated = [...history, prompt.id];
       setHistory(updated);
       saveHistory(updated);
+      const wc = essay.trim() ? essay.trim().split(/\s+/).length : 0;
+      postGreResult({
+        kind: "writing",
+        id: `gre-awa-${prompt.id}-${Date.now()}`,
+        taskType: tab === "issue" ? "gre_issue" : "gre_argument",
+        promptTitle: prompt.id,
+        promptText: prompt.prompt,
+        responseText: essay,
+        wordCount: wc,
+        elapsedSec: elapsed,
+      });
     }
   }
 

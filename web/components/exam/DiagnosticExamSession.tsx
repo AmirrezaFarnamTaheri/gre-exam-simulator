@@ -6,6 +6,7 @@ import type { AnyQuestion } from "gre-adaptive-engine";
 import { ALL_QUESTIONS } from "@/lib/questionBank";
 import { getQuestionExamTarget, QTYPE_FILTER_LABELS, type QuestionType } from "@/lib/examTargets";
 import { useAdaptiveState } from "@/lib/useAdaptiveState";
+import { postGreResult } from "@/lib/resultsSync";
 import awaData from "../../../data/questions/awa.json";
 import sampleEssaysRaw from "../../../data/awa/sample_essays.json";
 import GRECalculator from "./GRECalculator";
@@ -110,11 +111,39 @@ export default function DiagnosticExamSession() {
 
   useEffect(() => {
     if (phase !== "results" || !hydrated || recorded) return;
-    for (const q of [...verbalQs, ...quantQs]) {
+    const allQs = [...verbalQs, ...quantQs];
+    for (const q of allQs) {
       recordAnswer(q, evaluateQuestionAnswer(q, answers[q.id]));
     }
+    const verbalCorrect = verbalQs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
+    const quantCorrect = quantQs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
+    const awaWords = awaEssay.trim() ? awaEssay.trim().split(/\s+/).length : 0;
+    postGreResult({
+      kind: "run",
+      id: `gre-diag-${Date.now()}`,
+      runType: "diagnostic",
+      title: "GRE Evaluation Diagnostic",
+      scores: {
+        verbal: { correct: verbalCorrect, total: verbalQs.length },
+        quant: { correct: quantCorrect, total: quantQs.length },
+        awaWords: includeAwa ? awaWords : null,
+      },
+      details: {
+        items: allQs.map((q) => ({
+          id: q.id,
+          section: q.section,
+          qtype: q.qtype,
+          topic: q.topic,
+          correct: evaluateQuestionAnswer(q, answers[q.id]),
+          elapsedSec: timings[q.id] || 0,
+        })),
+      },
+      awa: includeAwa && awaEssay.trim() && awaPrompt
+        ? { prompt: awaPrompt.prompt, essay: awaEssay, wordCount: awaWords }
+        : undefined,
+    });
     setRecorded(true);
-  }, [phase, hydrated, recorded, verbalQs, quantQs, answers, recordAnswer]);
+  }, [phase, hydrated, recorded, verbalQs, quantQs, answers, timings, includeAwa, awaEssay, awaPrompt, recordAnswer]);
 
   function startDiagnostic(withAwa: boolean) {
     setIncludeAwa(withAwa);

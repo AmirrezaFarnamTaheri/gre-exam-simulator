@@ -12,6 +12,7 @@ import {
 } from "gre-adaptive-engine";
 import { sampleTimedSection } from "@/lib/questionBank";
 import { useAdaptiveState } from "@/lib/useAdaptiveState";
+import { postGreResult } from "@/lib/resultsSync";
 import awaData from "../../../data/questions/awa.json";
 import awaGuides from "../../../data/awa/guides.json";
 import GRECalculator from "./GRECalculator";
@@ -148,14 +149,51 @@ export default function FullMockSession() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
-  // Persist adaptive ratings when results load
+  // Persist adaptive ratings and SQLite run when results load
   useEffect(() => {
     if (phase !== "results" || !hydrated || recordedResults) return;
     setRecordedResults(true);
-    for (const q of [...v1Qs, ...v2Qs, ...q1Qs, ...q2Qs]) {
+    const allQs = [...v1Qs, ...v2Qs, ...q1Qs, ...q2Qs];
+    for (const q of allQs) {
       recordAnswer(q, evaluateQuestionAnswer(q, answers[q.id]));
     }
-  }, [phase, hydrated, recordedResults, v1Qs, v2Qs, q1Qs, q2Qs, answers, recordAnswer]);
+    const v1Ok = v1Qs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
+    const v2Ok = v2Qs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
+    const q1Ok = q1Qs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
+    const q2Ok = q2Qs.filter((q) => evaluateQuestionAnswer(q, answers[q.id])).length;
+    const verbalScaled = calculateAdaptiveGreScore("verbal", v1Ok, v2Ok, v2Band, v1Qs.length + v2Qs.length);
+    const quantScaled = calculateAdaptiveGreScore("quant", q1Ok, q2Ok, q2Band, q1Qs.length + q2Qs.length);
+    const awaWords = awaEssay.trim() ? awaEssay.trim().split(/\s+/).length : 0;
+    postGreResult({
+      kind: "run",
+      id: `gre-full-${Date.now()}`,
+      runType: "full_mock",
+      title: "Full GRE Practice Test",
+      scores: {
+        verbalScaled,
+        quantScaled,
+        totalScaled: verbalScaled + quantScaled,
+        v1: { correct: v1Ok, total: v1Qs.length },
+        v2: { correct: v2Ok, total: v2Qs.length, band: v2Band },
+        q1: { correct: q1Ok, total: q1Qs.length },
+        q2: { correct: q2Ok, total: q2Qs.length, band: q2Band },
+        awaWords,
+      },
+      details: {
+        items: allQs.map((q) => ({
+          id: q.id,
+          section: q.section,
+          qtype: q.qtype,
+          topic: q.topic,
+          correct: evaluateQuestionAnswer(q, answers[q.id]),
+          elapsedSec: qTimes[q.id] || 0,
+        })),
+      },
+      awa: awaEssay.trim() && awaPrompt
+        ? { prompt: awaPrompt.prompt, essay: awaEssay, wordCount: awaWords }
+        : undefined,
+    });
+  }, [phase, hydrated, recordedResults, v1Qs, v2Qs, q1Qs, q2Qs, v2Band, q2Band, answers, qTimes, awaEssay, awaPrompt, recordAnswer]);
 
   if (phase === "intro") {
     return (
