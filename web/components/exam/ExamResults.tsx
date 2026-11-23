@@ -2,11 +2,16 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import type { AnyQuestion } from "gre-adaptive-engine";
+import {
+  calculateAdaptiveGreScore,
+  type AdaptiveDifficultyBand,
+  type AnyQuestion,
+  type Section,
+} from "gre-adaptive-engine";
 import { useAdaptiveState } from "@/lib/useAdaptiveState";
 
-// Numeric-tolerant comparison — matches fractions, decimals, and integer forms.
-function parseNumeric(value: string): number | null {
+// Numeric-tolerant comparison matching fractions, decimals, and integer forms.
+export function parseNumeric(value: string): number | null {
   const trimmed = value.trim();
   if (/^-?\d+(\.\d+)?$/.test(trimmed)) return Number(trimmed);
   const fractionMatch = trimmed.match(/^(-?\d+)\/(\d+)$/);
@@ -18,7 +23,7 @@ function parseNumeric(value: string): number | null {
   return null;
 }
 
-function numericAnswersMatch(entered: string, expected: string): boolean {
+export function numericAnswersMatch(entered: string, expected: string): boolean {
   const enteredNum = parseNumeric(entered);
   const expectedNum = parseNumeric(expected);
   if (enteredNum !== null && expectedNum !== null)
@@ -26,67 +31,83 @@ function numericAnswersMatch(entered: string, expected: string): boolean {
   return entered.trim().toLowerCase() === expected.trim().toLowerCase();
 }
 
+export function evaluateQuestionAnswer(q: AnyQuestion, userAns: any): boolean {
+  if (q.qtype === "quant_comparison") {
+    return userAns === q.correct;
+  }
+  if (q.qtype === "quant_multiple_choice" || q.qtype === "data_interpretation") {
+    return (
+      Array.isArray(userAns) &&
+      userAns.length === q.correct.length &&
+      userAns.every((val) => q.correct.includes(val))
+    );
+  }
+  if (q.qtype === "quant_numeric_entry") {
+    return Boolean(userAns) && numericAnswersMatch(String(userAns), q.correct);
+  }
+  if (q.qtype === "text_completion") {
+    if (!userAns || typeof userAns !== "object") return false;
+    const blanks = Object.keys(q.correct);
+    return blanks.every((b) => userAns[b] === q.correct[b]);
+  }
+  if (q.qtype === "sentence_equivalence") {
+    return (
+      Array.isArray(userAns) &&
+      userAns.length === 2 &&
+      userAns.every((val) => q.correct.includes(val))
+    );
+  }
+  if (q.qtype === "reading_comprehension") {
+    return (
+      Array.isArray(userAns) &&
+      userAns.length === q.correct.length &&
+      userAns.every((val) => q.correct.includes(val))
+    );
+  }
+  return false;
+}
+
 interface ExamResultsProps {
+  section: Section;
   questions: AnyQuestion[];
   userAnswers: Record<string, any>;
   timeSpentSec: number;
+  questionTimesSec?: Record<string, number>;
   sectionTitle: string;
+  s1Count?: number;
+  s1Correct?: number;
+  s2Difficulty?: AdaptiveDifficultyBand;
   onRetake: () => void;
   onRetakeFresh?: () => void;
 }
 
 export default function ExamResults({
+  section,
   questions,
   userAnswers,
   timeSpentSec,
+  questionTimesSec = {},
   sectionTitle,
+  s1Count,
+  s1Correct,
+  s2Difficulty,
   onRetake,
   onRetakeFresh,
 }: ExamResultsProps) {
   const [selectedReviewIdx, setSelectedReviewIdx] = useState(0);
+  const [onlyMistakes, setOnlyMistakes] = useState(false);
   const { recordAnswer, hydrated } = useAdaptiveState();
   const recordedRef = useRef(false);
 
-  // Score validation
-  let correctCount = 0;
-  const questionResults = questions.map((q) => {
+  const questionResults = questions.map((q, idx) => {
     const userAns = userAnswers[q.id];
-    let isCorrect = false;
-
-    if (q.qtype === "quant_comparison") {
-      isCorrect = userAns === q.correct;
-    } else if (q.qtype === "quant_multiple_choice") {
-      if (Array.isArray(userAns)) {
-        isCorrect =
-          userAns.length === q.correct.length &&
-          userAns.every((val) => q.correct.includes(val));
-      }
-    } else if (q.qtype === "quant_numeric_entry") {
-      if (userAns) {
-        isCorrect = numericAnswersMatch(userAns, q.correct);
-      }
-    } else if (q.qtype === "text_completion") {
-      if (userAns && typeof userAns === "object") {
-        const blanks = Object.keys(q.correct);
-        isCorrect = blanks.every((b) => userAns[b] === q.correct[b]);
-      }
-    } else if (q.qtype === "sentence_equivalence") {
-      if (Array.isArray(userAns)) {
-        isCorrect =
-          userAns.length === 2 &&
-          userAns.every((val) => q.correct.includes(val));
-      }
-    } else if (q.qtype === "reading_comprehension") {
-      if (Array.isArray(userAns)) {
-        isCorrect =
-          userAns.length === q.correct.length &&
-          userAns.every((val) => q.correct.includes(val));
-      }
-    }
-
-    if (isCorrect) correctCount++;
-    return { question: q, userAns, isCorrect };
+    const isCorrect = evaluateQuestionAnswer(q, userAns);
+    const secSpent = questionTimesSec[q.id] ?? 0;
+    const stageLabel = s1Count ? (idx < s1Count ? "S1" : "S2") : "S1";
+    return { question: q, userAns, isCorrect, secSpent, stageLabel, origIdx: idx };
   });
+
+  const correctCount = questionResults.filter((r) => r.isCorrect).length;
 
   useEffect(() => {
     if (!hydrated || recordedRef.current) return;
@@ -96,22 +117,32 @@ export default function ExamResults({
     }
   }, [hydrated, questionResults, recordAnswer]);
 
-  const total = questions.length;
+  const total = Math.max(1, questions.length);
   const accuracyPct = Math.round((correctCount / total) * 100);
-  const estimatedScaledScore = 130 + Math.round(40 * (correctCount / total));
+  const s2Correct = s1Correct !== undefined ? correctCount - s1Correct : 0;
+  const estimatedScaledScore = s1Correct !== undefined && s2Difficulty
+    ? calculateAdaptiveGreScore(section, s1Correct, s2Correct, s2Difficulty, total)
+    : null;
 
   const minutes = Math.floor(timeSpentSec / 60);
   const seconds = timeSpentSec % 60;
   const avgSecPerQ = Math.round(timeSpentSec / total);
+  const timeSinks = questionResults.filter((r) => r.secSpent >= 150);
 
-  const activeReview = questionResults[selectedReviewIdx];
+  const filteredResults = onlyMistakes
+    ? questionResults.filter((r) => !r.isCorrect)
+    : questionResults;
+
+  const safeIdx = Math.min(selectedReviewIdx, Math.max(0, filteredResults.length - 1));
+  const activeReview = filteredResults[safeIdx];
 
   function formatAnswerDisplay(ans: any): string {
     if (ans === undefined || ans === null || ans === "") return "(Unanswered)";
     if (ans === "A") return "Quantity A is greater";
     if (ans === "B") return "Quantity B is greater";
     if (ans === "equal") return "The two quantities are equal";
-    if (ans === "cannot_determine") return "The relationship cannot be determined from the information given";
+    if (ans === "cannot_determine")
+      return "The relationship cannot be determined from the information given";
     if (Array.isArray(ans)) return ans.join(", ");
     if (typeof ans === "object") {
       return Object.entries(ans)
@@ -121,149 +152,182 @@ export default function ExamResults({
     return String(ans);
   }
 
+  function formatPrompt(q: AnyQuestion): string {
+    if (q.qtype === "quant_comparison") {
+      return `${q.shared_info ? q.shared_info + " | " : ""}Qty A: ${q.quantity_a} vs Qty B: ${q.quantity_b}`;
+    }
+    if (q.qtype === "text_completion") return q.passage;
+    if (q.qtype === "sentence_equivalence") return q.sentence;
+    if (q.qtype === "reading_comprehension") return q.question;
+    return q.prompt;
+  }
+
   return (
-    <div className="max-w-5xl mx-auto py-8 px-4 font-sans space-y-8">
-      {/* Score Header */}
-      <div className="bg-[#1b3a5b] text-white rounded-xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div>
-          <span className="text-xs font-bold uppercase tracking-widest text-blue-200">
-            OFFICIAL SECTION SCORE REPORT
-          </span>
-          <h1 className="text-2xl font-bold mt-1">{sectionTitle}</h1>
-          <p className="text-sm text-gray-200 mt-1">
-            Completed in {minutes}m {seconds}s (Avg {avgSecPerQ}s / question)
-          </p>
-        </div>
-
-        <div className="flex items-center gap-6 text-center">
-          <div className="bg-white/10 px-5 py-3 rounded-lg border border-white/20">
-            <span className="block text-xs uppercase tracking-wider text-blue-200 font-bold">
-              Raw Score
-            </span>
-            <span className="text-3xl font-extrabold">
-              {correctCount} / {total}
-            </span>
-            <span className="block text-xs text-blue-100">{accuracyPct}% accuracy</span>
+    <div className="min-h-screen bg-gray-100 text-gray-900 font-sans py-8 px-4">
+      <div className="max-w-5xl mx-auto space-y-6">
+        {/* Header Summary Card */}
+        <div className="bg-[#1b3a5b] text-white rounded-xl p-6 shadow-md">
+          <div className="flex flex-wrap justify-between items-center gap-4">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-blue-200">
+                Test Results
+              </p>
+              <h1 className="text-2xl font-bold mt-1">{sectionTitle}</h1>
+              {s2Difficulty && s1Count && (
+                <p className="text-sm text-blue-100 mt-1">
+                  Part 1: <strong>{s1Correct}/{s1Count}</strong> &rarr;{" "}
+                  <span
+                    className={`px-2 py-0.5 rounded font-bold uppercase text-xs ${
+                      s2Difficulty === "hard"
+                        ? "bg-[#166534] text-white"
+                        : s2Difficulty === "easy"
+                        ? "bg-amber-400 text-black"
+                        : "bg-sky-400 text-black"
+                    }`}
+                  >
+                    {s2Difficulty} Part 2
+                  </span>{" "}
+                  ({s2Correct}/{total - s1Count})
+                </p>
+              )}
+            </div>
+            {estimatedScaledScore !== null && (
+              <div className="text-right">
+                <div className="text-xs text-blue-200">App score estimate</div>
+                <div className="text-4xl font-extrabold text-amber-300">
+                  {estimatedScaledScore} <span className="text-base font-normal text-blue-200">/ 170</span>
+                </div>
+              </div>
+            )}
           </div>
 
-          <div className="bg-white text-[#1b3a5b] px-6 py-3 rounded-lg shadow-md">
-            <span className="block text-xs uppercase tracking-wider font-extrabold text-gray-600">
-              Estimated Scaled Score
-            </span>
-            <span className="text-4xl font-black">{estimatedScaledScore}</span>
-            <span className="block text-xs text-gray-500 font-medium">
-              Scale 130 – 170
-            </span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
+            <div className="bg-white/10 rounded-lg p-3">
+              <div className="text-xs text-blue-200">Correct</div>
+              <div className="text-xl font-bold">
+                {correctCount}/{total} ({accuracyPct}%)
+              </div>
+            </div>
+            <div className="bg-white/10 rounded-lg p-3">
+              <div className="text-xs text-blue-200">Total Time</div>
+              <div className="text-xl font-bold font-mono">
+                {minutes}m {String(seconds).padStart(2, "0")}s
+              </div>
+            </div>
+            <div className="bg-white/10 rounded-lg p-3">
+              <div className="text-xs text-blue-200">Avg / Question</div>
+              <div className="text-xl font-bold font-mono">{avgSecPerQ}s</div>
+            </div>
+            <div className="bg-white/10 rounded-lg p-3">
+              <div className="text-xs text-blue-200">Slow Questions (2.5m+)</div>
+              <div className={`text-xl font-bold ${timeSinks.length > 0 ? "text-amber-300" : "text-emerald-300"}`}>
+                {timeSinks.length}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      {/* Navigation Buttons */}
-      <div className="flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-sm font-bold text-gray-600 hover:text-gray-900 flex items-center gap-1.5"
-        >
-          &larr; Return to Dashboard
-        </Link>
-        <div className="flex gap-3">
-          {onRetakeFresh && (
-            <button
-              onClick={onRetakeFresh}
-              className="px-4 py-2 bg-[#1b3a5b] hover:bg-[#12273e] text-white text-sm font-bold rounded-lg shadow transition"
+          <div className="flex flex-wrap gap-3 mt-5">
+            <Link
+              href="/tests"
+              className="px-4 py-2 bg-white text-[#1b3a5b] font-bold rounded-lg text-sm hover:bg-blue-50 transition"
             >
-              Retake with Fresh Questions &rarr;
+              &larr; Timed tests
+            </Link>
+            <button
+              onClick={onRetake}
+              className="px-4 py-2 bg-white/15 hover:bg-white/25 text-white font-bold rounded-lg text-sm transition"
+            >
+              Retry this set
             </button>
-          )}
-          <button
-            onClick={onRetake}
-            className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 text-sm font-bold rounded-lg transition"
-          >
-            Retake Same Questions
-          </button>
-        </div>
-      </div>
-
-      {/* Review Navigator & Question Details */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Left Question List */}
-        <div className="border border-gray-300 rounded-xl bg-white p-4 shadow-sm h-fit">
-          <h3 className="font-bold text-sm text-gray-700 uppercase tracking-wider mb-3">
-            Questions ({correctCount}/{total} Correct)
-          </h3>
-          <div className="grid grid-cols-4 gap-2">
-            {questionResults.map((qr, idx) => (
+            {onRetakeFresh && (
               <button
-                key={qr.question.id}
-                onClick={() => setSelectedReviewIdx(idx)}
-                className={`p-2.5 rounded-lg text-sm font-bold border transition flex flex-col items-center justify-center ${
-                  selectedReviewIdx === idx ? "ring-2 ring-blue-600 shadow" : ""
+                onClick={onRetakeFresh}
+                className="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-black font-bold rounded-lg text-sm transition"
+              >
+                Try a new set
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Question-by-Question Review & Mistake Filter */}
+        <div className="bg-white rounded-xl border border-gray-300 p-6 shadow-sm space-y-4">
+          <div className="flex flex-wrap justify-between items-center gap-3 border-b pb-3">
+            <h2 className="text-lg font-bold">Review Questions</h2>
+            <label className="flex items-center gap-2 text-sm font-semibold cursor-pointer">
+              <input
+                type="checkbox"
+                checked={onlyMistakes}
+                onChange={(e) => {
+                  setOnlyMistakes(e.target.checked);
+                  setSelectedReviewIdx(0);
+                }}
+              />
+              Show Mistakes Only ({total - correctCount})
+            </label>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {filteredResults.map((qr, i) => (
+              <button
+                key={qr.question.id + "-" + qr.origIdx}
+                type="button"
+                onClick={() => setSelectedReviewIdx(i)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold border transition ${
+                  safeIdx === i ? "ring-2 ring-[#1b3a5b]" : ""
                 } ${
                   qr.isCorrect
-                    ? "bg-green-50 border-green-400 text-green-800 hover:bg-green-100"
-                    : "bg-red-50 border-red-400 text-red-800 hover:bg-red-100"
+                    ? "bg-emerald-50 border-emerald-400 text-emerald-900"
+                    : "bg-red-50 border-red-400 text-red-900"
                 }`}
               >
-                <span>Q{idx + 1}</span>
-                <span className="text-[10px]">{qr.isCorrect ? "✓" : "✗"}</span>
+                {qr.stageLabel}·Q{qr.origIdx + 1}{" "}
+                {qr.secSpent > 0 ? `(${qr.secSpent}s${qr.secSpent >= 150 ? ", slow" : ""})` : ""}
               </button>
             ))}
           </div>
-        </div>
 
-        {/* Right Question Detail & Explanation */}
-        <div className="md:col-span-2 border border-gray-300 rounded-xl bg-white p-6 shadow-sm space-y-6">
-          <div className="flex justify-between items-start border-b pb-3">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
-                Question {selectedReviewIdx + 1} Breakdown
-              </span>
-              <h2 className="text-base font-bold text-gray-900 capitalize">
-                Topic: {activeReview.question.topic.replace(/_/g, " ")} (Difficulty {activeReview.question.difficulty}/5)
-              </h2>
-            </div>
-            <span
-              className={`px-3 py-1 rounded-full text-xs font-extrabold uppercase ${
-                activeReview.isCorrect
-                  ? "bg-green-100 text-green-800"
-                  : "bg-red-100 text-red-800"
-              }`}
-            >
-              {activeReview.isCorrect ? "Correct" : "Incorrect"}
-            </span>
-          </div>
+          {activeReview ? (
+            <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
+              <div className="flex flex-wrap justify-between items-center text-xs text-gray-500 uppercase font-bold">
+                <span>
+                  {activeReview.stageLabel} · Question {activeReview.origIdx + 1} ·{" "}
+                  {activeReview.question.topic.replace(/_/g, " ")} (Difficulty {activeReview.question.difficulty}/5)
+                </span>
+                <span>
+                  Time spent: {activeReview.secSpent}s{" "}
+                  {activeReview.secSpent >= 150 ? "(2.5 minutes or more)" : ""}
+                </span>
+              </div>
 
-          <div className="grid grid-cols-2 gap-4 text-sm bg-slate-50 p-4 rounded-lg border border-slate-200">
-            <div>
-              <span className="block text-xs font-bold text-gray-500 uppercase">
-                Your Answer
-              </span>
-              <span
-                className={`font-semibold ${
-                  activeReview.isCorrect ? "text-green-700" : "text-red-700"
-                }`}
-              >
-                {formatAnswerDisplay(activeReview.userAns)}
-              </span>
-            </div>
-            <div>
-              <span className="block text-xs font-bold text-gray-500 uppercase">
-                Correct Answer
-              </span>
-              <span className="font-semibold text-green-800">
-                {formatAnswerDisplay(activeReview.question.correct)}
-              </span>
-            </div>
-          </div>
+              <p className="font-serif text-base text-gray-900 leading-relaxed">
+                {formatPrompt(activeReview.question)}
+              </p>
 
-          <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-900">
-              ETS Step-by-Step Explanation
-            </h4>
-            <div className="p-4 bg-blue-50/60 border border-blue-200 rounded-lg text-sm text-gray-900 leading-relaxed font-serif">
-              {activeReview.question.explanation}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                <div
+                  className={`p-3 rounded-lg border ${
+                    activeReview.isCorrect
+                      ? "bg-emerald-50 border-emerald-300 text-emerald-900"
+                      : "bg-red-50 border-red-300 text-red-900"
+                  }`}
+                >
+                  <strong>Your Answer:</strong> {formatAnswerDisplay(activeReview.userAns)}
+                </div>
+                <div className="p-3 rounded-lg border bg-blue-50 border-blue-300 text-blue-900">
+                  <strong>Correct Answer:</strong> {formatAnswerDisplay(activeReview.question.correct)}
+                </div>
+              </div>
+
+              <div className="p-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-800">
+                <strong>Explanation:</strong> {activeReview.question.explanation}
+              </div>
             </div>
-          </div>
+          ) : (
+            <p className="text-sm text-emerald-700 font-semibold">
+              No missed questions in this test.
+            </p>
+          )}
         </div>
       </div>
     </div>

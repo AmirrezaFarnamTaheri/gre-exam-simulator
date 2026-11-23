@@ -1,165 +1,197 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
-import { exportState, getTopicSummary, importState, topicsForSection } from "gre-adaptive-engine";
-import { BANK } from "@/lib/questionBank";
+import { useRef, useState, type ChangeEvent } from "react";
+import { exportState, getTopicSummary, importState, type Section } from "gre-adaptive-engine";
 import { useAdaptiveState } from "@/lib/useAdaptiveState";
 
-export default function Dashboard() {
+type Desk = "home" | "practice" | "tests" | "learn" | "progress";
+
+type ProgressCatalog = { questionIds: string[]; topics: Record<Section, string[]> };
+
+type Destination = [href: string, title: string, detail: string];
+
+const practice: Destination[] = [
+  ["/study/quant", "Math", "Targets Quantitative Comparison, Problem Solving, Numeric Entry & Data Interpretation"],
+  ["/study/verbal", "Verbal", "Targets Text Completion, Sentence Equivalence & Reading Comprehension"],
+  ["/awa", "Essay writing", "Targets Analytical Writing Section 1: Analyze an Issue (30 min)"],
+  ["/vocab", "Vocabulary", "Targets Verbal Text Completion & Sentence Equivalence word pairs"],
+  ["/study/quant?level=beginner", "Math foundations", "Targets Quantitative Reasoning basics: ratios, rates, equations, inequalities & triangles"],
+  ["/study/mixed", "Mixed questions", "Targets both Verbal Reasoning and Quantitative Reasoning formats together"],
+];
+
+const tests: Destination[] = [
+  ["/exam/diagnostic", "Evaluation diagnostic (recommended Day 1)", "20 Q across all formats + optional essay · 32-52 minutes"],
+  ["/exam/quant-s1", "Short math test", "12 questions · 21 minutes"],
+  ["/exam/verbal-s1", "Short verbal test", "12 questions · 18 minutes"],
+  ["/exam/quant", "Math test", "27 questions · 47 minutes"],
+  ["/exam/verbal", "Verbal test", "27 questions · 41 minutes"],
+];
+
+const resources: Destination[] = [
+  ["/courses", "Lessons", "Study a worked example and check your understanding"],
+  ["/guides", "Reference guides", "Formulas, reading strategies, and essay guidance"],
+  ["https://www.ets.org/gre/test-takers/general-test/prepare/test-structure.html", "Official GRE format", "Check section timing and question counts with ETS"],
+];
+
+const headings: Record<Desk, string> = {
+  home: "GRE study desk",
+  practice: "Untimed practice",
+  tests: "Timed tests",
+  learn: "Lessons and guides",
+  progress: "Your progress",
+};
+
+export default function Dashboard({ desk = "home", catalog }: { desk?: Desk; catalog?: ProgressCatalog }) {
   const { state, hydrated, replaceState } = useAdaptiveState();
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const input = useRef<HTMLInputElement>(null);
+  const [backupMessage, setBackupMessage] = useState("");
 
-  if (!hydrated) {
-    return (
-      <main className="container">
-        <p>Loading your progress...</p>
-      </main>
-    );
+  const latest = new Map<string, boolean>();
+  for (const attempt of state.attempts) latest.set(attempt.questionId, attempt.correct);
+  const mistakes = catalog?.questionIds.reduce((total, id) => total + Number(latest.get(id) === false), 0) ?? 0;
+
+  function saveBackup() {
+    const url = URL.createObjectURL(new Blob([exportState(state)], { type: "application/json" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "gre-study-progress.json";
+    link.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
-  const verbalTopics = topicsForSection(BANK, "verbal");
-  const quantTopics = topicsForSection(BANK, "quant");
-  const verbalSummary = getTopicSummary(state, verbalTopics);
-  const quantSummary = getTopicSummary(state, quantTopics);
-
-  function handleExport() {
-    const blob = new Blob([exportState(state)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `gre-study-progress-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-
-  function handleImportClick() {
-    fileInputRef.current?.click();
-  }
-
-  async function handleImportFile(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
+  async function restoreBackup(event: ChangeEvent<HTMLInputElement>) {
+    const field = event.currentTarget;
+    const file = field.files?.[0];
     if (!file) return;
-    const text = await file.text();
+    field.value = "";
+    if (!window.confirm("Replace the progress saved in this browser with this backup?")) return;
     try {
-      replaceState(importState(text));
+      replaceState(importState(await file.text()));
+      setBackupMessage("Backup restored.");
     } catch {
-      alert("That file doesn't look like a valid progress export.");
+      setBackupMessage("Choose a backup exported from this GRE app.");
     }
-    e.target.value = "";
   }
 
   return (
-    <main className="container">
-      <h1>GRE Adaptive Study & Exam Simulator</h1>
-
-      <section className="section-ratings">
-        <div className="rating-card">
-          <h2>Verbal Rating</h2>
-          <p className="rating-value">{Math.round(state.sectionRatings.verbal)}</p>
-        </div>
-        <div className="rating-card">
-          <h2>Quant Rating</h2>
-          <p className="rating-value">{Math.round(state.sectionRatings.quant)}</p>
-        </div>
-      </section>
-
-      {/* ETS Real Exam Simulator Modes */}
-      <section style={{ backgroundColor: "#1b3a5b", color: "#fff", padding: "1.5rem", borderRadius: "10px", margin: "1.5rem 0", boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px" }}>
-          <span style={{ backgroundColor: "#f59e0b", color: "#000", fontSize: "11px", fontWeight: "900", padding: "2px 6px", borderRadius: "4px" }}>ETS EXAM SIMULATOR</span>
-          <h2 style={{ fontSize: "1.25rem", margin: 0, fontWeight: "bold" }}>Timed Section Mode</h2>
-        </div>
-        <p style={{ fontSize: "0.85rem", color: "#bfdbfe", margin: "0 0 1rem 0" }}>
-          Official ETS test conditions: countdown timer (Hide/Show), on-screen calculator, Mark for Review, and Review Grid. Zero spoilers during the test.
-        </p>
-
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-          <Link
-            href="/exam/quant"
-            style={{ display: "block", padding: "1rem", backgroundColor: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: "8px", textDecoration: "none", color: "#fff" }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontWeight: "bold", fontSize: "1rem" }}>
-              <span>Quant Section &rarr;</span>
-              <span style={{ backgroundColor: "#10b981", fontSize: "11px", padding: "2px 6px", borderRadius: "4px" }}>12 Q • 21 Min</span>
+    <main className="container gre-desk">
+      {desk === "home" ? (
+        <>
+          <header className="desk-hero">
+            <div>
+              <h1>{headings.home}</h1>
+              <p>Work through a few questions or sit a timed test.</p>
+              <Link className="button" href="/study/mixed">Start practice</Link>
             </div>
-            <div style={{ fontSize: "0.8rem", color: "#e2e8f0", marginTop: "4px" }}>
-              Includes on-screen calculator & review table
-            </div>
-          </Link>
-
-          <Link
-            href="/exam/verbal"
-            style={{ display: "block", padding: "1rem", backgroundColor: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: "8px", textDecoration: "none", color: "#fff" }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontWeight: "bold", fontSize: "1rem" }}>
-              <span>Verbal Section &rarr;</span>
-              <span style={{ backgroundColor: "#10b981", fontSize: "11px", padding: "2px 6px", borderRadius: "4px" }}>12 Q • 18 Min</span>
-            </div>
-            <div style={{ fontSize: "0.8rem", color: "#e2e8f0", marginTop: "4px" }}>
-              Text Completion, SE & Reading Comprehension
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      <h3 style={{ marginTop: "1.5rem", marginBottom: "0.5rem", fontSize: "1.1rem", fontWeight: "bold" }}>Untimed Adaptive Practice</h3>
-      <nav className="study-links">
-        <Link href="/study/verbal" className="button">
-          Study Verbal
-        </Link>
-        <Link href="/study/quant" className="button">
-          Study Quant
-        </Link>
-        <Link href="/study/mixed" className="button">
-          Study Mixed
-        </Link>
-        <Link href="/vocab" className="button">
-          Vocabulary (SRS)
-        </Link>
-        <Link href="/awa" className="button" style={{ backgroundColor: "#7c3aed", borderColor: "#7c3aed" }}>
-          AWA Writing Practice
-        </Link>
-      </nav>
-
-      <TopicTable title="Verbal topics" rows={verbalSummary} />
-      <TopicTable title="Quant topics" rows={quantSummary} />
-
-      <section className="backup-actions">
-        <button onClick={handleExport}>Export progress</button>
-        <button onClick={handleImportClick}>Import progress</button>
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="application/json"
-          style={{ display: "none" }}
-          onChange={handleImportFile}
-        />
-      </section>
+            <aside className="desk-ledger" aria-label="Practice activity">
+              <strong>{hydrated ? state.attempts.length : "–"}</strong>
+              <span>Answers recorded</span>
+              <Link href="/progress">See your progress <span aria-hidden="true">→</span></Link>
+            </aside>
+          </header>
+          <div className="desk-columns">
+            <section aria-labelledby="choose-practice">
+              <h2 id="choose-practice">Practice by subject</h2>
+              <DestinationList items={practice.slice(0, 4)} />
+            </section>
+            <section className="desk-side" aria-labelledby="prepare-test">
+              <h2 id="prepare-test">Prepare for test day</h2>
+              <DestinationList items={[
+                ["/exam/diagnostic", "Evaluation diagnostic", "Measure all formats in 32-52 min and get your priority list"],
+                ["/tests", "Timed tests", "Full test or a shorter section"],
+                ["/learn", "Lessons and guides", "Worked examples and reference material"],
+                ["/study/mistakes", "Retry missed questions", "Work through questions you missed"],
+              ]} />
+            </section>
+          </div>
+        </>
+      ) : (
+        <>
+          <header className="desk-heading"><h1>{headings[desk]}</h1></header>
+          {desk === "practice" && <DestinationList items={practice} />}
+          {desk === "learn" && <DestinationList items={resources} />}
+          {desk === "tests" && (
+            <>
+              <section className="desk-feature">
+                <div><h2>Full practice test</h2><p>One essay and four timed sections · 1 hour 58 minutes</p></div>
+                <Link href="/exam/full" className="button">Open full test</Link>
+              </section>
+              <h2 className="desk-subheading">Section tests</h2>
+              <DestinationList items={tests} />
+            </>
+          )}
+          {desk === "progress" && (
+            <>
+              <section className="desk-feature">
+                <div><h2>Missed questions</h2><p>{hydrated ? `${mistakes} to retry · ${state.attempts.length} answers recorded` : "Loading progress…"}</p></div>
+                <Link href="/study/mistakes" className="button">Review mistakes</Link>
+              </section>
+              {catalog && hydrated && state.attempts.length > 0 && (
+                <div className="topics-grid desk-topics">
+                  <TopicTable title="Verbal" section="verbal" rows={getTopicSummary(state, catalog.topics.verbal)} />
+                  <TopicTable title="Math" section="quant" rows={getTopicSummary(state, catalog.topics.quant)} />
+                </div>
+              )}
+              <details className="desk-backup">
+                <summary>Back up progress</summary>
+                <p>Save a copy of your progress or restore it in this browser.</p>
+                <div className="backup-actions">
+                  <button type="button" className="btn-ghost" disabled={!hydrated} onClick={saveBackup}>Download backup</button>
+                  <button type="button" className="btn-ghost" disabled={!hydrated} onClick={() => input.current?.click()}>Restore backup</button>
+                  <input ref={input} type="file" accept=".json,application/json" hidden onChange={restoreBackup} />
+                </div>
+                <p role="status">{backupMessage}</p>
+              </details>
+            </>
+          )}
+        </>
+      )}
     </main>
   );
 }
 
-function TopicTable({ title, rows }: { title: string; rows: ReturnType<typeof getTopicSummary> }) {
+function DestinationList({ items }: { items: Destination[] }) {
+  return (
+    <ul className="desk-list">
+      {items.map(([href, title, detail]) => {
+        const external = /^https?:\/\//.test(href);
+        const content = (
+          <>
+            <span><strong>{title}</strong><small>{detail}</small></span>
+            <span className="desk-arrow" aria-hidden="true">→</span>
+          </>
+        );
+        return (
+          <li key={href}>
+            {external ? (
+              <a className="desk-link" href={href} target="_blank" rel="noopener noreferrer">
+                {content}
+              </a>
+            ) : (
+              <Link className="desk-link" href={href}>
+                {content}
+              </Link>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function TopicTable({ title, section, rows }: { title: string; section: "verbal" | "quant"; rows: ReturnType<typeof getTopicSummary> }) {
   return (
     <section className="topic-table">
       <h2>{title}</h2>
       <table>
-        <thead>
-          <tr>
-            <th>Topic</th>
-            <th>Rating</th>
-            <th>Attempts</th>
-            <th>Accuracy</th>
-          </tr>
-        </thead>
+        <thead><tr><th scope="col">Topic</th><th scope="col">Accuracy</th><th scope="col">Answers</th></tr></thead>
         <tbody>
-          {rows.map((r) => (
-            <tr key={r.topic}>
-              <td>{r.topic.replace(/_/g, " ")}</td>
-              <td>{Math.round(r.rating)}</td>
-              <td>{r.attempts}</td>
-              <td>{r.accuracy === null ? "—" : `${Math.round(r.accuracy * 100)}%`}</td>
+          {rows.map((row) => (
+            <tr key={row.topic}>
+              <th scope="row" className="capitalize"><Link href={{ pathname: `/study/${section}`, query: { topic: row.topic } }}>{row.topic.replace(/_/g, " ")}</Link></th>
+              <td>{row.accuracy === null ? "New" : `${Math.round(row.accuracy * 100)}%`}</td>
+              <td>{row.attempts}</td>
             </tr>
           ))}
         </tbody>
@@ -167,3 +199,4 @@ function TopicTable({ title, rows }: { title: string; rows: ReturnType<typeof ge
     </section>
   );
 }
+

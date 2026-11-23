@@ -8,6 +8,7 @@ import {
   recordAnswer as engineRecordAnswer,
 } from "gre-adaptive-engine";
 import type { AdaptiveState, AnyQuestion } from "gre-adaptive-engine";
+import { postGreResult } from "@/lib/resultsSync";
 
 /**
  * Wraps the adaptive engine's pure functions with React state + localStorage
@@ -31,6 +32,14 @@ export function useAdaptiveState() {
 
   const recordAnswer = useCallback((question: AnyQuestion, correct: boolean) => {
     setState((prev) => engineRecordAnswer(prev, question, correct));
+    postGreResult({
+      kind: "practice",
+      section: question.section,
+      qtype: question.qtype,
+      topic: question.topic,
+      questionId: question.id,
+      correct,
+    });
   }, []);
 
   const replaceState = useCallback((next: AdaptiveState) => {

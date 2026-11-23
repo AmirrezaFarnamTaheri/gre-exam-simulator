@@ -1,0 +1,4783 @@
+[
+  {
+    "id": "syn_001",
+    "words": [
+      "divulge",
+      "reveal",
+      "disclose",
+      "uncover",
+      "expose",
+      "unveil",
+      "broadcast"
+    ],
+    "meaning_fa": "فاش كردن",
+    "anchor": "divulge"
+  },
+  {
+    "id": "syn_002",
+    "words": [
+      "inadvertent",
+      "unintentional",
+      "accidental",
+      "unintended",
+      "careless",
+      "heedless"
+    ],
+    "meaning_fa": "غير عمدي",
+    "anchor": "inadvertent"
+  },
+  {
+    "id": "syn_003",
+    "words": [
+      "panegyric",
+      "eulogy",
+      "tribute",
+      "accolade",
+      "praise",
+      "commendation"
+    ],
+    "meaning_fa": "مديحه، ستايش",
+    "anchor": "panegyric"
+  },
+  {
+    "id": "syn_004",
+    "words": [
+      "draconian",
+      "harsh",
+      "severe",
+      "strict",
+      "rigorous",
+      "cruel"
+    ],
+    "meaning_fa": "بسيار ظالمانه",
+    "anchor": "draconian"
+  },
+  {
+    "id": "syn_005",
+    "words": [
+      "hodgepodge",
+      "jumble",
+      "mishmash",
+      "medley",
+      "mixture",
+      "assortment"
+    ],
+    "meaning_fa": "درهم و برهم، مخلوط",
+    "anchor": "hodgepodge"
+  },
+  {
+    "id": "syn_006",
+    "words": [
+      "incontrovertible",
+      "undeniable",
+      "indisputable",
+      "irrefutable",
+      "certain",
+      "unassailable"
+    ],
+    "meaning_fa": "انكارناپذير",
+    "anchor": "incontrovertible"
+  },
+  {
+    "id": "syn_007",
+    "words": [
+      "impartial",
+      "unbiased",
+      "neutral",
+      "objective",
+      "fair",
+      "equitable"
+    ],
+    "meaning_fa": "بي طرف",
+    "anchor": "impartial"
+  },
+  {
+    "id": "syn_008",
+    "words": [
+      "endemic",
+      "native",
+      "local",
+      "indigenous",
+      "regional",
+      "homegrown"
+    ],
+    "meaning_fa": "بومي",
+    "anchor": "endemic"
+  },
+  {
+    "id": "syn_009",
+    "words": [
+      "minuscule",
+      "tiny",
+      "small",
+      "minute",
+      "microscopic",
+      "diminutive"
+    ],
+    "meaning_fa": "بسيار كوچك",
+    "anchor": "minuscule"
+  },
+  {
+    "id": "syn_010",
+    "words": [
+      "lucrative",
+      "profitable",
+      "remunerative",
+      "moneymaking",
+      "rewarding",
+      "gainful"
+    ],
+    "meaning_fa": "سودآور",
+    "anchor": "lucrative"
+  },
+  {
+    "id": "syn_011",
+    "words": [
+      "compensate",
+      "reimburse",
+      "repay",
+      "recompense",
+      "atone",
+      "redress"
+    ],
+    "meaning_fa": "غرامت دادن",
+    "anchor": "compensate"
+  },
+  {
+    "id": "syn_012",
+    "words": [
+      "discursive",
+      "rambling",
+      "digressive",
+      "wandering",
+      "meandering",
+      "circuitous"
+    ],
+    "meaning_fa": "پراكنده",
+    "anchor": "discursive"
+  },
+  {
+    "id": "syn_013",
+    "words": [
+      "presuppose",
+      "assume",
+      "suppose",
+      "presume",
+      "imply",
+      "postulate"
+    ],
+    "meaning_fa": "پيش فرض كردن",
+    "anchor": "presuppose"
+  },
+  {
+    "id": "syn_014",
+    "words": [
+      "derogate",
+      "belittle",
+      "disparage",
+      "denigrate",
+      "deprecate",
+      "diminish"
+    ],
+    "meaning_fa": "خفت دادن",
+    "anchor": "derogate"
+  },
+  {
+    "id": "syn_015",
+    "words": [
+      "overbearing",
+      "domineering",
+      "bossy",
+      "controlling",
+      "authoritative",
+      "imperious"
+    ],
+    "meaning_fa": "از خود راضي",
+    "anchor": "overbearing"
+  },
+  {
+    "id": "syn_016",
+    "words": [
+      "zealous",
+      "enthusiastic",
+      "fervent",
+      "passionate",
+      "ardent",
+      "eager"
+    ],
+    "meaning_fa": "مشتاق",
+    "anchor": "zealous"
+  },
+  {
+    "id": "syn_017",
+    "words": [
+      "extraneous",
+      "irrelevant",
+      "unrelated",
+      "unconnected",
+      "inapplicable",
+      "external"
+    ],
+    "meaning_fa": "غير اصلي",
+    "anchor": "extraneous"
+  },
+  {
+    "id": "syn_018",
+    "words": [
+      "rehash",
+      "repeat",
+      "recycle",
+      "reiterate",
+      "restate",
+      "rework"
+    ],
+    "meaning_fa": "تكرار كردن",
+    "anchor": "rehash"
+  },
+  {
+    "id": "syn_019",
+    "words": [
+      "perfunctory",
+      "cursory",
+      "superficial",
+      "hasty",
+      "automatic",
+      "mechanical"
+    ],
+    "meaning_fa": "سرسري",
+    "anchor": "perfunctory"
+  },
+  {
+    "id": "syn_020",
+    "words": [
+      "compound",
+      "combine",
+      "mix",
+      "blend",
+      "worsen",
+      "intensify"
+    ],
+    "meaning_fa": "تركيب كردن",
+    "anchor": "compound"
+  },
+  {
+    "id": "syn_021",
+    "words": [
+      "envy",
+      "jealousy",
+      "covetousness",
+      "resentment",
+      "desire",
+      "begrudge"
+    ],
+    "meaning_fa": "حسادت",
+    "anchor": "envy"
+  },
+  {
+    "id": "syn_022",
+    "words": [
+      "defensive",
+      "protective",
+      "guarding",
+      "shielding",
+      "resisting",
+      "vigilant"
+    ],
+    "meaning_fa": "حالت تدافع",
+    "anchor": "defensive"
+  },
+  {
+    "id": "syn_023",
+    "words": [
+      "unbounded",
+      "limitless",
+      "infinite",
+      "endless",
+      "boundless",
+      "unrestricted"
+    ],
+    "meaning_fa": "نا محدود",
+    "anchor": "unbounded"
+  },
+  {
+    "id": "syn_024",
+    "words": [
+      "specious",
+      "misleading",
+      "deceptive",
+      "false",
+      "spurious",
+      "fallacious"
+    ],
+    "meaning_fa": "ظاهرا صحيح",
+    "anchor": "specious"
+  },
+  {
+    "id": "syn_025",
+    "words": [
+      "aimless",
+      "purposeless",
+      "directionless",
+      "wandering",
+      "drifting",
+      "meandering"
+    ],
+    "meaning_fa": "بي هدف",
+    "anchor": "aimless"
+  },
+  {
+    "id": "syn_026",
+    "words": [
+      "ingenuous",
+      "naive",
+      "innocent",
+      "candid",
+      "frank",
+      "sincere"
+    ],
+    "meaning_fa": "صاف و ساده",
+    "anchor": "ingenuous"
+  },
+  {
+    "id": "syn_027",
+    "words": [
+      "intrinsic",
+      "inherent",
+      "innate",
+      "essential",
+      "fundamental",
+      "built-in"
+    ],
+    "meaning_fa": "ذاتي",
+    "anchor": "intrinsic"
+  },
+  {
+    "id": "syn_028",
+    "words": [
+      "inevitable",
+      "unavoidable",
+      "certain",
+      "inescapable",
+      "destined",
+      "sure"
+    ],
+    "meaning_fa": "ناچار",
+    "anchor": "inevitable"
+  },
+  {
+    "id": "syn_029",
+    "words": [
+      "intransigent",
+      "uncompromising",
+      "inflexible",
+      "stubborn",
+      "obstinate",
+      "unyielding"
+    ],
+    "meaning_fa": "سرسخت",
+    "anchor": "intransigent"
+  },
+  {
+    "id": "syn_030",
+    "words": [
+      "detached",
+      "dispassionate",
+      "aloof",
+      "unbiased",
+      "indifferent",
+      "distant"
+    ],
+    "meaning_fa": "بي عﻼقه",
+    "anchor": "detached"
+  },
+  {
+    "id": "syn_031",
+    "words": [
+      "inveterate",
+      "habitual",
+      "chronic",
+      "ingrained",
+      "deep-rooted",
+      "entrenched"
+    ],
+    "meaning_fa": "سابقه دار",
+    "anchor": "inveterate"
+  },
+  {
+    "id": "syn_032",
+    "words": [
+      "backhanded",
+      "indirect",
+      "ambiguous",
+      "double-edged",
+      "equivocal",
+      "two-faced"
+    ],
+    "meaning_fa": "كنايه آميز",
+    "anchor": "backhanded"
+  },
+  {
+    "id": "syn_033",
+    "words": [
+      "affable",
+      "friendly",
+      "amiable",
+      "genial",
+      "cordial",
+      "sociable"
+    ],
+    "meaning_fa": "خونگرم",
+    "anchor": "affable"
+  },
+  {
+    "id": "syn_034",
+    "words": [
+      "whimsy",
+      "caprice",
+      "fancy",
+      "quirk",
+      "whim",
+      "notion"
+    ],
+    "meaning_fa": "بوالهوسي",
+    "anchor": "whimsy"
+  },
+  {
+    "id": "syn_035",
+    "words": [
+      "tenacious",
+      "persistent",
+      "determined",
+      "resolute",
+      "steadfast",
+      "firm"
+    ],
+    "meaning_fa": "سرسخت",
+    "anchor": "tenacious"
+  },
+  {
+    "id": "syn_036",
+    "words": [
+      "sardonic",
+      "mocking",
+      "cynical",
+      "scornful",
+      "satirical",
+      "derisive"
+    ],
+    "meaning_fa": "طعنه آميز",
+    "anchor": "sardonic"
+  },
+  {
+    "id": "syn_037",
+    "words": [
+      "skullduggery",
+      "trickery",
+      "deceit",
+      "deception",
+      "chicanery",
+      "fraud"
+    ],
+    "meaning_fa": "تقلب",
+    "anchor": "skullduggery"
+  },
+  {
+    "id": "syn_038",
+    "words": [
+      "legitimate",
+      "lawful",
+      "legal",
+      "valid",
+      "justified",
+      "authorized"
+    ],
+    "meaning_fa": "برحﻖ",
+    "anchor": "legitimate"
+  },
+  {
+    "id": "syn_039",
+    "words": [
+      "plagiarize",
+      "copy",
+      "steal",
+      "appropriate",
+      "pirate",
+      "replicate"
+    ],
+    "meaning_fa": "سرقت ادبي كردن",
+    "anchor": "plagiarize"
+  },
+  {
+    "id": "syn_040",
+    "words": [
+      "disavow",
+      "deny",
+      "repudiate",
+      "disclaim",
+      "reject",
+      "renounce"
+    ],
+    "meaning_fa": "انكار كردن",
+    "anchor": "disavow"
+  },
+  {
+    "id": "syn_041",
+    "words": [
+      "deplete",
+      "exhaust",
+      "drain",
+      "diminish",
+      "reduce",
+      "sap"
+    ],
+    "meaning_fa": "تحليل بردن",
+    "anchor": "deplete"
+  },
+  {
+    "id": "syn_042",
+    "words": [
+      "ridicule",
+      "mock",
+      "deride",
+      "taunt",
+      "laugh at",
+      "scorn"
+    ],
+    "meaning_fa": "تمسخر كردن",
+    "anchor": "ridicule"
+  },
+  {
+    "id": "syn_043",
+    "words": [
+      "undermine",
+      "weaken",
+      "sabotage",
+      "subvert",
+      "damage",
+      "erode"
+    ],
+    "meaning_fa": "آسيب رساندن",
+    "anchor": "undermine"
+  },
+  {
+    "id": "syn_044",
+    "words": [
+      "self-serving",
+      "selfish",
+      "self-centered",
+      "egocentric",
+      "self-interested",
+      "self-seeking"
+    ],
+    "meaning_fa": "خودخواه",
+    "anchor": "self-serving"
+  },
+  {
+    "id": "syn_045",
+    "words": [
+      "perishable",
+      "biodegradable",
+      "spoilable",
+      "destructible",
+      "transient",
+      "ephemeral"
+    ],
+    "meaning_fa": "فناپذير",
+    "anchor": "perishable"
+  },
+  {
+    "id": "syn_046",
+    "words": [
+      "capricious",
+      "fickle",
+      "changeable",
+      "volatile",
+      "whimsical",
+      "mercurial"
+    ],
+    "meaning_fa": "بوالهوس",
+    "anchor": "capricious"
+  },
+  {
+    "id": "syn_047",
+    "words": [
+      "egotism",
+      "self-centeredness",
+      "narcissism",
+      "vanity",
+      "conceit",
+      "arrogance"
+    ],
+    "meaning_fa": "خودپرستي",
+    "anchor": "egotism"
+  },
+  {
+    "id": "syn_048",
+    "words": [
+      "unqualified",
+      "absolute",
+      "complete",
+      "total",
+      "unrestricted",
+      "thorough"
+    ],
+    "meaning_fa": "بي چون و چرا",
+    "anchor": "unqualified"
+  },
+  {
+    "id": "syn_049",
+    "words": [
+      "magisterial",
+      "authoritative",
+      "commanding",
+      "domineering",
+      "imperious",
+      "dictatorial"
+    ],
+    "meaning_fa": "آمرانه",
+    "anchor": "magisterial"
+  },
+  {
+    "id": "syn_050",
+    "words": [
+      "chauvinistic",
+      "nationalistic",
+      "jingoistic",
+      "xenophobic",
+      "prejudiced",
+      "bigoted"
+    ],
+    "meaning_fa": "ميهن پرست",
+    "anchor": "chauvinistic"
+  },
+  {
+    "id": "syn_051",
+    "words": [
+      "sleek",
+      "smooth",
+      "glossy",
+      "shiny",
+      "polished",
+      "streamlined"
+    ],
+    "meaning_fa": "براق",
+    "anchor": "sleek"
+  },
+  {
+    "id": "syn_052",
+    "words": [
+      "astringent",
+      "harsh",
+      "severe",
+      "stern",
+      "stringent",
+      "sharp"
+    ],
+    "meaning_fa": "سخت گير",
+    "anchor": "astringent"
+  },
+  {
+    "id": "syn_053",
+    "words": [
+      "ambivalent",
+      "uncertain",
+      "unsure",
+      "indecisive",
+      "conflicted",
+      "wavering"
+    ],
+    "meaning_fa": "مردد",
+    "anchor": "ambivalent"
+  },
+  {
+    "id": "syn_054",
+    "words": [
+      "ameliorate",
+      "improve",
+      "enhance",
+      "better",
+      "upgrade",
+      "amend"
+    ],
+    "meaning_fa": "بهبود يافتن",
+    "anchor": "ameliorate"
+  },
+  {
+    "id": "syn_055",
+    "words": [
+      "exemplar",
+      "model",
+      "example",
+      "archetype",
+      "prototype",
+      "paradigm"
+    ],
+    "meaning_fa": "نمونه",
+    "anchor": "exemplar"
+  },
+  {
+    "id": "syn_056",
+    "words": [
+      "grudge",
+      "resentment",
+      "bitterness",
+      "animosity",
+      "rancor",
+      "spite"
+    ],
+    "meaning_fa": "كينه",
+    "anchor": "grudge"
+  },
+  {
+    "id": "syn_057",
+    "words": [
+      "sweeping",
+      "extensive",
+      "wide-ranging",
+      "comprehensive",
+      "all-encompassing",
+      "far-"
+    ],
+    "meaning_fa": "",
+    "anchor": "sweeping"
+  },
+  {
+    "id": "syn_058",
+    "words": [
+      "extirpate",
+      "eradicate",
+      "eliminate",
+      "destroy",
+      "annihilate",
+      "remove"
+    ],
+    "meaning_fa": "ريشه كن كردن",
+    "anchor": "extirpate"
+  },
+  {
+    "id": "syn_059",
+    "words": [
+      "parity",
+      "equality",
+      "equivalence",
+      "uniformity",
+      "similarity",
+      "balance"
+    ],
+    "meaning_fa": "همانندي",
+    "anchor": "parity"
+  },
+  {
+    "id": "syn_060",
+    "words": [
+      "utilitarian",
+      "practical",
+      "functional",
+      "useful",
+      "pragmatic",
+      "efficient"
+    ],
+    "meaning_fa": "سودمند",
+    "anchor": "utilitarian"
+  },
+  {
+    "id": "syn_061",
+    "words": [
+      "elicit",
+      "evoke",
+      "draw out",
+      "extract",
+      "bring out",
+      "obtain"
+    ],
+    "meaning_fa": "استخراج كردن",
+    "anchor": "elicit"
+  },
+  {
+    "id": "syn_062",
+    "words": [
+      "beneficial",
+      "advantageous",
+      "helpful",
+      "useful",
+      "profitable",
+      "favorable"
+    ],
+    "meaning_fa": "سودمند",
+    "anchor": "beneficial"
+  },
+  {
+    "id": "syn_063",
+    "words": [
+      "intoxicate",
+      "inebriate",
+      "exhilarate",
+      "elate",
+      "thrill",
+      "excite"
+    ],
+    "meaning_fa": "مست كردن",
+    "anchor": "intoxicate"
+  },
+  {
+    "id": "syn_064",
+    "words": [
+      "inchoate",
+      "rudimentary",
+      "undeveloped",
+      "incipient",
+      "embryonic",
+      "nascent"
+    ],
+    "meaning_fa": "آغازين",
+    "anchor": "inchoate"
+  },
+  {
+    "id": "syn_065",
+    "words": [
+      "rebuff",
+      "reject",
+      "snub",
+      "spurn",
+      "refuse",
+      "repudiate"
+    ],
+    "meaning_fa": "رد كردن",
+    "anchor": "rebuff"
+  },
+  {
+    "id": "syn_066",
+    "words": [
+      "construe",
+      "interpret",
+      "understand",
+      "deduce",
+      "infer",
+      "translate"
+    ],
+    "meaning_fa": "تفسير كردن",
+    "anchor": "construe"
+  },
+  {
+    "id": "syn_067",
+    "words": [
+      "fallacy",
+      "misconception",
+      "error",
+      "falsehood",
+      "delusion",
+      "myth"
+    ],
+    "meaning_fa": "استدﻻل غلط",
+    "anchor": "fallacy"
+  },
+  {
+    "id": "syn_068",
+    "words": [
+      "increment",
+      "increase",
+      "addition",
+      "augmentation",
+      "rise",
+      "growth"
+    ],
+    "meaning_fa": "افزايش",
+    "anchor": "increment"
+  },
+  {
+    "id": "syn_069",
+    "words": [
+      "deteriorate",
+      "decline",
+      "worsen",
+      "degrade",
+      "degenerate",
+      "decay"
+    ],
+    "meaning_fa": "بدتر شدن",
+    "anchor": "deteriorate"
+  },
+  {
+    "id": "syn_070",
+    "words": [
+      "grandiose",
+      "grand",
+      "magnificent",
+      "ambitious",
+      "pretentious",
+      "extravagant"
+    ],
+    "meaning_fa": "عظيم",
+    "anchor": "grandiose"
+  },
+  {
+    "id": "syn_071",
+    "words": [
+      "truncate",
+      "shorten",
+      "cut",
+      "abbreviate",
+      "trim",
+      "condense"
+    ],
+    "meaning_fa": "كوتاه كردن",
+    "anchor": "truncate"
+  },
+  {
+    "id": "syn_072",
+    "words": [
+      "haphazard",
+      "random",
+      "unplanned",
+      "chaotic",
+      "disorganized",
+      "arbitrary"
+    ],
+    "meaning_fa": "برحسب تصادف",
+    "anchor": "haphazard"
+  },
+  {
+    "id": "syn_073",
+    "words": [
+      "quizzical",
+      "puzzled",
+      "perplexed",
+      "baffled",
+      "bemused",
+      "questioning"
+    ],
+    "meaning_fa": "شگفت زده",
+    "anchor": "quizzical"
+  },
+  {
+    "id": "syn_074",
+    "words": [
+      "provincial",
+      "unsophisticated",
+      "narrow-minded",
+      "parochial",
+      "rustic",
+      "backward"
+    ],
+    "meaning_fa": "كوته فكر",
+    "anchor": "provincial"
+  },
+  {
+    "id": "syn_075",
+    "words": [
+      "insensitive",
+      "unfeeling",
+      "heartless",
+      "indifferent",
+      "callous",
+      "unresponsive"
+    ],
+    "meaning_fa": "بي مﻼحظه",
+    "anchor": "insensitive"
+  },
+  {
+    "id": "syn_076",
+    "words": [
+      "shackle",
+      "chain",
+      "fetter",
+      "restrain",
+      "restrict",
+      "bind"
+    ],
+    "meaning_fa": "پابند زدن",
+    "anchor": "shackle"
+  },
+  {
+    "id": "syn_077",
+    "words": [
+      "cumbersome",
+      "unwieldy",
+      "awkward",
+      "bulky",
+      "clumsy",
+      "inconvenient"
+    ],
+    "meaning_fa": "دست و پا گير",
+    "anchor": "cumbersome"
+  },
+  {
+    "id": "syn_078",
+    "words": [
+      "encomium",
+      "praise",
+      "accolade",
+      "tribute",
+      "eulogy",
+      "commendation"
+    ],
+    "meaning_fa": "ستايش",
+    "anchor": "encomium"
+  },
+  {
+    "id": "syn_079",
+    "words": [
+      "decelerate",
+      "slow down",
+      "reduce speed",
+      "brake",
+      "retard",
+      "delay"
+    ],
+    "meaning_fa": "كند كردن",
+    "anchor": "decelerate"
+  },
+  {
+    "id": "syn_080",
+    "words": [
+      "revitalize",
+      "rejuvenate",
+      "revive",
+      "renew",
+      "refresh",
+      "energize"
+    ],
+    "meaning_fa": "قدرت تازه دادن",
+    "anchor": "revitalize"
+  },
+  {
+    "id": "syn_081",
+    "words": [
+      "indisputable",
+      "undeniable",
+      "irrefutable",
+      "unquestionable",
+      "certain"
+    ],
+    "meaning_fa": "",
+    "anchor": "indisputable"
+  },
+  {
+    "id": "syn_082",
+    "words": [
+      "roost",
+      "perch",
+      "settle",
+      "rest",
+      "alight"
+    ],
+    "meaning_fa": "",
+    "anchor": "roost"
+  },
+  {
+    "id": "syn_083",
+    "words": [
+      "corroborate",
+      "confirm",
+      "verify",
+      "support",
+      "substantiate",
+      "validate"
+    ],
+    "meaning_fa": "تاييد كردن",
+    "anchor": "corroborate"
+  },
+  {
+    "id": "syn_084",
+    "words": [
+      "proclivity",
+      "tendency",
+      "inclination",
+      "predisposition",
+      "penchant",
+      "leaning"
+    ],
+    "meaning_fa": "تمايل",
+    "anchor": "proclivity"
+  },
+  {
+    "id": "syn_085",
+    "words": [
+      "hysteria",
+      "frenzy",
+      "panic",
+      "madness",
+      "delirium",
+      "agitation"
+    ],
+    "meaning_fa": "هيجان زياد",
+    "anchor": "hysteria"
+  },
+  {
+    "id": "syn_086",
+    "words": [
+      "speculate",
+      "hypothesize",
+      "guess",
+      "conjecture",
+      "theorize",
+      "surmise"
+    ],
+    "meaning_fa": "نظريه پردازي كردن",
+    "anchor": "speculate"
+  },
+  {
+    "id": "syn_087",
+    "words": [
+      "conducive",
+      "beneficial",
+      "helpful",
+      "advantageous",
+      "favorable",
+      "supportive"
+    ],
+    "meaning_fa": "سودمند",
+    "anchor": "conducive"
+  },
+  {
+    "id": "syn_088",
+    "words": [
+      "vexation",
+      "annoyance",
+      "irritation",
+      "exasperation",
+      "displeasure",
+      "frustration"
+    ],
+    "meaning_fa": "آزار",
+    "anchor": "vexation"
+  },
+  {
+    "id": "syn_089",
+    "words": [
+      "disdain",
+      "contempt",
+      "scorn",
+      "derision",
+      "disrespect",
+      "ridicule"
+    ],
+    "meaning_fa": "تحقير",
+    "anchor": "disdain"
+  },
+  {
+    "id": "syn_090",
+    "words": [
+      "caterwaul",
+      "wail",
+      "howl",
+      "screech",
+      "shriek",
+      "yell"
+    ],
+    "meaning_fa": "جيغ كشيدن",
+    "anchor": "caterwaul"
+  },
+  {
+    "id": "syn_091",
+    "words": [
+      "efficacious",
+      "effective",
+      "successful",
+      "potent",
+      "powerful",
+      "efficient"
+    ],
+    "meaning_fa": "موﺛر",
+    "anchor": "efficacious"
+  },
+  {
+    "id": "syn_092",
+    "words": [
+      "alienate",
+      "estrange",
+      "distance",
+      "isolate",
+      "separate",
+      "detach"
+    ],
+    "meaning_fa": "بيگانه كردن",
+    "anchor": "alienate"
+  },
+  {
+    "id": "syn_093",
+    "words": [
+      "analgesic",
+      "painkiller",
+      "anesthetic",
+      "sedative",
+      "balm"
+    ],
+    "meaning_fa": "داروي مسكن",
+    "anchor": "analgesic"
+  },
+  {
+    "id": "syn_094",
+    "words": [
+      "anatomize",
+      "dissect",
+      "analyze",
+      "examine",
+      "scrutinize",
+      "investigate"
+    ],
+    "meaning_fa": "تجزيه كردن",
+    "anchor": "anatomize"
+  },
+  {
+    "id": "syn_095",
+    "words": [
+      "embargo",
+      "ban",
+      "prohibition",
+      "restriction",
+      "boycott",
+      "blockade"
+    ],
+    "meaning_fa": "تحريم",
+    "anchor": "embargo"
+  },
+  {
+    "id": "syn_096",
+    "words": [
+      "contemplate",
+      "consider",
+      "ponder",
+      "reflect",
+      "deliberate",
+      "meditate"
+    ],
+    "meaning_fa": "تفكر كردن",
+    "anchor": "contemplate"
+  },
+  {
+    "id": "syn_097",
+    "words": [
+      "equivocal",
+      "ambiguous",
+      "unclear",
+      "vague",
+      "uncertain",
+      "doubtful"
+    ],
+    "meaning_fa": "مبهم",
+    "anchor": "equivocal"
+  },
+  {
+    "id": "syn_098",
+    "words": [
+      "overlap",
+      "intersect",
+      "coincide",
+      "cover",
+      "extend",
+      "overlay"
+    ],
+    "meaning_fa": "همپوشاني",
+    "anchor": "overlap"
+  },
+  {
+    "id": "syn_099",
+    "words": [
+      "complementary",
+      "matching",
+      "corresponding",
+      "compatible",
+      "harmonious"
+    ],
+    "meaning_fa": "مكمل",
+    "anchor": "complementary"
+  },
+  {
+    "id": "syn_100",
+    "words": [
+      "capacious",
+      "roomy",
+      "spacious",
+      "large",
+      "ample",
+      "extensive"
+    ],
+    "meaning_fa": "جادار",
+    "anchor": "capacious"
+  },
+  {
+    "id": "syn_101",
+    "words": [
+      "intimidate",
+      "frighten",
+      "threaten",
+      "bully",
+      "cow",
+      "terrorize"
+    ],
+    "meaning_fa": "ترساندن",
+    "anchor": "intimidate"
+  },
+  {
+    "id": "syn_102",
+    "words": [
+      "concur",
+      "agree",
+      "coincide",
+      "assent",
+      "consent"
+    ],
+    "meaning_fa": "موافقت كردن",
+    "anchor": "concur"
+  },
+  {
+    "id": "syn_103",
+    "words": [
+      "imperative",
+      "crucial",
+      "essential",
+      "necessary",
+      "urgent",
+      "vital"
+    ],
+    "meaning_fa": "ضروري",
+    "anchor": "imperative"
+  },
+  {
+    "id": "syn_104",
+    "words": [
+      "languish",
+      "weaken",
+      "deteriorate",
+      "wither",
+      "fade",
+      "decline"
+    ],
+    "meaning_fa": "پژمرده شدن",
+    "anchor": "languish"
+  },
+  {
+    "id": "syn_105",
+    "words": [
+      "secular",
+      "non-religious",
+      "worldly",
+      "temporal",
+      "earthly",
+      "profane"
+    ],
+    "meaning_fa": "سكوﻻر",
+    "anchor": "secular"
+  },
+  {
+    "id": "syn_106",
+    "words": [
+      "exacerbate",
+      "worsen",
+      "aggravate",
+      "intensify",
+      "increase",
+      "amplify"
+    ],
+    "meaning_fa": "تشديد كردن",
+    "anchor": "exacerbate"
+  },
+  {
+    "id": "syn_107",
+    "words": [
+      "lethargy",
+      "sluggishness",
+      "inertia",
+      "inactivity",
+      "torpor",
+      "laziness"
+    ],
+    "meaning_fa": "بي حالي",
+    "anchor": "lethargy"
+  },
+  {
+    "id": "syn_108",
+    "words": [
+      "perpetuate",
+      "continue",
+      "preserve",
+      "maintain",
+      "extend",
+      "sustain"
+    ],
+    "meaning_fa": "جاودانه كردن",
+    "anchor": "perpetuate"
+  },
+  {
+    "id": "syn_109",
+    "words": [
+      "pervasive",
+      "widespread",
+      "prevalent",
+      "ubiquitous",
+      "omnipresent",
+      "extensive"
+    ],
+    "meaning_fa": "فراگير",
+    "anchor": "pervasive"
+  },
+  {
+    "id": "syn_110",
+    "words": [
+      "meticulous",
+      "careful",
+      "precise",
+      "thorough",
+      "exact",
+      "detailed"
+    ],
+    "meaning_fa": "دقيﻖ",
+    "anchor": "meticulous"
+  },
+  {
+    "id": "syn_111",
+    "words": [
+      "conundrum",
+      "puzzle",
+      "riddle",
+      "enigma",
+      "mystery",
+      "problem"
+    ],
+    "meaning_fa": "معما",
+    "anchor": "conundrum"
+  },
+  {
+    "id": "syn_112",
+    "words": [
+      "tenacity",
+      "persistence",
+      "determination",
+      "perseverance",
+      "resolve",
+      "steadfastness"
+    ],
+    "meaning_fa": "پافشاري",
+    "anchor": "tenacity"
+  },
+  {
+    "id": "syn_113",
+    "words": [
+      "mundane",
+      "ordinary",
+      "commonplace",
+      "routine",
+      "banal",
+      "everyday"
+    ],
+    "meaning_fa": "عادي",
+    "anchor": "mundane"
+  },
+  {
+    "id": "syn_114",
+    "words": [
+      "skeptical",
+      "doubtful",
+      "suspicious",
+      "cynical",
+      "questioning",
+      "incredulous"
+    ],
+    "meaning_fa": "شكاك",
+    "anchor": "skeptical"
+  },
+  {
+    "id": "syn_115",
+    "words": [
+      "constrain",
+      "restrict",
+      "limit",
+      "restrain",
+      "confine",
+      "curb"
+    ],
+    "meaning_fa": "محدود كردن",
+    "anchor": "constrain"
+  },
+  {
+    "id": "syn_116",
+    "words": [
+      "incendiary",
+      "inflammatory",
+      "provocative",
+      "agitational",
+      "seditious",
+      "combustible"
+    ],
+    "meaning_fa": "تحريك آميز",
+    "anchor": "incendiary"
+  },
+  {
+    "id": "syn_117",
+    "words": [
+      "arduous",
+      "difficult",
+      "hard",
+      "strenuous",
+      "tough",
+      "challenging"
+    ],
+    "meaning_fa": "دشوار",
+    "anchor": "arduous"
+  },
+  {
+    "id": "syn_118",
+    "words": [
+      "convoluted",
+      "complicated",
+      "intricate",
+      "involved",
+      "tangled",
+      "complex"
+    ],
+    "meaning_fa": "پيچيده",
+    "anchor": "convoluted"
+  },
+  {
+    "id": "syn_119",
+    "words": [
+      "embellish",
+      "decorate",
+      "adorn",
+      "enhance",
+      "garnish",
+      "beautify"
+    ],
+    "meaning_fa": "زيبا كردن",
+    "anchor": "embellish"
+  },
+  {
+    "id": "syn_120",
+    "words": [
+      "invigorate",
+      "energize",
+      "refresh",
+      "revitalize",
+      "stimulate",
+      "rejuvenate"
+    ],
+    "meaning_fa": "نيروبخشيدن",
+    "anchor": "invigorate"
+  },
+  {
+    "id": "syn_121",
+    "words": [
+      "imminent",
+      "impending",
+      "approaching",
+      "forthcoming",
+      "looming",
+      "coming"
+    ],
+    "meaning_fa": "قريب الوقوع",
+    "anchor": "imminent"
+  },
+  {
+    "id": "syn_122",
+    "words": [
+      "resilient",
+      "tough",
+      "hardy",
+      "flexible",
+      "adaptable",
+      "strong"
+    ],
+    "meaning_fa": "انعطاف پذير",
+    "anchor": "resilient"
+  },
+  {
+    "id": "syn_123",
+    "words": [
+      "proliferate",
+      "multiply",
+      "increase",
+      "spread",
+      "grow",
+      "expand"
+    ],
+    "meaning_fa": "تكثير شدن",
+    "anchor": "proliferate"
+  },
+  {
+    "id": "syn_124",
+    "words": [
+      "ardent",
+      "passionate",
+      "enthusiastic",
+      "fervent",
+      "intense",
+      "eager"
+    ],
+    "meaning_fa": "پرشور",
+    "anchor": "ardent"
+  },
+  {
+    "id": "syn_125",
+    "words": [
+      "ambiguous",
+      "unclear",
+      "vague",
+      "uncertain",
+      "equivocal",
+      "obscure"
+    ],
+    "meaning_fa": "مبهم",
+    "anchor": "ambiguous"
+  },
+  {
+    "id": "syn_126",
+    "words": [
+      "austere",
+      "severe",
+      "strict",
+      "harsh",
+      "unadorned",
+      "plain"
+    ],
+    "meaning_fa": "سخت گير",
+    "anchor": "austere"
+  },
+  {
+    "id": "syn_127",
+    "words": [
+      "tranquil",
+      "calm",
+      "peaceful",
+      "serene",
+      "quiet",
+      "placid"
+    ],
+    "meaning_fa": "آرام",
+    "anchor": "tranquil"
+  },
+  {
+    "id": "syn_128",
+    "words": [
+      "acumen",
+      "insight",
+      "shrewdness",
+      "discernment",
+      "perception",
+      "intelligence"
+    ],
+    "meaning_fa": "تيزهوشي",
+    "anchor": "acumen"
+  },
+  {
+    "id": "syn_129",
+    "words": [
+      "discrepancy",
+      "difference",
+      "inconsistency",
+      "disparity",
+      "variation",
+      "divergence"
+    ],
+    "meaning_fa": "اختﻼف",
+    "anchor": "discrepancy"
+  },
+  {
+    "id": "syn_130",
+    "words": [
+      "augment",
+      "increase",
+      "enhance",
+      "enlarge",
+      "expand",
+      "boost"
+    ],
+    "meaning_fa": "افزايش دادن",
+    "anchor": "augment"
+  },
+  {
+    "id": "syn_131",
+    "words": [
+      "expunge",
+      "erase",
+      "remove",
+      "delete",
+      "obliterate",
+      "eliminate"
+    ],
+    "meaning_fa": "حذف كردن",
+    "anchor": "expunge"
+  },
+  {
+    "id": "syn_132",
+    "words": [
+      "anomaly",
+      "irregularity",
+      "aberration",
+      "deviation",
+      "peculiarity",
+      "abnormality"
+    ],
+    "meaning_fa": "نابهنجاري",
+    "anchor": "anomaly"
+  },
+  {
+    "id": "syn_133",
+    "words": [
+      "boisterous",
+      "noisy",
+      "loud",
+      "rowdy",
+      "lively",
+      "exuberant"
+    ],
+    "meaning_fa": "پر سر و صدا",
+    "anchor": "boisterous"
+  },
+  {
+    "id": "syn_134",
+    "words": [
+      "concede",
+      "admit",
+      "acknowledge",
+      "grant",
+      "allow",
+      "accept"
+    ],
+    "meaning_fa": "پذيرفتن",
+    "anchor": "concede"
+  },
+  {
+    "id": "syn_135",
+    "words": [
+      "affluent",
+      "wealthy",
+      "rich",
+      "prosperous",
+      "well-off"
+    ],
+    "meaning_fa": "",
+    "anchor": "affluent"
+  },
+  {
+    "id": "syn_136",
+    "words": [
+      "banal",
+      "ordinary",
+      "commonplace",
+      "trivial",
+      "unoriginal",
+      "dull"
+    ],
+    "meaning_fa": "پيش پا افتاده",
+    "anchor": "banal"
+  },
+  {
+    "id": "syn_137",
+    "words": [
+      "profound",
+      "deep",
+      "insightful",
+      "thoughtful",
+      "intense",
+      "significant"
+    ],
+    "meaning_fa": "عميﻖ",
+    "anchor": "profound"
+  },
+  {
+    "id": "syn_138",
+    "words": [
+      "nullify",
+      "invalidate",
+      "void",
+      "cancel",
+      "annul",
+      "negate"
+    ],
+    "meaning_fa": "بي اﺛر كردن",
+    "anchor": "nullify"
+  },
+  {
+    "id": "syn_139",
+    "words": [
+      "corroborate",
+      "confirm",
+      "verify",
+      "support",
+      "substantiate",
+      "validate"
+    ],
+    "meaning_fa": "تاييد كردن",
+    "anchor": "corroborate"
+  },
+  {
+    "id": "syn_140",
+    "words": [
+      "curtail",
+      "reduce",
+      "cut",
+      "decrease",
+      "diminish",
+      "shorten"
+    ],
+    "meaning_fa": "كاهش دادن",
+    "anchor": "curtail"
+  },
+  {
+    "id": "syn_141",
+    "words": [
+      "dichotomy",
+      "division",
+      "split",
+      "contrast",
+      "difference",
+      "separation"
+    ],
+    "meaning_fa": "دوگانگي",
+    "anchor": "dichotomy"
+  },
+  {
+    "id": "syn_142",
+    "words": [
+      "diffuse",
+      "spread",
+      "disperse",
+      "scatter",
+      "disseminate",
+      "distribute"
+    ],
+    "meaning_fa": "پراكنده كردن",
+    "anchor": "diffuse"
+  },
+  {
+    "id": "syn_143",
+    "words": [
+      "diligent",
+      "hardworking",
+      "industrious",
+      "assiduous",
+      "conscientious",
+      "meticulous"
+    ],
+    "meaning_fa": "سخت كوش",
+    "anchor": "diligent"
+  },
+  {
+    "id": "syn_144",
+    "words": [
+      "discreet",
+      "careful",
+      "cautious",
+      "prudent",
+      "tactful",
+      "diplomatic"
+    ],
+    "meaning_fa": "محتاط",
+    "anchor": "discreet"
+  },
+  {
+    "id": "syn_145",
+    "words": [
+      "diversify",
+      "vary",
+      "expand",
+      "spread",
+      "mix",
+      "broaden"
+    ],
+    "meaning_fa": "متنوع كردن",
+    "anchor": "diversify"
+  },
+  {
+    "id": "syn_146",
+    "words": [
+      "dormant",
+      "inactive",
+      "latent",
+      "inert",
+      "asleep",
+      "quiescent"
+    ],
+    "meaning_fa": "خاموش",
+    "anchor": "dormant"
+  },
+  {
+    "id": "syn_147",
+    "words": [
+      "dubious",
+      "doubtful",
+      "uncertain",
+      "unsure",
+      "suspicious",
+      "questionable"
+    ],
+    "meaning_fa": "مشكوك",
+    "anchor": "dubious"
+  },
+  {
+    "id": "syn_148",
+    "words": [
+      "dwindle",
+      "diminish",
+      "decrease",
+      "reduce",
+      "shrink",
+      "decline"
+    ],
+    "meaning_fa": "كاهش يافتن",
+    "anchor": "dwindle"
+  },
+  {
+    "id": "syn_149",
+    "words": [
+      "eclectic",
+      "diverse",
+      "varied",
+      "assorted",
+      "mixed",
+      "heterogeneous"
+    ],
+    "meaning_fa": "متنوع",
+    "anchor": "eclectic"
+  },
+  {
+    "id": "syn_150",
+    "words": [
+      "effervescent",
+      "bubbly",
+      "lively",
+      "sparkling",
+      "vivacious",
+      "enthusiastic"
+    ],
+    "meaning_fa": "سرزنده",
+    "anchor": "effervescent"
+  },
+  {
+    "id": "syn_151",
+    "words": [
+      "egregious",
+      "outrageous",
+      "shocking",
+      "appalling",
+      "atrocious",
+      "heinous"
+    ],
+    "meaning_fa": "فاحش",
+    "anchor": "egregious"
+  },
+  {
+    "id": "syn_152",
+    "words": [
+      "elucidate",
+      "explain",
+      "clarify",
+      "illuminate",
+      "expound",
+      "interpret"
+    ],
+    "meaning_fa": "روشن كردن",
+    "anchor": "elucidate"
+  },
+  {
+    "id": "syn_153",
+    "words": [
+      "elusive",
+      "evasive",
+      "slippery",
+      "intangible",
+      "ambiguous",
+      "difficult"
+    ],
+    "meaning_fa": "گريزان",
+    "anchor": "elusive"
+  },
+  {
+    "id": "syn_154",
+    "words": [
+      "emancipate",
+      "liberate",
+      "free",
+      "release",
+      "unshackle",
+      "unfetter"
+    ],
+    "meaning_fa": "آزاد كردن",
+    "anchor": "emancipate"
+  },
+  {
+    "id": "syn_155",
+    "words": [
+      "embark",
+      "begin",
+      "start",
+      "commence",
+      "undertake",
+      "initiate"
+    ],
+    "meaning_fa": "شروع كردن",
+    "anchor": "embark"
+  },
+  {
+    "id": "syn_156",
+    "words": [
+      "empirical",
+      "observational",
+      "experimental",
+      "practical",
+      "experiential",
+      "based on"
+    ],
+    "meaning_fa": "",
+    "anchor": "empirical"
+  },
+  {
+    "id": "syn_157",
+    "words": [
+      "enigma",
+      "mystery",
+      "puzzle",
+      "riddle",
+      "conundrum"
+    ],
+    "meaning_fa": "راز",
+    "anchor": "enigma"
+  },
+  {
+    "id": "syn_158",
+    "words": [
+      "encompass",
+      "include",
+      "cover",
+      "surround",
+      "encircle",
+      "contain"
+    ],
+    "meaning_fa": "احاطه كردن",
+    "anchor": "encompass"
+  },
+  {
+    "id": "syn_159",
+    "words": [
+      "endeavor",
+      "attempt",
+      "strive",
+      "try",
+      "effort",
+      "aim"
+    ],
+    "meaning_fa": "تﻼش",
+    "anchor": "endeavor"
+  },
+  {
+    "id": "syn_160",
+    "words": [
+      "enigmatic",
+      "mysterious",
+      "puzzling",
+      "cryptic",
+      "obscure",
+      "perplexing"
+    ],
+    "meaning_fa": "مرموز",
+    "anchor": "enigmatic"
+  },
+  {
+    "id": "syn_161",
+    "words": [
+      "enhance",
+      "improve",
+      "augment",
+      "boost",
+      "increase",
+      "strengthen"
+    ],
+    "meaning_fa": "تقويت كردن",
+    "anchor": "enhance"
+  },
+  {
+    "id": "syn_162",
+    "words": [
+      "enigma",
+      "mystery",
+      "puzzle",
+      "riddle",
+      "conundrum",
+      "perplexity"
+    ],
+    "meaning_fa": "راز",
+    "anchor": "enigma"
+  },
+  {
+    "id": "syn_163",
+    "words": [
+      "enmesh",
+      "entangle",
+      "ensnare",
+      "involve",
+      "embroil",
+      "trap"
+    ],
+    "meaning_fa": "گرفتار كردن",
+    "anchor": "enmesh"
+  },
+  {
+    "id": "syn_164",
+    "words": [
+      "enrich",
+      "improve",
+      "enhance",
+      "augment",
+      "boost",
+      "develop"
+    ],
+    "meaning_fa": "غني كردن",
+    "anchor": "enrich"
+  },
+  {
+    "id": "syn_165",
+    "words": [
+      "ephemeral",
+      "fleeting",
+      "transient",
+      "short-lived",
+      "brief",
+      "temporary"
+    ],
+    "meaning_fa": "زودگذر",
+    "anchor": "ephemeral"
+  },
+  {
+    "id": "syn_166",
+    "words": [
+      "epitome",
+      "embodiment",
+      "archetype",
+      "quintessence",
+      "exemplar",
+      "representation"
+    ],
+    "meaning_fa": "مظهر",
+    "anchor": "epitome"
+  },
+  {
+    "id": "syn_167",
+    "words": [
+      "equanimity",
+      "composure",
+      "calmness",
+      "poise",
+      "serenity",
+      "tranquility"
+    ],
+    "meaning_fa": "آرامش",
+    "anchor": "equanimity"
+  },
+  {
+    "id": "syn_168",
+    "words": [
+      "erratic",
+      "unpredictable",
+      "inconsistent",
+      "irregular",
+      "capricious",
+      "unreliable"
+    ],
+    "meaning_fa": "غيرقابل پيش بيني",
+    "anchor": "erratic"
+  },
+  {
+    "id": "syn_169",
+    "words": [
+      "euphoria",
+      "happiness",
+      "elation",
+      "joy",
+      "delight",
+      "ecstasy"
+    ],
+    "meaning_fa": "خوشي",
+    "anchor": "euphoria"
+  },
+  {
+    "id": "syn_170",
+    "words": [
+      "evoke",
+      "elicit",
+      "provoke",
+      "arouse",
+      "conjure",
+      "induce"
+    ],
+    "meaning_fa": "بر انگيختن",
+    "anchor": "evoke"
+  },
+  {
+    "id": "syn_171",
+    "words": [
+      "exacerbate",
+      "worsen",
+      "aggravate",
+      "intensify",
+      "increase",
+      "escalate"
+    ],
+    "meaning_fa": "تشديد كردن",
+    "anchor": "exacerbate"
+  },
+  {
+    "id": "syn_172",
+    "words": [
+      "exalt",
+      "praise",
+      "glorify",
+      "extol",
+      "laud",
+      "uplift"
+    ],
+    "meaning_fa": "تجليل كردن",
+    "anchor": "exalt"
+  },
+  {
+    "id": "syn_173",
+    "words": [
+      "exasperate",
+      "irritate",
+      "annoy",
+      "infuriate",
+      "provoke",
+      "frustrate"
+    ],
+    "meaning_fa": "عصباني كردن",
+    "anchor": "exasperate"
+  },
+  {
+    "id": "syn_174",
+    "words": [
+      "excavate",
+      "dig",
+      "unearth",
+      "extract",
+      "uncover",
+      "hollow out"
+    ],
+    "meaning_fa": "حفاري كردن",
+    "anchor": "excavate"
+  },
+  {
+    "id": "syn_175",
+    "words": [
+      "exculpate",
+      "absolve",
+      "exonerate",
+      "acquit",
+      "clear",
+      "vindicate"
+    ],
+    "meaning_fa": "تبرئه كردن",
+    "anchor": "exculpate"
+  },
+  {
+    "id": "syn_176",
+    "words": [
+      "exemplary",
+      "commendable",
+      "admirable",
+      "model",
+      "ideal",
+      "perfect"
+    ],
+    "meaning_fa": "نمونه",
+    "anchor": "exemplary"
+  },
+  {
+    "id": "syn_177",
+    "words": [
+      "exonerate",
+      "clear",
+      "absolve",
+      "acquit",
+      "vindicate",
+      "release"
+    ],
+    "meaning_fa": "تبرئه كردن",
+    "anchor": "exonerate"
+  },
+  {
+    "id": "syn_178",
+    "words": [
+      "expansive",
+      "extensive",
+      "wide",
+      "large",
+      "broad",
+      "comprehensive"
+    ],
+    "meaning_fa": "گسترده",
+    "anchor": "expansive"
+  },
+  {
+    "id": "syn_179",
+    "words": [
+      "expedite",
+      "accelerate",
+      "hasten",
+      "quicken",
+      "facilitate",
+      "speed up"
+    ],
+    "meaning_fa": "تسريع كردن",
+    "anchor": "expedite"
+  },
+  {
+    "id": "syn_180",
+    "words": [
+      "expiate",
+      "atone",
+      "compensate",
+      "make amends",
+      "redress",
+      "redeem"
+    ],
+    "meaning_fa": "كفاره دادن",
+    "anchor": "expiate"
+  },
+  {
+    "id": "syn_181",
+    "words": [
+      "explicit",
+      "clear",
+      "definite",
+      "precise",
+      "unambiguous",
+      "specific"
+    ],
+    "meaning_fa": "صريح",
+    "anchor": "explicit"
+  },
+  {
+    "id": "syn_182",
+    "words": [
+      "exploit",
+      "utilize",
+      "take advantage",
+      "use",
+      "leverage",
+      "capitalize"
+    ],
+    "meaning_fa": "بهره برداري كردن",
+    "anchor": "exploit"
+  },
+  {
+    "id": "syn_183",
+    "words": [
+      "extol",
+      "praise",
+      "laud",
+      "glorify",
+      "commend",
+      "exalt"
+    ],
+    "meaning_fa": "ستايش كردن",
+    "anchor": "extol"
+  },
+  {
+    "id": "syn_184",
+    "words": [
+      "extraneous",
+      "irrelevant",
+      "unrelated",
+      "unnecessary",
+      "external",
+      "incidental"
+    ],
+    "meaning_fa": "غير ضروري",
+    "anchor": "extraneous"
+  },
+  {
+    "id": "syn_185",
+    "words": [
+      "extrapolate",
+      "infer",
+      "deduce",
+      "estimate",
+      "predict",
+      "conclude"
+    ],
+    "meaning_fa": "استنباط كردن",
+    "anchor": "extrapolate"
+  },
+  {
+    "id": "syn_186",
+    "words": [
+      "facetious",
+      "flippant",
+      "humorous",
+      "playful",
+      "joking",
+      "witty"
+    ],
+    "meaning_fa": "شوخ طبع",
+    "anchor": "facetious"
+  },
+  {
+    "id": "syn_187",
+    "words": [
+      "facilitate",
+      "ease",
+      "assist",
+      "aid",
+      "expedite",
+      "simplify"
+    ],
+    "meaning_fa": "تسهيل كردن",
+    "anchor": "facilitate"
+  },
+  {
+    "id": "syn_188",
+    "words": [
+      "fallacious",
+      "misleading",
+      "deceptive",
+      "false",
+      "erroneous",
+      "mistaken"
+    ],
+    "meaning_fa": "غلط",
+    "anchor": "fallacious"
+  },
+  {
+    "id": "syn_189",
+    "words": [
+      "fathom",
+      "understand",
+      "comprehend",
+      "grasp",
+      "figure out",
+      "interpret"
+    ],
+    "meaning_fa": "درك كردن",
+    "anchor": "fathom"
+  },
+  {
+    "id": "syn_190",
+    "words": [
+      "fluctuate",
+      "vary",
+      "change",
+      "oscillate",
+      "waver",
+      "swing"
+    ],
+    "meaning_fa": "نوسان داشتن",
+    "anchor": "fluctuate"
+  },
+  {
+    "id": "syn_191",
+    "words": [
+      "forestall",
+      "prevent",
+      "hinder",
+      "preclude",
+      "avoid",
+      "avert"
+    ],
+    "meaning_fa": "پيشگيري كردن",
+    "anchor": "forestall"
+  },
+  {
+    "id": "syn_192",
+    "words": [
+      "frugal",
+      "economical",
+      "thrifty",
+      "sparing",
+      "prudent",
+      "saving"
+    ],
+    "meaning_fa": "صرفه جو",
+    "anchor": "frugal"
+  },
+  {
+    "id": "syn_193",
+    "words": [
+      "garrulous",
+      "talkative",
+      "chatty",
+      "loquacious",
+      "verbose",
+      "wordy"
+    ],
+    "meaning_fa": "پرحرف",
+    "anchor": "garrulous"
+  },
+  {
+    "id": "syn_194",
+    "words": [
+      "genial",
+      "friendly",
+      "affable",
+      "cordial",
+      "amiable",
+      "pleasant"
+    ],
+    "meaning_fa": "خوش مشرب",
+    "anchor": "genial"
+  },
+  {
+    "id": "syn_195",
+    "words": [
+      "gratuitous",
+      "unnecessary",
+      "unwarranted",
+      "free",
+      "complimentary",
+      "uncalled for"
+    ],
+    "meaning_fa": "غيرضروري",
+    "anchor": "gratuitous"
+  },
+  {
+    "id": "syn_196",
+    "words": [
+      "gregarious",
+      "sociable",
+      "outgoing",
+      "friendly",
+      "extroverted",
+      "companionable"
+    ],
+    "meaning_fa": "اجتماعي",
+    "anchor": "gregarious"
+  },
+  {
+    "id": "syn_197",
+    "words": [
+      "hackneyed",
+      "trite",
+      "overused",
+      "stale"
+    ],
+    "meaning_fa": "",
+    "anchor": "hackneyed"
+  },
+  {
+    "id": "syn_198",
+    "words": [
+      "harbinger",
+      "precursor",
+      "forerunner",
+      "omen",
+      "sign",
+      "herald"
+    ],
+    "meaning_fa": "پيش درآمد",
+    "anchor": "harbinger"
+  },
+  {
+    "id": "syn_199",
+    "words": [
+      "haughty",
+      "arrogant",
+      "proud",
+      "snobbish",
+      "condescending",
+      "disdainful"
+    ],
+    "meaning_fa": "متكبر",
+    "anchor": "haughty"
+  },
+  {
+    "id": "syn_200",
+    "words": [
+      "heinous",
+      "wicked",
+      "evil",
+      "atrocious",
+      "abominable",
+      "reprehensible"
+    ],
+    "meaning_fa": "شنيع",
+    "anchor": "heinous"
+  },
+  {
+    "id": "syn_201",
+    "words": [
+      "iconoclast",
+      "rebel",
+      "dissenter",
+      "nonconformist",
+      "radical",
+      "maverick"
+    ],
+    "meaning_fa": "بت شكن",
+    "anchor": "iconoclast"
+  },
+  {
+    "id": "syn_202",
+    "words": [
+      "idiosyncrasy",
+      "peculiarity",
+      "quirk",
+      "trait",
+      "characteristic",
+      "eccentricity"
+    ],
+    "meaning_fa": "ويژگي خاص",
+    "anchor": "idiosyncrasy"
+  },
+  {
+    "id": "syn_203",
+    "words": [
+      "illicit",
+      "illegal",
+      "unlawful",
+      "forbidden",
+      "prohibited",
+      "unauthorized"
+    ],
+    "meaning_fa": "غيرقانوني",
+    "anchor": "illicit"
+  },
+  {
+    "id": "syn_204",
+    "words": [
+      "illustrious",
+      "famous",
+      "eminent",
+      "distinguished",
+      "renowned",
+      "notable"
+    ],
+    "meaning_fa": "مشهور",
+    "anchor": "illustrious"
+  },
+  {
+    "id": "syn_205",
+    "words": [
+      "immaculate",
+      "spotless",
+      "clean",
+      "pristine",
+      "pure",
+      "flawless"
+    ],
+    "meaning_fa": "بي نقص",
+    "anchor": "immaculate"
+  },
+  {
+    "id": "syn_206",
+    "words": [
+      "imminent",
+      "impending",
+      "approaching",
+      "forthcoming",
+      "near",
+      "looming"
+    ],
+    "meaning_fa": "قريب الوقوع",
+    "anchor": "imminent"
+  },
+  {
+    "id": "syn_207",
+    "words": [
+      "immutable",
+      "unchangeable",
+      "fixed",
+      "invariable",
+      "constant",
+      "permanent"
+    ],
+    "meaning_fa": "تغييرناپذير",
+    "anchor": "immutable"
+  },
+  {
+    "id": "syn_208",
+    "words": [
+      "impartial",
+      "unbiased",
+      "neutral",
+      "objective",
+      "fair",
+      "equitable"
+    ],
+    "meaning_fa": "بي طرف",
+    "anchor": "impartial"
+  },
+  {
+    "id": "syn_209",
+    "words": [
+      "impervious",
+      "impermeable",
+      "resistant",
+      "invulnerable",
+      "unaffected",
+      "immune"
+    ],
+    "meaning_fa": "مقاوم",
+    "anchor": "impervious"
+  },
+  {
+    "id": "syn_210",
+    "words": [
+      "impetuous",
+      "impulsive",
+      "rash",
+      "hasty",
+      "reckless",
+      "spontaneous"
+    ],
+    "meaning_fa": "بي پروا",
+    "anchor": "impetuous"
+  },
+  {
+    "id": "syn_211",
+    "words": [
+      "implausible",
+      "unlikely",
+      "improbable",
+      "doubtful",
+      "unbelievable",
+      "questionable"
+    ],
+    "meaning_fa": "غيرمحتمل",
+    "anchor": "implausible"
+  },
+  {
+    "id": "syn_212",
+    "words": [
+      "implicate",
+      "involve",
+      "associate",
+      "connect",
+      "incriminate",
+      "link"
+    ],
+    "meaning_fa": "دخيل دانستن",
+    "anchor": "implicate"
+  },
+  {
+    "id": "syn_213",
+    "words": [
+      "impoverished",
+      "poor",
+      "destitute",
+      "indigent",
+      "needy",
+      "penniless"
+    ],
+    "meaning_fa": "فقير",
+    "anchor": "impoverished"
+  },
+  {
+    "id": "syn_214",
+    "words": [
+      "impregnable",
+      "invincible",
+      "unassailable",
+      "secure",
+      "invulnerable",
+      "unbeatable"
+    ],
+    "meaning_fa": "شكست ناپذير",
+    "anchor": "impregnable"
+  },
+  {
+    "id": "syn_215",
+    "words": [
+      "impromptu",
+      "spontaneous",
+      "unplanned",
+      "improvised",
+      "unrehearsed",
+      "offhand"
+    ],
+    "meaning_fa": "بداهه",
+    "anchor": "impromptu"
+  },
+  {
+    "id": "syn_216",
+    "words": [
+      "impudent",
+      "rude",
+      "insolent",
+      "disrespectful",
+      "cheeky",
+      "audacious"
+    ],
+    "meaning_fa": "گستاخ",
+    "anchor": "impudent"
+  },
+  {
+    "id": "syn_217",
+    "words": [
+      "inadvertent",
+      "unintentional",
+      "accidental",
+      "unintended",
+      "careless",
+      "heedless"
+    ],
+    "meaning_fa": "غيرعمدي",
+    "anchor": "inadvertent"
+  },
+  {
+    "id": "syn_218",
+    "words": [
+      "incessant",
+      "constant",
+      "continuous",
+      "unceasing",
+      "relentless",
+      "perpetual"
+    ],
+    "meaning_fa": "بي وقفه",
+    "anchor": "incessant"
+  },
+  {
+    "id": "syn_219",
+    "words": [
+      "incisive",
+      "sharp",
+      "keen",
+      "penetrating",
+      "acute",
+      "insightful"
+    ],
+    "meaning_fa": "تيزبين",
+    "anchor": "incisive"
+  },
+  {
+    "id": "syn_220",
+    "words": [
+      "inclement",
+      "harsh",
+      "severe",
+      "stormy",
+      "rough",
+      "unpleasant"
+    ],
+    "meaning_fa": "نامساعد",
+    "anchor": "inclement"
+  },
+  {
+    "id": "syn_221",
+    "words": [
+      "incongruous",
+      "inconsistent",
+      "inappropriate",
+      "unsuitable",
+      "out of place",
+      "absurd"
+    ],
+    "meaning_fa": "ناهماهنﮓ",
+    "anchor": "incongruous"
+  },
+  {
+    "id": "syn_222",
+    "words": [
+      "incontrovertible",
+      "undeniable",
+      "indisputable",
+      "irrefutable",
+      "certain",
+      "unassailable"
+    ],
+    "meaning_fa": "غيرقابل انكار",
+    "anchor": "incontrovertible"
+  },
+  {
+    "id": "syn_223",
+    "words": [
+      "incorrigible",
+      "irredeemable",
+      "unmanageable",
+      "unruly",
+      "hopeless",
+      "incurable"
+    ],
+    "meaning_fa": "اصﻼح ناپذير",
+    "anchor": "incorrigible"
+  },
+  {
+    "id": "syn_224",
+    "words": [
+      "inculcate",
+      "instill",
+      "implant",
+      "teach",
+      "impart",
+      "indoctrinate"
+    ],
+    "meaning_fa": "القا كردن",
+    "anchor": "inculcate"
+  },
+  {
+    "id": "syn_225",
+    "words": [
+      "indefatigable",
+      "tireless",
+      "unflagging",
+      "persistent",
+      "relentless",
+      "untiring"
+    ],
+    "meaning_fa": "خستگي ناپذير",
+    "anchor": "indefatigable"
+  },
+  {
+    "id": "syn_226",
+    "words": [
+      "indigenous",
+      "native",
+      "local",
+      "aboriginal",
+      "endemic",
+      "natural"
+    ],
+    "meaning_fa": "بومي",
+    "anchor": "indigenous"
+  },
+  {
+    "id": "syn_227",
+    "words": [
+      "indignant",
+      "angry",
+      "outraged",
+      "resentful",
+      "furious",
+      "annoyed"
+    ],
+    "meaning_fa": "خشمگين",
+    "anchor": "indignant"
+  },
+  {
+    "id": "syn_228",
+    "words": [
+      "indispensable",
+      "essential",
+      "necessary",
+      "vital",
+      "crucial",
+      "imperative"
+    ],
+    "meaning_fa": "ضروري",
+    "anchor": "indispensable"
+  },
+  {
+    "id": "syn_229",
+    "words": [
+      "indomitable",
+      "invincible",
+      "unconquerable",
+      "unyielding",
+      "resolute",
+      "determined"
+    ],
+    "meaning_fa": "شكست ناپذير",
+    "anchor": "indomitable"
+  },
+  {
+    "id": "syn_230",
+    "words": [
+      "induce",
+      "persuade",
+      "cause",
+      "bring about",
+      "lead to",
+      "provoke"
+    ],
+    "meaning_fa": "تحريك كردن",
+    "anchor": "induce"
+  },
+  {
+    "id": "syn_231",
+    "words": [
+      "indulgent",
+      "lenient",
+      "permissive",
+      "tolerant",
+      "forgiving",
+      "generous"
+    ],
+    "meaning_fa": "بخشنده",
+    "anchor": "indulgent"
+  },
+  {
+    "id": "syn_232",
+    "words": [
+      "ineffable",
+      "indescribable",
+      "inexpressible",
+      "beyond words",
+      "overwhelming"
+    ],
+    "meaning_fa": "",
+    "anchor": "ineffable"
+  },
+  {
+    "id": "syn_233",
+    "words": [
+      "inept",
+      "incompetent",
+      "unskilled",
+      "clumsy",
+      "awkward",
+      "bungling"
+    ],
+    "meaning_fa": "بي كفايت",
+    "anchor": "inept"
+  },
+  {
+    "id": "syn_234",
+    "words": [
+      "inexorable",
+      "relentless",
+      "unyielding",
+      "unstoppable",
+      "inevitable",
+      "unavoidable"
+    ],
+    "meaning_fa": "بي وقفه",
+    "anchor": "inexorable"
+  },
+  {
+    "id": "syn_235",
+    "words": [
+      "infamous",
+      "notorious",
+      "disreputable",
+      "scandalous",
+      "shameful"
+    ],
+    "meaning_fa": "بدنام",
+    "anchor": "infamous"
+  },
+  {
+    "id": "syn_236",
+    "words": [
+      "infallible",
+      "unerring",
+      "reliable",
+      "certain",
+      "perfect",
+      "flawless"
+    ],
+    "meaning_fa": "خطاناپذير",
+    "anchor": "infallible"
+  },
+  {
+    "id": "syn_237",
+    "words": [
+      "infinitesimal",
+      "tiny",
+      "minuscule",
+      "microscopic",
+      "negligible",
+      "minute"
+    ],
+    "meaning_fa": "بسيار كوچك",
+    "anchor": "infinitesimal"
+  },
+  {
+    "id": "syn_238",
+    "words": [
+      "ingratiate",
+      "flatter",
+      "please",
+      "win over",
+      "curry favor"
+    ],
+    "meaning_fa": "دل خوشي كردن",
+    "anchor": "ingratiate"
+  },
+  {
+    "id": "syn_239",
+    "words": [
+      "inhibit",
+      "restrain",
+      "hinder",
+      "impede",
+      "obstruct",
+      "suppress"
+    ],
+    "meaning_fa": "منع كردن",
+    "anchor": "inhibit"
+  },
+  {
+    "id": "syn_240",
+    "words": [
+      "innate",
+      "natural",
+      "inborn",
+      "inherent",
+      "instinctive",
+      "congenital"
+    ],
+    "meaning_fa": "ذاتي",
+    "anchor": "innate"
+  },
+  {
+    "id": "syn_241",
+    "words": [
+      "innocuous",
+      "harmless",
+      "safe",
+      "benign",
+      "inoffensive",
+      "mild"
+    ],
+    "meaning_fa": "بي ضرر",
+    "anchor": "innocuous"
+  },
+  {
+    "id": "syn_242",
+    "words": [
+      "inscrutable",
+      "mysterious",
+      "enigmatic",
+      "impenetrable",
+      "unfathomable"
+    ],
+    "meaning_fa": "",
+    "anchor": "inscrutable"
+  },
+  {
+    "id": "syn_243",
+    "words": [
+      "insidious",
+      "treacherous",
+      "sneaky",
+      "deceitful",
+      "dangerous",
+      "subtle"
+    ],
+    "meaning_fa": "موذي",
+    "anchor": "insidious"
+  },
+  {
+    "id": "syn_244",
+    "words": [
+      "insolent",
+      "rude",
+      "impudent",
+      "disrespectful",
+      "cheeky",
+      "bold"
+    ],
+    "meaning_fa": "گستاخ",
+    "anchor": "insolent"
+  },
+  {
+    "id": "syn_245",
+    "words": [
+      "insular",
+      "narrow-minded",
+      "isolated",
+      "provincial",
+      "parochial",
+      "confined"
+    ],
+    "meaning_fa": "كوته فكر",
+    "anchor": "insular"
+  },
+  {
+    "id": "syn_246",
+    "words": [
+      "integrity",
+      "honesty",
+      "probity",
+      "rectitude",
+      "uprightness",
+      "honor"
+    ],
+    "meaning_fa": "صداقت",
+    "anchor": "integrity"
+  },
+  {
+    "id": "syn_247",
+    "words": [
+      "intermittent",
+      "sporadic",
+      "occasional",
+      "irregular",
+      "periodic",
+      "episodic"
+    ],
+    "meaning_fa": "متناوب",
+    "anchor": "intermittent"
+  },
+  {
+    "id": "syn_248",
+    "words": [
+      "intransigent",
+      "uncompromising",
+      "inflexible",
+      "stubborn",
+      "obstinate",
+      "unyielding"
+    ],
+    "meaning_fa": "سرسخت",
+    "anchor": "intransigent"
+  },
+  {
+    "id": "syn_249",
+    "words": [
+      "intrepid",
+      "fearless",
+      "brave",
+      "courageous",
+      "bold",
+      "adventurous"
+    ],
+    "meaning_fa": "بي باك",
+    "anchor": "intrepid"
+  },
+  {
+    "id": "syn_250",
+    "words": [
+      "intricate",
+      "complex",
+      "complicated",
+      "elaborate",
+      "detailed",
+      "convoluted"
+    ],
+    "meaning_fa": "پيچيده",
+    "anchor": "intricate"
+  },
+  {
+    "id": "syn_251",
+    "words": [
+      "inundate",
+      "overwhelm",
+      "flood",
+      "swamp",
+      "overflow",
+      "engulf"
+    ],
+    "meaning_fa": "غرق كردن",
+    "anchor": "inundate"
+  },
+  {
+    "id": "syn_252",
+    "words": [
+      "inveterate",
+      "habitual",
+      "chronic",
+      "ingrained",
+      "entrenched",
+      "incorrigible"
+    ],
+    "meaning_fa": "ريشه دار",
+    "anchor": "inveterate"
+  },
+  {
+    "id": "syn_253",
+    "words": [
+      "invincible",
+      "unbeatable",
+      "unconquerable",
+      "indomitable",
+      "insurmountable"
+    ],
+    "meaning_fa": "",
+    "anchor": "invincible"
+  },
+  {
+    "id": "syn_254",
+    "words": [
+      "irascible",
+      "irritable",
+      "touchy",
+      "short-tempered",
+      "hot-headed",
+      "testy"
+    ],
+    "meaning_fa": "زودجوش",
+    "anchor": "irascible"
+  },
+  {
+    "id": "syn_255",
+    "words": [
+      "irksome",
+      "annoying",
+      "irritating",
+      "bothersome",
+      "tiresome",
+      "vexing"
+    ],
+    "meaning_fa": "هدننك هتسخ",
+    "anchor": "irksome"
+  },
+  {
+    "id": "syn_256",
+    "words": [
+      "itinerant",
+      "traveling",
+      "wandering",
+      "roaming",
+      "nomadic",
+      "peripatetic"
+    ],
+    "meaning_fa": "درگ هرود",
+    "anchor": "itinerant"
+  },
+  {
+    "id": "syn_257",
+    "words": [
+      "jaded",
+      "tired",
+      "weary",
+      "exhausted",
+      "worn out",
+      "fatigued"
+    ],
+    "meaning_fa": "خسته",
+    "anchor": "jaded"
+  },
+  {
+    "id": "syn_258",
+    "words": [
+      "jeopardize",
+      "endanger",
+      "risk",
+      "imperil",
+      "threaten",
+      "compromise"
+    ],
+    "meaning_fa": "به خطر انداختن",
+    "anchor": "jeopardize"
+  },
+  {
+    "id": "syn_259",
+    "words": [
+      "jocular",
+      "humorous",
+      "funny",
+      "witty",
+      "playful",
+      "facetious"
+    ],
+    "meaning_fa": "شوخ طبع",
+    "anchor": "jocular"
+  },
+  {
+    "id": "syn_260",
+    "words": [
+      "jovial",
+      "cheerful",
+      "jolly",
+      "merry",
+      "happy",
+      "good-humored"
+    ],
+    "meaning_fa": "خوش خلﻖ",
+    "anchor": "jovial"
+  },
+  {
+    "id": "syn_261",
+    "words": [
+      "judicious",
+      "wise",
+      "sensible",
+      "prudent",
+      "thoughtful",
+      "discerning"
+    ],
+    "meaning_fa": "عاقل",
+    "anchor": "judicious"
+  },
+  {
+    "id": "syn_262",
+    "words": [
+      "juxtapose",
+      "compare",
+      "contrast",
+      "place side by side",
+      "position",
+      "set against"
+    ],
+    "meaning_fa": "كنار هم قرار دادن",
+    "anchor": "juxtapose"
+  },
+  {
+    "id": "syn_263",
+    "words": [
+      "kindle",
+      "ignite",
+      "light",
+      "inflame",
+      "spark",
+      "arouse"
+    ],
+    "meaning_fa": "برانگيختن",
+    "anchor": "kindle"
+  },
+  {
+    "id": "syn_264",
+    "words": [
+      "laconic",
+      "concise",
+      "terse",
+      "brief",
+      "succinct",
+      "pithy"
+    ],
+    "meaning_fa": "كم حرف",
+    "anchor": "laconic"
+  },
+  {
+    "id": "syn_265",
+    "words": [
+      "lament",
+      "mourn",
+      "grieve",
+      "bemoan",
+      "bewail",
+      "deplore"
+    ],
+    "meaning_fa": "سوگواري كردن",
+    "anchor": "lament"
+  },
+  {
+    "id": "syn_266",
+    "words": [
+      "languid",
+      "listless",
+      "lazy",
+      "sluggish",
+      "weak",
+      "lethargic"
+    ],
+    "meaning_fa": "بي حال",
+    "anchor": "languid"
+  },
+  {
+    "id": "syn_267",
+    "words": [
+      "larceny",
+      "theft",
+      "robbery",
+      "stealing",
+      "burglary",
+      "pilfering"
+    ],
+    "meaning_fa": "دزدي",
+    "anchor": "larceny"
+  },
+  {
+    "id": "syn_268",
+    "words": [
+      "laud",
+      "praise",
+      "commend",
+      "extol",
+      "acclaim",
+      "glorify"
+    ],
+    "meaning_fa": "ستايش كردن",
+    "anchor": "laud"
+  },
+  {
+    "id": "syn_269",
+    "words": [
+      "lethargic",
+      "sluggish",
+      "inactive",
+      "lazy",
+      "drowsy",
+      "apathetic"
+    ],
+    "meaning_fa": "بي حال",
+    "anchor": "lethargic"
+  },
+  {
+    "id": "syn_270",
+    "words": [
+      "levity",
+      "frivolity",
+      "lightheartedness",
+      "humor",
+      "cheerfulness",
+      "silliness"
+    ],
+    "meaning_fa": "سبكسري",
+    "anchor": "levity"
+  },
+  {
+    "id": "syn_271",
+    "words": [
+      "loquacious",
+      "talkative",
+      "chatty",
+      "garrulous",
+      "voluble",
+      "verbose"
+    ],
+    "meaning_fa": "پرحرف",
+    "anchor": "loquacious"
+  },
+  {
+    "id": "syn_272",
+    "words": [
+      "lucid",
+      "clear",
+      "coherent",
+      "articulate",
+      "intelligible",
+      "transparent"
+    ],
+    "meaning_fa": "واضح",
+    "anchor": "lucid"
+  },
+  {
+    "id": "syn_273",
+    "words": [
+      "lurid",
+      "sensational",
+      "shocking",
+      "graphic",
+      "vivid",
+      "gruesome"
+    ],
+    "meaning_fa": "مهيج",
+    "anchor": "lurid"
+  },
+  {
+    "id": "syn_274",
+    "words": [
+      "magnanimous",
+      "generous",
+      "charitable",
+      "benevolent",
+      "forgiving",
+      "noble"
+    ],
+    "meaning_fa": "بزرگوار",
+    "anchor": "magnanimous"
+  },
+  {
+    "id": "syn_275",
+    "words": [
+      "maladroit",
+      "clumsy",
+      "awkward",
+      "inept",
+      "bungling",
+      "unskillful"
+    ],
+    "meaning_fa": "دست و پا چلفتي",
+    "anchor": "maladroit"
+  },
+  {
+    "id": "syn_276",
+    "words": [
+      "malicious",
+      "spiteful",
+      "malevolent",
+      "vindictive",
+      "mean",
+      "cruel"
+    ],
+    "meaning_fa": "بدخواه",
+    "anchor": "malicious"
+  },
+  {
+    "id": "syn_277",
+    "words": [
+      "malleable",
+      "pliable",
+      "flexible",
+      "adaptable",
+      "compliant",
+      "workable"
+    ],
+    "meaning_fa": "نرم و انعطاف پذير",
+    "anchor": "malleable"
+  },
+  {
+    "id": "syn_278",
+    "words": [
+      "mar",
+      "spoil",
+      "damage",
+      "impair",
+      "tarnish",
+      "blemish"
+    ],
+    "meaning_fa": "خراب كردن",
+    "anchor": "mar"
+  },
+  {
+    "id": "syn_279",
+    "words": [
+      "meander",
+      "wander",
+      "roam",
+      "ramble",
+      "stray",
+      "drift"
+    ],
+    "meaning_fa": "پرسه زدن",
+    "anchor": "meander"
+  },
+  {
+    "id": "syn_280",
+    "words": [
+      "mellifluous",
+      "sweet-sounding",
+      "harmonious",
+      "melodious",
+      "pleasant",
+      "soothing"
+    ],
+    "meaning_fa": "خوش آهنﮓ",
+    "anchor": "mellifluous"
+  },
+  {
+    "id": "syn_281",
+    "words": [
+      "mendacious",
+      "lying",
+      "untruthful",
+      "deceitful",
+      "dishonest",
+      "false"
+    ],
+    "meaning_fa": "دروغگو",
+    "anchor": "mendacious"
+  },
+  {
+    "id": "syn_282",
+    "words": [
+      "mercurial",
+      "volatile",
+      "unpredictable",
+      "capricious",
+      "fickle",
+      "changeable"
+    ],
+    "meaning_fa": "دمدمي مزاج",
+    "anchor": "mercurial"
+  },
+  {
+    "id": "syn_283",
+    "words": [
+      "meticulous",
+      "careful",
+      "precise",
+      "thorough",
+      "detailed",
+      "exact"
+    ],
+    "meaning_fa": "دقيﻖ",
+    "anchor": "meticulous"
+  },
+  {
+    "id": "syn_284",
+    "words": [
+      "mitigate",
+      "alleviate",
+      "lessen",
+      "ease",
+      "diminish",
+      "reduce"
+    ],
+    "meaning_fa": "تسكين دادن",
+    "anchor": "mitigate"
+  },
+  {
+    "id": "syn_285",
+    "words": [
+      "mollify",
+      "appease",
+      "pacify",
+      "soothe",
+      "calm",
+      "placate"
+    ],
+    "meaning_fa": "آرام كردن",
+    "anchor": "mollify"
+  },
+  {
+    "id": "syn_286",
+    "words": [
+      "morose",
+      "sullen",
+      "gloomy",
+      "glum",
+      "melancholy",
+      "moody"
+    ],
+    "meaning_fa": "عبوس",
+    "anchor": "morose"
+  },
+  {
+    "id": "syn_287",
+    "words": [
+      "mundane",
+      "ordinary",
+      "commonplace",
+      "routine",
+      "banal",
+      "everyday"
+    ],
+    "meaning_fa": "عادي",
+    "anchor": "mundane"
+  },
+  {
+    "id": "syn_288",
+    "words": [
+      "myriad",
+      "countless",
+      "innumerable",
+      "numerous",
+      "many",
+      "abundant"
+    ],
+    "meaning_fa": "بسيار زياد",
+    "anchor": "myriad"
+  },
+  {
+    "id": "syn_289",
+    "words": [
+      "nebulous",
+      "vague",
+      "unclear",
+      "hazy",
+      "indistinct",
+      "ambiguous"
+    ],
+    "meaning_fa": "مبهم",
+    "anchor": "nebulous"
+  },
+  {
+    "id": "syn_290",
+    "words": [
+      "negligible",
+      "insignificant",
+      "trivial",
+      "unimportant",
+      "minor",
+      "inconsequential"
+    ],
+    "meaning_fa": "ناچيز",
+    "anchor": "negligible"
+  },
+  {
+    "id": "syn_291",
+    "words": [
+      "nefarious",
+      "wicked",
+      "evil",
+      "villainous",
+      "sinful",
+      "atrocious"
+    ],
+    "meaning_fa": "شرير",
+    "anchor": "nefarious"
+  },
+  {
+    "id": "syn_292",
+    "words": [
+      "nonchalant",
+      "casual",
+      "indifferent",
+      "unconcerned",
+      "cool",
+      "relaxed"
+    ],
+    "meaning_fa": "بي تفاوت",
+    "anchor": "nonchalant"
+  },
+  {
+    "id": "syn_293",
+    "words": [
+      "notorious",
+      "infamous",
+      "disreputable",
+      "scandalous",
+      "shameful"
+    ],
+    "meaning_fa": "بدنام",
+    "anchor": "notorious"
+  },
+  {
+    "id": "syn_294",
+    "words": [
+      "novice",
+      "beginner",
+      "newcomer",
+      "neophyte",
+      "amateur",
+      "apprentice"
+    ],
+    "meaning_fa": "راك هزات",
+    "anchor": "novice"
+  },
+  {
+    "id": "syn_295",
+    "words": [
+      "nuance",
+      "subtlety",
+      "distinction",
+      "shade",
+      "difference",
+      "refinement"
+    ],
+    "meaning_fa": "اختﻼف جزئي",
+    "anchor": "nuance"
+  },
+  {
+    "id": "syn_296",
+    "words": [
+      "obdurate",
+      "stubborn",
+      "unyielding",
+      "inflexible",
+      "obstinate",
+      "adamant"
+    ],
+    "meaning_fa": "لجوج",
+    "anchor": "obdurate"
+  },
+  {
+    "id": "syn_297",
+    "words": [
+      "obfuscate",
+      "confuse",
+      "obscure",
+      "bewilder",
+      "perplex",
+      "complicate"
+    ],
+    "meaning_fa": "گيج كردن",
+    "anchor": "obfuscate"
+  },
+  {
+    "id": "syn_298",
+    "words": [
+      "obsequious",
+      "servile",
+      "fawning",
+      "subservient",
+      "ingratiating",
+      "sycophantic"
+    ],
+    "meaning_fa": "چاپلوس",
+    "anchor": "obsequious"
+  },
+  {
+    "id": "syn_299",
+    "words": [
+      "obstinate",
+      "stubborn",
+      "inflexible",
+      "unyielding",
+      "adamant",
+      "intransigent"
+    ],
+    "meaning_fa": "سرسخت",
+    "anchor": "obstinate"
+  },
+  {
+    "id": "syn_300",
+    "words": [
+      "omnipotent",
+      "all-powerful",
+      "almighty",
+      "supreme",
+      "invincible",
+      "powerful"
+    ],
+    "meaning_fa": "قادر مطلﻖ",
+    "anchor": "omnipotent"
+  },
+  {
+    "id": "syn_301",
+    "words": [
+      "omniscient",
+      "all-knowing",
+      "all-seeing",
+      "wise",
+      "knowledgeable",
+      "insightful"
+    ],
+    "meaning_fa": "داناي كل",
+    "anchor": "omniscient"
+  },
+  {
+    "id": "syn_302",
+    "words": [
+      "onerous",
+      "burdensome",
+      "heavy",
+      "difficult",
+      "arduous",
+      "taxing"
+    ],
+    "meaning_fa": "طاقت فرسا",
+    "anchor": "onerous"
+  },
+  {
+    "id": "syn_303",
+    "words": [
+      "opaque",
+      "unclear",
+      "obscure",
+      "dense",
+      "murky",
+      "impenetrable"
+    ],
+    "meaning_fa": "مات",
+    "anchor": "opaque"
+  },
+  {
+    "id": "syn_304",
+    "words": [
+      "ostentatious",
+      "showy",
+      "flamboyant",
+      "pretentious",
+      "extravagant",
+      "flashy"
+    ],
+    "meaning_fa": "خودنمايي",
+    "anchor": "ostentatious"
+  },
+  {
+    "id": "syn_305",
+    "words": [
+      "outlandish",
+      "bizarre",
+      "strange",
+      "weird",
+      "unusual",
+      "eccentric"
+    ],
+    "meaning_fa": "عجيب و غريب",
+    "anchor": "outlandish"
+  },
+  {
+    "id": "syn_306",
+    "words": [
+      "overwrought",
+      "agitated",
+      "overexcited",
+      "emotional",
+      "frantic",
+      "tense"
+    ],
+    "meaning_fa": "پريشان",
+    "anchor": "overwrought"
+  },
+  {
+    "id": "syn_307",
+    "words": [
+      "painstaking",
+      "careful",
+      "meticulous",
+      "thorough",
+      "diligent",
+      "conscientious"
+    ],
+    "meaning_fa": "دقيﻖ",
+    "anchor": "painstaking"
+  },
+  {
+    "id": "syn_308",
+    "words": [
+      "palliate",
+      "alleviate",
+      "ease",
+      "soothe",
+      "mitigate",
+      "relieve"
+    ],
+    "meaning_fa": "تسكين دادن",
+    "anchor": "palliate"
+  },
+  {
+    "id": "syn_309",
+    "words": [
+      "paradigm",
+      "model",
+      "pattern",
+      "example",
+      "archetype",
+      "standard"
+    ],
+    "meaning_fa": "الگو",
+    "anchor": "paradigm"
+  },
+  {
+    "id": "syn_310",
+    "words": [
+      "paradox",
+      "contradiction",
+      "puzzle",
+      "inconsistency",
+      "enigma",
+      "anomaly"
+    ],
+    "meaning_fa": "تناقﺾ",
+    "anchor": "paradox"
+  },
+  {
+    "id": "syn_311",
+    "words": [
+      "paragon",
+      "model",
+      "example",
+      "epitome",
+      "ideal",
+      "standard"
+    ],
+    "meaning_fa": "نمونه",
+    "anchor": "paragon"
+  },
+  {
+    "id": "syn_312",
+    "words": [
+      "paramount",
+      "supreme",
+      "chief",
+      "principal",
+      "foremost",
+      "dominant"
+    ],
+    "meaning_fa": "برتر",
+    "anchor": "paramount"
+  },
+  {
+    "id": "syn_313",
+    "words": [
+      "parody",
+      "imitation",
+      "satire",
+      "spoof",
+      "caricature",
+      "mockery"
+    ],
+    "meaning_fa": "تقليد مضحك",
+    "anchor": "parody"
+  },
+  {
+    "id": "syn_314",
+    "words": [
+      "parsimonious",
+      "stingy",
+      "miserly",
+      "frugal",
+      "tightfisted",
+      "penurious"
+    ],
+    "meaning_fa": "خسيس",
+    "anchor": "parsimonious"
+  },
+  {
+    "id": "syn_315",
+    "words": [
+      "pathos",
+      "emotion",
+      "sentiment",
+      "poignancy",
+      "feeling",
+      "appeal"
+    ],
+    "meaning_fa": "حس همدردي",
+    "anchor": "pathos"
+  },
+  {
+    "id": "syn_316",
+    "words": [
+      "patronize",
+      "condescend",
+      "look down on",
+      "demean",
+      "sponsor",
+      "support"
+    ],
+    "meaning_fa": "تحقير كردن",
+    "anchor": "patronize"
+  },
+  {
+    "id": "syn_317",
+    "words": [
+      "pejorative",
+      "derogatory",
+      "disparaging",
+      "negative",
+      "critical",
+      "demeaning"
+    ],
+    "meaning_fa": "تحقيرآميز",
+    "anchor": "pejorative"
+  },
+  {
+    "id": "syn_318",
+    "words": [
+      "pellucid",
+      "clear",
+      "transparent",
+      "lucid",
+      "bright",
+      "comprehensible"
+    ],
+    "meaning_fa": "شفاف",
+    "anchor": "pellucid"
+  },
+  {
+    "id": "syn_319",
+    "words": [
+      "penchant",
+      "inclination",
+      "liking",
+      "tendency",
+      "fondness",
+      "preference"
+    ],
+    "meaning_fa": "يدنم هقﻼع",
+    "anchor": "penchant"
+  },
+  {
+    "id": "syn_320",
+    "words": [
+      "penurious",
+      "stingy",
+      "miserly",
+      "frugal",
+      "tightfisted",
+      "parsimonious"
+    ],
+    "meaning_fa": "خسيس",
+    "anchor": "penurious"
+  },
+  {
+    "id": "syn_321",
+    "words": [
+      "perfunctory",
+      "cursory",
+      "superficial",
+      "automatic",
+      "mechanical",
+      "routine"
+    ],
+    "meaning_fa": "سرسري",
+    "anchor": "perfunctory"
+  },
+  {
+    "id": "syn_322",
+    "words": [
+      "perpetuate",
+      "continue",
+      "preserve",
+      "maintain",
+      "prolong",
+      "sustain"
+    ],
+    "meaning_fa": "جاودانه كردن",
+    "anchor": "perpetuate"
+  },
+  {
+    "id": "syn_323",
+    "words": [
+      "perspicacious",
+      "perceptive",
+      "insightful",
+      "astute",
+      "shrewd",
+      "discerning"
+    ],
+    "meaning_fa": "تيزبين",
+    "anchor": "perspicacious"
+  },
+  {
+    "id": "syn_324",
+    "words": [
+      "pertinent",
+      "relevant",
+      "applicable",
+      "appropriate",
+      "related",
+      "suitable"
+    ],
+    "meaning_fa": "مربوط",
+    "anchor": "pertinent"
+  },
+  {
+    "id": "syn_325",
+    "words": [
+      "pervasive",
+      "widespread",
+      "prevalent",
+      "ubiquitous",
+      "omnipresent",
+      "extensive"
+    ],
+    "meaning_fa": "فراگير",
+    "anchor": "pervasive"
+  },
+  {
+    "id": "syn_326",
+    "words": [
+      "petulant",
+      "irritable",
+      "peevish",
+      "cranky",
+      "bad-tempered",
+      "testy"
+    ],
+    "meaning_fa": "زودرنج",
+    "anchor": "petulant"
+  },
+  {
+    "id": "syn_327",
+    "words": [
+      "placate",
+      "appease",
+      "pacify",
+      "soothe",
+      "mollify",
+      "calm"
+    ],
+    "meaning_fa": "آرام كردن",
+    "anchor": "placate"
+  },
+  {
+    "id": "syn_328",
+    "words": [
+      "platitude",
+      "truism",
+      "commonplace",
+      "banality"
+    ],
+    "meaning_fa": "",
+    "anchor": "platitude"
+  },
+  {
+    "id": "syn_329",
+    "words": [
+      "plummet",
+      "plunge",
+      "drop",
+      "fall",
+      "tumble",
+      "dive"
+    ],
+    "meaning_fa": "سقوط كردن",
+    "anchor": "plummet"
+  },
+  {
+    "id": "syn_330",
+    "words": [
+      "polemic",
+      "argument",
+      "debate",
+      "dispute",
+      "controversy",
+      "diatribe"
+    ],
+    "meaning_fa": "مجادله",
+    "anchor": "polemic"
+  },
+  {
+    "id": "syn_331",
+    "words": [
+      "pragmatic",
+      "practical",
+      "realistic",
+      "sensible",
+      "down-to-earth",
+      "rational"
+    ],
+    "meaning_fa": "عمل گرايانه",
+    "anchor": "pragmatic"
+  },
+  {
+    "id": "syn_332",
+    "words": [
+      "precarious",
+      "uncertain",
+      "risky",
+      "unstable",
+      "insecure",
+      "perilous"
+    ],
+    "meaning_fa": "مخاطره آميز",
+    "anchor": "precarious"
+  },
+  {
+    "id": "syn_333",
+    "words": [
+      "preclude",
+      "prevent",
+      "exclude",
+      "prohibit",
+      "hinder",
+      "rule out"
+    ],
+    "meaning_fa": "مانع شدن",
+    "anchor": "preclude"
+  },
+  {
+    "id": "syn_334",
+    "words": [
+      "precocious",
+      "advanced",
+      "gifted",
+      "talented",
+      "mature",
+      "clever"
+    ],
+    "meaning_fa": "زودرس",
+    "anchor": "precocious"
+  },
+  {
+    "id": "syn_335",
+    "words": [
+      "predilection",
+      "preference",
+      "liking",
+      "inclination",
+      "bias",
+      "fondness"
+    ],
+    "meaning_fa": "تمايل",
+    "anchor": "predilection"
+  },
+  {
+    "id": "syn_336",
+    "words": [
+      "preeminent",
+      "foremost",
+      "leading",
+      "dominant",
+      "outstanding",
+      "supreme"
+    ],
+    "meaning_fa": "برجسته",
+    "anchor": "preeminent"
+  },
+  {
+    "id": "syn_337",
+    "words": [
+      "premonition",
+      "forewarning",
+      "intuition",
+      "hunch",
+      "suspicion",
+      "feeling"
+    ],
+    "meaning_fa": "پيش آگاهي",
+    "anchor": "premonition"
+  },
+  {
+    "id": "syn_338",
+    "words": [
+      "presumptuous",
+      "arrogant",
+      "overconfident",
+      "bold",
+      "audacious",
+      "forward"
+    ],
+    "meaning_fa": "گستاخ",
+    "anchor": "presumptuous"
+  },
+  {
+    "id": "syn_339",
+    "words": [
+      "prevalent",
+      "widespread",
+      "common",
+      "ubiquitous",
+      "pervasive",
+      "accepted"
+    ],
+    "meaning_fa": "رايج",
+    "anchor": "prevalent"
+  },
+  {
+    "id": "syn_340",
+    "words": [
+      "pristine",
+      "unspoiled",
+      "pure",
+      "untouched",
+      "immaculate",
+      "clean"
+    ],
+    "meaning_fa": "دست نخورده",
+    "anchor": "pristine"
+  },
+  {
+    "id": "syn_341",
+    "words": [
+      "proclivity",
+      "tendency",
+      "inclination",
+      "propensity",
+      "leaning",
+      "bent"
+    ],
+    "meaning_fa": "تمايل",
+    "anchor": "proclivity"
+  },
+  {
+    "id": "syn_342",
+    "words": [
+      "prodigious",
+      "enormous",
+      "huge",
+      "immense",
+      "vast",
+      "extraordinary"
+    ],
+    "meaning_fa": "شگفت انگيز",
+    "anchor": "prodigious"
+  },
+  {
+    "id": "syn_343",
+    "words": [
+      "prodigy",
+      "genius",
+      "sensation",
+      "wonder",
+      "talent",
+      "marvel"
+    ],
+    "meaning_fa": "نابغه",
+    "anchor": "prodigy"
+  },
+  {
+    "id": "syn_344",
+    "words": [
+      "profane",
+      "irreverent",
+      "impious",
+      "blasphemous",
+      "secular",
+      "vulgar"
+    ],
+    "meaning_fa": "كفرآميز",
+    "anchor": "profane"
+  },
+  {
+    "id": "syn_345",
+    "words": [
+      "profligate",
+      "wasteful",
+      "extravagant",
+      "prodigal",
+      "reckless",
+      "dissolute"
+    ],
+    "meaning_fa": "ولخرج",
+    "anchor": "profligate"
+  },
+  {
+    "id": "syn_346",
+    "words": [
+      "profound",
+      "deep",
+      "thoughtful",
+      "insightful",
+      "intense",
+      "significant"
+    ],
+    "meaning_fa": "عميﻖ",
+    "anchor": "profound"
+  },
+  {
+    "id": "syn_347",
+    "words": [
+      "prolific",
+      "productive",
+      "fruitful",
+      "fertile",
+      "abundant",
+      "creative"
+    ],
+    "meaning_fa": "پربار",
+    "anchor": "prolific"
+  },
+  {
+    "id": "syn_348",
+    "words": [
+      "prosaic",
+      "dull",
+      "unimaginative",
+      "ordinary",
+      "commonplace",
+      "mundane"
+    ],
+    "meaning_fa": "پيش پاافتاده",
+    "anchor": "prosaic"
+  },
+  {
+    "id": "syn_349",
+    "words": [
+      "proscribe",
+      "prohibit",
+      "ban",
+      "forbid",
+      "outlaw",
+      "exclude"
+    ],
+    "meaning_fa": "منع كردن",
+    "anchor": "proscribe"
+  },
+  {
+    "id": "syn_350",
+    "words": [
+      "protagonist",
+      "main character",
+      "hero",
+      "lead",
+      "advocate",
+      "champion"
+    ],
+    "meaning_fa": "قهرمان",
+    "anchor": "protagonist"
+  },
+  {
+    "id": "syn_351",
+    "words": [
+      "provocative",
+      "challenging",
+      "stimulating",
+      "controversial",
+      "inciting",
+      "provoking"
+    ],
+    "meaning_fa": "تحريك آميز",
+    "anchor": "provocative"
+  },
+  {
+    "id": "syn_352",
+    "words": [
+      "prudent",
+      "wise",
+      "cautious",
+      "careful",
+      "sensible",
+      "judicious"
+    ],
+    "meaning_fa": "محتاط",
+    "anchor": "prudent"
+  },
+  {
+    "id": "syn_353",
+    "words": [
+      "pugnacious",
+      "combative",
+      "aggressive",
+      "belligerent",
+      "quarrelsome",
+      "truculent"
+    ],
+    "meaning_fa": "ستيزه جو",
+    "anchor": "pugnacious"
+  },
+  {
+    "id": "syn_354",
+    "words": [
+      "pundit",
+      "expert",
+      "authority",
+      "specialist",
+      "commentator",
+      "guru"
+    ],
+    "meaning_fa": "كارشناس",
+    "anchor": "pundit"
+  },
+  {
+    "id": "syn_355",
+    "words": [
+      "vindicate",
+      "justify",
+      "defend",
+      "clear",
+      "exonerate",
+      "absolve"
+    ],
+    "meaning_fa": "توجيه كردن",
+    "anchor": "vindicate"
+  },
+  {
+    "id": "syn_356",
+    "words": [
+      "virtuoso",
+      "expert",
+      "master",
+      "maestro",
+      "prodigy",
+      "genius"
+    ],
+    "meaning_fa": "هنرمند ماهر",
+    "anchor": "virtuoso"
+  },
+  {
+    "id": "syn_357",
+    "words": [
+      "visceral",
+      "instinctive",
+      "intuitive",
+      "gut",
+      "emotional",
+      "deep-rooted"
+    ],
+    "meaning_fa": "حسي",
+    "anchor": "visceral"
+  },
+  {
+    "id": "syn_358",
+    "words": [
+      "volatile",
+      "unstable",
+      "unpredictable",
+      "changeable",
+      "erratic",
+      "fluctuating"
+    ],
+    "meaning_fa": "ناپايدار",
+    "anchor": "volatile"
+  },
+  {
+    "id": "syn_359",
+    "words": [
+      "voluble",
+      "talkative",
+      "chatty",
+      "loquacious",
+      "verbose",
+      "garrulous"
+    ],
+    "meaning_fa": "پرحرف",
+    "anchor": "voluble"
+  },
+  {
+    "id": "syn_360",
+    "words": [
+      "voracious",
+      "insatiable",
+      "ravenous",
+      "gluttonous",
+      "greedy",
+      "avid"
+    ],
+    "meaning_fa": "پرخور",
+    "anchor": "voracious"
+  },
+  {
+    "id": "syn_361",
+    "words": [
+      "vying",
+      "competing",
+      "contending",
+      "rivaling",
+      "battling",
+      "fighting"
+    ],
+    "meaning_fa": "رقابت كردن",
+    "anchor": "vying"
+  },
+  {
+    "id": "syn_362",
+    "words": [
+      "wane",
+      "diminish",
+      "decrease",
+      "decline",
+      "fade",
+      "dwindle"
+    ],
+    "meaning_fa": "كاهش يافتن",
+    "anchor": "wane"
+  },
+  {
+    "id": "syn_363",
+    "words": [
+      "wary",
+      "cautious",
+      "careful",
+      "circumspect",
+      "watchful",
+      "alert"
+    ],
+    "meaning_fa": "محتاط",
+    "anchor": "wary"
+  },
+  {
+    "id": "syn_364",
+    "words": [
+      "waver",
+      "hesitate",
+      "falter",
+      "fluctuate",
+      "oscillate",
+      "vacillate"
+    ],
+    "meaning_fa": "مردد بودن",
+    "anchor": "waver"
+  },
+  {
+    "id": "syn_365",
+    "words": [
+      "whimsical",
+      "fanciful",
+      "playful",
+      "capricious",
+      "quirky",
+      "imaginative"
+    ],
+    "meaning_fa": "خيال انگيز",
+    "anchor": "whimsical"
+  },
+  {
+    "id": "syn_366",
+    "words": [
+      "wistful",
+      "nostalgic",
+      "yearning",
+      "longing",
+      "pensive",
+      "reflective"
+    ],
+    "meaning_fa": "حسرت انگيز",
+    "anchor": "wistful"
+  },
+  {
+    "id": "syn_367",
+    "words": [
+      "zealous",
+      "enthusiastic",
+      "fervent",
+      "passionate",
+      "ardent",
+      "eager"
+    ],
+    "meaning_fa": "مشتاق",
+    "anchor": "zealous"
+  },
+  {
+    "id": "syn_368",
+    "words": [
+      "zenith",
+      "peak",
+      "summit",
+      "pinnacle",
+      "acme",
+      "apex"
+    ],
+    "meaning_fa": "اوج",
+    "anchor": "zenith"
+  },
+  {
+    "id": "syn_369",
+    "words": [
+      "zest",
+      "enthusiasm",
+      "gusto",
+      "eagerness",
+      "relish",
+      "enjoyment"
+    ],
+    "meaning_fa": "شور و شوق",
+    "anchor": "zest"
+  }
+]

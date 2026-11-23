@@ -1,4 +1,4 @@
-import type { AnyQuestion, Passage } from "./types";
+import type { AnyQuestion, DataInterpretationDataset, Passage } from "./types";
 
 /**
  * Pure transform: takes the already-parsed JSON arrays produced by the Python
@@ -15,6 +15,7 @@ export function loadQuestionBank(raw: {
   algebra: unknown[];
   geometry: unknown[];
   dataAnalysis: unknown[];
+  dataInterpretation?: unknown[];
 }): AnyQuestion[] {
   const all = [
     ...raw.textCompletion,
@@ -24,6 +25,7 @@ export function loadQuestionBank(raw: {
     ...raw.algebra,
     ...raw.geometry,
     ...raw.dataAnalysis,
+    ...(raw.dataInterpretation ?? []),
   ];
   for (const q of all) {
     if (typeof q !== "object" || q === null || !("id" in q) || !("qtype" in q) || !("topic" in q)) {
@@ -40,4 +42,13 @@ export function loadPassages(raw: unknown[]): Passage[] {
     }
   }
   return raw as Passage[];
+}
+
+export function loadDiDatasets(raw: unknown[]): DataInterpretationDataset[] {
+  for (const d of raw) {
+    if (typeof d !== "object" || d === null || !("id" in d) || !("headers" in d) || !("rows" in d)) {
+      throw new Error(`Malformed DI dataset: ${JSON.stringify(d)}`);
+    }
+  }
+  return raw as DataInterpretationDataset[];
 }

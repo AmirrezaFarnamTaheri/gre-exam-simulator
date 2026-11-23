@@ -499,5 +499,749 @@
       "An investor who poured his life savings into a failing startup responds to poor earnings reports by buying more shares and enthusiastically urging friends to invest."
     ],
     "select_all": false
+  },
+
+  {
+    "id": "gre-study-rc-archive-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Daily hiring raised the perceived cost of reporting. That change can reduce complaints even if underlying grievances persist.",
+    "passage_id": "gre-study-rc-archive",
+    "question": "The argument implies that a reduction in formal complaints may accompany which development?",
+    "choices": [
+      "An increase in barriers to reporting grievances",
+      "A decline in the number of supervisors who read a ledger",
+      "An improvement in conditions for workers on daily contracts",
+      "A rise in the number of permanent berths",
+      "A transfer of authority from dock workers to historians"
+    ],
+    "correct": [
+      "An increase in barriers to reporting grievances"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-archive-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The two employment arrangements gave workers different ability to report safely. The distinction offers a reason for lower recorded counts.",
+    "passage_id": "gre-study-rc-archive",
+    "question": "Why does the author distinguish permanent workers from day laborers?",
+    "choices": [
+      "To establish which group worked longer hours",
+      "To explain why a reporting channel may yield fewer records after an employment change",
+      "To suggest that supervisors caused the decline in permanent posts",
+      "To show that daily workers made informal complaints more often",
+      "To illustrate how the ledgers classified kinds of grievances"
+    ],
+    "correct": [
+      "To explain why a reporting channel may yield fewer records after an employment change"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-archive-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 5,
+    "source": "seed",
+    "tags": [],
+    "explanation": "A rise in independent injury records makes it harder to infer better conditions from falling complaints alone.",
+    "passage_id": "gre-study-rc-archive",
+    "question": "Which finding would most directly weaken the historians’ inference described in the first sentence?",
+    "choices": [
+      "Dock supervisors used the same ledger format throughout the period.",
+      "A different port also employed workers on daily contracts.",
+      "The frequency of injuries in independently kept clinic records rose while complaints declined.",
+      "Workers sometimes complained about scheduling alongside working conditions.",
+      "Demand for dock labor varied by season."
+    ],
+    "correct": [
+      "The frequency of injuries in independently kept clinic records rose while complaints declined."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-archive-4",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Day laborers could lose shifts, and the ledgers record the cases that reached the formal process. The underlying trend is left open.",
+    "passage_id": "gre-study-rc-archive",
+    "question": "Which statements are consistent with the passage?",
+    "choices": [
+      "At least some workers filing complaints faced a potential cost.",
+      "The ledgers preserve a record of grievances that reached a formal channel.",
+      "Historians established that the underlying number of grievances fell."
+    ],
+    "correct": [
+      "At least some workers filing complaints faced a potential cost.",
+      "The ledgers preserve a record of grievances that reached a formal channel."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "gre-study-rc-cooling-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The author reconciles the two findings and asks what evidence would actually answer the board’s policy question.",
+    "passage_id": "gre-study-rc-cooling",
+    "question": "Which statement best expresses the author’s main point?",
+    "choices": [
+      "Averages conceal the environmental value of street trees.",
+      "Air temperature is always more useful than pavement temperature.",
+      "Studies can give different cooling estimates because they measure different effects, and policy should use measurements suited to its goal.",
+      "Midday cooling experiments are unreliable unless they average several readings.",
+      "The planning board should compare tree varieties before measuring temperature."
+    ],
+    "correct": [
+      "Studies can give different cooling estimates because they measure different effects, and policy should use measurements suited to its goal."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-cooling-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The studies use different measures and time windows. A large pavement effect and a smaller air effect can coexist.",
+    "passage_id": "gre-study-rc-cooling",
+    "question": "Which result could hold without creating the apparent conflict described in the passage?",
+    "choices": [
+      "Shade cuts midday pavement temperatures substantially while producing a smaller average change in air temperature.",
+      "The first study measures air temperature and the second calculates pavement temperature.",
+      "The two studies obtain incompatible readings from the same pavement at the same time.",
+      "Almost all people use the street when neither study took measurements.",
+      "Shade increases pavement temperature while increasing air temperature by the same amount."
+    ],
+    "correct": [
+      "Shade cuts midday pavement temperatures substantially while producing a smaller average change in air temperature."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-cooling-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The proposed evaluation considers where shade falls along routes and when those routes are used. Citation counts do not measure walking conditions.",
+    "passage_id": "gre-study-rc-cooling",
+    "question": "Which information would help the board evaluate the policy according to the passage?",
+    "choices": [
+      "How much of a typical walking route is shaded",
+      "When residents tend to walk",
+      "How many times the studies have been cited"
+    ],
+    "correct": [
+      "How much of a typical walking route is shaded",
+      "When residents tend to walk"
+    ],
+    "select_all": true
+  },
+  {
+    "id": "gre-study-rc-cooling-4",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The board takes a pavement measurement as a prediction of the heat pedestrians will experience. The rest of the passage explains the gap.",
+    "passage_id": "gre-study-rc-cooling",
+    "question": "What role does the example of the planning board play?",
+    "choices": [
+      "It establishes which of the two studies was conducted first.",
+      "It presents an otherwise unexplained difference in data collection.",
+      "It illustrates a policy inference that goes beyond what one study measured.",
+      "It provides evidence inconsistent with both temperature studies.",
+      "It identifies an alternative explanation for why residents chose their routes."
+    ],
+    "correct": [
+      "It illustrates a policy inference that goes beyond what one study measured."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-translation-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The translator’s goal concerns how each mention feels. The critic’s point concerns what readers recognize across the cycle.",
+    "passage_id": "gre-study-rc-translation",
+    "question": "Which statement best captures the contrast developed in the passage?",
+    "choices": [
+      "Botanical precision can preserve meter at the expense of ordinary diction.",
+      "A word choice that suits individual appearances may weaken a pattern across a work.",
+      "Critics generally prefer translation strategies that introduce unfamiliar words.",
+      "A single unusual image improves a translation only when it changes the plot.",
+      "The same source word has unrelated meanings in different poems."
+    ],
+    "correct": [
+      "A word choice that suits individual appearances may weaken a pattern across a work."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-translation-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 5,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The translator defends the broader word on the ground that it keeps the reference unremarkable.",
+    "passage_id": "gre-study-rc-translation",
+    "question": "Which statement is most strongly supported about the translator’s argument?",
+    "choices": [
+      "The translator regards every recurring image as incidental.",
+      "The translator believes the plant is absent from the source setting.",
+      "The translator values how ordinary the reference sounds to a reader.",
+      "The translator aims to make the hesitation more explicit in each poem.",
+      "The translator intends to remove every reference to the river."
+    ],
+    "correct": [
+      "The translator values how ordinary the reference sounds to a reader."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-translation-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The criticism predicts loss of recognition across moments. Missing the recurrence supports that prediction.",
+    "passage_id": "gre-study-rc-translation",
+    "question": "What observation would most directly support the critic’s concern?",
+    "choices": [
+      "Readers describe the translation’s meter as regular.",
+      "Readers report that the source text contains several other plant names.",
+      "Readers finish the translated cycle without noticing that the same image returns at several moments of hesitation.",
+      "Readers can identify the reed in an illustrated field guide.",
+      "Readers recognize that most of the poems take place by water."
+    ],
+    "correct": [
+      "Readers finish the translated cycle without noticing that the same image returns at several moments of hesitation."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-translation-4",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The first two claims are stated. The critic’s argument is specific to the reed’s repeated appearance.",
+    "passage_id": "gre-study-rc-translation",
+    "question": "Which statements does the passage support?",
+    "choices": [
+      "The translator uses 'grass' repeatedly for the same source word.",
+      "The critic ties the recurring reed to moments of hesitation.",
+      "The critic recommends replacing every plant name with a more precise term."
+    ],
+    "correct": [
+      "The translator uses 'grass' repeatedly for the same source word.",
+      "The critic ties the recurring reed to moments of hesitation."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "gre-study-rc-outreach-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The pilot paired later hours with reminder calls. The proposed follow-up separates those changes.",
+    "passage_id": "gre-study-rc-outreach",
+    "question": "What is the passage primarily concerned with?",
+    "choices": [
+      "The cost of hiring staff for an evening program",
+      "How to distinguish two possible explanations for increased visits",
+      "Why library visits are more difficult to count during the evening",
+      "Whether patrons should be allowed to place items on hold",
+      "Why uniform schedules are preferable across branches"
+    ],
+    "correct": [
+      "How to distinguish two possible explanations for increased visits"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-outreach-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "To attribute the increase to extended hours, the director needs reason to treat the calls as a minor cause.",
+    "passage_id": "gre-study-rc-outreach",
+    "question": "What assumption does the director’s argument most depend on?",
+    "choices": [
+      "The phone calls were unlikely to explain most of the increase.",
+      "The first week had fewer items on hold than later weeks.",
+      "All branches had identical demand before the pilot.",
+      "Only patrons with holds could enter the library.",
+      "The library could hire more staff at its current budget."
+    ],
+    "correct": [
+      "The phone calls were unlikely to explain most of the increase."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-outreach-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 5,
+    "source": "seed",
+    "tags": [],
+    "explanation": "An increase concentrated in branches that extend hours while omitting calls directly supports a scheduling effect.",
+    "passage_id": "gre-study-rc-outreach",
+    "question": "Which finding from the follow-up would most strongly support extending evening hours?",
+    "choices": [
+      "Visits rise equally at all branches during a holiday week.",
+      "Visits rise only in branches that call patrons and keep the old hours.",
+      "With comparable branch traffic before the trial, visits rise mainly at branches that extend hours without reminders.",
+      "Visits rise mainly in branches that had the fewest items on hold before the trial.",
+      "Call recipients report appreciating the reminder, regardless of whether they pick up their items."
+    ],
+    "correct": [
+      "With comparable branch traffic before the trial, visits rise mainly at branches that extend hours without reminders."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-outreach-4",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The first-week timing makes calls a plausible alternative explanation for the observed increase.",
+    "passage_id": "gre-study-rc-outreach",
+    "question": "Why does the passage note when most of the new visits occurred?",
+    "choices": [
+      "To characterize an increase that coincided with the reminder calls",
+      "To show that the pilot ran for only one week",
+      "To prove that patrons disliked later hours",
+      "To describe the director’s method for counting visits",
+      "To suggest that the comparison branches opened at different dates"
+    ],
+    "correct": [
+      "To characterize an increase that coincided with the reminder calls"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-archive-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Being left off the next morning’s hiring list is a specific consequence of making a formal complaint.",
+    "passage_id": "gre-study-rc-archive",
+    "question": "Select the sentence that explains a specific consequence a day laborer might face after reporting a problem.",
+    "choices": [
+      "Several historians have treated a decline in formal complaints to dock authorities as evidence that working conditions improved.",
+      "But the years with the sharpest drop were also those in which many workers shifted from permanent berths to daily hiring.",
+      "Permanent workers could appeal to a recognized supervisor.",
+      "A day laborer who filed a complaint could simply be left off the next morning’s list.",
+      "The complaint ledgers are therefore valuable records of which grievances entered a formal process.",
+      "Whether they track the frequency of grievances depends in part on who could risk supplying the information."
+    ],
+    "correct": [
+      "A day laborer who filed a complaint could simply be left off the next morning’s list."
+    ],
+    "select_all": false,
+    "select_in_passage": true
+  },
+  {
+    "id": "gre-study-rc-cooling-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The sentence says that a large pavement effect can occur alongside a smaller air-temperature effect.",
+    "passage_id": "gre-study-rc-cooling",
+    "question": "Select the sentence that states how the two temperature results can coexist.",
+    "choices": [
+      "Two studies of street-tree cooling appear to conflict.",
+      "The first ranks streets by the greatest difference between shaded and unshaded pavement at midday.",
+      "The second averages air-temperature readings from morning through evening and finds a much smaller effect.",
+      "A planning board cites the first study to predict an equally large drop in the heat residents experience on their walks.",
+      "The measurements, however, answer different questions.",
+      "A large change in pavement temperature can coexist with a modest change in the temperature of surrounding air.",
+      "To evaluate a policy meant to improve walking conditions, the board would need to consider shade along routes at the hours people actually use them."
+    ],
+    "correct": [
+      "A large change in pavement temperature can coexist with a modest change in the temperature of surrounding air."
+    ],
+    "select_all": false,
+    "select_in_passage": true
+  },
+  {
+    "id": "gre-study-rc-translation-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The critic identifies moments of hesitation at the water’s edge as the contexts in which the reed recurs.",
+    "passage_id": "gre-study-rc-translation",
+    "question": "Select the sentence that identifies the repeated circumstance the critic connects with the reed.",
+    "choices": [
+      "A translator of a verse cycle replaces the word for a particular river reed with 'grass' throughout the work.",
+      "The choice sacrifices botanical precision, but the translator argues that it better preserves the unremarkable status of the plant in the original setting.",
+      "A critic replies that the specific reed recurs at moments when characters hesitate at the water’s edge.",
+      "In isolation the substitution might preserve the effect the translator seeks.",
+      "Across a sequence of poems, however, it may weaken the link among these moments: a generic word is less likely to register as the return of a particular image."
+    ],
+    "correct": [
+      "A critic replies that the specific reed recurs at moments when characters hesitate at the water’s edge."
+    ],
+    "select_all": false,
+    "select_in_passage": true
+  },
+  {
+    "id": "gre-study-rc-outreach-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "That comparison group isolates the effect of staying open later.",
+    "passage_id": "gre-study-rc-outreach",
+    "question": "Select the sentence that describes a comparison group where the library changes its hours but makes no calls.",
+    "choices": [
+      "A library piloted an evening pickup program and found that visits increased during the pilot.",
+      "Most of the new visits occurred in the first week, when staff phoned patrons who already had items on hold.",
+      "The director proposed extending evening hours to every branch, arguing that the visit increase demonstrated demand for later hours.",
+      "One librarian agreed that the pilot warranted another trial but asked for a different comparison.",
+      "At some branches, hold hours would remain unchanged while staff made the same calls.",
+      "At others, pickup would stay open later without the calls.",
+      "If visits rose primarily at the branches that made calls, the first pilot would tell the library more about reminders than about scheduling."
+    ],
+    "correct": [
+      "At others, pickup would stay open later without the calls."
+    ],
+    "select_all": false,
+    "select_in_passage": true
+  },
+  {
+    "id": "gre-study-rc-music-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_main_idea",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The passage challenges the claim that equal temperament was required for remote keys, showing unequal tunings persisted and were used expressively.",
+    "passage_id": "gre-study-rc-music",
+    "question": "Which statement best captures the main point of the passage?",
+    "choices": [
+      "Equal temperament eliminated dramatic tension in nineteenth-century keyboard music.",
+      "Eighteenth-century composers modulated to distant keys even while unequal temperaments remained standard.",
+      "Workshop manuals prove that keyboard technicians opposed every form of modulation.",
+      "Modern listeners prefer unequal temperaments to equal temperament.",
+      "Keys with few sharps or flats were avoided by eighteenth-century composers."
+    ],
+    "correct": [
+      "Eighteenth-century composers modulated to distant keys even while unequal temperaments remained standard."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-music-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "In unequal temperaments, keys with few sharps or flats sounded calmer while remote keys had sharper intervals that heightened dramatic tension.",
+    "passage_id": "gre-study-rc-music",
+    "question": "According to the passage, what effect did unequal temperaments have on remote keys?",
+    "choices": [
+      "They made remote keys indistinguishable from keys with few sharps.",
+      "They prevented keyboard technicians from tuning instruments quickly.",
+      "They produced sharper intervals that composers used for dramatic tension.",
+      "They required instruments to have more than twelve steps per octave.",
+      "They forced composers to write exclusively for string ensembles."
+    ],
+    "correct": [
+      "They produced sharper intervals that composers used for dramatic tension."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-music-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The second sentence cites surviving workshop manuals as evidence against the earlier view.",
+    "passage_id": "gre-study-rc-music",
+    "question": "Select the sentence that introduces historical evidence challenging the earlier attribution to equal temperament.",
+    "choices": [
+      "Music historians once attributed the rise of pieces written in distant keys during the eighteenth century solely to the spread of equal temperament, a tuning system that divides the octave into twelve identical steps.",
+      "Recent studies of surviving workshop manuals, however, show that most keyboard technicians continued using unequal temperaments well into the nineteenth century.",
+      "In those systems, keys with few sharps or flats sounded calmer while remote keys carried sharper intervals that heightened dramatic tension.",
+      "Composers exploited these distinct acoustic colors rather than avoiding remote keys altogether.",
+      "Treating equal temperament as a precondition for modulation overlooks how musicians turned slight tuning irregularities into an expressive resource."
+    ],
+    "correct": [
+      "Recent studies of surviving workshop manuals, however, show that most keyboard technicians continued using unequal temperaments well into the nineteenth century."
+    ],
+    "select_all": false,
+    "select_in_passage": true
+  },
+  {
+    "id": "gre-study-rc-soil-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "When phosphorus is abundant, trees cut carbon flow and some fungi tap older organic matter, showing the exchange shifts with resource supply.",
+    "passage_id": "gre-study-rc-soil",
+    "question": "Which statements about mycorrhizal relationships are supported by the passage? Select all that apply.",
+    "choices": [
+      "Abundant soil phosphorus can reduce the amount of carbon trees supply to fungi.",
+      "Some fungal strains can survive without relying solely on sugars from host trees.",
+      "Seedlings must supply large amounts of sugar before a fungal network aids their survival."
+    ],
+    "correct": [
+      "Abundant soil phosphorus can reduce the amount of carbon trees supply to fungi.",
+      "Some fungal strains can survive without relying solely on sugars from host trees."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "gre-study-rc-soil-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_rhetorical_purpose",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The dry-summer seedling example shows a case where plants gain survival benefits despite supplying little sugar, contrasting with the fertilized-soil case.",
+    "passage_id": "gre-study-rc-soil",
+    "question": "Why does the author mention seedlings during dry summers?",
+    "choices": [
+      "To show that fertilization harms young trees",
+      "To illustrate a condition in which hosts benefit from fungi while contributing little sugar",
+      "To prove that older organic matter disappears during drought",
+      "To argue that forest ecologists should stop studying phosphorus",
+      "To explain why trees grow faster in dry climates"
+    ],
+    "correct": [
+      "To illustrate a condition in which hosts benefit from fungi while contributing little sugar"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-soil-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "A shifting market shaped by scarcity predicts that nutrient scarcity increases host reliance on and investment in the fungal partner.",
+    "passage_id": "gre-study-rc-soil",
+    "question": "Which observation would best align with the passage's 'shifting market' characterization?",
+    "choices": [
+      "Trees deliver the exact same share of sugar to fungi regardless of soil nutrients.",
+      "Fungi disappear completely whenever soil phosphorus levels change.",
+      "Trees increase carbon flow to fungi when soil phosphorus becomes scarce.",
+      "Seedlings refuse to connect to fungal networks until they reach maturity.",
+      "Fertilization permanently converts all fungi into independent decomposers."
+    ],
+    "correct": [
+      "Trees increase carbon flow to fungi when soil phosphorus becomes scarce."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-tolls-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Bridge crossings fell 12% while rail ridership rose only 4%; the remaining reduction came from earlier crossings and consolidated delivery runs.",
+    "passage_id": "gre-study-rc-tolls",
+    "question": "The passage suggests that city analysts erred primarily by doing which of the following?",
+    "choices": [
+      "Overstating the percentage decline in morning bridge traffic",
+      "Assuming that nearly all reduced peak crossings represented a shift to rail",
+      "Ignoring the cost of installing traffic sensors on feeder roads",
+      "Setting the toll too low to affect retail delivery vans",
+      "Measuring traffic counts during holidays rather than workdays"
+    ],
+    "correct": [
+      "Assuming that nearly all reduced peak crossings represented a shift to rail"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-tolls-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 2,
+    "source": "seed",
+    "tags": [],
+    "explanation": "Traffic sensors showed drivers crossing 30 minutes earlier and delivery vans consolidating trips.",
+    "passage_id": "gre-study-rc-tolls",
+    "question": "Which responses to the peak-hour toll are mentioned in the passage? Select all that apply.",
+    "choices": [
+      "Some commuters shifted to parallel rail lines.",
+      "Some drivers crossed the bridge before peak pricing started.",
+      "Some delivery operators combined multiple trips into fewer runs."
+    ],
+    "correct": [
+      "Some commuters shifted to parallel rail lines.",
+      "Some drivers crossed the bridge before peak pricing started.",
+      "Some delivery operators combined multiple trips into fewer runs."
+    ],
+    "select_all": true
+  },
+  {
+    "id": "gre-study-rc-tolls-3",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_synthesis",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "If pre-peak congestion spiked severely when drivers shifted 30 minutes earlier, the net benefit of timing flexibility would be smaller than expected.",
+    "passage_id": "gre-study-rc-tolls",
+    "question": "Which finding would most complicate the passage's conclusion about timing flexibility?",
+    "choices": [
+      "Rail trains ran on schedule throughout the month.",
+      "Shifting crossings thirty minutes earlier created an equally severe bottleneck just before peak hours.",
+      "Retail stores reported lower fuel costs after consolidating van trips.",
+      "Bridge toll revenue funded additional feeder-road maintenance.",
+      "Weekend traffic counts remained unchanged after the toll began."
+    ],
+    "correct": [
+      "Shifting crossings thirty minutes earlier created an equally severe bottleneck just before peak hours."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-moons-1",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_detail",
+    "difficulty": 3,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The passage states that without gravitational resonance from neighboring moons, tidal friction would circularize the orbit and stop the heating.",
+    "passage_id": "gre-study-rc-moons",
+    "question": "According to the passage, what role do neighboring moons play in maintaining a subsurface ocean?",
+    "choices": [
+      "They reflect extra sunlight onto the icy moon's surface.",
+      "They prevent tidal friction from circularizing the moon's orbit.",
+      "They pull water vapor plumes back onto the ice shell.",
+      "They cool the moon's core so the ocean does not boil.",
+      "They shield the moon from the host planet's gravity."
+    ],
+    "correct": [
+      "They prevent tidal friction from circularizing the moon's orbit."
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-moons-2",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_inference",
+    "difficulty": 4,
+    "source": "seed",
+    "tags": [],
+    "explanation": "If a solitary moon has no neighbors to preserve eccentricity, friction will circularize its orbit and shut down tidal flexing.",
+    "passage_id": "gre-study-rc-moons",
+    "question": "It can be inferred from the passage that an icy outer-planet moon orbiting entirely alone would most likely:",
+    "choices": [
+      "Maintain a thicker plume of water vapor than moons with neighbors",
+      "Lose its tidal heat engine as its orbit became circular over time",
+      "Move progressively closer to the Sun because of orbital friction",
+      "Develop an increasingly elliptical orbit without outside gravity",
+      "Freeze immediately during its first flyby"
+    ],
+    "correct": [
+      "Lose its tidal heat engine as its orbit became circular over time"
+    ],
+    "select_all": false
+  },
+  {
+    "id": "gre-study-rc-moons-sentence",
+    "section": "verbal",
+    "qtype": "reading_comprehension",
+    "topic": "reading_comprehension_select_in_passage",
+    "difficulty": 2,
+    "source": "seed",
+    "tags": [],
+    "explanation": "The third sentence defines tidal flexing and explains how changing gravitational pull generates internal heat through friction.",
+    "passage_id": "gre-study-rc-moons",
+    "question": "Select the sentence that explains the physical mechanism generating heat inside the moon.",
+    "choices": [
+      "Because outer-planet moons orbit far from the Sun, planetary scientists once expected their interiors to be frozen solid.",
+      "Close flybys overturned that assumption by revealing fractured ice shells and plumes of water vapor.",
+      "The energy source is tidal flexing: as a moon follows a slightly elliptical orbit around a massive planet, changing gravitational pull stretches and compresses its interior, generating heat through friction.",
+      "Without orbital interactions from neighboring moons, however, friction would quickly circularize the orbit and shut the heat engine down.",
+      "A subsurface ocean can persist over billions of years only when gravitational resonance keeps the orbit eccentric."
+    ],
+    "correct": [
+      "The energy source is tidal flexing: as a moon follows a slightly elliptical orbit around a massive planet, changing gravitational pull stretches and compresses its interior, generating heat through friction."
+    ],
+    "select_all": false,
+    "select_in_passage": true
   }
 ]

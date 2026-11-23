@@ -504,5 +504,2050 @@
     "quantity_b": "(-1)^(k + 1)",
     "shared_info": "k is a negative integer.",
     "correct": "cannot_determine"
+  },
+  {
+    "id": "q240_s1_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "shared_info": "A certain brand of dishwashing liquid was sold in two different bottle sizes. The small bottle was sold with 2/5 as many ounces of liquid as the large bottle and was sold at a price that was1/2 the price of the large bottle.",
+    "quantity_a": "The price per ounce of the liquid in the small bottle.",
+    "quantity_b": "The price per ounce of the liquid in the large bottle.",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The price per ounce of the liquid in the small bottle.) vs Quantity B (The price per ounce of the liquid in the large bottle.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q5",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": null,
+    "quantity_a": "The number of different prime factors of 500.",
+    "quantity_b": "The number of different prime factors of 360.",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The number of different prime factors of 500.) vs Quantity B (The number of different prime factors of 360.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q8",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "s = jt \u0000 2j.",
+    "quantity_a": "s + 2.",
+    "quantity_b": "jtj.",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (s + 2.) vs Quantity B (jtj.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q14",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "What fraction of the people in the age-group 20 to 49 indicated newspaper or the Internet as their pre- ferred method to obtain news?",
+    "correct": "9/20",
+    "explanation": "Exact numeric answer: 9/20. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s1_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "Which of the following is closest to the percent of all the people survey who indicated the Internet as their preferred method to obtain news?",
+    "choices": [
+      "18.8%",
+      "21.7%",
+      "23.0%",
+      "33.3%",
+      "46.0%"
+    ],
+    "correct": [
+      "21.7%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 21.7%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "For the age-group 50 and older, the number of people who indicated the Internet as their preferred method to obtain news is approximately what percent less than the number of people who indicated radio?",
+    "choices": [
+      "12%",
+      "27%",
+      "36%",
+      "45%",
+      "50%"
+    ],
+    "correct": [
+      "27%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 27%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "When the positive integer x is divided by 42, the remainder is 19. What is the remainder whenx is divided by 7?",
+    "choices": [
+      "0",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": [
+      "5"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 5. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q18",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If x is 4 more than half ofy and if y is 10 more than half ofx, what is the value ofx?",
+    "correct": "12",
+    "explanation": "Exact numeric answer: 12. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s1_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "A pianist agreed to perform one concert at a fee 12.5 percent less than her usual fee and a second concert at a fee 20 percent greater than the first fee. The fee for the second concert was what percent greater than her usual fee?",
+    "choices": [
+      "5%",
+      "7.5%",
+      "15%",
+      "16.25%",
+      "32.5%"
+    ],
+    "correct": [
+      "5%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 5%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s2_q2",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": null,
+    "quantity_a": "The greatest possible value of 2 x \u0000 y, where 9 \u0014 x \u0014 12 and \u00002 \u0014 y \u0014 8.",
+    "quantity_b": "2.",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The greatest possible value of 2 x \u0000 y, where 9 \u0014 x \u0014 12 and \u00002 \u0014 y \u0014 8.) vs Quantity B (2.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "x \u0000 y = 5.",
+    "quantity_a": "x2 \u0000 y2.",
+    "quantity_b": "5.",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (x2 \u0000 y2.) vs Quantity B (5.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q5",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": null,
+    "quantity_a": "(27)\u00008.",
+    "quantity_b": "(81)\u00006.",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A ((27)\u00008.) vs Quantity B ((81)\u00006.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": null,
+    "quantity_a": "m + n.",
+    "quantity_b": "2m.",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (m + n.) vs Quantity B (2m.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q8",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "Company A has twice as many employees as Company B, and the two companies have no employees in common. If 64 percent of the employees of Company A are women and 52 percent of the employees of Company B are women, what percent of all the employees of the two companies are women? %",
+    "correct": "60",
+    "explanation": "Exact numeric answer: 60. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s2_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "A bookcase hass shelves with n books on each shelf, wheren is a multiple of boths and s \u0000 1. If all of the books on the highest shelf were removed and redistributed equally among the other shelves, which of the following represents the number of books that would be on each of the other shelves?",
+    "choices": [
+      "ns",
+      "n(s + 1)",
+      "(n + 1)s",
+      "(n \u0000 1)s",
+      "(n + 1)(s \u0000 1)"
+    ],
+    "correct": [
+      "ns"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: ns. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q10",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "Which of the following pairs of integers have reciprocals whose sum is either less than 1/3 or greater than 1/2? Indicate allsuch pairs.",
+    "choices": [
+      "1 and 14",
+      "3 and 12",
+      "5 and 10",
+      "7 and 8"
+    ],
+    "correct": [
+      "1 and 14",
+      "5 and 10",
+      "7 and 8"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: 1 and 14, 5 and 10, 7 and 8. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q12",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "In a survey, 130 people were asked how many movies they had seen in the preceding year. Their responses varied from 0 to 30 movies. The graphs above show two different summaries of the same survey results. How many people responded that they had seen 11 or 12 movies? 7",
+    "choices": [
+      "10",
+      "12",
+      "15",
+      "20",
+      "23"
+    ],
+    "correct": [
+      "10"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 10. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q14",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "In 1998, how many of the imported towels were not imported from China?",
+    "choices": [
+      "260 million",
+      "264 million",
+      "268 million",
+      "272 million",
+      "276 million"
+    ],
+    "correct": [
+      "264 million"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 264 million. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If x is a positive integer such that the units digit ofx3 is 3, what is the units digit ofx15?",
+    "choices": [
+      "1",
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "correct": [
+      "3"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 3. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s3_q2",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "n is an integer.",
+    "quantity_a": "(\u00001)n(\u00001)n+2",
+    "quantity_b": "1",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A ((\u00001)n(\u00001)n+2) vs Quantity B (1) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "shared_info": "The population of CountryX for 1980 wasp. The population of CountryX increased by 3.8 percent in each of the next two years.",
+    "quantity_a": "The population of CountryX for 1982",
+    "quantity_b": "1:076p",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The population of CountryX for 1982) vs Quantity B (1:076p) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q5",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "x = 2, y = 3, z = 5.",
+    "quantity_a": "x\u00001yz \u00002",
+    "quantity_b": "( xz y )\u00002",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (x\u00001yz \u00002) vs Quantity B (( xz y )\u00002) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q10",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "According to a tax rate formula for a certain year, the amount of tax owed by an individual whose annual income was between $31,850 and $77,100 was equal to a base tax of $4,386 plus 24 percent of the annual income that exceeded $31,850. According to this formula, what was the amount of tax owed by an individual whose annual income that year was $42,000?",
+    "correct": "6822",
+    "explanation": "Exact numeric answer: 6822. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s3_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "prompt": "Each week a salesperson receives a commission that is equal to 12 percent of the first $500 of sales plus 20 percent of additional sales. If the salesperson received a commission of $380 last week, what was the total amount of the sales that the salesperson made last week?",
+    "choices": [
+      "$1,600",
+      "$1,660",
+      "$1,860",
+      "$2,000",
+      "$2,100"
+    ],
+    "correct": [
+      "$2,100"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: $2,100. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q14",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "How many of the age-groups each accounted for more than 15 percent of the total number of occupational injuries in StateX in 1998?",
+    "choices": [
+      "One",
+      "Two",
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "correct": [
+      "Three"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: Three. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "In 1998, if one-half of the occupational injuries in the combine 34-and-under age-groups were incurred by men, what was the number of occupational injuries incurred by men in the combined 35-and-over age-groups?",
+    "choices": [
+      "33,500",
+      "31,900",
+      "30,500",
+      "25,400",
+      "21,700"
+    ],
+    "correct": [
+      "25,400"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 25,400. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s4_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "shared_info": "Of the students in a certain group, 22 percent are juniors and 26 percent are seniors.",
+    "quantity_a": "The ratio of the number of juniors in the group to the number of seniors in the group.",
+    "quantity_b": "4/5",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The ratio of the number of juniors in the group to the number of seniors in the group.) vs Quantity B (4/5) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "1 2 < r < 1",
+    "quantity_a": "2r",
+    "quantity_b": "1 r",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (2r) vs Quantity B (1 r) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q8",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "A historian asserts that at the beginning of 1852, the population of a certain mining town was 16,000. The historian also asserts that for each of the years from 1849 through 1853, the town’s population at the beginning of the year was twice that of the preceding year. According to the historian, what was the range of the town’s populations at the beginning of each year from 1848 through 1853?",
+    "choices": [
+      "14,000",
+      "15,000",
+      "28,000",
+      "30,000",
+      "31,000"
+    ],
+    "correct": [
+      "31,000"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 31,000. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "What is the remainder when3283 is divided by 5?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": [
+      "2"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 2. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q12",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "If x < y, which of the following must be true?",
+    "choices": [
+      "2x < y",
+      "2x > y",
+      "x2 < y 2",
+      "2x \u0000 y < y",
+      "2x \u0000 y < 2xy"
+    ],
+    "correct": [
+      "2x \u0000 y < y"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 2x \u0000 y < y. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "The number of managers surveyed who identified work experience as an important characteristic to con- sider was approximately what percent greater than the number who identified appropriate attire and behavior as an important characteristic to consider?",
+    "choices": [
+      "15%",
+      "20%",
+      "25%",
+      "30%",
+      "35%"
+    ],
+    "correct": [
+      "30%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 30%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "If 48 percent of the managers surveyed identified both ability to follow directions and computer expertise as an important characteristics to consider, what percent of the managers surveyed identified neither of these characteristics as important to consider?",
+    "choices": [
+      "15%",
+      "18%",
+      "23%",
+      "25%",
+      "28%"
+    ],
+    "correct": [
+      "25%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 25%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If n is an integer, what is the least possible value of3n + (3)(3\u0000n)?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "3 1",
+      "4"
+    ],
+    "correct": [
+      "4"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 4. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q20",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "At a certain elementary school, 10 percent of the fifth-grade students are members of the school band. If 12 percent of the fifth-grade boys and 8 percent of the fifth-grade girls are members of the band, what percent of the fifth-grade students at the school are boys?",
+    "choices": [
+      "10%",
+      "12%",
+      "20%",
+      "30%",
+      "50%"
+    ],
+    "correct": [
+      "50%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 50%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s5_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "n is an odd integer between 2 and 10, andn is not a prime number.",
+    "quantity_a": "n",
+    "quantity_b": "9",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (n) vs Quantity B (9) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q2",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "s, t, and u are integers, and10 \u0014 s < t < u \u0014 20.",
+    "quantity_a": "s + u t",
+    "quantity_b": "11",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (s + u t) vs Quantity B (11) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "a > 0.",
+    "quantity_a": "( a + a\u00001)2",
+    "quantity_b": "a2 + a\u00002",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (( a + a\u00001)2) vs Quantity B (a2 + a\u00002) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q8",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "j2y \u0000 5j < 1:",
+    "quantity_a": "y",
+    "quantity_b": "1",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (y) vs Quantity B (1) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "If 1 kilometer is approximately 0.62 mile, what is the approximate speed, in kilometers per hour, of a car that is traveling at a speed of 50 miles per hour?",
+    "choices": [
+      "31",
+      "41",
+      "61",
+      "71",
+      "81"
+    ],
+    "correct": [
+      "81"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 81. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q10",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If x postage stamps were divided evenly among 4 boys, each boy would receivey postage stamps. If thex postage stamps were divided evenly among 6 boys, each boy would receivez postage stamps. Ify \u0000z = 25, what is the value ofx?",
+    "correct": "300",
+    "explanation": "Exact numeric answer: 300. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s5_q14",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "Which of the following is closest to the percent increase in the number of temporary employees from 1993 to 1999?",
+    "choices": [
+      "36%",
+      "58%",
+      "136%",
+      "158%",
+      "236%"
+    ],
+    "correct": [
+      "136%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 136%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "In 1999 approximately how many of the temporary employees had an employment contract with a length of at most 3 months?",
+    "choices": [
+      "185,000",
+      "150,000",
+      "101,000",
+      "35,000",
+      "19,000"
+    ],
+    "correct": [
+      "185,000"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 185,000. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "What is the sum of the integers between -90 and 95, inclusive?",
+    "choices": [
+      "5",
+      "185",
+      "465",
+      "4,275",
+      "4,560"
+    ],
+    "correct": [
+      "465"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 465. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s6_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "n is an integer, andk is not an integer. 0 < k < n < k + 2.",
+    "quantity_a": "n",
+    "quantity_b": "k + 1",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (n) vs Quantity B (k + 1) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "z \u0003 10k = 6 \u0003 10m; m = k + 2",
+    "quantity_a": "z",
+    "quantity_b": "60",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (z) vs Quantity B (60) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "prompt": "For each of the last 5 years, the population of a colony of beetles increased by 8 percent of the preceding year’s population. If P represents the current population of the colony, which of the following best rep- resents the population 5 years ago, in terms ofP? 26",
+    "choices": [
+      "(5)(1:08P \u00001)",
+      "(1:08)\u00005P \u00001",
+      "(1:08P )\u00005",
+      "(1:08)\u00005P",
+      "(1:08)\u00005P 5"
+    ],
+    "correct": [
+      "(1:08)\u00005P"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: (1:08)\u00005P. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q10",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "Ben has 30 pencils in a box. Each of the pencils is one of 5 different colors, and there are 6 pencils of each color. If Ben selects pencils one at a time from the box without being able to see the pencils, what is the minimum number of pencils that he must select in order to ensure that he selects at least 2 pencils of each color?",
+    "choices": [
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+    ],
+    "correct": [
+      "26"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 26. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q11",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If p and n are prime numbers,p \u0000 n = 4, and 3 2 < p n < 2, what is the value ofp?",
+    "correct": "11",
+    "explanation": "Exact numeric answer: 11. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s6_q14",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "For how many of the four incentives listed does each of the companies surveyed that offers this incentive also offer a health-insurance benefit?",
+    "choices": [
+      "None",
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "correct": [
+      "Three"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: Three. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "A certain benefits and incentives package consists of 2 benefits to be chosen from the benefits offered by more than 1 2 of all the companies surveyed and 1 incentive to be chosen from the incentives offered by more than 1 3 of all the companies surveyed. How many suck packages are possible?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "correct": [
+      "12"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 12. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "The ratio of the number of companies offering both a stock-options incentive and one of the benefits listed to the number of companies offering that benefit is greatest for which of the five benefits?",
+    "choices": [
+      "Health insurance",
+      "Flex-time",
+      "Disability insurance",
+      "Tuition",
+      "Telecommuting"
+    ],
+    "correct": [
+      "Tuition"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: Tuition. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "Which of the following is equivalent to0 < x < 2?",
+    "choices": [
+      "x = 1",
+      "jxj < 1",
+      "jxj < 2",
+      "jx + 1j < 1",
+      "jx \u0000 1j < 1"
+    ],
+    "correct": [
+      "jx \u0000 1j < 1"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: jx \u0000 1j < 1. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s7_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "shared_info": "In a fruit basket containing apples, pears, and oranges, the ratio of the number of apples to the number of pears is 3 to 4, and the ratio of the number of pears to the number of oranges is 5 to 3.",
+    "quantity_a": "The number of apples in the fruit basket.",
+    "quantity_b": "The number of oranges in the fruit basket.",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The number of apples in the fruit basket.) vs Quantity B (The number of oranges in the fruit basket.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q2",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "shared_info": "0 < x < y",
+    "quantity_a": "x percent of y",
+    "quantity_b": "y percent of x",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (x percent of y) vs Quantity B (y percent of x) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "prompt": "SOURCES OF FINANCIAL SUPPORT FOR A NONPROFIT ORGANIZATION 31 The table shows the percent distribution of financial support for a nonprofit organization, by source. The amount of financial support for individuals is approximately what percent less than the amount from corporations?",
+    "choices": [
+      "24%",
+      "35%",
+      "41%",
+      "69%",
+      "88%"
+    ],
+    "correct": [
+      "41%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 41%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "Three different committees consist of 8, 10, and 13 people, respectively. If N is the total number of different people in the 3 committees combined, what is the least possible value ofN?",
+    "choices": [
+      "13",
+      "15",
+      "21",
+      "24",
+      "31"
+    ],
+    "correct": [
+      "13"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 13. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q12",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If 17 + m 43 + m = 2 3, what is the value ofm?",
+    "correct": "35",
+    "explanation": "Exact numeric answer: 35. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s7_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "The typical travel time during the morning commuting hours decreased by approximately what percent from 1986 to 1988?",
+    "choices": [
+      "5%",
+      "10%",
+      "25%",
+      "40%",
+      "45%"
+    ],
+    "correct": [
+      "25%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 25%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q20",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If n and m are positive integers andm is a factor of62, what is the greatest possible number of integers that can be equal to both3n and 62 m?",
+    "choices": [
+      "Zero",
+      "One",
+      "Three",
+      "Four",
+      "Six"
+    ],
+    "correct": [
+      "Six"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: Six. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s8_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "n is a positive integer.",
+    "quantity_a": "The remainder when34n is divided by 10",
+    "quantity_b": "1",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The remainder when34n is divided by 10) vs Quantity B (1) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "n is a positive integer.",
+    "quantity_a": "1 3n",
+    "quantity_b": "3 ( 1 4n )",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (1 3n) vs Quantity B (3 ( 1 4n )) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "P Q = QR = QS",
+    "quantity_a": "P S",
+    "quantity_b": "RS",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (P S) vs Quantity B (RS) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "Which of the following equals(8)(72)\u00005?",
+    "choices": [
+      "8\u00004",
+      "8\u00005",
+      "(72)\u00004",
+      "(72)\u00005",
+      "(72)\u00006"
+    ],
+    "correct": [
+      "(72)\u00004"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: (72)\u00004. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "If 2, 4, 6, and 9 are the digits of two 2-digit integers, what is the least possible positive difference between the integers?",
+    "choices": [
+      "28",
+      "27",
+      "17",
+      "13",
+      "9"
+    ],
+    "correct": [
+      "13"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 13. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q14",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "In April 2004 the dollar amount of the Housing expense in regionQ was less than the dollar amount of the Housing expense in which of the other regions? Indicate allsuch regions.",
+    "choices": [
+      "P",
+      "R",
+      "S",
+      "T",
+      "U"
+    ],
+    "correct": [
+      "R",
+      "S",
+      "U"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: R, S, U. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "For the region in which the range of the dollar amounts of the four expense categories was least, what percent of total living expenses was the Transportation expense in that region?",
+    "choices": [
+      "10%",
+      "15%",
+      "16%",
+      "17%",
+      "20%"
+    ],
+    "correct": [
+      "20%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 20%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "Amy and Jed are among 35 people, who are standing in a line, on behind the other, waiting to buy movie tickets. The number of people in front of Amy plus the number of people behind Jed is 24. If there are 15 people behind Amy, including Jed, how many people are in front of Jed?",
+    "choices": [
+      "23",
+      "25",
+      "27",
+      "29",
+      "31"
+    ],
+    "correct": [
+      "29"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 29. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s9_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": null,
+    "quantity_a": "(\u000087)8.",
+    "quantity_b": "( 1 87 )\u00008 .",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A ((\u000087)8.) vs Quantity B (( 1 87 )\u00008 .) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "shared_info": "R = ( 216) ( 534) ( N 50) , N is a positive integer.",
+    "quantity_a": "p R.",
+    "quantity_b": "R",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (p R.) vs Quantity B (R) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q10",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "prompt": "The discounted price of a certain suit is 20 percent less than the original price of the suit. If the discounted price of the suit plus a sales tax of 5 percent of the discounted price equals $67.20, what was the original price of the suit?",
+    "choices": [
+      "$70.50",
+      "$73.90",
+      "$76.00",
+      "$79.80",
+      "$80.00"
+    ],
+    "correct": [
+      "$80.00"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: $80.00. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "By approximately what percent did the total number of the students enrolled in college increase from 1973 to 1993?",
+    "choices": [
+      "45%",
+      "55%",
+      "65%",
+      "75%",
+      "85%"
+    ],
+    "correct": [
+      "55%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 55%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "Which of the following is closest to the number of males who were notenrolled in college in 1993?",
+    "choices": [
+      "107 million",
+      "110 million",
+      "113 million",
+      "116 million",
+      "119 million"
+    ],
+    "correct": [
+      "119 million"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 119 million. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q20",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "Greg’s weekly salary is187, which is 15 percent less than Karla’s weekly salary. If Karla’s weekly salary increases by 10 percent, by what percent must Greg’s weekly salary increase in order to equal Karla’s new weekly salary? Give your answer to the nearest tenth of a percent. %",
+    "correct": "29.4",
+    "explanation": "Exact numeric answer: 29.4. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s10_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": null,
+    "quantity_a": "The greatest possible value of 3 x \u0000 y, where 6 \u0014 x \u0014 8 and 0 \u0014 y \u0014 5.",
+    "quantity_b": "3.",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The greatest possible value of 3 x \u0000 y, where 6 \u0014 x \u0014 8 and 0 \u0014 y \u0014 5.) vs Quantity B (3.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s10_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "xy > 0.",
+    "quantity_a": "x4y3",
+    "quantity_b": "0",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (x4y3) vs Quantity B (0) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s10_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "prompt": "A family paid 12 percent of its annual after-tax income on food last year. This amount was equal to 10 percent of its annual before-tax income last year. Which of the following is closest to the percent of the family’s annual before-tax income that was paid for taxes last year?",
+    "choices": [
+      "8%",
+      "12%",
+      "17%",
+      "20%",
+      "25%"
+    ],
+    "correct": [
+      "17%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 17%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s10_q17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "How many 6-digit integers greater than 400,000 can be formed such that each of the digits 2, 3, 4, 5, 6 and 7 is used once in each 6-digit integer?",
+    "choices": [
+      "240",
+      "480",
+      "720",
+      "960",
+      "1,440"
+    ],
+    "correct": [
+      "480"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 480. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s10_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "Of the total number of students enrolled at UniversityU in the fall of 2008,3 8 were sophomores and 1 50 were biology majors. Which of the following could be the total number of students enrolled at University U in the fall of 2008? Indicate allsuch numbers.",
+    "choices": [
+      "7,000",
+      "7,040",
+      "7,050",
+      "7,100",
+      "7,125",
+      "7,200"
+    ],
+    "correct": [
+      "7,000",
+      "7,200"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: 7,000, 7,200. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s11_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": null,
+    "quantity_a": "2 3p 6 + 3 3p 6",
+    "quantity_b": "3p 6 2 + 3p 6 3",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (2 3p 6 + 3 3p 6) vs Quantity B (3p 6 2 + 3p 6 3) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "n = 2k = 3m.",
+    "quantity_a": "n2",
+    "quantity_b": "6km",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (n2) vs Quantity B (6km) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "A certain brand of chewing gum can be purchased in only two ways: 1 piece at a time at 7 cents a piece 5 pieces at a time at 30 cents for the 5 pieces",
+    "quantity_a": "The greatest number of pieces of this gum that can be purchased with 87 cents",
+    "quantity_b": "The greatest number of pieces of this gum that can be purchased with 82 cents",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The greatest number of pieces of this gum that can be purchased with 87 cents) vs Quantity B (The greatest number of pieces of this gum that can be purchased with 82 cents) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q5",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "n > 10; 000.",
+    "quantity_a": "The thousands digit ofn 8",
+    "quantity_b": "7",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (The thousands digit ofn 8) vs Quantity B (7) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q10",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "Of the 312 employees of CompanyX, 1 3 are in divisionA and the rest are in divisionB. Women account for 2 3 of all employees. If5 8 of the women are in divisionB, how many men are in divisionA?",
+    "choices": [
+      "26",
+      "35",
+      "78",
+      "104",
+      "130"
+    ],
+    "correct": [
+      "26"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 26. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q15",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "If 187,500 people are currently employed in manufacturing, how many more people are currently employed in finance than in agriculture?",
+    "correct": "37500",
+    "explanation": "Exact numeric answer: 37500. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s11_q18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "A furniture store purchased sofas for a wholesale price of $400 each and sold most of them for a retail price of $560 each. In a summer sale, the retail price of the last few sofas was reduced byx dollars, and they were sold at this reduced price. The store’s profit form selling the last sofa was more than 15 percent of its wholesale price. Which of the following could be the value ofx? Indicate allsuch values.",
+    "choices": [
+      "50",
+      "75",
+      "100",
+      "125"
+    ],
+    "correct": [
+      "50",
+      "75"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: 50, 75. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s12_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "shared_info": "In 1998 the yearly expenses to run a certain small business werex dollars. In 1999 the yearly expenses to run the business increased by 10 percent of the 1998 yearly expenses. In 2000 the yearly expenses decreased by 5 percent of the 1999 yearly expenses.",
+    "quantity_a": "The percent increase from 1998 to 2000 in the yearly expenses to run the business",
+    "quantity_b": "5%",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The percent increase from 1998 to 2000 in the yearly expenses to run the business) vs Quantity B (5%) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "shared_info": "n is an integer greater than or equal to 5.",
+    "quantity_a": "The number of positive factors ofn",
+    "quantity_b": "The number of positive factors ofn + 2",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (The number of positive factors ofn) vs Quantity B (The number of positive factors ofn + 2) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "shared_info": "4 < x < y < 8 The ratio ofx to y is 4 to 7.",
+    "quantity_a": "y \u0000 x",
+    "quantity_b": "3",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (y \u0000 x) vs Quantity B (3) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q8",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "56 The table shows the linear relationship between the stride rate of a runner, in numbers of strides per second, and the speed index. This linear relationship holds for stride rates per second to 5.00 strides per second. According to this linear relationship, what is the speed index when the runner with a stride rate of 3.80 strides per second? Speed Index:",
+    "correct": "8.2",
+    "explanation": "Exact numeric answer: 8.2. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s12_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 3,
+    "prompt": "The weekly sales commission at CompanyX is 2 percent of the first $2,000 of weekly sales plus 15 percent of the weekly sales in excess of the first $2,000. The weekly sales commission at CompanyY is 5 percent of the first $2,000 of weekly sales plus 10 percent of the weekly sales in excess of the first $2,000. In a given week, what is the amount of weekly sales at CompanyY that would earn the same weekly sales commission as $5,000 in weekly sales at CompanyX?",
+    "choices": [
+      "$5,900",
+      "$5,300",
+      "$4,900",
+      "$4,800",
+      "$4,500"
+    ],
+    "correct": [
+      "$5,900"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: $5,900. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q12",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 3,
+    "prompt": "P = 23 25 \u0000 23. What is the units digit ofP?",
+    "choices": [
+      "0",
+      "1",
+      "3",
+      "7",
+      "9"
+    ],
+    "correct": [
+      "0"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 0. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q14",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "For the seven actions listed in the table, what is the range of the numbers of companies that cited the action?",
+    "choices": [
+      "130",
+      "140",
+      "150",
+      "160",
+      "170"
+    ],
+    "correct": [
+      "170"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 170. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "fractions_decimals_percents",
+    "difficulty": 4,
+    "prompt": "The dollar amount of losses due to financial fraud was what percent greater, to the nearest whole percent, than the dollar amount of losses due to virus attack?",
+    "choices": [
+      "5%",
+      "6%",
+      "11%",
+      "16%",
+      "21%"
+    ],
+    "correct": [
+      "16%"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 16%. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "What is the remainder when335 is divided by 5?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": [
+      "2"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 2. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "integers_and_divisibility",
+    "difficulty": 4,
+    "prompt": "The sequence a1; a2; : : : ; an; : : : is defined bya1 = 1, a2 = 1, and an = an\u00001 + an\u00002 for all integersn \u0015 3. Which of the following values are terms of the sequence? Indicate allsuch values.",
+    "choices": [
+      "8",
+      "15",
+      "21",
+      "24",
+      "34"
+    ],
+    "correct": [
+      "8",
+      "21",
+      "34"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: 8, 21, 34. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
   }
 ]

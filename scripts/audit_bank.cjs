@@ -1,21 +1,35 @@
 const fs = require("fs");
 const path = require("path");
 
-const basePath = "F:/StudyTools/gre-study-app/data/questions";
+const basePath = path.join(__dirname, "../data/questions");
 const files = {
   arithmetic: JSON.parse(fs.readFileSync(basePath + "/quant/arithmetic.json", "utf8")),
   algebra: JSON.parse(fs.readFileSync(basePath + "/quant/algebra.json", "utf8")),
   geometry: JSON.parse(fs.readFileSync(basePath + "/quant/geometry.json", "utf8")),
   dataAnalysis: JSON.parse(fs.readFileSync(basePath + "/quant/data_analysis.json", "utf8")),
+  dataInterpretation: JSON.parse(fs.readFileSync(basePath + "/quant/data_interpretation.json", "utf8")),
+  datasets: JSON.parse(fs.readFileSync(basePath + "/quant/di_datasets.json", "utf8")),
   textCompletion: JSON.parse(fs.readFileSync(basePath + "/verbal/text_completion.json", "utf8")),
   sentenceEquivalence: JSON.parse(fs.readFileSync(basePath + "/verbal/sentence_equivalence.json", "utf8")),
   readingComprehension: JSON.parse(fs.readFileSync(basePath + "/verbal/reading_comprehension.json", "utf8")),
   passages: JSON.parse(fs.readFileSync(basePath + "/verbal/passages.json", "utf8"))
 };
 
+files.arithmetic.push(...JSON.parse(fs.readFileSync(path.join(basePath, "quant/foundations.json"), "utf8")));
+files.passages.push(...JSON.parse(fs.readFileSync(path.join(basePath, "verbal/timed_passages.json"), "utf8")));
+files.readingComprehension.push(...JSON.parse(fs.readFileSync(path.join(basePath, "verbal/timed_reading.json"), "utf8")));
+
 const issues = [];
 const idSet = new Set();
 const passageIds = new Set(files.passages.map(p => p.id));
+const datasetIds = new Set();
+for (const dataset of files.datasets) {
+  if (!dataset.id || datasetIds.has(dataset.id)) issues.push(`Missing or duplicate dataset ID: ${dataset.id}`);
+  datasetIds.add(dataset.id);
+  if (!dataset.headers?.length || !dataset.rows?.length || dataset.rows.some(row => row.length !== dataset.headers.length)) {
+    issues.push(`${dataset.id}: Invalid table dimensions`);
+  }
+}
 
 // 1. Passage checks
 for (const p of files.passages) {
@@ -30,6 +44,7 @@ const allQuestions = [
   ...files.algebra,
   ...files.geometry,
   ...files.dataAnalysis,
+  ...files.dataInterpretation,
   ...files.textCompletion,
   ...files.sentenceEquivalence,
   ...files.readingComprehension
@@ -57,7 +72,10 @@ for (const q of allQuestions) {
     if (typeof q.correct !== "string" || q.correct.trim() === "") {
       issues.push(`${q.id}: Numeric entry invalid correct string`);
     }
-  } else if (q.qtype === "quant_multiple_choice") {
+  } else if (q.qtype === "quant_multiple_choice" || q.qtype === "data_interpretation") {
+    if (q.qtype === "data_interpretation" && !datasetIds.has(q.dataset_id)) {
+      issues.push(`${q.id}: Unknown data set ${q.dataset_id}`);
+    }
     if (!q.prompt) issues.push(`${q.id}: MC missing prompt`);
     if (!Array.isArray(q.choices) || q.choices.length < 2) issues.push(`${q.id}: MC invalid choices`);
     if (!Array.isArray(q.correct) || q.correct.length < 1) issues.push(`${q.id}: MC invalid correct array`);
@@ -103,7 +121,7 @@ for (const q of allQuestions) {
 
 console.log(`\nAudit completed!`);
 if (issues.length === 0) {
-  console.log("SUCCESS: 0 issues found across all 192 questions and 5 passages!");
+  console.log(`No structural issues in ${allQuestions.length} questions, ${files.passages.length} passages, and ${files.datasets.length} data sets.`);
 } else {
   console.log(`FOUND ${issues.length} ISSUES:`);
   issues.forEach(i => console.log(" - " + i));

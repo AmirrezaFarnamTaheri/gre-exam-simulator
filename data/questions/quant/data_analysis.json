@@ -511,5 +511,744 @@
     ],
     "prompt": "The average (arithmetic mean) of six numbers is 25. If the average of the first two numbers is 20 and the average of the last three numbers is 26, what is the value of the fourth number?",
     "correct": "32"
+  },
+  {
+    "id": "q240_s1_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "counting_methods",
+    "difficulty": 3,
+    "shared_info": "Set T consists of the integers from 11 through 100, inclusive.",
+    "quantity_a": "4 times the number of integers in setT that are multiples of 4.",
+    "quantity_b": "5 times the number of integers in setT that are multiples of 5.",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (4 times the number of integers in setT that are multiples of 4.) vs Quantity B (5 times the number of integers in setT that are multiples of 5.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "shared_info": "List L consists of 7 numbers. The range of the numbers in listL is 0.",
+    "quantity_a": "The average (arithmetic mean) of the numbers in listL.",
+    "quantity_b": "0.",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (The average (arithmetic mean) of the numbers in listL.) vs Quantity B (0.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "probability",
+    "difficulty": 3,
+    "prompt": "A jar contains exactly 10 dimes andx quarters and no other coins. If a coin is randomly selected from the jar, the probability that a quarter is selected is 0.6. What is the value ofx?",
+    "choices": [
+      "5",
+      "6",
+      "8",
+      "12",
+      "15"
+    ],
+    "correct": [
+      "15"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 15. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q20",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "Textbook Number of Pages A 510 B 480 C 490 D 520 E x The table shows the number of pages in each of 5 textbooks. What is the greatest possible value ofx for which the average (arithmetic mean) number of pages of the 5 textbooks is equal to the median number of pages of the 5 textbooks?",
+    "correct": "550",
+    "explanation": "Exact numeric answer: 550. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s2_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "shared_info": "For the 500 measurements obtained in experimentX, the average (arithmetic mean) value is 280 and the value k is at the 75th percentile. For the 500 measurements obtained in experimentY, the average value is 280 and the valuen is at the 75th percentile.",
+    "quantity_a": "k.",
+    "quantity_b": "n.",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (k.) vs Quantity B (n.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "If the average (arithmetic mean) number of towels imported from China per month was the same for the last 3 months of 2000 as it was for the first 9 months of 2000, approximately how many million dozen towels were imported from China during the 12 months of 2000?",
+    "choices": [
+      "57",
+      "63",
+      "76",
+      "80",
+      "86"
+    ],
+    "correct": [
+      "57"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 57. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "prompt": "In 1999, the ratio of the number of towels imported from China to the total number of towels imported from countries other than China was closets to which of the following?",
+    "choices": [
+      "7 to 2",
+      "3 to 1",
+      "5 to 2",
+      "2 to 1",
+      "3 to 2"
+    ],
+    "correct": [
+      "5 to 2"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 5 to 2. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q20",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "The sum ofn numbers is greater than 48. If the average (arithmetic mean) of then numbers is 1.2, what is the least possible value ofn?",
+    "correct": "41",
+    "explanation": "Exact numeric answer: 41. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s3_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "shared_info": "x < y \u0000 2",
+    "quantity_a": "The average (arithmetic mean) ofx and y",
+    "quantity_b": "y \u0000 1",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The average (arithmetic mean) ofx and y) vs Quantity B (y \u0000 1) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q12",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "prompt": "Last Monday a certain store sold 17 wrenches atx dollars each. Last Tuesday the store reduced its prices and sold an additional 8 wrenches at 0.5x dollars each. Which of the following is equal to the av- erage (arithmetic mean) price, in dollars, of the 25 wrenches that the store sold last Monday and Tuesday?",
+    "choices": [
+      "0:68x",
+      "0:73x",
+      "0:76x",
+      "0:81x",
+      "0:84x"
+    ],
+    "correct": [
+      "0:84x"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 0:84x. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "For the 55-64 age-group in 1998, the average (arithmetic mean) number of work-hours lost per occupa- tional injury was 48.5. If a workweek is 40 work-hours, which of the following is closets to the total number of workweeks lost due to occupational injuries in the 55-64 age-group in 1998?",
+    "choices": [
+      "4,500",
+      "5,200",
+      "5,500",
+      "5,900",
+      "6,300"
+    ],
+    "correct": [
+      "6,300"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 6,300. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s3_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "X Frequency 0 6 1 11 2 18 3 23 4 15 The table shows the frequency distribution of the random variable X. What is the median of the distri- bution of the values of X ?",
+    "choices": [
+      "1.0",
+      "1.8",
+      "2.0",
+      "2.5",
+      "3.0"
+    ],
+    "correct": [
+      "3.0"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 3.0. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s4_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "shared_info": "In a data set of 10,000 numbers varying from 20 to 80, the number 62 is the 60th percentile and the number 74 is thenth percentile.",
+    "quantity_a": "n",
+    "quantity_b": "70",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (n) vs Quantity B (70) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s4_q18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "On his trip to the airport, Grant drove a total of 9 miles. His average speed on the trip wasx miles per hour, where 30 \u0014 x \u0014 35. Which of the following could be the total number of minutesthat Grant took to make the trip? Indicate allsuch statements.",
+    "choices": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "correct": [
+      "16",
+      "17",
+      "18"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: 16, 17, 18. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-4"
+    ]
+  },
+  {
+    "id": "q240_s5_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "shared_info": "Magdalena took 1 hour to complete a task that had 60 steps. She took 20 minutes to complete the first 30 steps of the task.",
+    "quantity_a": "The average number of secondsper step that Magdalena took to complete the remaining 30 steps.",
+    "quantity_b": "80",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The average number of secondsper step that Magdalena took to complete the remaining 30 steps.) vs Quantity B (80) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "From a set of 100 numbers, half were selected to form group I, and 60 percent of the remaining numbers were selected to form group II. The average (arithmetic mean) of the numbers in group I is 24.4, and the average of the numbers in group II is 31.5. Which of the following is closest to the average of the numbers in groups I and II combined?",
+    "choices": [
+      "27.1",
+      "27.6",
+      "27.8",
+      "28.0",
+      "28.3"
+    ],
+    "correct": [
+      "27.1"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 27.1. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s6_q5",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "shared_info": "The average (arithmetic mean) ofm and n is 1 more thank.",
+    "quantity_a": "m + n",
+    "quantity_b": "2k + 1",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (m + n) vs Quantity B (2k + 1) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s7_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "shared_info": "The average (arithmetic mean) ofx and z is greater thany, and x < y < z .",
+    "quantity_a": "The average ofx, y, and z",
+    "quantity_b": "The median ofx, y, and z",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The average ofx, y, and z) vs Quantity B (The median ofx, y, and z) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "During the morning commuting hours in 1987, what was the average speed, in miles per hour, of a car that traveled the 10 miles on RoadH if the car took the typical amount of time to travel the 10 miles?",
+    "choices": [
+      "15",
+      "20",
+      "25",
+      "33",
+      "40"
+    ],
+    "correct": [
+      "40"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 40. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q17",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "probability",
+    "difficulty": 4,
+    "prompt": "A certain box contains 4 red blocks, 5 blue blocks, and 3 yellow blocks. Judy will select one of these blocks at random from the box, put it back in the box, and then again select a block at random from the box. What is the probability that both of the blocks selected will be yellow? Give your answer as a fraction.",
+    "correct": "1/16",
+    "explanation": "Exact numeric answer: 1/16. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s7_q18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "Mike, Scott, Jim, Kate, and Pete each have a different number of assignments this month. Pete has fewer assignments than Kate, Kate has more assignments than Mike, Mike has more assignments than Jim, and Jim has more assignments than Scott. Which of the following could be the person who has the median number of assignments this month for the five people listed? Indicate allsuch people.",
+    "choices": [
+      "Mike",
+      "Scott",
+      "Jim",
+      "Kate",
+      "Pete"
+    ],
+    "correct": [
+      "Mike",
+      "Jim",
+      "Pete"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: Mike, Jim, Pete. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s8_q8",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "prompt": "A certain class of 90 students took a typing proficiency test. The average (arithmetic mean) score of the students who passed the test was 84, and the average score of the students who failed the test was 60. If the average score of all students was 80, how many students passed the test?",
+    "choices": [
+      "15",
+      "20",
+      "42",
+      "70",
+      "75"
+    ],
+    "correct": [
+      "75"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 75. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s8_q18",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "A research report states that the average (arithmetic mean) of 120 measurements was 72.5, the greatest of the 120 measurements was 92.8, and the range of the 120 measurements was 51.6. The information given above is sufficient to determine the value of which of the following statistics? Indicate allsuch statistics.",
+    "choices": [
+      "The least of the 120 measurements",
+      "The median of the 120 measurements",
+      "The standard deviation of the 120 measurements",
+      "The sum of the 120 measurements"
+    ],
+    "correct": [
+      "The least of the 120 measurements",
+      "The sum of the 120 measurements"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: The least of the 120 measurements, The sum of the 120 measurements. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-8"
+    ]
+  },
+  {
+    "id": "q240_s9_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "shared_info": "The average (arithmetic mean) of the two numbers3x and 3y is 48.",
+    "quantity_a": "The average (arithmetic mean) of the two numbers2x and 2y.",
+    "quantity_b": "30.",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The average (arithmetic mean) of the two numbers2x and 2y.) vs Quantity B (30.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q2",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "shared_info": "A certain train travels 150 miles inh hours at the average rate ofm miles per hour.",
+    "quantity_a": "The number of hours required for the train to travel 320 miles at the average rate of2m miles per hour.",
+    "quantity_b": "h.",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The number of hours required for the train to travel 320 miles at the average rate of2m miles per hour.) vs Quantity B (h.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s9_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "prompt": "41 According to the table, what is the average (arithmetic mean) hourly wage of the employees at Company C?",
+    "choices": [
+      "$12",
+      "$17",
+      "$23",
+      "$25",
+      "$30"
+    ],
+    "correct": [
+      "$23"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: $23. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s10_q2",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "shared_info": "In a certain club, the average (arithmetic mean) of the 35 males is 24.2 years and the average age of the 25 females is 27.6 years.",
+    "quantity_a": "The average age of all of the people in the club",
+    "quantity_b": "25.9",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The average age of all of the people in the club) vs Quantity B (25.9) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s10_q7",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "counting_methods",
+    "difficulty": 4,
+    "shared_info": "In a distribution of the values of the variablex, the 50th percentile is 48.5, and the 60th percentile is 56.5.",
+    "quantity_a": "The 40th percentile of the distribution of the values ofx",
+    "quantity_b": "40.5",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (The 40th percentile of the distribution of the values ofx) vs Quantity B (40.5) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s11_q8",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "shared_info": "a < b < c < d < e List S : a; b; c; d; e List T : a \u0000 2; b \u0000 1; c; d + 1; e + 2",
+    "quantity_a": "The standard deviation of the numbers in listS",
+    "quantity_b": "The standard deviation of the numbers in listT",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The standard deviation of the numbers in listS) vs Quantity B (The standard deviation of the numbers in listT) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q9",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "prompt": "The average (arithmetic mean) of the body weights of John, Jack, Bill, Mark, and Tom is at least 170 pounds. John, Jack, and Bill weigh 140, 160, and 180 pounds, respectively. If Mark weighs between 160 and 180 pounds, inclusive, what is the least possible weight, in pounds, of Tom?",
+    "choices": [
+      "180",
+      "190",
+      "200",
+      "210",
+      "220"
+    ],
+    "correct": [
+      "190"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 190. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q16",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "If the average (arithmetic mean) annual salary of the people currently employed in agriculture is $35,000 and if the average annual salary of the people currently employed in construction is $45,000, what is the average annual salary of the people currently employed in agriculture and construction combined?",
+    "choices": [
+      "$37,500",
+      "$40,000",
+      "$40,500",
+      "$42,500",
+      "$43,000"
+    ],
+    "correct": [
+      "$43,000"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: $43,000. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q20",
+    "section": "quant",
+    "qtype": "quant_numeric_entry",
+    "topic": "probability",
+    "difficulty": 4,
+    "prompt": "A certain band will perform 15 different songs in random order, and no song will be performed twice. If 9 of the songs are new, what is the probability that the first 2 songs that the band performs will both be new? Give your answer as a fraction.",
+    "correct": "12/35",
+    "explanation": "Exact numeric answer: 12/35. Double-check units and rounding requirements before finalizing.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11",
+      "numeric-entry"
+    ]
+  },
+  {
+    "id": "q240_s12_q10",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 3,
+    "prompt": "The arithmetic mean of the five numbersx + 6, 2x \u0000 3, 2x + 2, 3x \u0000 5, and 4x \u0000 4 is 4. What is the range of the five numbers?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct": [
+      "7"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 7. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q15",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "Which of the following is closest to the amount by which the average (arithmetic mean) dollar amount of losses due to the actions cited exceeds the median dollar amount of the losses?",
+    "choices": [
+      "$5,400,000",
+      "$5,700,000",
+      "$6,000,000",
+      "$6,200,000",
+      "$6,600,000"
+    ],
+    "correct": [
+      "$5,700,000"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: $5,700,000. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
+  },
+  {
+    "id": "q240_s12_q17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "descriptive_statistics",
+    "difficulty": 4,
+    "prompt": "The average (arithmetic mean) of the weights of a father and mother is twice the average of the weights of their 4 children. If the average weight of the 6 family members is 128 pounds, what is the average weight, in pounds, of the 4 children?",
+    "choices": [
+      "64",
+      "91",
+      "92",
+      "94",
+      "96"
+    ],
+    "correct": [
+      "96"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 96. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-12"
+    ]
   }
 ]

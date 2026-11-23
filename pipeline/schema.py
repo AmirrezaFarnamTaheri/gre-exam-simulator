@@ -73,9 +73,12 @@ class ReadingComprehensionQuestion(QuestionBase):
     choices: list[str]
     correct: list[str]
     select_all: bool = False
+    select_in_passage: bool = False
 
     @model_validator(mode="after")
     def _check_answers(self):
+        if self.select_in_passage and self.select_all:
+            raise ValueError(f"{self.id}: select-in-passage accepts one sentence")
         if not self.select_all and len(self.correct) != 1:
             raise ValueError(f"{self.id}: single-answer RC question must have exactly 1 correct choice")
         if not set(self.correct).issubset(self.choices):

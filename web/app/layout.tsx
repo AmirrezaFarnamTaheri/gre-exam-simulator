@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import AppShell from "@/components/AppShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GRE Adaptive Study",
-  description: "Personal adaptive GRE verbal & quant practice",
+  title: "GRE Study",
+  description: "Practice GRE math, verbal reasoning, vocabulary, and essay writing.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <AppShell>{children}</AppShell>
+      </body>
     </html>
   );
 }

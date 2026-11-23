@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { ReadingComprehensionQuestion } from "gre-adaptive-engine";
 import { getPassageById } from "@/lib/questionBank";
+import SelectInPassage from "./SelectInPassage";
 
 export default function ReadingComprehensionQuestionView({
   question,
@@ -33,39 +34,45 @@ export default function ReadingComprehensionQuestionView({
 
   return (
     <div className="question reading-comprehension">
-      <article className="passage-text">
-        <h3>{passage.title}</h3>
-        <p>{passage.text}</p>
-      </article>
+      {question.select_in_passage ? (
+        <SelectInPassage passage={passage} question={question} selected={selected[0]} submitted={submitted} onSelect={toggle} />
+      ) : (
+        <>
+          <article className="passage-text">
+            <h3>{passage.title}</h3>
+            <p>{passage.text}</p>
+          </article>
 
-      <p className="prompt">{question.question}</p>
-      <ul className="choice-list">
-        {question.choices.map((choice) => {
-          const isSelected = selected.includes(choice);
-          const isCorrectChoice = submitted && correctSet.has(choice);
-          const className = submitted
-            ? isCorrectChoice
-              ? "choice correct"
-              : isSelected
-                ? "choice incorrect"
-                : "choice"
-            : "choice";
-          return (
-            <li key={choice}>
-              <label className={className}>
-                <input
-                  type={question.select_all ? "checkbox" : "radio"}
-                  name="rc-choice"
-                  checked={isSelected}
-                  disabled={submitted}
-                  onChange={() => toggle(choice)}
-                />
-                {choice}
-              </label>
-            </li>
-          );
-        })}
-      </ul>
+          <p className="prompt">{question.question}</p>
+          <ul className="choice-list">
+            {question.choices.map((choice) => {
+              const isSelected = selected.includes(choice);
+              const isCorrectChoice = submitted && correctSet.has(choice);
+              const className = submitted
+                ? isCorrectChoice
+                  ? "choice correct"
+                  : isSelected
+                    ? "choice incorrect"
+                    : "choice"
+                : "choice";
+              return (
+                <li key={choice}>
+                  <label className={className}>
+                    <input
+                      type={question.select_all ? "checkbox" : "radio"}
+                      name="rc-choice"
+                      checked={isSelected}
+                      disabled={submitted}
+                      onChange={() => toggle(choice)}
+                    />
+                    {choice}
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      )}
 
       {!submitted && (
         <button className="button" disabled={selected.length === 0} onClick={handleSubmit}>

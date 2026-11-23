@@ -1,0 +1,330 @@
+[
+  {
+    "id": "di_set_01",
+    "title": "Weekly Customer Support Call Volume",
+    "subtitle": "Number of support calls received by TechCorp during one workweek (Monday–Friday)",
+    "chartType": "bar",
+    "unit": "calls",
+    "headers": [
+      "Day",
+      "Calls Received",
+      "Avg Handle Time (min)"
+    ],
+    "rows": [
+      [
+        "Monday",
+        240,
+        6.5
+      ],
+      [
+        "Tuesday",
+        180,
+        5.0
+      ],
+      [
+        "Wednesday",
+        210,
+        7.0
+      ],
+      [
+        "Thursday",
+        150,
+        6.0
+      ],
+      [
+        "Friday",
+        120,
+        5.5
+      ]
+    ],
+    "notes": "Total calls for the week = 900."
+  },
+  {
+    "id": "di_set_02",
+    "title": "University Research Funding by Department (2022–2025)",
+    "subtitle": "Annual grant funding in millions of dollars ($M)",
+    "chartType": "table",
+    "unit": "$M",
+    "headers": [
+      "Department",
+      "2022 ($M)",
+      "2023 ($M)",
+      "2024 ($M)",
+      "2025 ($M)"
+    ],
+    "rows": [
+      [
+        "Engineering",
+        40,
+        48,
+        54,
+        60
+      ],
+      [
+        "Biology",
+        30,
+        33,
+        36,
+        45
+      ],
+      [
+        "Physics",
+        20,
+        22,
+        20,
+        25
+      ],
+      [
+        "Economics",
+        10,
+        12,
+        15,
+        20
+      ]
+    ],
+    "notes": "All figures rounded to the nearest million dollars."
+  },
+  {
+    "id": "di_set_03",
+    "title": "Regional Renewable Energy Generation Mix (2025)",
+    "subtitle": "Total regional generation = 4,000 GWh",
+    "chartType": "bar",
+    "unit": "%",
+    "headers": [
+      "Source",
+      "Share (%)",
+      "Capacity Factor (%)"
+    ],
+    "rows": [
+      [
+        "Solar PV",
+        35,
+        24
+      ],
+      [
+        "Onshore Wind",
+        30,
+        38
+      ],
+      [
+        "Hydroelectric",
+        20,
+        52
+      ],
+      [
+        "Geothermal",
+        10,
+        82
+      ],
+      [
+        "Biomass",
+        5,
+        65
+      ]
+    ],
+    "notes": "Shares sum to 100% of total 4,000 GWh output."
+  },
+  {
+    "id": "di_set_04",
+    "title": "Graduate Admissions Outcomes by Applicant Background",
+    "subtitle": "Applications, admissions, and enrollment at Meridian University (Fall 2025)",
+    "chartType": "table",
+    "unit": "students",
+    "headers": [
+      "Program",
+      "Applied",
+      "Admitted",
+      "Enrolled"
+    ],
+    "rows": [
+      [
+        "Computer Science",
+        1200,
+        180,
+        108
+      ],
+      [
+        "Data Science",
+        800,
+        200,
+        130
+      ],
+      [
+        "Electrical Eng.",
+        500,
+        150,
+        90
+      ],
+      [
+        "Applied Math",
+        400,
+        100,
+        62
+      ]
+    ],
+    "notes": "Yield rate = (Enrolled / Admitted) × 100%."
+  },
+  {
+    "id": "di_set_05",
+    "title": "Retail Chain Quarterly Revenue and Operating Margin",
+    "subtitle": "Four consecutive quarters of FY2025 performance",
+    "chartType": "table",
+    "unit": "$M",
+    "headers": [
+      "Quarter",
+      "Revenue ($M)",
+      "Operating Margin (%)",
+      "Store Count"
+    ],
+    "rows": [
+      [
+        "Q1",
+        80,
+        15,
+        40
+      ],
+      [
+        "Q2",
+        100,
+        18,
+        44
+      ],
+      [
+        "Q3",
+        90,
+        20,
+        45
+      ],
+      [
+        "Q4",
+        130,
+        22,
+        50
+      ]
+    ],
+    "notes": "Operating Profit = Revenue × (Operating Margin / 100)."
+  },
+  {
+    "id": "di_set_06",
+    "title": "Commuter Mode Share Across Four Cities",
+    "subtitle": "Percentage of daily commuters using each primary mode",
+    "chartType": "table",
+    "unit": "%",
+    "headers": [
+      "City",
+      "Total Commuters (k)",
+      "Transit (%)",
+      "Car (%)",
+      "Bike/Walk (%)"
+    ],
+    "rows": [
+      [
+        "City A",
+        500,
+        48,
+        36,
+        16
+      ],
+      [
+        "City B",
+        800,
+        25,
+        65,
+        10
+      ],
+      [
+        "City C",
+        400,
+        35,
+        45,
+        20
+      ],
+      [
+        "City D",
+        300,
+        60,
+        20,
+        20
+      ]
+    ],
+    "notes": "Percentages in each row sum to 100%."
+  },
+  {
+    "id": "di_set_07",
+    "title": "Clinical Trial Recovery Times (Days)",
+    "subtitle": "Distribution of patient recovery times across 3 treatment cohorts (n = 200 each)",
+    "chartType": "table",
+    "unit": "days",
+    "headers": [
+      "Cohort",
+      "Mean (days)",
+      "Median (days)",
+      "Std Dev (days)",
+      "Range (days)"
+    ],
+    "rows": [
+      [
+        "Control",
+        14.0,
+        13.5,
+        3.2,
+        16
+      ],
+      [
+        "Drug A",
+        10.5,
+        10.0,
+        2.0,
+        9
+      ],
+      [
+        "Drug B",
+        9.0,
+        9.5,
+        4.1,
+        18
+      ]
+    ],
+    "notes": "Each cohort contains exactly 200 patients."
+  },
+  {
+    "id": "di_set_08",
+    "title": "Bookstore Monthly Inventory & Sales by Genre",
+    "subtitle": "Units stocked, units sold, and average selling price ($)",
+    "chartType": "table",
+    "unit": "units",
+    "headers": [
+      "Genre",
+      "Stocked",
+      "Sold",
+      "Avg Price ($)"
+    ],
+    "rows": [
+      [
+        "Fiction",
+        600,
+        450,
+        16
+      ],
+      [
+        "Non-Fiction",
+        500,
+        350,
+        24
+      ],
+      [
+        "Science",
+        300,
+        240,
+        30
+      ],
+      [
+        "Children",
+        400,
+        360,
+        12
+      ]
+    ],
+    "notes": "Sell-through rate = Sold / Stocked."
+  }
+]

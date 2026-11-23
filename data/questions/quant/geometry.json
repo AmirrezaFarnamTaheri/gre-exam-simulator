@@ -508,5 +508,400 @@
     "quantity_b": "27",
     "shared_info": "A solid metal sphere of radius 3 is melted down and recast into smaller solid spheres, each of radius 1, with no loss of metal.",
     "correct": "equal"
+  },
+  {
+    "id": "q240_s1_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "shared_info": null,
+    "quantity_a": "The area of a triangular region with perimeter 8.",
+    "quantity_b": "8.",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The area of a triangular region with perimeter 8.) vs Quantity B (8.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s1_q10",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "circles",
+    "difficulty": 3,
+    "prompt": "In the rectangular coordinate system, the point(3; 1) is on the circle with center(0; \u00003). What is the area of the circle?",
+    "choices": [
+      "5\u0019",
+      "7\u0019",
+      "10\u0019",
+      "25\u0019",
+      "p"
+    ],
+    "correct": [
+      "25\u0019"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 25\u0019. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-1"
+    ]
+  },
+  {
+    "id": "q240_s2_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "triangles",
+    "difficulty": 3,
+    "prompt": "In the triangle, ify = 30, then x =",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "8",
+      "9"
+    ],
+    "correct": [
+      "4"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 4. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s2_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "prompt": "If a square region with sidex and a circular region with radiusr have the same area, thenx must be how many times as great asr?",
+    "choices": [
+      "1",
+      "1p\u0019",
+      "p\u0019",
+      "\u0019",
+      "\u00192"
+    ],
+    "correct": [
+      "p\u0019"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: p\u0019. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-2"
+    ]
+  },
+  {
+    "id": "q240_s3_q1",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "area_perimeter_volume",
+    "difficulty": 3,
+    "shared_info": "ABCE is a square, andBCDE is a parallelogram.",
+    "quantity_a": "The area of squareABCE",
+    "quantity_b": "The area of parallelogramBCDE",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The area of squareABCE) vs Quantity B (The area of parallelogramBCDE) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-3"
+    ]
+  },
+  {
+    "id": "q240_s5_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "circles",
+    "difficulty": 3,
+    "shared_info": "In the rectangular coordinate system,(x; y) is a point on a circle that has center(3; 2) and is tangent to the x-axis at (3; 0).",
+    "quantity_a": "The least possible value ofx",
+    "quantity_b": "0",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The least possible value ofx) vs Quantity B (0) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s5_q11",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "circles",
+    "difficulty": 3,
+    "prompt": "In the xy-plane, a circle is centered at the point(\u00004; 3) and passes through the origin. What is the area of the circle?",
+    "choices": [
+      "9\u0019",
+      "12\u0019",
+      "16\u0019",
+      "20\u0019",
+      "25\u0019"
+    ],
+    "correct": [
+      "25\u0019"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 25\u0019. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-5"
+    ]
+  },
+  {
+    "id": "q240_s6_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "area_perimeter_volume",
+    "difficulty": 3,
+    "shared_info": "On a certain map, 1 centimeter represents 5 kilometers. On the map, regionX has an area of 6.4 square centimeters.",
+    "quantity_a": "The actual area of regionX",
+    "quantity_b": "150 square kilometers",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The actual area of regionX) vs Quantity B (150 square kilometers) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q4",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "circles",
+    "difficulty": 3,
+    "shared_info": "x > 0.",
+    "quantity_a": "The area of a circle whose circumference is8\u0019x",
+    "quantity_b": "The area of a circle with radius4x 25",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The area of a circle whose circumference is8\u0019x) vs Quantity B (The area of a circle with radius4x 25) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s6_q12",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "circles",
+    "difficulty": 4,
+    "prompt": "The area of a circle with radiusa is less than the area of a square with sides of lengthka. Which of the following could be the value ofk? Indicate allsuch values.",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct": [
+      "6",
+      "7"
+    ],
+    "select_all": true,
+    "explanation": "Official answer: 6, 7. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-6"
+    ]
+  },
+  {
+    "id": "q240_s7_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "shared_info": "The dotted line segments separate the rectangular region into six identical smaller rectangular regions.",
+    "quantity_a": "The area of triangular regionW XV.",
+    "quantity_b": "The area of triangular regionXY V .",
+    "correct": "equal",
+    "explanation": "Official GRE Quant Comparison key: equal. Compare Quantity A (The area of triangular regionW XV.) vs Quantity B (The area of triangular regionXY V .) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s7_q19",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "triangles",
+    "difficulty": 4,
+    "prompt": "The legs of a right triangle are in the ratio of 3 to 1. If the length of the hypotenuse of the triangle isp 40, then the perimeter of the triangle is between",
+    "choices": [
+      "14 and 15",
+      "13 and 14",
+      "12 and 13",
+      "11 and 12",
+      "10 and 11"
+    ],
+    "correct": [
+      "14 and 15"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 14 and 15. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-7"
+    ]
+  },
+  {
+    "id": "q240_s9_q8",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "shared_info": "In the xy-plane, line k has slope 2 and passes through the point(3; r).",
+    "quantity_a": "r.",
+    "quantity_b": "3.",
+    "correct": "cannot_determine",
+    "explanation": "Official GRE Quant Comparison key: cannot determine. Compare Quantity A (r.) vs Quantity B (3.) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-9"
+    ]
+  },
+  {
+    "id": "q240_s10_q3",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "circles",
+    "difficulty": 3,
+    "shared_info": "Point O is the center of a circle with circumference 12. PointP is another point inside the circle.",
+    "quantity_a": "The greatest distance fromP to a point on the circle plus the least distance fromP to a Quantity A:point on the circle",
+    "quantity_b": "4",
+    "correct": "B",
+    "explanation": "Official GRE Quant Comparison key: B. Compare Quantity A (The greatest distance fromP to a point on the circle plus the least distance fromP to a Quantity A:point on the circle) vs Quantity B (4) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s10_q8",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "area_perimeter_volume",
+    "difficulty": 3,
+    "prompt": "POPULATION OF THE UNITED STATES IN 1800 AND 1900 By approximately how many square miles did the area of the United States increase from 1800 to 1900?",
+    "choices": [
+      "360,000",
+      "2,000,000",
+      "3,625,000",
+      "20,000,000",
+      "36,250,000"
+    ],
+    "correct": [
+      "2,000,000"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 2,000,000. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s10_q10",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "area_perimeter_volume",
+    "difficulty": 3,
+    "prompt": "In the xy-plane, the pointsP; Q and S have coordinates (14; 10), (1; 0), and (6; 0), respectively. What is the area of triangular regionP QS?",
+    "choices": [
+      "25",
+      "30",
+      "35",
+      "42",
+      "50"
+    ],
+    "correct": [
+      "25"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 25. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-10"
+    ]
+  },
+  {
+    "id": "q240_s11_q2",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "triangles",
+    "difficulty": 3,
+    "shared_info": "The regions enclosed by the rectangle and the triangle have areas ofm and n, respectively.",
+    "quantity_a": "m",
+    "quantity_b": "n",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (m) vs Quantity B (n) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q6",
+    "section": "quant",
+    "qtype": "quant_comparison",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "shared_info": null,
+    "quantity_a": "The sum of the coordinates of pointP",
+    "quantity_b": "0",
+    "correct": "A",
+    "explanation": "Official GRE Quant Comparison key: A. Compare Quantity A (The sum of the coordinates of pointP) vs Quantity B (0) carefully across edge cases (0, 1, negatives, fractions).",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
+  },
+  {
+    "id": "q240_s11_q17",
+    "section": "quant",
+    "qtype": "quant_multiple_choice",
+    "topic": "area_perimeter_volume",
+    "difficulty": 4,
+    "prompt": "The length of an edge of cubeY is 2 3 the length of an edge of cubeX. What is the ratio of the volume of cube Y to the volume of cubeX? 53",
+    "choices": [
+      "1 to 3",
+      "1 to 9",
+      "1 to 27",
+      "2 to 3",
+      "8 to 27"
+    ],
+    "correct": [
+      "8 to 27"
+    ],
+    "select_all": false,
+    "explanation": "Official answer: 8 to 27. Verify by back-solving or testing boundary values against the problem constraints.",
+    "source": "seed",
+    "tags": [
+      "gre-240-quant",
+      "section-11"
+    ]
   }
 ]
